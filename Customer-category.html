@@ -40,12 +40,8 @@
   <link rel="stylesheet" href="./assets/vendor/libs/fullcalendar/fullcalendar.css" />
   <link rel="stylesheet" href="./assets/vendor/libs/flatpickr/flatpickr.css" />
   <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
-  <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
   <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
-  <link rel="stylesheet" href="./assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
-  <link rel="stylesheet" href="./assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
-  <link rel="stylesheet" href="./assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
-  <link rel="stylesheet" href="./assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+  <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
   <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
   <link rel="stylesheet" href="./assets/vendor/libs/quill/editor.css" />
 
@@ -520,7 +516,7 @@
                 </li>
 
                 <!-- Apps -->
-                <li class="menu-item active">
+                <li class="menu-item">
                   <a href="javascript:void(0)" class="menu-link menu-toggle">
                     <i class="menu-icon fa fa-store"></i>
                     <div data-i18n="store">المخزن</div>
@@ -533,14 +529,14 @@
                         <div data-i18n="categories"> الأصناف </div>
                       </a>
                       <ul class="menu-sub">
-                        <li class="menu-item">
+                        <li class="menu-item ">
                           <a href="Item-categories.html" class="menu-link">
 
                             <div data-i18n="Item-categories"> فئات الأصناف </div>
                           </a>
 
                         </li>
-                        <li class="menu-item ">
+                        <li class="menu-item">
                           <a href="Items.html" class="menu-link">
 
                             <div data-i18n="Items"> الاصناف </div>
@@ -557,13 +553,13 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="menu-item active">
+                    <li class="menu-item">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
                         <i class="menu-icon fas fa-box-open"></i>
                         <div data-i18n="store-report"> تقارير المخزن </div>
                       </a>
                       <ul class="menu-sub">
-                        <li class="menu-item ">
+                        <li class="menu-item">
                           <a href="transfer_report-store.html" class="menu-link">
 
                             <div data-i18n="transfer_report-store"> تقرير تحويلات المخازن
@@ -571,7 +567,7 @@
                           </a>
 
                         </li>
-                        <li class="menu-item ">
+                        <li class="menu-item">
                           <a href="store-report.html" class="menu-link">
 
                             <div data-i18n="store-report"> تقرير المخزون
@@ -588,7 +584,7 @@
                           </a>
 
                         </li>
-                        <li class="menu-item active">
+                        <li class="menu-item">
                           <a href="freequantity_report.html" class="menu-link">
 
                             <div data-i18n="freequantity_reportt">
@@ -705,7 +701,7 @@
                   </ul>
                 </li>
                 <!--money-->
-                <li class="menu-item">
+                <li class="menu-item ">
                   <a href="javascript:void(0)" class="menu-link menu-toggle">
                     <i class="menu-icon fas fa-file-invoice-dollar"></i>
                     <div data-i18n="audience">نظام نقاط البيع </div>
@@ -729,7 +725,7 @@
                       </a>
 
                     </li>
-                    <li class="menu-item ">
+                    <li class="menu-item">
                       <a href="Add-cashier.html" class="menu-link">
                         <i class="menu-icon fas fa-file-invoice-dollar"></i>
                         <div data-i18n="Add a cashier">
@@ -759,14 +755,14 @@
                   </ul>
                 </li>
                 <!-- المبيعات -->
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="javascript:void(0)" class="menu-link menu-toggle">
                     <i class="menu-icon fa-solid fa-shopping-cart"></i>
                     <div data-i18n="sales">المبيعات </div>
                   </a>
 
                   <ul class="menu-sub">
-                    <li class="menu-item">
+                    <li class="menu-item active">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
                         <i class="menu-icon fas fa-box-open"></i>
                         <div data-i18n="Customer category"> العملاء
@@ -1715,45 +1711,180 @@
           <!-- Content -->
 
           <div class="container-xxl flex-grow-1 container-p-y">
-            <div class="card comonent-hader-top">
-              <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
-                <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-3 align-items-center pt-2">
-                  <div class="col col-md-8 col-12  mb-md-4 mb-2 ">
-                    <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">   تقرير الكميات المجانية</span>  </strong>
-
-
+           
+              <div class="card comonent-hader-top">
+                <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
+                  <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted">
+                      فئات العملاء
+                    </span>
+                  </strong>
+                  <div class="row justify-content-center mx-0 py-2 px-md-3 px-2">
+                    <!--item-->
+                    <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
+                      <div class="card h-100">
+                        <div class="row h-100">
+                          <div class="col-sm-5 col-12">
+                            <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                              <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
+                                alt="add-new-roles" width="83" />
+                            </div>
+                          </div>
+                          <div class="col-sm-7 col-12">
+                            <div class="card-body text-sm-end text-center ps-sm-0">
+                              <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
+                                اضافة 
+                              </button>
+                              <p class="mb-0 mt-1">
+                                Add Customer-category. data , if it does not exist
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--item-->
                   </div>
-        
                 </div>
-                
               </div>
-            
-           </div>
-           <div class="card comonent-hader-top p-2 mt-4 ">
-            
-            <!--/ Column Search -->
-            <div class="card">
-              <div class="btn-group">
+              <div class="card comonent-hader-top p-2 mt-4">
+
                 <div class="table-responsive text-nowrap rounded mt-4">
-                <table class="datatables-basic dt-column-search table table">
-                  <thead class="table-light">
-                    <tr>
-                      <th>اسم الصنف</th>
-                      <th> اسم المخزن</th>
-                      <th> اللشد</th>
-                      <th> من تاريخ</th>
-                    <th>الى تاريخ</th>
-                    </tr>
-                  </thead>
-                </table>
+                  <table class="table table-bordered table-hover rounded text-center">
+                    <thead class="table-light">
+                      <tr class="fw-bold">
+                        <th class="fw-bold">التسلسل</th>
+
+                       
+                        <th class="fw-bold"> اسم الفئة </th>
+                       
+
+                        <th class="fw-bold"> Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <tr>
+                        <td>  1 </td>
+                        <td> 123456</td>
+                       
+                    
+                        <td class="d-flex justify-content-center">
+                          <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
+                            data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i
+                              class="ti ti-pencil  fs-4"></i> </a>
+
+                          <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                            href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
+                            data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
+
+
+                        </td>
+                      </tr>
+
+
+                    </tbody>
+                  </table>
+                </div>
+              
+            </div>
+            
+          </div>
+         
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel">  اضافة فئة العملاء</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="row component-form pt-2 mx-0">
+                    <div class="col-12 mb-3">
+                      <label class="form-label" for="username">  اسم الفئة <span class="start-form">*</span></label>
+                      <input type="text" id="username" class="form-control" placeholder="  اسم الفئة" />
+                    </div>
+                    <div class="col-12  mb-3">
+                      <label for="Bond-type" class="form-label">
+                          رقم الحساب<span class="start-form">*</span></label>
+  
+                      <select id="Bond-type" class="select2 form-select" data-allow-clear="true">
+                        <option value="AK"> رقم الحساب</option>
+                        <option value="HI">كفته دجاج </option>
+                      </select>
+                    </div>
+               
+      
+                    
+                    <div class="col-12 col-lg-12 mt-2">
+                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+                    </div>
+                  </form>
+                  
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- edit Hardware Modal -->
+          <div class="modal fade " id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+              <div class="modal-content p-3 p-md-3">
+                <div class="modal-header px-0">
+                  <h6 class="modal-title fs-4 fw-bold text-tilte-b">   تعديل بيانات فئات العملاء</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-0">
+                  <form class="row component-form pt-2 mx-0">
+                    <div class="col-12 mb-3">
+                      <label class="form-label" for="username">  اسم الفئة <span class="start-form">*</span></label>
+                      <input type="text" id="username" class="form-control" placeholder="  اسم الفئة" />
+                    </div>
+                    <div class="col-12  mb-3">
+                      <label for="Bond-type1" class="form-label">
+                          رقم الحساب<span class="start-form">*</span></label>
+  
+                      <select id="Bond-type1" class="select2 form-select" data-allow-clear="true">
+                        <option value="AK"> رقم الحساب</option>
+                        <option value="HI">كفته دجاج </option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-lg-12 mt-2">
+                      <button type="submit" class="btn btn-primary  waves-effect waves-light">تعديل</button>
+                    </div>
+                  </form>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- delet Modal -->
+          <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
+              <div class="modal-content p-1 p-md-3">
+                <button type="button" class="btn-close btn-pinned" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body text-center">
+                  <h3 class="role-title mb-2 fs-5">
+                    هل انت متاكد من حذف العنصر؟
+                  </h3>
+
+                  <div class="col-11 col-lg-12 mb-3">
+                    <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
+                    <button type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
+                  </div>
+
+
                 </div>
               </div>
             </div>
-           
           </div>
-          </div>
-          
-          <!-- Footer -->
+          <!-- Button to trigger the first modal -->
+
+  <!-- Footer -->
           <footer class="content-footer footer bg-footer-theme">
             <div class="container-xxl">
               <div
@@ -1868,13 +1999,12 @@
   <script src="./assets/js/forms-selects.js"></script>
   <script src="./assets/vendor/js/chart.js"></script>
   <script src="./assets/js/dashboards-crm.js"></script>
+  <script src="./assets/vendor/js/accordion.js"></script>
   <script src="./assets/js/app-calendar-events.js"></script>
   <script src="./assets/js/app-calendar.js"></script>
   <script src="./assets/js/forms-extras.js"></script>
   <script src="./assets/js/forms-editors.js"></script>
-  <script src="./assets/vendor/js/accordion.js"></script>
-  <script src="./assets/js/tables-datatables-advanced.js"></script><!--مسول عن داتا-->
-  <script src="./assets/js/tables-datatables-basic.js"></script>
+  <script src="./assets/js/charts-chartjs.js"></script>
 
 </body>
 

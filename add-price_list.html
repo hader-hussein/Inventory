@@ -536,7 +536,7 @@
                           </a>
 
                         </li>
-                        <li class="menu-item active">
+                        <li class="menu-item">
                           <a href="Items.html" class="menu-link">
 
                             <div data-i18n="Items"> الاصناف </div>
@@ -743,7 +743,7 @@
 
                     </li>
                     <li class="menu-item ">
-                      <a href="Inquiry-quantitieshtml" class="menu-link">
+                      <a href="Inquiry-quantities.html" class="menu-link">
                         <i class="menu-icon fas fa-file-invoice-dollar"></i>
                         <div data-i18n="Inquiry-quantities">
 
@@ -1779,7 +1779,7 @@
                   </div>
                   <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
 
-                    <table class="table table-bordered table-hover rounded " id="my_table" >
+                    <table class="table table-bordered table-hover rounded tabel-table" id="my_table" >
                       <thead class="table-light">
                         <tr class="fw-bold">
                           <th class="fw-bold">التسلسل</th>
@@ -1796,7 +1796,7 @@
                       
                           <td>  1</td>
                     
-                          <td>  
+                          <td style="width: 50%;">  
                              <input type="text"class="form-control">
                           </td>
                           <td> 
@@ -1819,6 +1819,34 @@
                           <td class="d-flex">
                             <button  type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
                             <button type="button" class="button btn btn-primary add_another" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                      
+                          <td>  1</td>
+                    
+                          <td style="width: 50%;">  
+                             <input type="text"class="form-control">
+                          </td>
+                          <td> 
+                          
+                              <select id="select-2" class="form-select">
+                                <option value="AK"> SIZE</option>
+                                <option value="HI">1</option>
+                                <option value="CA">1</option>
+                                <option value="NV">1</option>
+                                <option value="OR">1</option>
+                            
+                              </select>
+                          
+                          
+                          </td>
+                          <td>
+                            <input type="text"class="form-control">
+                          </td>
+                        
+                          <td class="d-flex">
+                            <button  type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
                           </td>
                         </tr>
                       </tbody>

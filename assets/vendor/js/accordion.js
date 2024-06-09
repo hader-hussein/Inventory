@@ -37,6 +37,24 @@ function optionCheck() {
    }
 }
 /************************ */
+$('.tabel-table').on('keydown','tr td',function (e) {
+    var keyCode = e.keyCode;
+    if (keyCode !== 9) return;
+
+    var $this = $(this),
+        $lastTr = $('tr:last', $('.tabel-table')),
+        $lastTd = $('td:last', $lastTr);
+
+    
+    if (($(e.target).closest('td')).is($lastTd)) {
+     
+
+        $lastTr.after($lastTr.clone());
+      
+    }
+    
+});
+
 function addField(n)
 {
     var tr = n.parentNode.parentNode.cloneNode(true);
@@ -55,10 +73,12 @@ function addFieldt(n,index)
 }
 function addFieldtow(n,index)
 {
-    var tr = n.parentNode.parentNode.cloneNode(true);
-    document.getElementById('tb3').appendChild(tr);
-    var removeButton = tr.getElementsByTagName("button")[1];
-    removeButton.parentNode.removeChild(removeButton);
+        var tr = n.parentNode.parentNode.cloneNode(true);
+        document.getElementById('tb3').appendChild(tr);
+        var removeButton = tr.getElementsByTagName("button")[1];
+        removeButton.parentNode.removeChild(removeButton);
+    
+ 
   
 }
 function readURL(input) {

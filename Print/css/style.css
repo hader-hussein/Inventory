@@ -194,5 +194,19 @@ width: 0px;
     justify-content: space-between;
  }
    /**********************/
-   
- 
+   .table-table{
+    padding-top: 20px;
+   }
+   .table-table td:nth-child(odd){
+    background-color: #14aae2 !important;
+    color: #fff;
+  }
+  .table-footer tr td{
+background-color: #fff;
+color: #000;
+font-size: 16px;
+vertical-align: top
+  }
+  .tr-back td{
+background-color: #14aae2!important;
+  }
