@@ -178,11 +178,12 @@ width: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px 10px;
+    
  }
- .content-content  ,.component-signature {
+ .content-content  ,.component-signature ,.component-signature-rec{
     padding-top: 25px;
  }
- .component-signature .sign{
+ .component-signature .sign,.component-signature-rec .sign{
     color: #000;
     font-size: 12px;
     font-weight: 600;
@@ -191,6 +192,11 @@ width: 0px;
  .component-signature{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+ }
+ .component-signature-rec{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
  }
    /**********************/
@@ -209,4 +215,22 @@ vertical-align: top
   }
   .tr-back td{
 background-color: #14aae2!important;
+  }
+  .table th{
+    color: #000;
+    font-weight: 800;
+  }
+  .component-recript{
+    border: 2px dashed #eee;
+    padding: 4px;
+    margin: 4px;
+  }
+  .row-rec{
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
   }

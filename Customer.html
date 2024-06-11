@@ -1809,14 +1809,250 @@
           <!-- edit Hardware Modal -->
           <div class="modal fade " id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
             aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
               <div class="modal-content p-3 p-md-3">
                 <div class="modal-header px-0">
                   <h6 class="modal-title fs-4 fw-bold text-tilte-b">   تعديل بيانات  العميل</h6>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-0">
-                  
+                  <div class="accordion from-cllapse" id="accordionExample">
+
+                    <form class="form-content  row mx-0">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                               بيانات العميل
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="row mx-0 pt-2">
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="id-customer" class="form-label">رمز العميل<span class="start-form">*</span></label>
+                                    <input type="text" class="form-control" id="id-customer" placeholder=" رمز العميل">
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="Membership-customer" class="form-label"> رقم العضوية<span class="start-form">*</span></label>
+                                    <input type="text" class="form-control" id="Membership-customer" placeholder="  رقم العضوية">
+                                  </div>
+                                  
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="select2Basic-2" class="form-label">الفئة  </label>
+                                    
+                                    <select id="select2Basic-2" class="select2 form-select" data-allow-clear="true">
+                                      <option value="LETTER">الفئة  </option>
+                                      <option value="VIDEO">الوطنية </option>
+                                      <option value="PHOTO">الدوحة </option>
+                                      <option value="SI">الاخوين </option>
+                                      <option value="CERTIFICATE">مراعى</option>
+                                      <option value="OTHER">نادك</option>
+                                    </select>
+                                   
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="exampleFormControlInput1" class="form-label">اسم العميل   <span class="start-form">*</span></label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="اسم العميل   ">
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="example-email" class="form-label">  البريد الاكترونى <span class="start-form">*</span></label>
+                                    <input type="email" class="form-control" id="example-email" placeholder="    البريد الاكترونى">
+                                  </div>
+                                
+                               
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="example-phone" class="form-label"> الجوال  <span class="start-form">*</span> </label>
+                                    <input type="text" class="form-control" id="example-phone" placeholder=" الجوال ">
+                                  </div>
+                              
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="exampleForm-fax" class="form-label"> Fax No <span class="start-form">*</span></label>
+                                    <input type="text" class="form-control" id="exampleForm-fax" placeholder=" Fax No ">
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="exampleForm-Editorial" class="form-label"> الرصيد الافتتاحي <span class="start-form">*</span></label>
+                                    <input type="number" class="form-control" id="exampleForm-Editorial" placeholder=" الرصيد الافتتاحي" >
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="exampleForm-Limit " class="form-label"> حد المديونية<span class="start-form">*</span></label>
+                                    <input type="number" class="form-control" id="exampleForm-Limit " placeholder="  حد المديونية" >
+                                  </div>
+                                
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="exampleForm-ac" class="form-label">  
+                                      فتره المديونية
+                                      </label>
+                                    <input type="date" class="form-control" id="exampleForm-ac" placeholder=" فتره المديونية">
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="exampleForm-commercial" class="form-label"> السجل التجارى<span class="start-form">*</span></label>
+                                    <input type="text" class="form-control" id="exampleForm-commercial" placeholder="السجل التجارى">
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="exampleTaxNumber" class="form-label"> الرقم الضريبى<span class="start-form">*</span></label>
+                                    <input type="text" class="form-control" id="exampleTaxNumber" placeholder=" الرقم الضريبى">
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="select2Basic-deceont" class="form-label"> المنطقة </label>
+                                   
+                                    <select id="select2Basic-deceont" class="select2 form-select" data-allow-clear="true">
+                                      <option value="LETTER">المنطقة</option>
+                                      <option value="VIDEO">حفر البطن </option>
+                                      <option value="PHOTO">الباحة </option>
+                                    
+                                    </select>
+                                   
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="select2Basic-City" class="form-label"> المدينة </label>
+                                    
+                                    <select id="select2Basic-City" class="select2 form-select" data-allow-clear="true">
+                                      <option value="LETTER">المدبنة</option>
+                                      <option value="VIDEO">حفر البطن </option>
+                                      <option value="PHOTO">الباحة </option>
+                                    
+                                    </select>
+                                   
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="exampleForm-commercial" class="form-label">  الحى<span class="start-form">*</span></label>
+                                    <input type="text" class="form-control" id="exampleForm-commercial" placeholder="الحى ">
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="selectItinerary" class="form-label"> خط السير </label>
+                                   
+                                    <select id="selectItinerary" class="select2 form-select" data-allow-clear="true">
+                                      <option value="LETTER">خط السير</option>
+                                      <option value="VIDEO">حفر البطن </option>
+                                      <option value="PHOTO">الباحة </option>
+                                    
+                                    </select>
+                                   
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="selectbranch" class="form-label"> اختيار الفرع</label>
+                                    
+                                    <select id="selectbranch" class="select2 form-select" data-allow-clear="true">
+                                      <option value="LETTER"> اختيار الفرع</option>
+                                      <option value="VIDEO">حفر البطن </option>
+                                      <option value="PHOTO">الباحة </option>
+                                    
+                                    </select>
+                                  
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="selectdelegate" class="form-label">  المندوب</label>
+                                    
+                                    <select id="selectdelegate" class="select2 form-select" data-allow-clear="true">
+                                      <option value="LETTER"> اختيار المندوب</option>
+                                      <option value="VIDEO">حفر البطن </option>
+                                      <option value="PHOTO">الباحة </option>
+                                    
+                                    </select>
+                                    
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="selectaccount-number" class="form-label">  رقم الحساب </label>
+                                   
+                                    <select id="selectaccount-number" class="select2 form-select" data-allow-clear="true">
+                                      <option value="LETTER"> اختيار رقم الحساب</option>
+                                      <option value="VIDEO">حفر البطن </option>
+                                      <option value="PHOTO">الباحة </option>
+                                    
+                                    </select>
+                                    
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="example-rival" class="form-label">خصم<span class="start-form">*</span></label>
+                                    <div class="d-flex align-items-start">
+                                      <input type="text" class="form-control" id="example-rival" placeholder=" خصم">
+                                      <div class="">
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                          <label class="form-check-label" for="flexRadioDefault1">
+                                            نسبة
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                               قيمة
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                  <div class="mb-3 col-md-4 col-12">
+                                    <label for="exampleForm-remarks" class="form-label"> الملاحظات </label>
+                                    <textarea class="form-control" id="exampleForm-remarks" placeholder=" الملاحظات" rows="1"></textarea>
+                                  </div>
+                                </div>
+                             </div>
+                          </div>
+                        </div>
+                         <!--item-->
+                         <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              المنطقة/ الفرع
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <div class="component-map row mx-0 pt-2 align-items-end">
+                               <div class="col-md-12 col-12 mb-3">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14944375.392967016!2d55.741555192601474!3d23.870848067872135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e7b33fe7952a41%3A0x5960504bc21ab69b!2z2KfZhNiz2LnZiNiv2YrYqQ!5e0!3m2!1sar!2seg!4v1718021209550!5m2!1sar!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                               </div>
+                                <div class="mb-3 col-md-4 col-12">
+                                    
+                                    <label for="map_deceont" class="form-label"> المنطقة </label>
+      
+                                    <input type="text" placeholder="المنطقة" name="map_deceont" class="form-control" id="map_deceont">
+                                </div>
+                                 
+                                <div class="mb-3 col-md-4 col-12">
+                                    
+                                  <label for="map_radius" class="form-label"> نصف القطر </label>
+      
+                                  <input type="text" placeholder="نصف القطر" name="radius" class="form-control" id="map_radius">
+                                </div>
+                                <div class="mb-3 col-md-4 col-12">
+                                  <label for="Latitude" class="form-label">  خط العرض </label>
+      
+                                  <input type="text" placeholder=" خط العرض" name="radius" class="form-control" id="Latitude">
+                                </div>
+                                <div class="mb-3 col-md-4 col-12">
+                                  <label for="Latitude" class="form-label">  خط الطول </label>
+      
+                                  <input type="text" placeholder=" خط الطول" name="radius" class="form-control" id="Latitude">
+                                </div>
+                                <div class="mb-3 col-md-4 col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                     تضمن المنطقة
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                         تضمن الفرع
+      
+                                     </label>
+                                  </div>
+        
+                                </div>
+        
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <button type="submit" class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">تعديل</button>
+                        </div>
+                    </form>
+                  </div>
 
                 </div>
 
