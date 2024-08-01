@@ -45,7 +45,6 @@
   <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
   <link rel="stylesheet" href="./assets/vendor/libs/quill/editor.css" />
 
-
   <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
   <link rel="stylesheet" href="./assets/vendor/css/pages/app-calendar.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -1800,7 +1799,7 @@
                   <form class="form-content row mx-0">
 
                     <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
-                      <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table">
+                      <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table" >
                         <thead class="table-light">
                           <tr class="fw-bold">
                             <th class="fw-bold">التسلسل</th>
@@ -1819,38 +1818,39 @@
 
                             </td>
                             <td style="width: 40%">
-                              <select id="select-3" class="form-select form-s">
-                                <option value="AK">SIZE</option>
-                                <option value="HI">1</option>
-                                <option value="CA">1</option>
-                                <option value="NV">1</option>
-                                <option value="OR">1</option>
-                              </select>
+                              <select class="form-select form-s">
+                                <option value="AK">Alaska</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="CA">California</option>
+                                <option value="NV">Nevada</option>
+                                <option value="OR">Oregon</option>
+                                <option value="WA">Washington</option>
+                            </select>
+                           
                             </td>
                            
                             <td class="d-flex">
-                              <button type="button"
-                                class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
-                                title="حذف">
-                                <i class="ti ti-trash fs-4"></i>
-                              </button>
-                              <button type="button" class="button btn btn-primary add_another" value="Add another line"
-                                onclick="addField(this);">
+                              <button  type="button" class="bg-danger btn removeRowButton text-bg-danger  p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
+
+                              <button type="button" class="button btn btn-primary add_another addRowButton" value="Add another line">
                                 <i class="fa-solid fa-plus"></i>
                               </button>
                             </td>
                           </tr>
+                          
                         </tbody>
                       </table>
                     </div>
     
-                    <!--item-->
+                  
     
-                    <div>
-                      <button type="submit" class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">
-                        حفظ
-                      </button>
-                    </div>
+                   <div>
+                    <button type="submit" class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">
+                      حفظ
+                    </button>
+                   </div>
+                    
+                   
                   </form>
                 </div>
 
@@ -1889,7 +1889,7 @@
 
                             </td>
                             <td style="width: 40%">
-                              <select id="select-3" class="form-select form-s">
+                              <select id="select-3" class="form-select form-s select2">
                                 <option value="AK">SIZE</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -2059,6 +2059,64 @@
   <script src="./assets/js/forms-extras.js"></script>
   <script src="./assets/js/forms-editors.js"></script>
   <script src="./assets/js/charts-chartjs.js"></script>
+  <script>
+    $(document).ready(function() {
+        // تهيئة select2 للصف الأول
+        // $('#tbl tr:first select').select2({
+        //     placeholder: 'اختر عنصرًا',
+        //     allowClear: false
+        // });
+
+        // دالة لإضافة صف جديد إلى الجدول
+        function addField() {
+            // نسخ الصف الأول
+            var tr = $('#tbl tr:first').clone();
+
+            // تحديث رقم التسلسل في الصف المستنسخ
+            var newIndex = $('#tbl tr').length + 1;
+            tr.find('td:first').text(newIndex);
+
+            // إعادة تعيين المدخلات والقيم
+            tr.find('input').val('');
+            tr.find('select').val(null).trigger('change');
+
+            // إعادة تطبيق select2 على العنصر الجديد
+            tr.find('select').select2({
+                placeholder: 'اختر عنصرًا',
+                allowClear: false
+            });
+
+            // إزالة زر الإضافة من الصف المستنسخ
+            tr.find('.addRowButton').remove();
+
+            // إضافة الصف الجديد إلى الجدول
+            $('#tbl').append(tr);
+        }
+
+        // دالة لحذف الصف
+        function removeField(button) {
+            button.closest('tr').remove();
+            updateSequenceNumbers();
+        }
+
+        // دالة لتحديث أرقام التسلسل
+        function updateSequenceNumbers() {
+            $('#tbl tr').each(function(index, tr) {
+                $(tr).find('td:first').text(index + 1);
+            });
+        }
+
+        // مستمع للنقر على زر الإضافة
+        $('#tbl').on('click', '.addRowButton', function() {
+            addField();
+        });
+
+        // مستمع للنقر على زر الحذف
+        $('#tbl').on('click', '.removeRowButton', function() {
+            removeField($(this));
+        });
+    });
+</script>
 
 </body>
 

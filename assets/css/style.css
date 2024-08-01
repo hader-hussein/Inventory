@@ -591,9 +591,9 @@ color: #dbdade !important;
   display: none;
 }
 .select2-container--default{
-top:0px !important;
-bottom: 100px !important;
-z-index: 10000;
+/* top:0px !important;
+bottom: 100px !important; */
+z-index: 10000 !important;
 }
 .light-style .select2-dropdown {
    

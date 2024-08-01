@@ -55,22 +55,42 @@ $('.tabel-table').on('keydown','tr td',function (e) {
     
 });
 
-function addField(n)
-{
-    var tr = n.parentNode.parentNode.cloneNode(true);
-    document.getElementById('tbl').appendChild(tr);
-    var removeButton = tr.getElementsByTagName("button")[1];
-    removeButton.parentNode.removeChild(removeButton);
+// $(document).ready(function() {
+//     $('.select2').select2();
+    
+//   });
+
+//   function addField(n) {
+//     var tr = n.parentNode.parentNode.cloneNode(true);
+    
+//     var rows = document.querySelectorAll('#tbl tr');
+//     var newIndex = rows.length + 1;
+//     tr.querySelector('td').textContent = newIndex; 
+    
   
-}
+//    var addButton = tr.querySelector("button.btn-primary");
+//    addButton.parentNode.removeChild(addButton);
+   
+   
+
+   
+//    document.getElementById('tbl').appendChild(tr);
+
+// }
+
+  
 function addFieldt(n,index)
 {
     var tr = n.parentNode.parentNode.cloneNode(true);
     document.getElementById('tb2').appendChild(tr);
     var removeButton = tr.getElementsByTagName("button")[1];
     removeButton.parentNode.removeChild(removeButton);
+   
+
+  
   
 }
+
 function addFieldtow(n,index)
 {
         var tr = n.parentNode.parentNode.cloneNode(true);
@@ -113,5 +133,60 @@ function readURL(input) {
             $(this).closest('tr').remove();
          });
      });
-    
+     $(document).ready(function() {
+        // تهيئة select2 للصف الأول
+        // $('#tbl tr:first select').select2({
+        //     placeholder: 'اختر عنصرًا',
+        //     allowClear: false
+        // });
+
+        // دالة لإضافة صف جديد إلى الجدول
+        function addField() {
+            // نسخ الصف الأول
+            var tr = $('#tbl tr:first').clone();
+
+            // تحديث رقم التسلسل في الصف المستنسخ
+            var newIndex = $('#tbl tr').length + 1;
+            tr.find('td:first').text(newIndex);
+
+            // إعادة تعيين المدخلات والقيم
+            tr.find('input').val('');
+            tr.find('select').val(null).trigger('change');
+
+            // إعادة تطبيق select2 على العنصر الجديد
+            tr.find('select').select2({
+                placeholder: 'اختر عنصرًا',
+                allowClear: false
+            });
+
+            // إزالة زر الإضافة من الصف المستنسخ
+            tr.find('.addRowButton').remove();
+
+            // إضافة الصف الجديد إلى الجدول
+            $('#tbl').append(tr);
+        }
+
+        // دالة لحذف الصف
+        function removeField(button) {
+            button.closest('tr').remove();
+            updateSequenceNumbers();
+        }
+
+        // دالة لتحديث أرقام التسلسل
+        function updateSequenceNumbers() {
+            $('#tbl tr').each(function(index, tr) {
+                $(tr).find('td:first').text(index + 1);
+            });
+        }
+
+        // مستمع للنقر على زر الإضافة
+        $('#tbl').on('click', '.addRowButton', function() {
+            addField();
+        });
+
+        // مستمع للنقر على زر الحذف
+        $('#tbl').on('click', '.removeRowButton', function() {
+            removeField($(this));
+        });
+    });
     
