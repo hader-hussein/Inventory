@@ -1,111 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table with Dropdown Search Box using select2</title>
-    <!-- تضمين مكتبة jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- تضمين مكتبة select2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <!-- تضمين مكتبة select2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Form with Select2</title>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include select2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <!-- Include select2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <style>
+    .form-content { margin: 20px; }
+    .accordion-item { margin-bottom: 20px; }
+  </style>
 </head>
 <body>
-
-<div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
-    <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table">
-        <thead class="table-light">
-            <tr class="fw-bold">
-                <th class="fw-bold">التسلسل</th>
-                <th class="fw-bold">اسم التكاليف الإضافية</th>
-                <th class="fw-bold">حساب التكاليف الإضافية</th>
-                <th class="fw-bold">إجراءات</th>
-            </tr>
-        </thead>
-        <tbody class="table-border-bottom-0" id="tbl">
-            <tr>
-                <td>1</td>
-                <td style="width: 40%">
-                    <input type="text" class="form-control" placeholder="اسم التكاليف الإضافية"/>
-                </td>
-                <td style="width: 40%">
-                    <select class="form-select form-s">
-                        <option value="AK">Alaska</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="CA">California</option>
-                        <option value="NV">Nevada</option>
-                        <option value="OR">Oregon</option>
-                        <option value="WA">Washington</option>
-                    </select>
-                </td>
-                <td>
-                    <button class="btn btn-danger removeRowButton">حذف</button>
-                    <button class="btn btn-primary addRowButton">إضافة</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<form class="form-content row mx-0">
+  <!-- Other form elements -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethere" aria-expanded="false" aria-controls="collapsethere">
+        تكاليف اضافية
+      </button>
+    </h2>
+    <div id="collapsethere" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="form-repeater">
+          <div id="repeater-list" data-repeater-list="group-a">
+            <div class="repeater-item col-lg-12" data-repeater-item>
+              <div class="row">
+                <div class="mb-3 col-lg-6 col-xl-5 col-12 mb-0">
+                  <label class="form-label" for="purpose">الغرض<span class="start-form">*</span></label>
+                  <select class="form-select select2">
+                    <option value="Designer">اختر التكلفة</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Tester">Tester</option>
+                    <option value="Manager">Manager</option>
+                  </select>
+                </div>
+                <div class="mb-3 col-lg-6 col-xl-5 col-12 mb-0">
+                  <label class="form-label" for="form-repeater-1-1">القيمة<span class="start-form">*</span></label>
+                  <input type="text" class="form-control" placeholder="القيمة" />
+                </div>
+                <div class="mb-3 col-lg-12 col-xl-2 col-12 d-flex align-items-center mb-0">
+                  <button class="btn btn-label-danger mt-4" data-repeater-delete type="button">
+                    <i class="ti ti-x ti-xs me-1"></i>
+                    <span class="align-middle">Delete</span>
+                  </button>
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <div class="mb-3">
+            <button id="add-new-row" class="btn btn-primary" type="button">
+              <i class="ti ti-plus me-1"></i>
+              <span class="align-middle">Add New</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">حفظ</button>
+  </div>
+</form>
 
 <script>
-    $(document).ready(function() {
-        // تهيئة select2 للصف الأول
-        // $('#tbl tr:first select').select2({
-        //     placeholder: 'اختر عنصرًا',
-        //     allowClear: false
-        // });
+  $(document).ready(function() {
+    // Initialize select2 for existing elements
+    $('.select2').select2();
 
-        // دالة لإضافة صف جديد إلى الجدول
-        function addField() {
-            // نسخ الصف الأول
-            var tr = $('#tbl tr:first').clone();
+    // Function to add a new row
+    function addNewRow() {
+      const newRow = `
+        <div class="repeater-item col-lg-12" data-repeater-item>
+          <div class="row">
+            <div class="mb-3 col-lg-6 col-xl-5 col-12 mb-0">
+              <label class="form-label" for="purpose">الغرض<span class="start-form">*</span></label>
+              <select class="form-select select2">
+                <option value="Designer">اختر التكلفة</option>
+                <option value="Developer">Developer</option>
+                <option value="Tester">Tester</option>
+                <option value="Manager">Manager</option>
+              </select>
+            </div>
+            <div class="mb-3 col-lg-6 col-xl-5 col-12 mb-0">
+              <label class="form-label" for="form-repeater-1-1">القيمة<span class="start-form">*</span></label>
+              <input type="text" class="form-control" placeholder="القيمة" />
+            </div>
+            <div class="mb-3 col-lg-12 col-xl-2 col-12 d-flex align-items-center mb-0">
+              <button class="btn btn-label-danger mt-4" data-repeater-delete type="button">
+                <i class="ti ti-x ti-xs me-1"></i>
+                <span class="align-middle">Delete</span>
+              </button>
+            </div>
+          </div>
+          <hr />
+        </div>`;
+      
+      // Append new row to the repeater list
+      $('#repeater-list').append(newRow);
 
-            // تحديث رقم التسلسل في الصف المستنسخ
-            var newIndex = $('#tbl tr').length + 1;
-            tr.find('td:first').text(newIndex);
+      // Reinitialize select2 for the new elements
+      $('.select2').select2();
 
-            // إعادة تعيين المدخلات والقيم
-            tr.find('input').val('');
-            tr.find('select').val(null).trigger('change');
+      // Attach delete event to the new delete button
+      $('[data-repeater-delete]').on('click', function() {
+        $(this).closest('[data-repeater-item]').remove();
+      });
+    }
 
-            // إعادة تطبيق select2 على العنصر الجديد
-            tr.find('select').select2({
-                placeholder: 'اختر عنصرًا',
-                allowClear: false
-            });
-
-            // إزالة زر الإضافة من الصف المستنسخ
-            tr.find('.addRowButton').remove();
-
-            // إضافة الصف الجديد إلى الجدول
-            $('#tbl').append(tr);
-        }
-
-        // دالة لحذف الصف
-        function removeField(button) {
-            button.closest('tr').remove();
-            updateSequenceNumbers();
-        }
-
-        // دالة لتحديث أرقام التسلسل
-        function updateSequenceNumbers() {
-            $('#tbl tr').each(function(index, tr) {
-                $(tr).find('td:first').text(index + 1);
-            });
-        }
-
-        // مستمع للنقر على زر الإضافة
-        $('#tbl').on('click', '.addRowButton', function() {
-            addField();
-        });
-
-        // مستمع للنقر على زر الحذف
-        $('#tbl').on('click', '.removeRowButton', function() {
-            removeField($(this));
-        });
+    // Add new row on button click
+    $('#add-new-row').on('click', function() {
+      addNewRow();
     });
-</script>
 
+    // Attach delete event to existing delete buttons
+    $('[data-repeater-delete]').on('click', function() {
+      $(this).closest('[data-repeater-item]').remove();
+    });
+  });
+</script>
 </body>
 </html>
+
