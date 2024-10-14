@@ -534,3 +534,14 @@ z-index: 10000 !important;
   padding-right: 0.75rem;
   padding-left: 0.875rem;
 }
+[dir=ltr] .menu-horizontal .menu-item .menu-link {
+  padding: 0.5rem 0.375rem !important;
+}
+[dir=rtl] .menu-horizontal .menu-item .menu-link {
+  padding: 0.5rem 0.375rem;
+}
+@media (min-width: 1200px) {
+  [dir=ltr] .layout-horizontal .bg-menu-theme .menu-inner > .menu-item:not(:last-child) {
+      margin-right: 1.125rem;
+  }
+}
