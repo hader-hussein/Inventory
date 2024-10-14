@@ -1798,28 +1798,31 @@
                   </strong>
                   <div class="row justify-content-center mx-0 py-2 px-md-3 px-2">
                     <!--item-->
-                    <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                      <div class="card h-100">
-                        <div class="row h-100">
-                          <div class="col-sm-5 col-12">
-                            <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
-                              <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
-                                alt="add-new-roles" width="83" />
+                    <div class="col-xl-6 col-lg-4 col-md-6 mb-md-0 mb-2">
+                      <div class="a-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="card h-100">
+                          <div class="row h-100">
+                            <div class="col-sm-5 col-12">
+                              <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                                <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
+                                  alt="add-new-roles" width="83" />
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-sm-7 col-12">
-                            <div class="card-body text-sm-end text-center ps-sm-0">
-                              <button data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
-                                اضافة فئة
-                              </button>
-                              <p class="mb-0 mt-1">
-                                Add Item-categories. data , if it does not exist
-                              </p>
+                            <div class="col-sm-7 col-12">
+                              <div class="card-body text-sm-end text-center ps-sm-0">
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                  class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
+                                  اضافة فئة
+                                </button>
+                                <p class="mb-0 mt-1">
+                                  Add Item-categories. data , if it does not exist
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      
                     </div>
                     <!--item-->
                   </div>
@@ -1829,13 +1832,13 @@
 
                 <div class="row mx-0">
                   
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-sm-12 col-md-4">
                     <div id="DataTables_Table_1_filter" class="dataTables_filter w-100">
                       <label class="w-100 fw-medium">البحث:<input type="search" class="form-control w-100" placeholder="البحث.........." aria-controls="DataTables_Table_1"></label>
                     </div>
                   </div>
                 </div>
-                <div class="table-responsive text-nowrap rounded mt-4">
+                <div class="table-responsive text-nowrap rounded mt-2">
                   <table class="table table-bordered table-hover rounded text-center">
                     <thead class="table-light">
                       <tr class="fw-bold">
@@ -1855,7 +1858,7 @@
                         <td></td>
                         <td class="d-flex justify-content-center">
                           <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
-                            data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i
+                            data-bs-target="#edit-modal" data-bs-toggle="modal" title="تعديل"><i
                               class="ti ti-pencil  fs-4"></i> </a>
 
                           <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
@@ -1874,74 +1877,81 @@
             </div>
           </div>
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-md">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel">  اضافة فئة</h6>
+                  <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel">اضافة فئة</h6>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                  <form class="row component-form pt-2 mx-0">
-                    <div class="col-12 mb-3">
-                      <label class="form-label" for="username"> اسم الفئة <span class="start-form">*</span></label>
-                      <input type="text" id="username" class="form-control" placeholder=" اسم الفئة" />
+                <div class="modal-body pt-2">
+                  <form class="row component-form mx-0">
+                    <div class="col-12 mb-2">
+                      <label class="form-label" for="username-add">اسم الفئة <span class="start-form">*</span></label>
+                      <input type="text" id="username-add" class="form-control" placeholder="اسم الفئة" />
                     </div>
-                    <div class="col-12  mb-3">
-                      <label for="Bond-type" class="form-label">
-                         النوع<span class="start-form">*</span></label>
-  
-                      <select id="Bond-type" class="select2 form-select" data-allow-clear="true">
-                        <option value="AK">رئيسية</option>
-                        <option value="HI">الفرعية </option>
+                    <div class="col-12 mb-2">
+                      <label for="Bond-type-add" class="form-label">النوع <span class="start-form">*</span></label>
+                      <select id="Bond-type-add" class="Bond-type-add select2 form-select" data-allow-clear="true">
+                        <option value="رئيسية">رئيسية</option>
+                        <option value="الفرعية">الفرعية</option>
+                      </select>
+                    </div>
+                    <div id="sub-category-div-add" class="sub-category-div-add col-12 mb-2" style="display:none;">
+                      <label for="sub-category-add" class="form-label">اختر الفئة الرئيسية <span class="start-form">*</span></label>
+                      <select id="sub-category-add" class="select2 form-select" data-allow-clear="true">
+                        <option value="Sub1">الفئة الفرعية 1</option>
+                        <option value="Sub2">الفئة الفرعية 2</option>
+                        <option value="Sub3">الفئة الفرعية 3</option>
                       </select>
                     </div>
                     <div class="col-12 col-lg-12 mt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+                      <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
                     </div>
                   </form>
                 </div>
-
               </div>
             </div>
           </div>
-          <!-- edit Hardware Modal -->
-          <div class="modal fade " id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
-            aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md modal-dialog-centered">
-              <div class="modal-content p-3 p-md-3">
-                <div class="modal-header px-0">
-                  <h6 class="modal-title fs-4 fw-bold text-tilte-b"> تعديل بيانات</h6>
+          
+          <!-- Modal لتعديل الفئة -->
+          <div class="modal fade" id="edit-modal" aria-labelledby="editModalLabel" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h6 class="modal-title fs-4 fw-bold text-tilte-b">تعديل بيانات</h6>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body px-0">
-                  <form class="row component-form pt-2 mx-0">
-                    <div class="col-12 mb-3">
-                      <label class="form-label" for="username-1"> اسم الفئة <span class="start-form">*</span></label>
-                      <input type="text" id="username-1" class="form-control" placeholder=" اسم الفئة" />
+                <div class="modal-body pt-2">
+                  <form class="row component-form mx-0">
+                    <div class="col-12 mb-2">
+                      <label class="form-label" for="username-edit">اسم الفئة <span class="start-form">*</span></label>
+                      <input type="text" id="username-edit" class="form-control" placeholder="اسم الفئة" />
                     </div>
-                    <div class="col-12  mb-3">
-                      <label for="Bond-type-1" class="form-label">
-                         النوع<span class="start-form">*</span></label>
-  
-                      <select id="Bond-type-1" class="select2 form-select" data-allow-clear="true">
-                        <option value="AK">رئيسية</option>
-                        <option value="HI">الفرعية </option>
+                    <div class="col-12 mb-2">
+                      <label for="Bond-type-edit" class="form-label">النوع <span class="start-form">*</span></label>
+                      <select id="Bond-type-edit" class="Bond-type-edit select2 form-select" data-allow-clear="true">
+                        <option value="رئيسية">رئيسية</option>
+                        <option value="الفرعية">الفرعية</option>
                       </select>
                     </div>
-
+                    <div id="sub-category-div-edit" class="sub-category-div-edit col-12 mb-2" style="display:none;">
+                      <label for="sub-category-edit" class="form-label">اختر الفئة الرئيسية <span class="start-form">*</span></label>
+                      <select id="sub-category-edit" class="select2 form-select" data-allow-clear="true">
+                        <option value="Sub1">الفئة الفرعية 1</option>
+                        <option value="Sub2">الفئة الفرعية 2</option>
+                        <option value="Sub3">الفئة الفرعية 3</option>
+                      </select>
+                    </div>
                     <div class="col-12 col-lg-12 mt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">تعديل</button>
+                      <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
                     </div>
                   </form>
-
                 </div>
-
               </div>
             </div>
           </div>
+          
           <!-- delet Modal -->
           <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
@@ -1952,7 +1962,7 @@
                     هل انت متاكد من حذف العنصر؟
                   </h3>
 
-                  <div class="col-11 col-lg-12 mb-3">
+                  <div class="col-11 col-lg-12 mb-2">
                     <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
                     <button type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
                   </div>
@@ -2081,8 +2091,33 @@
   <script src="./assets/js/app-calendar-events.js"></script>
   <script src="./assets/js/app-calendar.js"></script>
   <script src="./assets/js/forms-extras.js"></script>
-  <script src="./assets/js/forms-editors.js"></script>
   <script src="./assets/js/charts-chartjs.js"></script>
+</div>
+
+<!-- JavaScript -->
+<script>
+  $(document).ready(function() {
+    $('.select2').select2();
+
+    // Function for Add Modal
+    $('#Bond-type-add').on('change', function() {
+      if ($(this).val() === 'الفرعية') {
+        $('#sub-category-div-add').show();
+      } else {
+        $('#sub-category-div-add').hide();
+      }
+    });
+
+    // Function for Edit Modal
+    $('#Bond-type-edit').on('change', function() {
+      if ($(this).val() === 'الفرعية') {
+        $('#sub-category-div-edit').show();
+      } else {
+        $('#sub-category-div-edit').hide();
+      }
+    });
+  });
+</script>
 
 </body>
 
