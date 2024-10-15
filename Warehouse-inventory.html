@@ -1792,29 +1792,31 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             <div class="card comonent-hader-top">
               <div class="card-body py-2 px-md-0 px-2 card-widget-separator">
-                    <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">  شاشة الجرد</span>  </strong>
+                    <strong class="py-md-2 px-md-2 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">  شاشة الجرد</span>  </strong>
 
                     <div class="row justify-content-center mx-0  py-3 px-md-3 px-2">
                       <!--item-->
-                        <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                              
-                              <div class="card h-100">
-                                <div class="row h-100">
-                                  <div class="col-sm-5 col-12">
-                                    <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
-                                      <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="83">
+                        <div class="col-xl-6 col-lg-4 col-md-6 mb-md-0 mb-2">
+                              <a href="add-Warehouse-inventory.html" class="a-link">
+                                <div class="card h-100">
+                                  <div class="row h-100">
+                                    <div class="col-sm-5 col-12">
+                                      <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                                        <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="83">
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div class="col-sm-7 col-12">
-                                    <div class="card-body text-sm-end text-center ps-sm-0">
-                                      <a href="add-Warehouse-inventory.html" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة  طلب 
-                                      </a>
-                                      <p class="mb-0 mt-1">Add Warehouse-inventory data , if it does not exist</p>
+                                    <div class="col-sm-7 col-12">
+                                      <div class="card-body text-sm-end text-center ps-sm-0">
+                                        <button href="add-Warehouse-inventory.html" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
+                                      اضافة  طلب 
+                                        </button>
+                                        <p class="mb-0 mt-1">Add Warehouse-inventory data , if it does not exist</p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </a>
+                             
                           
                         </div>
                       <!--item-->
@@ -1868,10 +1870,10 @@
           <!-- edit Hardware Modal -->
           <div class="modal fade " id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
             aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-dialog modal-xl">
               <div class="modal-content p-3 p-md-3">
                 <div class="modal-header px-0">
-                  <h6 class="modal-title fs-4 fw-bold text-tilte-b">  تعديل سلة الاسعار</h6>
+                  <h6 class="modal-title fs-4 fw-bold text-tilte-b">  تعديل  شاشة الجرد</h6>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-0">
@@ -1900,80 +1902,74 @@
                         <input type="text" class="form-control" id="example-Barcodes" placeholder=" الباركود" />
                       </div>
       
-                      <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
-                        <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table">
-                          <thead class="table-light">
-                            <tr class="fw-bold">
-                              <th class="fw-bold">التسلسل</th>
-                              <th class="fw-bold">اسم المنتج</th>
-      
-                              <th class="fw-bold">الحجم</th>
-                              <th class="fw-bold">الكمية الحالية</th>
-                              <th class="fw-bold">
-                                الكميه الحالية
-                                <br />
-                                وحدة صغرى
-                              </th>
-                              <th class="fw-bold">الكمية الفعلية</th>
-                              <th class="fw-bold">
-                                الكمية الفعلية
-                                <br />
-                                (وحدة صغرى)
-                              </th>
-                              <th class="fw-bold">فرق الكمية</th>
-                              <th class="fw-bold">فرق الكميه (وحده صغري)</th>
-      
-                              <th class="fw-bold">السعر</th>
-      
-                              
-                            </tr>
-                          </thead>
-                          <tbody class="table-border-bottom-0" id="tbl">
-                            <tr>
-                              <td>1</td>
-      
-                              <td style="width: 40%">
-                                <select id="select-2" class="form-select form-s">
-                                  <option value="AK">الاصناف</option>
-                                  <option value="HI">1</option>
-                                  <option value="CA">1</option>
-                                  <option value="NV">1</option>
-                                  <option value="OR">1</option>
-                                </select>
-                              </td>
-                              <td style="width: 40%">
-                                <select id="select-3" class="form-select form-s">
-                                  <option value="AK">SIZE</option>
-                                  <option value="HI">1</option>
-                                  <option value="CA">1</option>
-                                  <option value="NV">1</option>
-                                  <option value="OR">1</option>
-                                </select>
-                              </td>
-                              <td>
-                                <input type="text" class="form-control" />
-                              </td>
-                              <td><input type="text" class="form-control" /></td>
-                              <td><input type="text" class="form-control" /></td>
-                              <td><input type="text" class="form-control" /></td>
-                              <td><input type="text" class="form-control" /></td>
-                              <td><input type="text" class="form-control" /></td>
-      
-                              <td class="d-flex">
-                                <button type="button"
-                                  class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
-                                  title="حذف">
-                                  <i class="ti ti-trash fs-4"></i>
-                                </button>
-                                <button type="button" class="button btn btn-primary add_another" value="Add another line"
-                                  onclick="addField(this);">
-                                  <i class="fa-solid fa-plus"></i>
-                                </button>
-                              </td>
-                            </tr>
-                          </tbody>
+                      <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-4">
+                        <table class="table table-bordered table-hover rounded w-100 table-inv" id="myTable">
+                            <thead class="table-light">
+                                <tr class="fw-bold">
+                                    <th class="fw-bold">التسلسل</th>
+                                    <th class="fw-bold" style="width: 30%;">اسم المنتج</th>
+                                    <th class="fw-bold" style="width: 30%;">الحجم</th>
+                                    <th class="fw-bold">الكمية الحالية</th>
+                                    <th class="fw-bold">
+                                        الكميه الحالية
+                                        <br/>
+                                        (وحدة صغرى) 
+                                    </th>
+                                    <th class="fw-bold">الكمية الفعلية</th>
+                                    <th class="fw-bold">
+                                        الكمية الفعلية
+                                        <br/>
+                                        (وحدة صغرى)
+                                    </th>
+                                    <th class="fw-bold">فرق الكمية</th>
+                                    <th class="fw-bold">فرق الكميه
+                                      <br/>
+                                      (وحده صغري)</th>
+                                    <th class="fw-bold">السعر</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0 text-center" id="tableBody">
+                                <tr>
+                                    <td>1</td>
+                                    <td style="width: 40%">
+                                        <select class="form-select form-s select2">
+                                            <option value="AK">الاصناف</option>
+                                            <option value="HI">1</option>
+                                            <option value="CA">1</option>
+                                            <option value="NV">1</option>
+                                            <option value="OR">1</option>
+                                        </select>
+                                    </td>
+                                    <td style="width: 40%">
+                                        <select class="form-select form-s select2">
+                                            <option value="AK">SIZE</option>
+                                            <option value="HI">1</option>
+                                            <option value="CA">1</option>
+                                            <option value="NV">1</option>
+                                            <option value="OR">1</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td class="d-flex">
+                                        <button type="button"
+                                            class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                                            title="حذف">
+                                            <i class="ti ti-trash fs-4"></i>
+                                        </button>
+                                        <button type="button" class="button btn btn-primary add_another" value="Add another line" onclick="addFieldinv();">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
-                      </div>
+                    </div>
       
                       <!--item-->
       
@@ -2130,7 +2126,84 @@
   <script src="./assets/js/forms-extras.js"></script>
   <script src="./assets/js/forms-editors.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
-  
+  <script>
+    // Function to add a new row
+    function addFieldinv() {
+        var tableBody = document.getElementById("tableBody");
+        var rowCount = tableBody.rows.length + 1;
+
+        // Create a new row
+        var newRow = document.createElement("tr");
+
+        // Add content to the new row
+        newRow.innerHTML = `
+            <td>${rowCount}</td>
+            <td style="width: 40%">
+                <select class="form-select form-s select2">
+                    <option value="AK">الاصناف</option>
+                    <option value="HI">1</option>
+                    <option value="CA">1</option>
+                    <option value="NV">1</option>
+                    <option value="OR">1</option>
+                </select>
+            </td>
+            <td style="width: 40%">
+                <select class="form-select form-s select2">
+                    <option value="AK">SIZE</option>
+                    <option value="HI">1</option>
+                    <option value="CA">1</option>
+                    <option value="NV">1</option>
+                    <option value="OR">1</option>
+                </select>
+            </td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td class="d-flex">
+                <button type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
+                    <i class="ti ti-trash fs-4"></i>
+                </button>
+             
+            </td>
+        `;
+
+        // Append the new row to the table
+        tableBody.appendChild(newRow);
+
+        // Re-initialize select2 for the new elements
+        $('.select2').select2();
+
+        // Add delete functionality for the new row
+        newRow.querySelector('.btnDelete').addEventListener('click', function() {
+            newRow.remove();
+            updateRowNumbers();
+        });
+    }
+
+    // Function to update row numbers after deletion
+    function updateRowNumbers() {
+        var rows = document.querySelectorAll("#tableBody tr");
+        rows.forEach((row, index) => {
+            row.querySelector('td').innerText = index + 1;
+        });
+    }
+
+    // Initialize select2 for the existing rows on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        $('.select2').select2();
+
+        // Add delete functionality for the initial delete buttons
+        document.querySelectorAll('.btnDelete').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('tr').remove();
+                updateRowNumbers();
+            });
+        });
+    });
+</script>
 
 </body>
 

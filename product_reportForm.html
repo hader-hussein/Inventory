@@ -1791,9 +1791,9 @@
 
           <div class="container-xxl flex-grow-1 container-p-y">
             <div class="card comonent-hader-top">
-              <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
+              <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
                 <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-3 align-items-center pt-2">
-                  <div class="col col-md-8 col-12  mb-md-4 mb-2 ">
+                  <div class="col col-md-8 col-12  mb-md-2 px-1 mb-2 ">
                     <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">تقرير الاصناف</span>  </strong>
 
 
@@ -1818,10 +1818,18 @@
                     <div class="col-sm-7">
                       <form class="form-content  row mx-0" action="all-reports-product.html">
                         <div class="mb-3 col-md-12 col-12">
-                          <label for="exampleFormControlInput1" class="form-label">اسم الصنف </label>
-                          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="اسم الصنف   ">
+                          <label for="nem-item" class="form-label">اسم الصنف </label>
+                          <select id="nem-item" class="select2 form-select" data-allow-clear="true">
+                            <option value="LETTER">اختر اسم الصنف  </option>
+                            <option value="VIDEO">الوطنية </option>
+                            <option value="PHOTO">الدوحة </option>
+                            <option value="SI">الاخوين </option>
+                            <option value="CERTIFICATE">مراعى</option>
+                            <option value="OTHER">نادك</option>
+                          </select>
+
                         </div>
-                        <div class="mb-3 col-md-12 col-12">
+                        <div class="mb-3 col-md-6 col-12">
                           <label for="select2Basic-2" class="form-label">الفئة الرئيسية <span class="start-form">*</span></label>
                         
                           <select id="select2Basic-2" class="select2 form-select" data-allow-clear="true">
@@ -1834,11 +1842,11 @@
                           </select>
                         
                         </div>
-                        <div class="mb-3 col-md-12 col-12">
+                        <div class="mb-3 col-md-6 col-12">
                           <label for="select2Basic-percussion" class="form-label">الفئة الفرعية <span class="start-form">*</span></label>
                           
                           <select id="select2Basic" class="select2 form-select" data-allow-clear="true">
-                            <option value="LETTER">رضوى  </option>
+                            <option value="LETTER">اختر الفرعية  </option>
                             <option value="VIDEO">الوطنية </option>
                             <option value="PHOTO">الدوحة </option>
                             <option value="SI">الاخوين </option>

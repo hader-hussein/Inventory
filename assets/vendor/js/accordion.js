@@ -55,52 +55,7 @@ $('.tabel-table').on('keydown','tr td',function (e) {
     
 });
 
-// $(document).ready(function() {
-//     $('.select2').select2();
-    
-//   });
 
-//   function addField(n) {
-//     var tr = n.parentNode.parentNode.cloneNode(true);
-    
-//     var rows = document.querySelectorAll('#tbl tr');
-//     var newIndex = rows.length + 1;
-//     tr.querySelector('td').textContent = newIndex; 
-    
-  
-//    var addButton = tr.querySelector("button.btn-primary");
-//    addButton.parentNode.removeChild(addButton);
-   
-   
-
-   
-//    document.getElementById('tbl').appendChild(tr);
-
-// }
-
-  
-function addFieldt(n,index)
-{
-    var tr = n.parentNode.parentNode.cloneNode(true);
-    document.getElementById('tb2').appendChild(tr);
-    var removeButton = tr.getElementsByTagName("button")[1];
-    removeButton.parentNode.removeChild(removeButton);
-   
-
-  
-  
-}
-
-function addFieldtow(n,index)
-{
-        var tr = n.parentNode.parentNode.cloneNode(true);
-        document.getElementById('tb3').appendChild(tr);
-        var removeButton = tr.getElementsByTagName("button")[1];
-        removeButton.parentNode.removeChild(removeButton);
-    
- 
-  
-}
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -129,64 +84,227 @@ function readURL(input) {
          $("#my-table-tow").on('click','.btnDelete-to',function(){
             $(this).closest('tr').remove();
          });
-         $("#my_table-tow").on('click','.btnDelete-t',function(){
-            $(this).closest('tr').remove();
-         });
+        
      });
-     $(document).ready(function() {
-        // تهيئة select2 للصف الأول
-        // $('#tbl tr:first select').select2({
-        //     placeholder: 'اختر عنصرًا',
-        //     allowClear: false
-        // });
+  
+    // Function to add a new row
+function addField(button) {
+    // Get the table body
+    var table = document.getElementById("tbl");
 
-        // دالة لإضافة صف جديد إلى الجدول
-        function addField() {
-            // نسخ الصف الأول
-            var tr = $('#tbl tr:first').clone();
+    // Get the number of rows (for the sequence number)
+    var rowCount = table.rows.length;
 
-            // تحديث رقم التسلسل في الصف المستنسخ
-            var newIndex = $('#tbl tr').length + 1;
-            tr.find('td:first').text(newIndex);
+    // Create a new row
+    var newRow = table.insertRow();
 
-            // إعادة تعيين المدخلات والقيم
-            tr.find('input').val('');
-            tr.find('select').val(null).trigger('change');
+    // Add the sequence number cell
+    var cell1 = newRow.insertCell(0);
+    cell1.innerHTML = rowCount + 1;
 
-            // إعادة تطبيق select2 على العنصر الجديد
-            tr.find('select').select2({
-                placeholder: 'اختر عنصرًا',
-                allowClear: false
-            });
+    // Add the item select2 dropdown
+    var cell2 = newRow.insertCell(1);
+    cell2.style.width = "50%";
+    cell2.innerHTML = `
+        <select class="select2 form-select" data-allow-clear="true">
+            <option value="LETTER">1</option>
+            <option value="VIDEO">2</option>
+            <option value="PHOTO">3</option>
+            <option value="SI">4</option>
+            <option value="CERTIFICATE">5</option>
+            <option value="OTHER">6</option>
+        </select>
+    `;
 
-            // إزالة زر الإضافة من الصف المستنسخ
-            tr.find('.addRowButton').remove();
+    // Add the size select2 dropdown
+    var cell3 = newRow.insertCell(2);
+    cell3.innerHTML = `
+        <select class="form-select select2">
+            <option value="AK">SIZE</option>
+            <option value="HI">1</option>
+            <option value="CA">1</option>
+            <option value="NV">1</option>
+            <option value="OR">1</option>
+        </select>
+    `;
 
-            // إضافة الصف الجديد إلى الجدول
-            $('#tbl').append(tr);
-        }
+    // Add the quantity input
+    var cell4 = newRow.insertCell(3);
+    cell4.innerHTML = `<input type="text" class="form-control">`;
 
-        // دالة لحذف الصف
-        function removeField(button) {
-            button.closest('tr').remove();
-            updateSequenceNumbers();
-        }
+    // Add the action buttons (delete and add)
+    var cell5 = newRow.insertCell(4);
+    cell5.classList.add("d-flex");
+    cell5.innerHTML = `
+        <button type="button" class="bg-danger btn text-bg-danger btnDelete px-2 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
+            <i class="ti ti-trash fs-4"></i>
+        </button>
+       
+    `;
 
-        // دالة لتحديث أرقام التسلسل
-        function updateSequenceNumbers() {
-            $('#tbl tr').each(function(index, tr) {
-                $(tr).find('td:first').text(index + 1);
-            });
-        }
+    // Reinitialize select2 for the new fields
+    $('.select2').select2();
 
-        // مستمع للنقر على زر الإضافة
-        $('#tbl').on('click', '.addRowButton', function() {
-            addField();
-        });
+    // Add delete functionality to the delete button
+    var deleteButton = newRow.querySelector('.btnDelete');
+    deleteButton.onclick = function () {
+        table.deleteRow(newRow.rowIndex - 1);
+    };
+}
+   // Function to add a new row
+   function addFieldtow(button) {
+    // Get the table body
+    var table = document.getElementById("tb2");
 
-        // مستمع للنقر على زر الحذف
-        $('#tbl').on('click', '.removeRowButton', function() {
-            removeField($(this));
-        });
-    });
-    
+    // Get the number of rows (for the sequence number)
+    var rowCount = table.rows.length;
+
+    // Create a new row
+    var newRow = table.insertRow();
+
+    // Add the sequence number cell
+    var cell1 = newRow.insertCell(0);
+    cell1.innerHTML = rowCount + 1;
+
+    // Add the item select2 dropdown
+    var cell2 = newRow.insertCell(1);
+    cell2.style.width = "50%";
+    cell2.innerHTML = `
+        <select class="select2 form-select" data-allow-clear="true">
+            <option value="LETTER">1</option>
+            <option value="VIDEO">2</option>
+            <option value="PHOTO">3</option>
+            <option value="SI">4</option>
+            <option value="CERTIFICATE">5</option>
+            <option value="OTHER">6</option>
+        </select>
+    `;
+
+    // Add the size select2 dropdown
+    var cell3 = newRow.insertCell(2);
+    cell3.innerHTML = `
+        <select class="form-select select2">
+            <option value="AK">SIZE</option>
+            <option value="HI">1</option>
+            <option value="CA">1</option>
+            <option value="NV">1</option>
+            <option value="OR">1</option>
+        </select>
+    `;
+
+    // Add the quantity input
+    var cell4 = newRow.insertCell(3);
+    cell4.innerHTML = `<input type="text" class="form-control">`;
+
+    // Add the action buttons (delete and add)
+    var cell5 = newRow.insertCell(4);
+    cell5.classList.add("d-flex");
+    cell5.innerHTML = `
+        <button type="button" class="bg-danger btn text-bg-danger btnDelete p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
+            <i class="ti ti-trash fs-4"></i>
+        </button>
+       
+    `;
+
+    // Reinitialize select2 for the new fields
+    $('.select2').select2();
+
+    // Add delete functionality to the delete button
+    var deleteButton = newRow.querySelector('.btnDelete');
+    deleteButton.onclick = function () {
+        table.deleteRow(newRow.rowIndex - 1);
+    };
+}
+// Function to add a new row
+// Counter to ensure unique IDs for radio buttons
+var radioCounter = 1;
+
+// Function to add a new row
+function addFieldthere(button) {
+    // Get the table body
+    var table = document.getElementById("tb3");
+
+    // Get the number of rows (for the sequence number)
+    var rowCount = table.rows.length;
+
+    // Create a new row
+    var newRow = table.insertRow();
+
+    // Add the sequence number cell
+    var cell1 = newRow.insertCell(0);
+    cell1.innerHTML = rowCount + 1;
+
+    // Add the empty item code cell
+    var cell2 = newRow.insertCell(1);
+    cell2.innerHTML = '';
+
+    // Add the size select2 dropdown
+    var cell3 = newRow.insertCell(2);
+    cell3.innerHTML = `
+        <select class="form-select select2">
+            <option value="AK" selected>CHOOSE THE SIZE</option>
+            <option value="HI">1</option>
+            <option value="CA">1</option>
+            <option value="NV">1</option>
+            <option value="OR">1</option>
+        </select>
+    `;
+
+    // Add other input fields
+    var cell4 = newRow.insertCell(3);
+    cell4.innerHTML = `<input type="number" class="form-control">`;
+
+    var cell5 = newRow.insertCell(4);
+    cell5.innerHTML = `<input type="text" class="form-control">`;
+
+    var cell6 = newRow.insertCell(5);
+    cell6.innerHTML = `<input type="number" class="form-control">`;
+
+    var cell7 = newRow.insertCell(6);
+    cell7.innerHTML = `<input type="text" class="form-control">`;
+
+    var cell8 = newRow.insertCell(7);
+    cell8.innerHTML = `<input type="text" class="form-control">`;
+
+    var cell9 = newRow.insertCell(8);
+    cell9.innerHTML = `<input type="text" class="form-control">`;
+
+    var cell10 = newRow.insertCell(9);
+    cell10.innerHTML = `<input type="text" class="form-control">`;
+
+    // Assign unique IDs for radio buttons
+    var basicSizeId = `colla-basic-${radioCounter}`;
+    var subSizeId = `sub-size-${radioCounter}`;
+    radioCounter++;
+
+    var cell11 = newRow.insertCell(10);
+    cell11.innerHTML = `<input name="collap-type-${radioCounter}" class="form-check-input" type="radio" id="${basicSizeId}">`;
+
+    var cell12 = newRow.insertCell(11);
+    cell12.innerHTML = `<input name="collap-type-${radioCounter}" class="form-check-input" type="radio" id="${subSizeId}">`;
+
+    // Add the action buttons (delete and add)
+    var cell13 = newRow.insertCell(12);
+    cell13.classList.add("d-flex");
+    cell13.innerHTML = `
+        <button type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
+            <i class="ti ti-trash fs-4"></i>
+        </button>
+        
+    `;
+
+    // Reinitialize select2 for the new fields
+    $('.select2').select2();
+
+    // Add delete functionality to the delete button
+    var deleteButton = newRow.querySelector('.btnDelete-to');
+    deleteButton.onclick = function () {
+        table.deleteRow(newRow.rowIndex - 1);
+    };
+}
+// Reinitialize select2 for the new fields with a small delay
+setTimeout(function() {
+    $('.select2').select2();
+}, 100);  // Adjust the delay if necessary
+
+

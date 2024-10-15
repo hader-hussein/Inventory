@@ -1801,13 +1801,13 @@
             <div class="card comonent-hader-top">
               <div class="card-body py-2 px-md-0 px-2 card-widget-separator">
                 <div class="row mx-0 d-flex flex-wrap justify-content-between mb-3 align-items-center pt-2">
-                  <div class="col col-md-8 col-12 mb-md-4 mb-2">
+                  <div class="col col-md-8 col-12 mb-md-2 mb-2">
                     <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">
                          شاشة الجرد
                     </span>
                     </strong>
                   </div>
-                  <div class="col text-end">
+                  <div class="col text-end px-3">
                     <a href="Warehouse-inventory.html" class="btn btn-primary waves-effect waves-light btn-add">
                       رجوع</a>
                   </div>
@@ -1844,80 +1844,74 @@
                   <input type="text" class="form-control" id="example-Barcodes" placeholder=" الباركود" />
                 </div>
 
-                <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
-                  <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table">
-                    <thead class="table-light">
-                      <tr class="fw-bold">
-                        <th class="fw-bold">التسلسل</th>
-                        <th class="fw-bold">اسم المنتج</th>
-
-                        <th class="fw-bold">الحجم</th>
-                        <th class="fw-bold">الكمية الحالية</th>
-                        <th class="fw-bold">
-                          الكميه الحالية
-                          <br />
-                          وحدة صغرى
-                        </th>
-                        <th class="fw-bold">الكمية الفعلية</th>
-                        <th class="fw-bold">
-                          الكمية الفعلية
-                          <br />
-                          (وحدة صغرى)
-                        </th>
-                        <th class="fw-bold">فرق الكمية</th>
-                        <th class="fw-bold">فرق الكميه (وحده صغري)</th>
-
-                        <th class="fw-bold">السعر</th>
-
-                        
-                      </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0" id="tbl">
-                      <tr>
-                        <td>1</td>
-
-                        <td style="width: 40%">
-                          <select id="select-2" class="form-select form-s">
-                            <option value="AK">الاصناف</option>
-                            <option value="HI">1</option>
-                            <option value="CA">1</option>
-                            <option value="NV">1</option>
-                            <option value="OR">1</option>
-                          </select>
-                        </td>
-                        <td style="width: 40%">
-                          <select id="select-3" class="form-select form-s">
-                            <option value="AK">SIZE</option>
-                            <option value="HI">1</option>
-                            <option value="CA">1</option>
-                            <option value="NV">1</option>
-                            <option value="OR">1</option>
-                          </select>
-                        </td>
-                        <td>
-                          <input type="text" class="form-control" />
-                        </td>
-                        <td><input type="text" class="form-control" /></td>
-                        <td><input type="text" class="form-control" /></td>
-                        <td><input type="text" class="form-control" /></td>
-                        <td><input type="text" class="form-control" /></td>
-                        <td><input type="text" class="form-control" /></td>
-
-                        <td class="d-flex">
-                          <button type="button"
-                            class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
-                            title="حذف">
-                            <i class="ti ti-trash fs-4"></i>
-                          </button>
-                          <button type="button" class="button btn btn-primary add_another" value="Add another line"
-                            onclick="addField(this);">
-                            <i class="fa-solid fa-plus"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
+                <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-4">
+                  <table class="table table-bordered table-hover rounded w-100 table-inv" id="myTable">
+                      <thead class="table-light">
+                          <tr class="fw-bold">
+                              <th class="fw-bold">التسلسل</th>
+                              <th class="fw-bold" style="width: 30%;">اسم المنتج</th>
+                              <th class="fw-bold" style="width: 30%;">الحجم</th>
+                              <th class="fw-bold">الكمية الحالية</th>
+                              <th class="fw-bold">
+                                  الكميه الحالية
+                                  <br/>
+                                  (وحدة صغرى) 
+                              </th>
+                              <th class="fw-bold">الكمية الفعلية</th>
+                              <th class="fw-bold">
+                                  الكمية الفعلية
+                                  <br/>
+                                  (وحدة صغرى)
+                              </th>
+                              <th class="fw-bold">فرق الكمية</th>
+                              <th class="fw-bold">فرق الكميه
+                                <br/>
+                                (وحده صغري)</th>
+                              <th class="fw-bold">السعر</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody class="table-border-bottom-0 text-center" id="tableBody">
+                          <tr>
+                              <td>1</td>
+                              <td style="width: 40%">
+                                  <select class="form-select form-s select2">
+                                      <option value="AK">الاصناف</option>
+                                      <option value="HI">1</option>
+                                      <option value="CA">1</option>
+                                      <option value="NV">1</option>
+                                      <option value="OR">1</option>
+                                  </select>
+                              </td>
+                              <td style="width: 40%">
+                                  <select class="form-select form-s select2">
+                                      <option value="AK">SIZE</option>
+                                      <option value="HI">1</option>
+                                      <option value="CA">1</option>
+                                      <option value="NV">1</option>
+                                      <option value="OR">1</option>
+                                  </select>
+                              </td>
+                              <td><input type="text" class="form-control" /></td>
+                              <td><input type="text" class="form-control" /></td>
+                              <td><input type="text" class="form-control" /></td>
+                              <td><input type="text" class="form-control" /></td>
+                              <td><input type="text" class="form-control" /></td>
+                              <td><input type="text" class="form-control" /></td>
+                              <td class="d-flex">
+                                  <button type="button"
+                                      class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                                      title="حذف">
+                                      <i class="ti ti-trash fs-4"></i>
+                                  </button>
+                                  <button type="button" class="button btn btn-primary add_another" value="Add another line" onclick="addFieldinv();">
+                                      <i class="fa-solid fa-plus"></i>
+                                  </button>
+                              </td>
+                          </tr>
+                      </tbody>
                   </table>
-                </div>
+              </div>
 
                 <!--item-->
 
@@ -2074,6 +2068,84 @@
   <script src="./assets/js/forms-extras.js"></script>
   <script src="./assets/js/forms-editors.js"></script>
   <script src="./assets/js/charts-chartjs.js"></script>
+  <script>
+    // Function to add a new row
+    function addFieldinv() {
+        var tableBody = document.getElementById("tableBody");
+        var rowCount = tableBody.rows.length + 1;
+
+        // Create a new row
+        var newRow = document.createElement("tr");
+
+        // Add content to the new row
+        newRow.innerHTML = `
+            <td>${rowCount}</td>
+            <td style="width: 40%">
+                <select class="form-select form-s select2">
+                    <option value="AK">الاصناف</option>
+                    <option value="HI">1</option>
+                    <option value="CA">1</option>
+                    <option value="NV">1</option>
+                    <option value="OR">1</option>
+                </select>
+            </td>
+            <td style="width: 40%">
+                <select class="form-select form-s select2">
+                    <option value="AK">SIZE</option>
+                    <option value="HI">1</option>
+                    <option value="CA">1</option>
+                    <option value="NV">1</option>
+                    <option value="OR">1</option>
+                </select>
+            </td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td class="d-flex">
+                <button type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
+                    <i class="ti ti-trash fs-4"></i>
+                </button>
+             
+            </td>
+        `;
+
+        // Append the new row to the table
+        tableBody.appendChild(newRow);
+
+        // Re-initialize select2 for the new elements
+        $('.select2').select2();
+
+        // Add delete functionality for the new row
+        newRow.querySelector('.btnDelete').addEventListener('click', function() {
+            newRow.remove();
+            updateRowNumbers();
+        });
+    }
+
+    // Function to update row numbers after deletion
+    function updateRowNumbers() {
+        var rows = document.querySelectorAll("#tableBody tr");
+        rows.forEach((row, index) => {
+            row.querySelector('td').innerText = index + 1;
+        });
+    }
+
+    // Initialize select2 for the existing rows on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        $('.select2').select2();
+
+        // Add delete functionality for the initial delete buttons
+        document.querySelectorAll('.btnDelete').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('tr').remove();
+                updateRowNumbers();
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

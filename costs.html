@@ -1791,34 +1791,37 @@
            
               <div class="card comonent-hader-top">
                 <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
-                  <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted">
+                  <strong class="py-md-2 px-md-2 text-title-hadeer text-tilte-b"><span class="text-muted">
                       تكاليف  اضافية
                     </span>
                   </strong>
                   <div class="row justify-content-center mx-0 py-2 px-md-3 px-2">
                     <!--item-->
-                    <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                      <div class="card h-100">
-                        <div class="row h-100">
-                          <div class="col-sm-5 col-12">
-                            <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
-                              <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
-                                alt="add-new-roles" width="83" />
+                    <div class="col-xl-6 col-lg-4 col-md-6 mb-md-0 mb-2">
+                      <div class="a-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="card h-100">
+                          <div class="row h-100">
+                            <div class="col-sm-5 col-12">
+                              <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                                <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
+                                  alt="add-new-roles" width="83" />
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-sm-7 col-12">
-                            <div class="card-body text-sm-end text-center ps-sm-0">
-                              <button data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
-                                اضافة تكاليف
-                              </button>
-                              <p class="mb-0 mt-1">
-                                Add costs. data , if it does not exist
-                              </p>
+                            <div class="col-sm-7 col-12">
+                              <div class="card-body text-sm-end text-center ps-sm-0">
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                  class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
+                                  اضافة تكاليف
+                                </button>
+                                <p class="mb-0 mt-1">
+                                  Add costs. data , if it does not exist
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                     
                     </div>
                     <!--item-->
                   </div>
@@ -1876,8 +1879,8 @@
                 <div class="modal-body">
                   <form class="form-content row mx-0">
 
-                    <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
-                      <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table" >
+                    <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-4">
+                      <table class="table table-bordered table-hover rounded w-100 table-inv">
                         <thead class="table-light">
                           <tr class="fw-bold">
                             <th class="fw-bold">التسلسل</th>
@@ -1887,7 +1890,7 @@
                             <th></th>
                           </tr>
                         </thead>
-                        <tbody class="table-border-bottom-0" id="tbl">
+                        <tbody class="table-border-bottom-0" id="costTableBody">
                           <tr>
                             <td>1</td>
     
@@ -1896,7 +1899,7 @@
 
                             </td>
                             <td style="width: 40%">
-                              <select class="form-select form-s">
+                              <select class="form-select form-s select2">
                                 <option value="AK">Alaska</option>
                                 <option value="HI">Hawaii</option>
                                 <option value="CA">California</option>
@@ -1908,12 +1911,13 @@
                             </td>
                            
                             <td class="d-flex">
-                              <button  type="button" class="bg-danger btn removeRowButton text-bg-danger  p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-
-                              <button type="button" class="button btn btn-primary add_another addRowButton" value="Add another line">
-                                <i class="fa-solid fa-plus"></i>
+                              <button type="button" class="bg-danger btn removeRowButton text-bg-danger p-1 me-3 rounded" title="حذف">
+                                  <i class="ti ti-trash"></i>
                               </button>
-                            </td>
+                              <button type="button" class="button btn btn-primary p-2 addRowButton" value="line">
+                                  <i class="fa-solid fa-plus"></i>
+                              </button>
+                          </td>
                           </tr>
                           
                         </tbody>
@@ -1947,7 +1951,7 @@
                 <div class="modal-body px-0">
                   <form class="form-content row mx-0">
 
-                    <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
+                    <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-4">
                       <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table">
                         <thead class="table-light">
                           <tr class="fw-bold">
@@ -2116,8 +2120,6 @@
   <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
   <script src="./assets/vendor/libs/chartjs/chartjs.js"></script>
 
-  <script src="./assets/vendor/libs/quill/katex.js"></script>
-  <script src="./assets/vendor/libs/quill/quill.js"></script>
   <!-- Main JS -->
   <script src="./assets/js/main.js"></script>
 
@@ -2138,63 +2140,69 @@
   <script src="./assets/js/forms-editors.js"></script>
   <script src="./assets/js/charts-chartjs.js"></script>
   <script>
-    $(document).ready(function() {
-        // تهيئة select2 للصف الأول
-        // $('#tbl tr:first select').select2({
-        //     placeholder: 'اختر عنصرًا',
-        //     allowClear: false
-        // });
+    // Function to add a new row
+    function addRow() {
+        var tableBody = document.getElementById("costTableBody");
+        var rowCount = tableBody.rows.length + 1; // Get the current row count for numbering
 
-        // دالة لإضافة صف جديد إلى الجدول
-        function addField() {
-            // نسخ الصف الأول
-            var tr = $('#tbl tr:first').clone();
+        // Create a new row
+        var newRow = document.createElement("tr");
 
-            // تحديث رقم التسلسل في الصف المستنسخ
-            var newIndex = $('#tbl tr').length + 1;
-            tr.find('td:first').text(newIndex);
+        // Add the row content
+        newRow.innerHTML = `
+            <td>${rowCount}</td>
+            <td style="width: 40%">
+                <input type="text" class="form-control" placeholder="اسم التكاليف الاضافيه"/>
+            </td>
+            <td style="width: 40%">
+                <select class="form-select form-s select2">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="CA">California</option>
+                    <option value="NV">Nevada</option>
+                    <option value="OR">Oregon</option>
+                    <option value="WA">Washington</option>
+                </select>
+            </td>
+            <td class="d-flex">
+                <button type="button" class="bg-danger btn removeRowButton text-bg-danger p-1 me-3 rounded" title="حذف">
+                    <i class="ti ti-trash"></i>
+                </button>
+               
+            </td>
+        `;
 
-            // إعادة تعيين المدخلات والقيم
-            tr.find('input').val('');
-            tr.find('select').val(null).trigger('change');
+        // Append the new row to the table body
+        tableBody.appendChild(newRow);
 
-            // إعادة تطبيق select2 على العنصر الجديد
-            tr.find('select').select2({
-                placeholder: 'اختر عنصرًا',
-                allowClear: false
-            });
+        // Reinitialize select2 for the new elements
+        $('.select2').select2();
 
-            // إزالة زر الإضافة من الصف المستنسخ
-            tr.find('.addRowButton').remove();
-
-            // إضافة الصف الجديد إلى الجدول
-            $('#tbl').append(tr);
-        }
-
-        // دالة لحذف الصف
-        function removeField(button) {
-            button.closest('tr').remove();
-            updateSequenceNumbers();
-        }
-
-        // دالة لتحديث أرقام التسلسل
-        function updateSequenceNumbers() {
-            $('#tbl tr').each(function(index, tr) {
-                $(tr).find('td:first').text(index + 1);
-            });
-        }
-
-        // مستمع للنقر على زر الإضافة
-        $('#tbl').on('click', '.addRowButton', function() {
-            addField();
+        // Add remove functionality for the new delete button
+        newRow.querySelector('.removeRowButton').addEventListener('click', function() {
+            newRow.remove();
         });
 
-        // مستمع للنقر على زر الحذف
-        $('#tbl').on('click', '.removeRowButton', function() {
-            removeField($(this));
+        // Add functionality to the new add button
+        newRow.querySelector('.addRowButton').addEventListener('click', addRow);
+    }
+
+    // Attach event listeners on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize select2 for the initial select elements
+        $('.select2').select2();
+
+        // Add row button functionality
+        document.querySelector('.addRowButton').addEventListener('click', addRow);
+
+        // Remove row button functionality
+        document.querySelector('.removeRowButton').addEventListener('click', function() {
+            this.closest('tr').remove();
         });
     });
 </script>
+  
+  
 
 </body>
 

@@ -155,11 +155,15 @@ width: 0px;
  }
  .item-d{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.50fr 1fr;
    
  }
+ .row-item-information .item-d:nth-child(3n){
+  grid-column: span 2;
+  width: 100%;
+ }
  .item-d label{
-    background-color:#14AAE2 ;
+    background-color:#4A4A4A ;
     padding: 5px;
     color:#fff;
     font-size: 16px;
@@ -177,11 +181,11 @@ width: 0px;
  .row-item{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15px 10px;
+    grid-gap: 10px 10px;
     
  }
  .content-content  ,.component-signature ,.component-signature-rec{
-    padding-top: 25px;
+    padding-top: 1px;
  }
  .component-signature .sign,.component-signature-rec .sign{
     color: #000;

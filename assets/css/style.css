@@ -361,7 +361,6 @@ color: #dbdade !important;
   width: 130px;
   height: 130px;
   position: relative;
-  border-radius: 100%;
   border: 6px solid var(--theme-color);
   box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 10%);
   margin: 0 auto;
@@ -370,12 +369,11 @@ color: #dbdade !important;
 .avatar-preview > div {
   width: 100%;
   height: 100%;
-  border-radius: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .avatar-edit input + label {
-  display: inline-block;
+  display: flex;
   width: 34px;
   height: 34px;
   margin-bottom: 0;
@@ -386,6 +384,8 @@ color: #dbdade !important;
   cursor: pointer;
   font-weight: normal;
   transition: all 0.2s ease-in-out;
+  align-items: center;
+    justify-content: center;
 }
 .avatar-edit input + label:after {
   content: "";
@@ -547,4 +547,13 @@ z-index: 10000 !important;
   [dir=ltr] .layout-horizontal .bg-menu-theme .menu-inner > .menu-item:not(:last-child) {
       margin-right: 1.125rem;
   }
+}
+.light-style .select2-container--default .select2-selection--single {
+  position: relative;
+}
+.select2-container--default[dir=rtl] .select2-selection__arrow {
+  left: 4px;
+}
+a .card-body  p{
+  color: #6f6b7d !important;
 }
