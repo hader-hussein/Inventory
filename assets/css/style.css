@@ -557,3 +557,6 @@ z-index: 10000 !important;
 a .card-body  p{
   color: #6f6b7d !important;
 }
+.input-groupe button{
+  font-size: 12px;
+}

@@ -1791,30 +1791,32 @@
 
           <div class="container-xxl flex-grow-1 container-p-y">
             <div class="card comonent-hader-top">
-              <div class="card-body py-2 px-md-0 px-2 card-widget-separator">
-                    <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">   تحويل منتجات</span>  </strong>
+              <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
+                    <strong class="py-md-2 px-md-2 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">   تحويل منتجات</span>  </strong>
 
                     <div class="row justify-content-center mx-0  py-3 px-md-3 px-2">
                       <!--item-->
-                        <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                              
-                              <div class="card h-100">
-                                <div class="row h-100">
-                                  <div class="col-sm-5 col-12">
-                                    <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
-                                      <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="83">
+                        <div class="col-xl-6 col-lg-4 col-md-6 mb-md-0 mb-2">
+                              <a href="add-transfer-products.html" class="a-link">
+                                <div class="card h-100">
+                                  <div class="row h-100">
+                                    <div class="col-sm-5 col-12">
+                                      <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                                        <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="83">
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div class="col-sm-7 col-12">
-                                    <div class="card-body text-sm-end text-center ps-sm-0">
-                                      <a href="add-transfer-products.html" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة  تحويل 
-                                      </a>
-                                      <p class="mb-0 mt-1">Add transfer-products data , if it does not exist</p>
+                                    <div class="col-sm-7 col-12">
+                                      <div class="card-body text-sm-end text-center ps-sm-0">
+                                        <button href="add-transfer-products.html" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
+                                      اضافة  تحويل 
+                                        </button>
+                                        <p class="mb-0 mt-1">Add transfer-products data , if it does not exist</p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </a>
+                              
                           
                         </div>
                       <!--item-->
@@ -1848,7 +1850,9 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                      
+                    </td>
                     <td>
                       <a class="bg-primary text-bg-primary p-1 d-flex align-items-center justify-content-center  rounded" href="#" title="طباعة"><i class="ti ti-printer  fs-4"></i> </a>
 
@@ -1922,24 +1926,23 @@
                       </div>
       
                       <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
-                        <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table">
+                        <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table-product">
                           <thead class="table-light">
                             <tr class="fw-bold">
                               <th class="fw-bold">التسلسل</th>
-                              <th class="fw-bold"> المنتج المراد تحويله</th>
+                              <th class="fw-bold">المنتج المراد تحويله </th>
       
-                              <th class="fw-bold">تاريخ انتهاء الصلاحية</th>
                               <th class="fw-bold"> الحجم</th>
+                              
                               <th class="fw-bold">
-                               اسم الرف
+                                الكمية 
                               </th>
-                              <th class="fw-bold"> الى رف</th>
                               <th class="fw-bold">
-                                الكمية
+                                سعر الوحدة 
                               </th>
                               <th class="fw-bold"> الكمية الفعلية</th>
                               <th class="fw-bold">  </th>
-
+      
                             </tr>
                           </thead>
                           <tbody class="table-border-bottom-0" id="tbl">
@@ -1947,7 +1950,7 @@
                               <td>1</td>
       
                               <td style="width: 20%">
-                                <select id="select-2" class="form-select form-s">
+                                <select id="select-2" class="form-select form-s select2">
                                   <option value="AK">الاصناف</option>
                                   <option value="HI">1</option>
                                   <option value="CA">1</option>
@@ -1955,28 +1958,32 @@
                                   <option value="OR">1</option>
                                 </select>
                               </td>
-                              <td>
-                                <input type="text" class="form-control" />
-
+                              
+                              <td style="width: 20%">
+                                <select id="select-3" class="form-select form-s select2">
+                                  <option value="AK"> الحجم</option>
+                                  <option value="HI">1</option>
+                                  <option value="CA">1</option>
+                                  <option value="NV">1</option>
+                                  <option value="OR">1</option>
+                                </select>      
+                              
                               </td>
-                              <td>
-                                <input type="text" class="form-control" />
-                              </td>
+                             
                               <td><input type="text" class="form-control" /></td>
                               <td><input type="text" class="form-control" /></td>
                               <td><input type="text" class="form-control" /></td>
-                              <td><input type="text" class="form-control" /></td>
-
+      
                               <td class="d-flex">
                                 <button type="button"
-                                  class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
-                                  title="حذف">
-                                  <i class="ti ti-trash fs-4"></i>
-                                </button>
-                                <button type="button" class="button btn btn-primary add_another" value="Add another line"
-                                  onclick="addField(this);">
-                                  <i class="fa-solid fa-plus"></i>
-                                </button>
+                                class="bg-danger btn text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                                title="حذف">
+                                <i class="ti ti-trash fs-4"></i>
+                            </button>
+                            <button type="button" class="button btn btn-primary add_another" value="Add another line"
+                                onclick="addFieldprodcts();">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
                               </td>
                             </tr>
                           </tbody>
@@ -2113,13 +2120,13 @@
 
   <!-- Vendors JS -->
   <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
-  <script src="./assets/vendor/libs/select2/select2.js"></script>
   <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
   <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
   <script src="./assets/vendor/libs/chartjs/chartjs.js"></script>
 
-  <script src="./assets/vendor/libs/quill/katex.js"></script>
   <script src="./assets/vendor/libs/quill/quill.js"></script>
+  <script src="./assets/vendor/libs/select2/select2.js"></script>
+
   <!-- Main JS -->
   <script src="./assets/js/main.js"></script>
 
@@ -2138,7 +2145,83 @@
   <script src="./assets/js/forms-extras.js"></script>
   <script src="./assets/js/forms-editors.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
-  
+  <script>
+    // Function to add a new row
+    function addFieldprodcts() {
+        var tableBody = document.getElementById("tbl");
+        var rowCount = tableBody.rows.length + 1;
+
+        // Create a new row
+        var newRow = document.createElement("tr");
+
+        // Add content to the new row
+        newRow.innerHTML = `
+            <td>${rowCount}</td>
+            <td style="width: 20%">
+                <select class="form-select form-s select2">
+                    <option value="AK">الاصناف</option>
+                    <option value="HI">1</option>
+                    <option value="CA">1</option>
+                    <option value="NV">1</option>
+                    <option value="OR">1</option>
+                </select>
+            </td>
+            <td style="width: 20%">
+                <select class="form-select form-s select2">
+                    <option value="AK">الحجم</option>
+                    <option value="HI">1</option>
+                    <option value="CA">1</option>
+                    <option value="NV">1</option>
+                    <option value="OR">1</option>
+                </select>
+            </td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td class="d-flex">
+                <button type="button"
+                    class="bg-danger btn text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                    title="حذف">
+                    <i class="ti ti-trash fs-4"></i>
+                </button>
+               
+            </td>
+        `;
+
+        // Append the new row to the table
+        tableBody.appendChild(newRow);
+
+        // Re-initialize select2 for the new elements
+        $('.select2').select2();
+
+        // Add delete functionality for the new row
+        newRow.querySelector('.remove_row').addEventListener('click', function() {
+            newRow.remove();
+            updateRowNumbers();
+        });
+    }
+
+    // Function to update row numbers after deletion
+    function updateRowNumbers() {
+        var rows = document.querySelectorAll("#tbl tr");
+        rows.forEach((row, index) => {
+            row.querySelector('td').innerText = index + 1;
+        });
+    }
+
+    // Initialize select2 for the existing rows on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        $('.select2').select2();
+
+        // Add delete functionality for the initial delete buttons
+        document.querySelectorAll('.remove_row').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('tr').remove();
+                updateRowNumbers();
+            });
+        });
+    });
+</script>
 
 </body>
 
