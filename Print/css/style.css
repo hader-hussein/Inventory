@@ -27,7 +27,7 @@ a{
 }
 table{
   
-     margin-top: 10px;
+     margin-top: 16px;
      margin-bottom: 10px;
     
  }
@@ -39,7 +39,10 @@ table{
 }
  
  tr td{
-    background-color: #E8E7EC;
+    background-color: #f0efefce;
+ }
+ tfoot tr td{
+  background-color: #fff;
  }
  .content-table::-webkit-scrollbar {
 width: 0px;
@@ -55,7 +58,7 @@ width: 0px;
  
  table, th{
      color: #fff;
-     font-size: 14px;
+     font-size: 12px;
  }
  table, td{
      color: var(--color-secend);
@@ -163,7 +166,7 @@ width: 0px;
   width: 100%;
  }
  .item-d label{
-    background-color:#4A4A4A ;
+    background-color:#5d5c5c ;
     padding: 5px;
     color:#fff;
     font-size: 16px;
@@ -181,7 +184,7 @@ width: 0px;
  .row-item{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px 10px;
+    grid-gap: 10px 40px;
     
  }
  .content-content  ,.component-signature ,.component-signature-rec{
@@ -208,7 +211,7 @@ width: 0px;
     padding-top: 20px;
    }
    .table-table td:nth-child(odd){
-    background-color: #14aae2 !important;
+    background-color: #5d5c5c !important;
     color: #fff;
   }
   .table-footer tr td{

@@ -78,6 +78,7 @@ function readURL(input) {
     document.getElementById('div1').style.display = 'block';
     }
     $(document).ready(function(){
+        $('.select2').select2();
         $("#my_table").on('click','.btnDelete',function(){
             $(this).closest('tr').remove();
          });
@@ -87,134 +88,7 @@ function readURL(input) {
         
      });
   
-    // Function to add a new row
-function addField(button) {
-    // Get the table body
-    var table = document.getElementById("tbl");
 
-    // Get the number of rows (for the sequence number)
-    var rowCount = table.rows.length;
-
-    // Create a new row
-    var newRow = table.insertRow();
-
-    // Add the sequence number cell
-    var cell1 = newRow.insertCell(0);
-    cell1.innerHTML = rowCount + 1;
-
-    // Add the item select2 dropdown
-    var cell2 = newRow.insertCell(1);
-    cell2.style.width = "50%";
-    cell2.innerHTML = `
-        <select class="select2 form-select" data-allow-clear="true">
-            <option value="LETTER">1</option>
-            <option value="VIDEO">2</option>
-            <option value="PHOTO">3</option>
-            <option value="SI">4</option>
-            <option value="CERTIFICATE">5</option>
-            <option value="OTHER">6</option>
-        </select>
-    `;
-
-    // Add the size select2 dropdown
-    var cell3 = newRow.insertCell(2);
-    cell3.innerHTML = `
-        <select class="form-select select2">
-            <option value="AK">SIZE</option>
-            <option value="HI">1</option>
-            <option value="CA">1</option>
-            <option value="NV">1</option>
-            <option value="OR">1</option>
-        </select>
-    `;
-
-    // Add the quantity input
-    var cell4 = newRow.insertCell(3);
-    cell4.innerHTML = `<input type="text" class="form-control">`;
-
-    // Add the action buttons (delete and add)
-    var cell5 = newRow.insertCell(4);
-    cell5.classList.add("d-flex");
-    cell5.innerHTML = `
-        <button type="button" class="bg-danger btn text-bg-danger btnDelete px-2 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
-            <i class="ti ti-trash fs-4"></i>
-        </button>
-       
-    `;
-
-    // Reinitialize select2 for the new fields
-    $('.select2').select2();
-
-    // Add delete functionality to the delete button
-    var deleteButton = newRow.querySelector('.btnDelete');
-    deleteButton.onclick = function () {
-        table.deleteRow(newRow.rowIndex - 1);
-    };
-}
-   // Function to add a new row
-   function addFieldtow(button) {
-    // Get the table body
-    var table = document.getElementById("tb2");
-
-    // Get the number of rows (for the sequence number)
-    var rowCount = table.rows.length;
-
-    // Create a new row
-    var newRow = table.insertRow();
-
-    // Add the sequence number cell
-    var cell1 = newRow.insertCell(0);
-    cell1.innerHTML = rowCount + 1;
-
-    // Add the item select2 dropdown
-    var cell2 = newRow.insertCell(1);
-    cell2.style.width = "50%";
-    cell2.innerHTML = `
-        <select class="select2 form-select" data-allow-clear="true">
-            <option value="LETTER">1</option>
-            <option value="VIDEO">2</option>
-            <option value="PHOTO">3</option>
-            <option value="SI">4</option>
-            <option value="CERTIFICATE">5</option>
-            <option value="OTHER">6</option>
-        </select>
-    `;
-
-    // Add the size select2 dropdown
-    var cell3 = newRow.insertCell(2);
-    cell3.innerHTML = `
-        <select class="form-select select2">
-            <option value="AK">SIZE</option>
-            <option value="HI">1</option>
-            <option value="CA">1</option>
-            <option value="NV">1</option>
-            <option value="OR">1</option>
-        </select>
-    `;
-
-    // Add the quantity input
-    var cell4 = newRow.insertCell(3);
-    cell4.innerHTML = `<input type="text" class="form-control">`;
-
-    // Add the action buttons (delete and add)
-    var cell5 = newRow.insertCell(4);
-    cell5.classList.add("d-flex");
-    cell5.innerHTML = `
-        <button type="button" class="bg-danger btn text-bg-danger btnDelete p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
-            <i class="ti ti-trash fs-4"></i>
-        </button>
-       
-    `;
-
-    // Reinitialize select2 for the new fields
-    $('.select2').select2();
-
-    // Add delete functionality to the delete button
-    var deleteButton = newRow.querySelector('.btnDelete');
-    deleteButton.onclick = function () {
-        table.deleteRow(newRow.rowIndex - 1);
-    };
-}
 // Function to add a new row
 // Counter to ensure unique IDs for radio buttons
 var radioCounter = 1;
@@ -303,8 +177,5 @@ function addFieldthere(button) {
     };
 }
 // Reinitialize select2 for the new fields with a small delay
-setTimeout(function() {
-    $('.select2').select2();
-}, 100);  // Adjust the delay if necessary
 
 
