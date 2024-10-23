@@ -1974,9 +1974,9 @@
                                           <option value="OTHER">6</option>
                                         </select>
                                       </td>
-                                      <td> 
+                                      <td class="p-1"> 
                                       
-                                          <select id="select-size" class="form-select select2">
+                                          <select id="select-size" class="form-select select2" data-allow-clear="true">
                                             <option value="AK"> SIZE</option>
                                             <option value="HI">1</option>
                                             <option value="CA">1</option>
@@ -1993,7 +1993,7 @@
                                     
                                       <td class="d-flex">
                                         <button  type="button" class="bg-danger btn text-bg-danger btnDelete  p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-                                        <button type="button" class="button btn btn-primary addField" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus"></i></button>
+                                        <button type="button" class="button btn btn-primary addField p-1" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
 
                                       
                                       </td>
@@ -2024,7 +2024,7 @@
                                       <td>  1</td>
                                 
                                       <td style="width: 50%;"> 
-                                        <select id="select-name-add" class="select2 form-select">
+                                        <select id="select-name-add" class="select2 form-select" data-allow-clear="true">
                                           <option value="LETTER"selected >1  </option>
                                           <option value="VIDEO">2 </option>
                                           <option value="PHOTO">3 </option>
@@ -2033,9 +2033,9 @@
                                           <option value="OTHER">6</option>
                                         </select>
                                       </td>
-                                      <td> 
+                                      <td class="p-1"> 
                                       
-                                          <select id="select-size-add" class="form-select select2">
+                                          <select id="select-size-add" class="form-select select2" data-allow-clear="true">
                                             <option value="AK" selected> SIZE</option>
                                             <option value="HI">1</option>
                                             <option value="CA">1</option>
@@ -2052,7 +2052,7 @@
                                     
                                       <td class="d-flex">
                                         <button  type="button" class="bg-danger btn text-bg-danger btnDelete-to   p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-                                        <button type="button" class="button btn btn-primary addField" value="Add another line" onclick="addFieldtow(this);"><i class="fa-solid fa-plus"></i></button>
+                                        <button type="button" class="button btn btn-primary addField p-1" value="Add another line" onclick="addFieldtow(this);"><i class="fa-solid fa-plus fs-4"></i></button>
 
                                       
                                       </td>
@@ -2099,18 +2099,18 @@
                                 </th>
                               </tr>
                             </thead>
-                            <tbody class="table-border-bottom-0 text-center" id="tb3">
+                            <tbody class="table-border-bottom-0" id="tb3">
                               <tr>
                             
-                                <td>  1</td>
+                                <td class="text-center">  1</td>
                           
                                 <td> 
                                    
                                 
                                 </td>
                                 <td>  
-                                  <select id="select-size-i" class="form-select form-control select2" >
-                                    <option value="AK" selected>   	CHOOSE THE SIZE</option>
+                                  <select id="select-size-i" class="form-select form-control select2"  data-allow-clear="true">
+                                    <option value="AK" selected>CHOOSE THE SIZE</option>
                                     <option value="HI">1</option>
                                     <option value="CA">1</option>
                                     <option value="NV">1</option>
@@ -2134,7 +2134,7 @@
                                 <td class="d-flex">
                                   <button  type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
 
-                                  <button type="button" class="button btn btn-primary" value="Add another line" onclick="addFieldthere(this);"><i class="fa-solid fa-plus "></i></button>
+                                  <button type="button" class="button btn btn-primary p-1" value="Add another line" onclick="addFieldthere(this);"><i class="fa-solid fa-plus fs-4"></i></button>
 
                                 </td>
                               </tr>
@@ -2334,7 +2334,7 @@
 
   <!-- Vendors JS -->
   <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
-  <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+  <!-- <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script> -->
   <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
   <script src="./assets/vendor/libs/chartjs/chartjs.js"></script>
   <script src="./assets/vendor/libs/select2/select2.js"></script>
@@ -2347,83 +2347,17 @@
   <script src="./assets/js/forms-selects.js"></script>
   <script src="./assets/vendor/js/chart.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
-  <script>
-        // Function to add a new row
-function addField(button) {
-    // Get the table body
-    var table = document.getElementById("tbl");
-
-    // Get the number of rows (for the sequence number)
-    var rowCount = table.rows.length;
-
-    // Create a new row
-    var newRow = table.insertRow();
-
-    // Add the sequence number cell
-    var cell1 = newRow.insertCell(0);
-    cell1.innerHTML = rowCount + 1;
-
-    // Add the item select2 dropdown
-    var cell2 = newRow.insertCell(1);
-    cell2.style.width = "50%";
-    cell2.innerHTML = `
-        <select class="select2 form-select" data-allow-clear="true">
-            <option value="LETTER">1</option>
-            <option value="VIDEO">2</option>
-            <option value="PHOTO">3</option>
-            <option value="SI">4</option>
-            <option value="CERTIFICATE">5</option>
-            <option value="OTHER">6</option>
-        </select>
-    `;
-
-    // Add the size select2 dropdown
-    var cell3 = newRow.insertCell(2);
-    cell3.innerHTML = `
-        <select class="form-select select2">
-            <option value="AK">SIZE</option>
-            <option value="HI">1</option>
-            <option value="CA">1</option>
-            <option value="NV">1</option>
-            <option value="OR">1</option>
-        </select>
-    `;
-
-    // Add the quantity input
-    var cell4 = newRow.insertCell(3);
-    cell4.innerHTML = `<input type="text" class="form-control">`;
-
-    // Add the action buttons (delete and add)
-    var cell5 = newRow.insertCell(4);
-    cell5.classList.add("d-flex");
-    cell5.innerHTML = `
-        <button type="button" class="bg-danger btn text-bg-danger btnDelete p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
-            <i class="ti ti-trash fs-4"></i>
-        </button>
-       
-    `;
-
-    // Reinitialize select2 for the new fields
-    $('.select2').select2();
-
-    // Add delete functionality to the delete button
-    var deleteButton = newRow.querySelector('.btnDelete');
-    deleteButton.onclick = function () {
-        table.deleteRow(newRow.rowIndex - 1);
-    };
-}
-  </script>
+ 
   <script>
     $(document).ready(function () {
     
-
     // Function to add a new row
-    window.addFieldtow = function () {
+    window.addField = function () {
         var newRow = `
             <tr>
                 <td></td>
                 <td style="width: 50%;">
-                    <select class="select2 form-select">
+                    <select class="select2 form-select" data-allow-clear="true">
                         <option value="LETTER" selected>1</option>
                         <option value="VIDEO">2</option>
                         <option value="PHOTO">3</option>
@@ -2432,8 +2366,67 @@ function addField(button) {
                         <option value="OTHER">6</option>
                     </select>
                 </td>
-                <td>
-                    <select class="select2 form-select">
+                <td class="p-1">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="AK" selected>SIZE</option>
+                        <option value="HI">1</option>
+                        <option value="CA">1</option>
+                        <option value="NV">1</option>
+                        <option value="OR">1</option>
+                    </select>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td class="d-flex">
+                    <button type="button" class="bg-danger btn text-bg-danger btnDelete-to p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
+                        <i class="ti ti-trash fs-4"></i>
+                    </button>
+                </td>
+            </tr>`;
+
+        $('#tbl').append(newRow);
+
+        // Re-initialize select2 for the newly added select elements
+        $('#tbl tr:last-child .select2').select2({
+            dropdownParent: $('body'), // Ensures dropdown is within body
+            width: '100%' // Ensures the select2 element uses 100% width of its container
+        });
+
+
+        // Update row numbering
+        updateRowNumbers();
+    };
+
+    // Function to update row numbering
+    function updateRowNumbers() {
+        $('#tbl tr').each(function (index, row) {
+            $(row).find('td:first').text(index + 1);
+        });
+    }
+
+    // Function to delete a row
+    $(document).on('click', '.btnDelete', function () {
+        $(this).closest('tr').remove();
+        updateRowNumbers();
+    });
+
+
+    // Function to add a new row
+    window.addFieldtow = function () {
+        var newRow = `
+            <tr>
+                <td></td>
+                <td style="width: 50%;">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>1</option>
+                        <option value="VIDEO">2</option>
+                        <option value="PHOTO">3</option>
+                        <option value="SI">4</option>
+                        <option value="CERTIFICATE">5</option>
+                        <option value="OTHER">6</option>
+                    </select>
+                </td>
+                <td class="p-1">
+                    <select class="select2 form-select" data-allow-clear="true">
                         <option value="AK" selected>SIZE</option>
                         <option value="HI">1</option>
                         <option value="CA">1</option>
@@ -2452,7 +2445,11 @@ function addField(button) {
         $('#tb2').append(newRow);
 
         // Re-initialize select2 for the newly added select elements
-        $('#tb2 tr:last-child .select2').select2();
+        $('#tb2 tr:last-child .select2').select2({
+            dropdownParent: $('body'), // Ensures dropdown is within body
+            width: '100%' // Ensures the select2 element uses 100% width of its container
+        });
+
 
         // Update row numbering
         updateRowNumbers();
@@ -2470,7 +2467,9 @@ function addField(button) {
         $(this).closest('tr').remove();
         updateRowNumbers();
     });
+    
 });
+
 
   </script>
 </body>

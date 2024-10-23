@@ -2008,7 +2008,7 @@
 
                           </select>
                         </td>
-                        <td>
+                        <td class="p-1">
 
                           <select id="select-size" class="form-select select2" data-allow-clear="true">
                             <option selected> SIZE</option>
@@ -2025,11 +2025,11 @@
                           <input type="text" class="form-control">
                         </td>
 
-                        <td class="d-flex justify-content-center align-items-center">
-                          <button type="button" class="bg-danger btn btnDelete text-bg-danger px-2  me-3 rounded"
-                            title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-                          <button type="button" class="button btn btn-primary " value="Add another line"
-                            onclick="addField(this);"><i class="fa-solid fa-plus"></i></button>
+                        <td class="d-flex">
+                          <button  type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
+
+                          <button type="button" class="button btn btn-primary p-1" value="Add another line"
+                            onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
                         </td>
                       </tr>
 
@@ -2233,7 +2233,6 @@
 
   <!-- Vendors JS -->
   <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
-  <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
   <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
   <script src="./assets/vendor/libs/chartjs/chartjs.js"></script>
   <script src="./assets/vendor/libs/select2/select2.js"></script>
@@ -2246,6 +2245,70 @@
   <script src="./assets/js/forms-selects.js"></script>
   <script src="./assets/vendor/js/chart.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
+  <script>
+    $(document).ready(function () {
+    
+    // Function to add a new row
+    window.addField = function () {
+        var newRow = `
+            <tr>
+                <td></td>
+                <td style="width: 50%;">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>1</option>
+                        <option value="VIDEO">2</option>
+                        <option value="PHOTO">3</option>
+                        <option value="SI">4</option>
+                        <option value="CERTIFICATE">5</option>
+                        <option value="OTHER">6</option>
+                    </select>
+                </td>
+                <td class="p-1">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="AK" selected>SIZE</option>
+                        <option value="HI">1</option>
+                        <option value="CA">1</option>
+                        <option value="NV">1</option>
+                        <option value="OR">1</option>
+                    </select>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td class="d-flex">
+                    <button  type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
+
+                </td>
+            </tr>`;
+
+        $('#tbl').append(newRow);
+
+        // Re-initialize select2 for the newly added select elements
+        $('#tbl tr:last-child .select2').select2({
+            dropdownParent: $('body'), // Ensures dropdown is within body
+            width: '100%' // Ensures the select2 element uses 100% width of its container
+        });
+
+
+        // Update row numbering
+        updateRowNumbers();
+    };
+
+    // Function to update row numbering
+    function updateRowNumbers() {
+        $('#tbl tr').each(function (index, row) {
+            $(row).find('td:first').text(index + 1);
+        });
+    }
+
+    // Function to delete a row
+    $(document).on('click', '.btnDelete-to', function () {
+        $(this).closest('tr').remove();
+        updateRowNumbers();
+    });
+
+
+});
+
+  </script>
 
 </body>
 

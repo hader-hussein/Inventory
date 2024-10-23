@@ -1881,7 +1881,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body pt-2">
-                  <form class="row component-form mx-0">
+                  <form class="row component-form component-modal-select mx-0">
                     <div class="col-12 mb-2">
                       <label class="form-label" for="username-add">اسم الفئة <span class="start-form">*</span></label>
                       <input type="text" id="username-add" class="form-control" placeholder="اسم الفئة" />
@@ -1919,7 +1919,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body pt-2">
-                  <form class="row component-form mx-0">
+                  <form class="row component-form component-modal-select mx-0">
                     <div class="col-12 mb-2">
                       <label class="form-label" for="username-edit">اسم الفئة <span class="start-form">*</span></label>
                       <input type="text" id="username-edit" class="form-control" placeholder="اسم الفئة" />
@@ -2098,6 +2098,15 @@
       } else {
         $('#sub-category-div-edit').hide();
       }
+    });
+  });
+  $(document).ready(function() {
+    // عند فتح أي مودال يحتوي على فئة معينة
+    $('.modal').on('shown.bs.modal', function () {
+      // تهيئة الـ select2 لجميع العناصر داخل هذا المودال
+      $(this).find('.select2').select2({
+        dropdownParent: $(this) // تخصيص الـ modal الحالي كأب للقائمة المنسدلة
+      });
     });
   });
 </script>
