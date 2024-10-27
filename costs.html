@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
 
 
+  <link href="./assets/default-ocean-blue.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -657,6 +658,13 @@
                         <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
 
                         <div data-i18n="Internal-drainage">صرف داخلى</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="internalDisbursementRequest.html" class="menu-link">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
+
+                        <div data-i18n="Internal exchange request"> طلب صرف داخلى</div>
                       </a>
                     </li>
                     <li class="menu-item">
@@ -1877,7 +1885,7 @@
                   <form class="form-content row mx-0">
 
                     <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-4">
-                      <table class="table table-bordered table-hover rounded w-100 table-inv">
+                      <table class="table table-bordered table-hover rounded w-100 table-inv" id="my-table">
                         <thead class="table-light">
                           <tr class="fw-bold">
                             <th class="fw-bold">التسلسل</th>
@@ -1896,22 +1904,16 @@
 
                             </td>
                             <td style="width: 40%">
-                              <select class="form-select form-s select2">
-                                <option value="AK">Alaska</option>
-                                <option value="HI">Hawaii</option>
-                                <option value="CA">California</option>
-                                <option value="NV">Nevada</option>
-                                <option value="OR">Oregon</option>
-                                <option value="WA">Washington</option>
-                            </select>
+                              <input id="dropdowntree-tow" class="dropdowntree-tow" />
+
                            
                             </td>
                            
                             <td class="d-flex">
-                              <button type="button" class="bg-danger btn removeRowButton text-bg-danger p-1 me-3 rounded" title="حذف">
+                              <button type="button" class="bg-danger btn delete-row text-bg-danger p-1 me-2 rounded" title="حذف">
                                   <i class="ti ti-trash"></i>
                               </button>
-                              <button type="button" class="button btn btn-primary p-2 addRowButton" value="line">
+                              <button type="button" class="button btn btn-primary p-2 add-row" value="line">
                                   <i class="fa-solid fa-plus"></i>
                               </button>
                           </td>
@@ -1949,17 +1951,18 @@
                   <form class="form-content row mx-0">
 
                     <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-4">
-                      <table class="table table-bordered table-hover rounded w-100 table-inv" id="my_table">
+                      <table class="table table-bordered table-hover rounded w-100 table-inv" id="my-table-edit">
                         <thead class="table-light">
                           <tr class="fw-bold">
                             <th class="fw-bold">التسلسل</th>
                             <th class="fw-bold"> اسم التكاليف الاضافيه</th>
     
                             <th class="fw-bold">حساب التكاليف الاضافيه</th>
-                           
+                            <th class="fw-bold">  </th>
+
                           </tr>
                         </thead>
-                        <tbody class="table-border-bottom-0" id="tbl">
+                        <tbody class="table-border-bottom-0">
                           <tr>
                             <td>1</td>
     
@@ -1968,16 +1971,18 @@
 
                             </td>
                             <td style="width: 40%">
-                              <select id="select-3" class="form-select form-s select2">
-                                <option value="AK">SIZE</option>
-                                <option value="HI">1</option>
-                                <option value="CA">1</option>
-                                <option value="NV">1</option>
-                                <option value="OR">1</option>
-                              </select>
+                              <input id="dropdowntree" class="dropdowntree-tow" />
+
                             </td>
                            
-                        
+                            <td class="d-flex">
+                              <button type="button" class="bg-danger btn delete-row text-bg-danger p-1 me-2 rounded" title="حذف">
+                                  <i class="ti ti-trash"></i>
+                              </button>
+                              <button type="button" class="button btn btn-primary p-2 add-row-edit" value="line">
+                                  <i class="fa-solid fa-plus"></i>
+                              </button>
+                          </td>
                           </tr>
                         </tbody>
                       </table>
@@ -2122,71 +2127,106 @@
   <!-- Page JS -->
   <script src="./assets/js/forms-selects.js"></script>
   <script src="./assets/vendor/js/chart.js"></script>
+  <script src="./assets/kendo.all.min.js"></script>
+
   <script src="./assets/vendor/js/accordion.js"></script>
   <script src="./assets/js/tables-datatables-advanced.js"></script><!--مسول عن داتا-->
   <script src="./assets/js/tables-datatables-basic.js"></script>
   <script>
-    // Function to add a new row
-    function addRow() {
-        var tableBody = document.getElementById("costTableBody");
-        var rowCount = tableBody.rows.length + 1; // Get the current row count for numbering
+    $(document).ready(function () {
+      function initializeDropDownTree(selector) {
+        $(selector).each(function () {
+          if (!$(this).data("kendoDropDownTree")) {
+            $(this).kendoDropDownTree({
+              placeholder: "Select ...",
+              filter: "startswith",
+              dataSource: [
+                {
+                  text: "Furniture",
+                  expanded: true,
+                  items: [
+                    { text: "Tables & Chairs" },
+                    { text: "Sofas" },
+                    { text: "Occasional Furniture" },
+                  ],
+                },
+                {
+                  text: "Decor",
+                  expanded: true,
+                  items: [
+                    { text: "Bed Linen" },
+                    { text: "Curtains & Blinds" },
+                    { text: "Carpets" },
+                  ],
+                },
+              ],
+              select: function (e) {
+                var dataItem = this.dataItem(e.node); // الحصول على العنصر المحدد
 
-        // Create a new row
-        var newRow = document.createElement("tr");
+                // منع اختيار العناصر التي تحتوي على عناصر فرعية
+                if (dataItem.hasChildren) {
+                  e.preventDefault(); // منع اختيار العنصر الرئيسي
+                  alert(
+                    "لا يمكنك اختيار العناصر الرئيسية، يرجى اختيار عنصر فرعي."
+                  );
+                }
+              },
+            });
+          }
+        });
+      }
 
-        // Add the row content
-        newRow.innerHTML = `
-            <td>${rowCount}</td>
-            <td style="width: 40%">
-                <input type="text" class="form-control" placeholder="اسم التكاليف الاضافيه"/>
-            </td>
-            <td style="width: 40%">
-                <select class="form-select form-s select2">
-                    <option value="AK">Alaska</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="CA">California</option>
-                    <option value="NV">Nevada</option>
-                    <option value="OR">Oregon</option>
-                    <option value="WA">Washington</option>
-                </select>
-            </td>
-            <td class="d-flex">
-                <button type="button" class="bg-danger btn removeRowButton text-bg-danger p-1 me-3 rounded" title="حذف">
-                    <i class="ti ti-trash"></i>
-                </button>
-               
-            </td>
-        `;
+      // Initialize DropDownTree for existing elements
+      initializeDropDownTree(".dropdowntree");
+      initializeDropDownTree(".dropdowntree-tow");
+      $(".add-row").on("click", function () {
+        var $row = $(this).closest("tr");
+        var $newRow = $row.clone();
+        // Remove the plus button from the new row
+        $newRow.find(".add-row").remove();
+
+        // إضافة زر حذف للصف الجديد
+       
+
+        // Clear values
+        $newRow.find("input").val("");
 
         // Append the new row to the table body
-        tableBody.appendChild(newRow);
-
-        // Reinitialize select2 for the new elements
-        $('.select2').select2();
-
-        // Add remove functionality for the new delete button
-        newRow.querySelector('.removeRowButton').addEventListener('click', function() {
-            newRow.remove();
+        $("#my-table tbody").append($newRow);
+        // Initialize DropDownTree for new row
+        initializeDropDownTree($newRow.find(".dropdowntree"));
+        initializeDropDownTree($newRow.find(".dropdowntree-tow"));
+        // حذف الصف عند الضغط على زر الحذف
+        $(document).on("click", ".delete-row", function () {
+          $(this).closest("tr").remove();
         });
+      });
+      //////////////
+      $(".add-row-edit").on("click", function () {
+        var $rowedit = $(this).closest("tr");
+        var $newRowedit = $rowedit.clone();
+        // Remove the plus button from the new row
+        $newRowedit.find(".add-row-edit").remove();
 
-        // Add functionality to the new add button
-        newRow.querySelector('.addRowButton').addEventListener('click', addRow);
-    }
+        // إضافة زر حذف للصف الجديد
+       
 
-    // Attach event listeners on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize select2 for the initial select elements
-        $('.select2').select2();
+        // Clear values
+        $newRowedit.find("input").val("");
 
-        // Add row button functionality
-        document.querySelector('.addRowButton').addEventListener('click', addRow);
-
-        // Remove row button functionality
-        document.querySelector('.removeRowButton').addEventListener('click', function() {
-            this.closest('tr').remove();
+        // Append the new row to the table body
+        $("#my-table-edit tbody").append($newRowedit);
+        // Initialize DropDownTree for new row
+        initializeDropDownTree($newRowedit.find(".dropdowntree"));
+        initializeDropDownTree($newRowedit.find(".dropdowntree-tow"));
+        // حذف الصف عند الضغط على زر الحذف
+        $(document).on("click", ".delete-row", function () {
+          $(this).closest("tr").remove();
         });
-    });
-</script>
+      });
+    })
+   
+  </script>
   
   
 

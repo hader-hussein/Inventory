@@ -660,6 +660,13 @@
                       </a>
                     </li>
                     <li class="menu-item">
+                      <a href="internalDisbursementRequest.html" class="menu-link">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
+
+                        <div data-i18n="Internal exchange request"> طلب صرف داخلى</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
                       <a href="Store-shelves.html" class="menu-link">
                         <img class="menu-icon img-nav" src="./assets/img/nav-icon/Store-shelves.png" alt="img" loading="lazy">
 
@@ -1791,25 +1798,27 @@
 
                     <div class="row justify-content-center mx-0  py-3 px-md-3 px-2">
                       <!--item-->
-                        <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                              
-                              <div class="card h-100">
-                                <div class="row h-100">
-                                  <div class="col-sm-5 col-12">
-                                    <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
-                                      <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="83">
+                        <div class="col-xl-6 col-lg-4 col-md-6 mb-md-0 mb-2">
+                              <a href="add-Internal-drainage.html">
+                                <div class="card h-100">
+                                  <div class="row h-100">
+                                    <div class="col-sm-5 col-12">
+                                      <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                                        <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="83">
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div class="col-sm-7 col-12">
-                                    <div class="card-body text-sm-end text-center ps-sm-0">
-                                      <a href="add-Internal-drainage.html" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة  سند 
-                                      </a>
-                                      <p class="mb-0 mt-1">Add Internal-drainage data , if it does not exist</p>
+                                    <div class="col-sm-7 col-12">
+                                      <div class="card-body text-sm-end text-center ps-sm-0">
+                                        <button  class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
+                                      اضافة  سند 
+                                        </button>
+                                        <p class="mb-0 mt-1">Add Internal-drainage data , if it does not exist</p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </a>
+                             
                           
                         </div>
                       <!--item-->
@@ -1848,14 +1857,14 @@
                     <td></td>
                     <td></td>
                     <td class="d-flex justify-content-center">
-                      <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
+                      <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-2 rounded cursor-pointer"
                         data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i
                           class="ti ti-pencil  fs-4"></i> </a>
+                          <a class="bg-primary text-bg-primary p-1 d-flex align-items-center justify-content-center me-2  rounded" href="./Print/Internal-drainage.html" title="طباعة"><i class="ti ti-printer  fs-4"></i> </a>
 
-                      <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                      <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-2 rounded"
                         href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
                         data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
-                        <a class="bg-primary text-bg-primary p-1 d-flex align-items-center justify-content-center  rounded" href="#" title="طباعة"><i class="ti ti-printer  fs-4"></i> </a>
                     </td>
                   </tr>
 
@@ -1871,15 +1880,15 @@
           <!-- edit Hardware Modal -->
           <div class="modal fade " id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
             aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-dialog modal-xl">
               <div class="modal-content p-3 p-md-3">
                 <div class="modal-header px-0">
                   <h6 class="modal-title fs-4 fw-bold text-tilte-b">  تعديل  سند الصرف </h6>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-0">
-                  <form class="form-content row mx-0">
-                    <div class="mb-3 col-md-4 col-12">
+                  <form class="form-content row mx-0 g-2">
+                    <div class="mb-2 col-md-4 col-lg-3 col-12">
                       <label for="select-brinh" class="form-label">
                         اختر الفرع
                       </label>
@@ -1891,12 +1900,12 @@
                           <option value="SI">شركة الجمعية فرع المروج</option>
                         </select>
                     </div>
-                    <div class="mb-3 col-md-4 col-12">
-                      <label for="select2Basic-2" class="form-label">
+                    <div class="mb-2 col-md-4 col-lg-3  col-12">
+                      <label for="select-int" class="form-label">
                         اختر المخزن
                       </label>
                      
-                        <select id="select2Basic-2" class="select2 form-select" data-allow-clear="true">
+                        <select id="select-int" class="select2 form-select" data-allow-clear="true">
                           <option value="LETTER">اختيار المخزن</option>
                           <option value="VIDEO">الفرع التجارى</option>
                           <option value="PHOTO">شركة الجمعية فرع الخالدية</option>
@@ -1904,7 +1913,7 @@
                         </select>
                     
                     </div>
-                    <div class="mb-3 col-md-4 col-12">
+                    <div class="mb-2 col-md-4 col-lg-3  col-12">
                       <label for="select2Basic-2" class="form-label">
                         اختر الجهة
                       </label>
@@ -1917,19 +1926,19 @@
                         </select>
                      
                     </div>
-                    <div class="mb-3 col-md-4 col-12">
+                    <div class="mb-2 col-md-4 col-lg-2 col-12">
                       <label for="example-date-2" class="form-label">
                         تاريخ
                       </label>
                       <input type="date" class="form-control" id="example-date-2" />
                     </div>
                    
-                    <div class="mb-3 col-md-4 col-12">
-                      <label for="example-time" class="form-label">الوقت<span class="start-form">*</span></label>
+                    <div class="mb-2 col-md-4 col-lg-1 col-12">
+                      <label for="example-time" class="form-label">الوقت</label>
                       <input type="time" class="form-control" id="example-time" placeholder=" الباركود" />
                     </div>
-                    <div class="mb-3 col-md-4 col-12">
-                      <label for="example-commit" class="form-label">الملاحظات<span class="start-form">*</span></label>
+                    <div class="mb-2 col-md-4 col-lg-12 col-12">
+                      <label for="example-commit" class="form-label">الملاحظات</label>
                       <textarea type="text" rows="1" class="form-control" id="example-commit" placeholder=" الملاحظات"></textarea>
                     </div>
                     <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
@@ -1954,7 +1963,7 @@
                             <td>1</td>
     
                             <td style="width: 20%">
-                              <select id="select-2" class="form-select form-s">
+                              <select id="select-2" class="form-select select2">
                                 <option value="AK">الاصناف</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -1963,7 +1972,7 @@
                               </select>
                             </td>
                             <td style="width: 20%">
-                              <select id="select-3" class="form-select form-s">
+                              <select id="select-3" class="form-select select2">
                                 <option value="AK">SIZE</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -1983,9 +1992,9 @@
                                 title="حذف">
                                 <i class="ti ti-trash fs-4"></i>
                               </button>
-                              <button type="button" class="button btn btn-primary add_another" value="Add another line"
+                              <button type="button" class="button btn btn-primary p-1 add_another" value="Add another line"
                                 onclick="addField(this);">
-                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-plus fs-4"></i>
                               </button>
                             </td>
                           </tr>
@@ -2017,7 +2026,7 @@
                     هل انت متاكد من حذف العنصر؟
                   </h3>
 
-                  <div class="col-11 col-lg-12 mb-3">
+                  <div class="col-11 col-lg-12 mb-2">
                     <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
                     <button type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
                   </div>
@@ -2135,7 +2144,65 @@
   <script src="./assets/vendor/js/accordion.js"></script>
   <script src="./assets/js/tables-datatables-advanced.js"></script><!--مسول عن داتا-->
   <script src="./assets/js/tables-datatables-basic.js"></script>
+  <script>
+    $(document).ready(function() {
+// تهيئة جميع حقول Select2 في البداية
+$('.select2').select2({
+  dropdownParent: $('#edit-modeil') // للتأكد أن الـ Select2 يظهر داخل الـ modal
+});
 
+// دالة لإضافة صف جديد
+window.addField = function(button) {
+  const newRow = `
+    <tr>
+      <td> 1 </td>
+      <td style="width: 30%;">
+        <select class="form-select select2" data-allow-clear="true">
+          <option selected> select name</option>
+          <option value="HI">1</option>
+          <option value="CA">1</option>
+          <option value="NV">1</option>
+          <option value="OR">1</option>
+        </select>
+      </td>
+      <td class="p-1">
+        <select class="form-select select2" data-allow-clear="true">
+          <option selected> SIZE</option>
+          <option value="HI">1</option>
+          <option value="CA">1</option>
+          <option value="NV">1</option>
+          <option value="OR">1</option>
+        </select>
+      </td>
+      <td>
+        <input type="text" class="form-control">
+      </td>
+      <td>
+        <input type="text" class="form-control">
+      </td>
+      <td>
+        <input type="text" class="form-control">
+      </td>
+      <td class="d-flex  align-items-center">
+        <button type="button" class="bg-danger btn btnDelete text-bg-danger p-1  rounded" title="حذف"><i class="ti ti-trash fs-4"></i></button>
+      </td>
+    </tr>
+  `;
+  $('#tbl').append(newRow);
+
+  // تهيئة Select2 للصف الجديد
+  $('#tbl .select2').select2({
+    dropdownParent: $('#edit-modeil')
+  });
+};
+
+// دالة حذف الصف
+$('#tbl').on('click', '.btnDelete', function() {
+  $(this).closest('tr').remove();
+});
+});
+
+  </script>
 </body>
 
 </html>

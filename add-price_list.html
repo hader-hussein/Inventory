@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
 
 
+  <link href="./assets/default-ocean-blue.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -671,6 +672,13 @@
                           loading="lazy">
 
                         <div data-i18n="Internal-drainage">صرف داخلى</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="internalDisbursementRequest.html" class="menu-link">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
+
+                        <div data-i18n="Internal exchange request"> طلب صرف داخلى</div>
                       </a>
                     </li>
                     <li class="menu-item">
@@ -2029,7 +2037,9 @@
                           <button  type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
 
                           <button type="button" class="button btn btn-primary p-1" value="Add another line"
-                            onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
+                          onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
+
+                        
                         </td>
                       </tr>
 
@@ -2222,11 +2232,13 @@
 
   <!-- endbuild -->
   <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-  <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
 
   <!-- Vendors JS -->
   <script src="./assets/vendor/js/dropdown-hover.js"></script>
   <script src="./assets/vendor/js/mega-dropdown.js"></script>
+  <script src="./assets/vendor/libs/select2/select2.js"></script>
+  <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+
   <script src="./assets/js/main.js"></script>
 
   <script src="./assets/js/ui-navbar.js"></script>
@@ -2235,19 +2247,20 @@
   <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
   <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
   <script src="./assets/vendor/libs/chartjs/chartjs.js"></script>
-  <script src="./assets/vendor/libs/select2/select2.js"></script>
 
 
   <!-- Main JS -->
 
 
   <!-- Page JS -->
-  <script src="./assets/js/forms-selects.js"></script>
   <script src="./assets/vendor/js/chart.js"></script>
+
+  <script src="./assets/js/forms-selects.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
   <script>
     $(document).ready(function () {
-    
+      $('.select2').select2();
+
     // Function to add a new row
     window.addField = function () {
         var newRow = `

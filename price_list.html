@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
 
 
+  <link href="./assets/default-ocean-blue.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -671,6 +672,13 @@
                           loading="lazy">
 
                         <div data-i18n="Internal-drainage">صرف داخلى</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="internalDisbursementRequest.html" class="menu-link">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
+
+                        <div data-i18n="Internal exchange request"> طلب صرف داخلى</div>
                       </a>
                     </li>
                     <li class="menu-item">
@@ -2003,7 +2011,7 @@
 
 
             <!-- edit Hardware Modal -->
-            <div class="modal fade " id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+            <div class="modal fade" id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
               aria-modal="true" role="dialog">
               <div class="modal-dialog modal-lg ">
                 <div class="modal-content p-3 p-md-3">
@@ -2017,9 +2025,9 @@
                       <form class="form-content  row mx-0">
 
                         <div class="mb-3 col-md-4 col-12">
-                          <label for="select2Basic-2" class="form-label"> الفرع </label>
+                          <label for="select2-pranh" class="form-label"> الفرع </label>
 
-                          <select id="select2Basic-2" class="select2 form-select" data-allow-clear="true">
+                          <select id="select2-pranh" class="select2 form-select" data-allow-clear="true">
                             <option value="LETTER">اختيار الفرع </option>
                             <option value="VIDEO">الفرع التجارى </option>
                             <option value="PHOTO">شركة الجمعية فرع الخالدية </option>
@@ -2250,74 +2258,63 @@
     <script src="./assets/js/tables-datatables-basic.js"></script>
     <script src="./assets/vendor/js/chart.js"></script>
     <script src="./assets/vendor/js/accordion.js"></script>
- 
     <script>
-      $(document).ready(function () {
-          // Initialize Select2 when a modal is shown
-          $('.modal').on('shown.bs.modal', function () {
-              $(this).find('.select2').select2({
-                  dropdownParent: $(this) // Set the modal as the parent for dropdown
-              });
-          });
-      
-          // Function to add a new row
-          window.addField = function () {
-              var newRow = `
-                  <tr>
-                      <td></td>
-                      <td style="width: 50%;">
-                          <select class="select2 form-select" data-allow-clear="true">
-                              <option value="LETTER" selected>1</option>
-                              <option value="VIDEO">2</option>
-                              <option value="PHOTO">3</option>
-                              <option value="SI">4</option>
-                              <option value="CERTIFICATE">5</option>
-                              <option value="OTHER">6</option>
-                          </select>
-                      </td>
-                      <td class="p-1">
-                          <select class="select2 form-select" data-allow-clear="true">
-                              <option value="AK" selected>SIZE</option>
-                              <option value="HI">1</option>
-                              <option value="CA">1</option>
-                              <option value="NV">1</option>
-                              <option value="OR">1</option>
-                          </select>
-                      </td>
-                      <td><input type="text" class="form-control"></td>
-                      <td class="d-flex">
-                          <button type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
-                              <i class="ti ti-trash fs-4"></i>
-                          </button>
-                      </td>
-                  </tr>`;
-      
-              $('#tbl').append(newRow);
-      
-              // Re-initialize select2 for the newly added select elements
-              $('#tbl tr:last-child .select2').select2({
-                  dropdownParent: $('.modal'), // Ensure dropdown is within the modal
-                  width: '100%' // Ensure the select2 element uses 100% width of its container
-              });
-      
-              // Update row numbering
-              updateRowNumbers();
-          };
-      
-          // Function to update row numbering
-          function updateRowNumbers() {
-              $('#tbl tr').each(function (index, row) {
-                  $(row).find('td:first').text(index + 1);
-              });
-          }
-      
-          // Function to delete a row
-          $(document).on('click', '.btnDelete-to', function () {
-              $(this).closest('tr').remove();
-              updateRowNumbers();
-          });
-      });
-      </script>
+      $(document).ready(function() {
+  // تهيئة جميع حقول Select2 في البداية
+  $('.select2').select2({
+    dropdownParent: $('#edit-modeil') // للتأكد أن الـ Select2 يظهر داخل الـ modal
+  });
+
+  // دالة لإضافة صف جديد
+  window.addField = function(button) {
+    const newRow = `
+      <tr>
+        <td> 1 </td>
+        <td style="width: 30%;">
+          <select class="form-select select2" data-allow-clear="true">
+            <option selected> select name</option>
+            <option value="HI">1</option>
+            <option value="CA">1</option>
+            <option value="NV">1</option>
+            <option value="OR">1</option>
+          </select>
+        </td>
+        <td class="p-1">
+          <select class="form-select select2" data-allow-clear="true">
+            <option selected> SIZE</option>
+            <option value="HI">1</option>
+            <option value="CA">1</option>
+            <option value="NV">1</option>
+            <option value="OR">1</option>
+          </select>
+        </td>
+        <td>
+          <input type="text" class="form-control">
+        </td>
+        <td class="d-flex justify-content-center align-items-center">
+          <button type="button" class="bg-danger btn btnDelete text-bg-danger p-1 me-3 rounded" title="حذف"><i class="ti ti-trash fs-4"></i></button>
+        </td>
+      </tr>
+    `;
+    $('#tbl').append(newRow);
+
+    // تهيئة Select2 للصف الجديد
+    $('#tbl .select2').select2({
+      dropdownParent: $('#edit-modeil')
+    });
+  };
+
+  // دالة حذف الصف
+  $('#tbl').on('click', '.btnDelete', function() {
+    $(this).closest('tr').remove();
+  });
+});
+
+    </script>
+  
+  
+  
+  
       
 </body>
 

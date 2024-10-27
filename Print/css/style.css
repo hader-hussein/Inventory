@@ -223,6 +223,9 @@ vertical-align: top
   .tr-back td{
 background-color: #14aae2!important;
   }
+  tfoot tr td{
+    font-weight: bold;
+  }
   .table th{
     color: #000;
     font-weight: 800;

@@ -660,6 +660,13 @@
                       </a>
                     </li>
                     <li class="menu-item">
+                      <a href="internalDisbursementRequest.html" class="menu-link">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
+
+                        <div data-i18n="Internal exchange request"> طلب صرف داخلى</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
                       <a href="Store-shelves.html" class="menu-link">
                         <img class="menu-icon img-nav" src="./assets/img/nav-icon/Store-shelves.png" alt="img" loading="lazy">
 
@@ -1842,14 +1849,14 @@
                     <td></td>
                    
                     <td class="d-flex justify-content-center">
-                      <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
+                      <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-2 rounded cursor-pointer"
                         data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i
                           class="ti ti-pencil  fs-4"></i> </a>
+                          <a class="bg-primary text-bg-primary p-1 me-2 d-flex align-items-center justify-content-center  rounded" href="./Print/Stores inventory.html" title="طباعة"><i class="ti ti-printer  fs-4"></i> </a>
 
-                      <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                      <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-2 rounded"
                         href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
                         data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
-                        <a class="bg-primary text-bg-primary p-1 d-flex align-items-center justify-content-center  rounded" href="./Print/Stores inventory.html" title="طباعة"><i class="ti ti-printer  fs-4"></i> </a>
                     </td>
                   </tr>
 
@@ -1924,7 +1931,7 @@
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody class="table-border-bottom-0 text-center" id="tableBody">
+                            <tbody class="table-border-bottom-0" id="tableBody">
                                 <tr>
                                     <td>1</td>
                                     <td style="width: 40%">
@@ -1951,14 +1958,16 @@
                                     <td><input type="text" class="form-control" /></td>
                                     <td><input type="text" class="form-control" /></td>
                                     <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+
                                     <td class="d-flex">
                                         <button type="button"
-                                            class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                                            class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-2 rounded"
                                             title="حذف">
                                             <i class="ti ti-trash fs-4"></i>
                                         </button>
-                                        <button type="button" class="button btn btn-primary add_another" value="Add another line" onclick="addFieldinv();">
-                                            <i class="fa-solid fa-plus"></i>
+                                        <button type="button" class="button btn btn-primary add_another p-1" value="Add another line" onclick="addFieldinv();">
+                                            <i class="fa-solid fa-plus fs-4"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -2143,6 +2152,11 @@
   <script src="./assets/js/tables-datatables-advanced.js"></script><!--مسول عن داتا-->
   <script src="./assets/js/tables-datatables-basic.js"></script>
   <script>
+ $(document).ready(function() {
+    $('.select2').select2({
+        dropdownParent: $('#edit-modeil') // التأكد من أن القائمة تظهر داخل الـ modal
+    });
+});
     // Function to add a new row
     function addFieldinv() {
         var tableBody = document.getElementById("tableBody");
@@ -2178,6 +2192,8 @@
             <td><input type="text" class="form-control" /></td>
             <td><input type="text" class="form-control" /></td>
             <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+
             <td class="d-flex">
                 <button type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
                     <i class="ti ti-trash fs-4"></i>
@@ -2190,7 +2206,9 @@
         tableBody.appendChild(newRow);
 
         // Re-initialize select2 for the new elements
-        $('.select2').select2();
+        $('.select2').select2({
+    dropdownParent: $('#edit-modeil') // للتأكد من أن القائمة تظهر داخل الـ modal
+});
 
         // Add delete functionality for the new row
         newRow.querySelector('.btnDelete').addEventListener('click', function() {

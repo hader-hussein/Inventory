@@ -670,6 +670,13 @@
                       </a>
                     </li>
                     <li class="menu-item">
+                      <a href="internalDisbursementRequest.html" class="menu-link">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
+
+                        <div data-i18n="Internal exchange request"> طلب صرف داخلى</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
                       <a href="Store-shelves.html" class="menu-link">
                         <img class="menu-icon img-nav" src="./assets/img/nav-icon/Store-shelves.png" alt="img" loading="lazy">
 
@@ -1797,7 +1804,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             <div class="card comonent-hader-top">
               <div class="card-body py-2 px-md-0 px-2 card-widget-separator">
-                <div class="row mx-0 d-flex flex-wrap justify-content-between mb-3 align-items-center pt-2">
+                <div class="row mx-0 d-flex flex-wrap justify-content-between mb-2 align-items-center pt-2">
                   <div class="col col-md-8 col-12 mb-md-4 mb-2">
                     <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">
                       اضافة سند استلام داخلى
@@ -1813,8 +1820,8 @@
               </div>
             </div>
             <div class="card comonent-hader-top p-2 mt-4">
-              <form class="form-content row mx-0">
-                <div class="mb-3 col-md-4 col-12">
+              <form class="form-content row mx-0 g-2">
+                <div class="mb-2 col-md-4 col-lg-3 col-12">
                   <label for="select-brinh" class="form-label">
                     اختر الفرع
                   </label>
@@ -1831,8 +1838,8 @@
                     </select>
                   </div>
                 </div>
-                <div class="mb-3 col-md-4 col-12">
-                  <label for="select2Basic-2" class="form-label">
+                <div class="mb-2 col-md-4 col-lg-3 col-12">
+                  <label for="select-int" class="form-label">
                     اختر المخزن
                   </label>
                   <div class="input-groupe">
@@ -1840,7 +1847,7 @@
                       class="btn btn-primary text-nowrap add-new-role waves-effect waves-light text-withe">
                       اضافة
                     </button>
-                    <select id="select2Basic-2" class="select2 form-select" data-allow-clear="true">
+                    <select id="select-int" class="select2 form-select" data-allow-clear="true">
                       <option value="LETTER">اختيار المخزن</option>
                       <option value="VIDEO">الفرع التجارى</option>
                       <option value="PHOTO">شركة الجمعية فرع الخالدية</option>
@@ -1848,7 +1855,7 @@
                     </select>
                   </div>
                 </div>
-                <div class="mb-3 col-md-4 col-12">
+                <div class="mb-2 col-md-4 col-lg-3 col-12">
                   <label for="select2Basic-2" class="form-label">
                     اختر الجهة
                   </label>
@@ -1865,19 +1872,19 @@
                     </select>
                   </div>
                 </div>
-                <div class="mb-3 col-md-4 col-12">
+                <div class="mb-2 col-md-4 col-lg-2 col-12">
                   <label for="example-date-2" class="form-label">
                     تاريخ
                   </label>
                   <input type="date" class="form-control" id="example-date-2" />
                 </div>
                
-                <div class="mb-3 col-md-4 col-12">
-                  <label for="example-time" class="form-label">الوقت<span class="start-form">*</span></label>
+                <div class="mb-2 col-md-4 col-lg-1 col-12">
+                  <label for="example-time" class="form-label">الوقت</label>
                   <input type="time" class="form-control" id="example-time" placeholder=" الباركود" />
                 </div>
-                <div class="mb-3 col-md-4 col-12">
-                  <label for="example-commit" class="form-label">الملاحظات<span class="start-form">*</span></label>
+                <div class="mb-2 col-md-4 col-lg-12 col-12">
+                  <label for="example-commit" class="form-label">الملاحظات</label>
                   <textarea type="text" rows="1" class="form-control" id="example-commit" placeholder=" الملاحظات"></textarea>
                 </div>
                 <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
@@ -1902,7 +1909,7 @@
                         <td>1</td>
 
                         <td style="width: 20%">
-                          <select id="select-2" class="form-select form-s">
+                          <select id="select-2" class="form-select select2">
                             <option value="AK">الاصناف</option>
                             <option value="HI">1</option>
                             <option value="CA">1</option>
@@ -1911,7 +1918,7 @@
                           </select>
                         </td>
                         <td style="width: 20%">
-                          <select id="select-3" class="form-select form-s">
+                          <select id="select-3" class="form-select select2">
                             <option value="AK">SIZE</option>
                             <option value="HI">1</option>
                             <option value="CA">1</option>
@@ -1931,9 +1938,9 @@
                             title="حذف">
                             <i class="ti ti-trash fs-4"></i>
                           </button>
-                          <button type="button" class="button btn btn-primary add_another" value="Add another line"
+                          <button type="button" class="button btn p-1 btn-primary add_another" value="Add another line"
                             onclick="addField(this);">
-                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-plus fs-4"></i>
                           </button>
                         </td>
                       </tr>
@@ -2139,6 +2146,74 @@
   <script src="./assets/js/forms-selects.js"></script>
   <script src="./assets/vendor/js/chart.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.select2').select2();
+
+    // Function to add a new row
+    window.addField = function () {
+        var newRow = `
+            <tr>
+                <td></td>
+                <td style="width: 50%;">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>1</option>
+                        <option value="VIDEO">2</option>
+                        <option value="PHOTO">3</option>
+                        <option value="SI">4</option>
+                        <option value="CERTIFICATE">5</option>
+                        <option value="OTHER">6</option>
+                    </select>
+                </td>
+                <td class="p-1">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="AK" selected>SIZE</option>
+                        <option value="HI">1</option>
+                        <option value="CA">1</option>
+                        <option value="NV">1</option>
+                        <option value="OR">1</option>
+                    </select>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+
+                <td class="d-flex">
+                    <button  type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
+
+                </td>
+            </tr>`;
+
+        $('#tbl').append(newRow);
+
+        // Re-initialize select2 for the newly added select elements
+        $('#tbl tr:last-child .select2').select2({
+            dropdownParent: $('body'), // Ensures dropdown is within body
+            width: '100%' // Ensures the select2 element uses 100% width of its container
+        });
+
+
+        // Update row numbering
+        updateRowNumbers();
+    };
+
+    // Function to update row numbering
+    function updateRowNumbers() {
+        $('#tbl tr').each(function (index, row) {
+            $(row).find('td:first').text(index + 1);
+        });
+    }
+
+    // Function to delete a row
+    $(document).on('click', '.btnDelete-to', function () {
+        $(this).closest('tr').remove();
+        updateRowNumbers();
+    });
+
+
+});
+
+  </script>
 </body>
 
 </html>

@@ -660,6 +660,13 @@
                       </a>
                     </li>
                     <li class="menu-item">
+                      <a href="internalDisbursementRequest.html" class="menu-link">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
+
+                        <div data-i18n="Internal exchange request"> طلب صرف داخلى</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
                       <a href="Store-shelves.html" class="menu-link">
                         <img class="menu-icon img-nav" src="./assets/img/nav-icon/Store-shelves.png" alt="img" loading="lazy">
 
@@ -1795,27 +1802,30 @@
                   <div class="row justify-content-center mx-0 py-2 px-md-3 px-2">
                     <!--item-->
                     <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                      <div class="card h-100">
-                        <div class="row h-100">
-                          <div class="col-sm-5 col-12">
-                            <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
-                              <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
-                                alt="add-new-roles" width="83" />
+                      <div class="a-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="card h-100">
+                          <div class="row h-100">
+                            <div class="col-sm-5 col-12">
+                              <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                                <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
+                                  alt="add-new-roles" width="83" />
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-sm-7 col-12">
-                            <div class="card-body text-sm-end text-center ps-sm-0">
-                              <button data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
-                                اضافة رف
-                              </button>
-                              <p class="mb-0 mt-1">
-                                Add storeshelves data , if it does not exist
-                              </p>
+                            <div class="col-sm-7 col-12">
+                              <div class="card-body text-sm-end text-center ps-sm-0">
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                  class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
+                                  اضافة رف
+                                </button>
+                                <p class="mb-0 mt-1">
+                                  Add storeshelves data , if it does not exist
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                     
                     </div>
                     <!--item-->
                   </div>
@@ -1843,11 +1853,11 @@
                         <td></td>
                     
                         <td class="d-flex justify-content-center">
-                          <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
+                          <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-2 rounded cursor-pointer"
                             data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i
                               class="ti ti-pencil  fs-4"></i> </a>
 
-                          <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                          <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-2 rounded"
                             href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
                             data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
 
@@ -1874,12 +1884,12 @@
                 </div>
                 <div class="modal-body">
                   <form class="form-content row mx-0">
-                    <div class="mb-3 col-md-12 col-12">
-                      <label for="select2Basic-2" class="form-label">
+                    <div class="mb-2 col-md-12 col-12">
+                      <label for="select-store" class="form-label">
                         اختر المخزن
                       </label>
                      
-                        <select id="select2Basic-2" class="select2 form-select" data-allow-clear="true">
+                        <select id="select-store" class="select2 form-select" data-allow-clear="true">
                           <option value="LETTER">اختر المخزن</option>
                           <option value="VIDEO">الفرع التجارى</option>
                           <option value="PHOTO">شركة الجمعية فرع الخالدية</option>
@@ -1900,21 +1910,21 @@
                         </thead>
                         <tbody class="table-border-bottom-0" id="tbl">
                           <tr>
-                            <td>1</td>
+                            <td class="text-center">1</td>
     
                             <td>
                               <input type="text" class="form-control" />
                             </td>
                            
-                            <td class="d-flex">
+                            <td class="d-flex  align-items-center">
                               <button type="button"
                                 class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"
                                 title="حذف">
                                 <i class="ti ti-trash fs-4"></i>
                               </button>
-                              <button type="button" class="button btn btn-primary add_another" value="Add another line"
+                              <button type="button" class="button btn btn-primary add_another p-1" value="Add another line"
                                 onclick="addField(this);">
-                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-plus fs-4"></i>
                               </button>
                             </td>
                           </tr>
@@ -1963,7 +1973,6 @@
                             <th class="fw-bold">التسلسل</th>
                             <th class="fw-bold">اسم الرف</th>
     
-                            <th class="fw-bold"> action</th>
                             
                           </tr>
                         </thead>
@@ -1975,14 +1984,7 @@
                               <input type="text" class="form-control" />
                             </td>
                            
-                            <td class="text-center">
-                              <button type="button"
-                                class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center rounded"
-                                title="حذف">
-                                <i class="ti ti-trash fs-4"></i>
-                              </button>
-                             
-                            </td>
+                            
                           </tr>
                         </tbody>
                       </table>
@@ -2128,6 +2130,37 @@
   <script src="./assets/vendor/js/accordion.js"></script>
   <script src="./assets/js/tables-datatables-advanced.js"></script><!--مسول عن داتا-->
   <script src="./assets/js/tables-datatables-basic.js"></script>
+  <script>
+    $(document).ready(function() {
+
+// دالة لإضافة صف جديد
+window.addField = function(button) {
+  const newRow = `
+    <tr>
+     <tr>
+                            <td class="text-center">1</td>
+    
+                            <td>
+                              <input type="text" class="form-control" />
+                            </td>
+                           
+      <td class="d-flex  align-items-center">
+        <button type="button" class="bg-danger btn btnDelete text-bg-danger p-1 me-3 rounded" title="حذف"><i class="ti ti-trash fs-4"></i></button>
+      </td>
+    </tr>
+  `;
+  $('#tbl').append(newRow);
+
+ 
+};
+
+// دالة حذف الصف
+$('#tbl').on('click', '.btnDelete', function() {
+  $(this).closest('tr').remove();
+});
+});
+
+  </script>
 </body>
 
 </html>

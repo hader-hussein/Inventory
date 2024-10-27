@@ -78,7 +78,6 @@ function readURL(input) {
     document.getElementById('div1').style.display = 'block';
     }
     $(document).ready(function(){
-        $('.select2').select2();
         $("#my_table").on('click','.btnDelete',function(){
             $(this).closest('tr').remove();
          });
