@@ -31,16 +31,14 @@ table{
      margin-bottom: 10px;
     
  }
-.caption-table{
+.caption-table,.table-assembly caption{
      font-weight: 500;
      font-size: 22px;
      background-color: #E8E7EC;
      color: var(--color-secend);
 }
  
- tr td{
-    background-color: #f0efefce;
- }
+
  tfoot tr td{
   background-color: #fff;
  }
@@ -77,6 +75,7 @@ width: 0px;
      padding: 5px;
     
    }
+   
    .log img{
     width: 100px;
     height: 100px;
@@ -106,7 +105,7 @@ width: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #4A4A4A;
+    background: #5d5c5c8a;
     position: relative;
     font-weight: 600;
     -moz-border-radius: 10px;
@@ -166,7 +165,7 @@ width: 0px;
   width: 100%;
  }
  .item-d label{
-    background-color:#5d5c5c ;
+    background-color:#5d5c5c8a ;
     padding: 5px;
     color:#fff;
     font-size: 16px;

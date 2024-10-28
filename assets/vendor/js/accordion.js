@@ -37,23 +37,23 @@ function optionCheck() {
    }
 }
 /************************ */
-$('.tabel-table').on('keydown','tr td',function (e) {
-    var keyCode = e.keyCode;
-    if (keyCode !== 9) return;
+// $('.tabel-table').on('keydown','tr td',function (e) {
+//     var keyCode = e.keyCode;
+//     if (keyCode !== 9) return;
 
-    var $this = $(this),
-        $lastTr = $('tr:last', $('.tabel-table')),
-        $lastTd = $('td:last', $lastTr);
+//     var $this = $(this),
+//         $lastTr = $('tr:last', $('.tabel-table')),
+//         $lastTd = $('td:last', $lastTr);
 
     
-    if (($(e.target).closest('td')).is($lastTd)) {
+//     if (($(e.target).closest('td')).is($lastTd)) {
      
 
-        $lastTr.after($lastTr.clone());
+//         $lastTr.after($lastTr.clone());
       
-    }
+//     }
     
-});
+// });
 
 
 function readURL(input) {
@@ -77,15 +77,7 @@ function readURL(input) {
     function show2(){
     document.getElementById('div1').style.display = 'block';
     }
-    $(document).ready(function(){
-        $("#my_table").on('click','.btnDelete',function(){
-            $(this).closest('tr').remove();
-         });
-         $("#my-table-tow").on('click','.btnDelete-to',function(){
-            $(this).closest('tr').remove();
-         });
-        
-     });
+   
   
 
 // Function to add a new row

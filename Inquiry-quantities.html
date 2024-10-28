@@ -1801,28 +1801,23 @@
                   </strong>
                   <div class="row justify-content-center mx-0 py-2 px-md-3 px-2">
                     <!--item-->
-                    <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                      <div class="card h-100">
-                        <div class="row h-100">
-                          <div class="col-sm-5 col-12">
-                            <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
-                              <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
-                                alt="add-new-roles" width="83" />
-                            </div>
-                          </div>
-                          <div class="col-sm-7 col-12">
-                            <div class="card-body text-sm-end text-center ps-sm-0">
-                              <button data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
-                                اضافة 
-                              </button>
-                              <p class="mb-0 mt-1">
-                                Add Inquiry-quantities. data , if it does not exist
-                              </p>
-                            </div>
-                          </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2 card">
+                      <form class="row component-form p-2 mx-0">
+                        <div class="col-12  col-md-6  mb-2">
+                          <label for="Bond-type" class="form-label">
+                             اسم الصنف<span class="start-form">*</span></label>
+      
+                          <select id="Bond-type" class="select2 form-select" data-allow-clear="true">
+                            <option value="AK">اسم الصنف</option>
+                            <option value="HI">كفته دجاج </option>
+                          </select>
                         </div>
-                      </div>
+                        <div class="col-12 col-md-6 mb-2">
+                          <label class="form-label" for="username">  الباركود <span class="start-form">*</span></label>
+                          <input type="text" id="username" class="form-control" placeholder="  الباركود" />
+                        </div>
+                       
+                      </form>
                     </div>
                     <!--item-->
                   </div>
@@ -1842,7 +1837,6 @@
                         <th class="fw-bold">    الحجم </th>
                         <th class="fw-bold">    الكمية </th>
 
-                        <th class="fw-bold"> Action</th>
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
@@ -1853,17 +1847,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="d-flex justify-content-center">
-                          <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
-                            data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i
-                              class="ti ti-pencil  fs-4"></i> </a>
-
-                          <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
-                            href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
-                            data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
-
-
-                        </td>
+                     
                       </tr>
 
 
@@ -1874,74 +1858,6 @@
             </div>
           </div>
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-md">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel">  اضافة استعلام</h6>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form class="row component-form pt-2 mx-0">
-                    <div class="col-12  mb-3">
-                      <label for="Bond-type" class="form-label">
-                         اسم الصنف<span class="start-form">*</span></label>
-  
-                      <select id="Bond-type" class="select2 form-select" data-allow-clear="true">
-                        <option value="AK">اسم الصنف</option>
-                        <option value="HI">كفته دجاج </option>
-                      </select>
-                    </div>
-                    <div class="col-12 mb-3">
-                      <label class="form-label" for="username">  الباركود <span class="start-form">*</span></label>
-                      <input type="text" id="username" class="form-control" placeholder="  الباركود" />
-                    </div>
-                    <div class="col-12 col-lg-12 mt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-                    </div>
-                  </form>
-                  
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <!-- edit Hardware Modal -->
-          <div class="modal fade " id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
-            aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md modal-dialog-centered">
-              <div class="modal-content p-3 p-md-3">
-                <div class="modal-header px-0">
-                  <h6 class="modal-title fs-4 fw-bold text-tilte-b">   تعديل بيانات الاستعلام</h6>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  <form class="row component-form pt-2 mx-0">
-                    <div class="col-12  mb-3">
-                      <label for="Bond-type-1" class="form-label">
-                         اسم الصنف<span class="start-form">*</span></label>
-  
-                      <select id="Bond-type-1" class="select2 form-select" data-allow-clear="true">
-                        <option value="AK">اسم الصنف</option>
-                        <option value="HI">كفته دجاج </option>
-                      </select>
-                    </div>
-                    <div class="col-12 mb-3">
-                      <label class="form-label" for="username">  الباركود <span class="start-form">*</span></label>
-                      <input type="text" id="username" class="form-control" placeholder="  الباركود" />
-                    </div>
-                    <div class="col-12 col-lg-12 mt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">تعديل</button>
-                    </div>
-                  </form>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
           <!-- delet Modal -->
           <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">

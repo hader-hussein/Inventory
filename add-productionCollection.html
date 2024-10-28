@@ -1793,9 +1793,9 @@
 
           <div class="container-xxl flex-grow-1 container-p-y">
             <div class="card comonent-hader-top">
-              <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
+              <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
                 <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-3 align-items-center pt-2">
-                  <div class="col col-md-8 col-12  mb-md-4 mb-2 ">
+                  <div class="col col-md-8 col-12  mb-md-2 px-0 mb-2 ">
                     <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">اضافه امر انتاج</span>  </strong>
 
 
@@ -1857,56 +1857,65 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
-                        <div class="form-repeater">
-                          <div data-repeater-list="group-a" id="repeater-list1">
-                            <div data-repeater-item class="col-lg-12"  data-repeater-item>
-                              <div class="row">
-        
-                                <div class="mb-3 col-lg-6 col-xl-4 col-12 mb-0">
-                                  <label class="form-label" for="form-repeater-1-4">اسم الصنف<span class="start-form">*</span></label>
-                                  <select id="form-repeater-1-4" class="form-select select2">
-                                    <option value="Designer">اختر اسم الصنف</option>
-                                    <option value="Developer">Developer</option>
-                                    <option value="Tester">Tester</option>
-                                    <option value="Manager">Manager</option>
+                        <div class="table-responsive text-nowrap rounded  pt-4 pb-4">
+      
+                          <table class="table table-bordered table-hover rounded tabel-table table-inv" id="my_table-tow">
+                            <thead class="table-light">
+                              <tr class="fw-bold">
+                                <th class="fw-bold"> SR. NO.</th>
+                                <th class="fw-bold">  اسم الصنف</th>
+
+                                <th class="fw-bold"> الحجم</th>
+                                <th class="fw-bold"> الكمية</th>
+                                <th class="fw-bold"> تاريخ انتهاء صلاحية</th>
+                                <th class="fw-bold"> </th>
+
+                                  
+                              </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0" id="tb3">
+                              <tr>
+                            
+                                <td class="text-center">  1</td>
+                          
+                                <td>  
+                                  <select id="select-1" class="form-select  form-control select2" >
+                                    <option value="AK" selected>   	اختر اسم المنتج</option>
+                                    <option value="HI">1</option>
+                                    <option value="CA">1</option>
+                                    <option value="NV">1</option>
+                                    <option value="OR">1</option>
+                                
                                   </select>
-                                </div>
-                                <div class="mb-3 col-lg-6 col-xl-4 col-12 mb-0">
-                                  <label class="form-label" for="form-repeater">  الحجم<span class="start-form">*</span></label>
-                                  <select id="form-repeater" class="form-select select2">
-                                    <option value="Designer">  الحجم</option>
-                                    <option value="Developer">Developer</option>
-                                    <option value="Tester">Tester</option>
-                                    <option value="Manager">Manager</option>
+                                </td>
+                                <td>  
+                                  <select id="select-7" class="form-select  form-control select2" >
+                                    <option value="AK" selected>   	CHOOSE THE SIZE</option>
+                                    <option value="HI">1</option>
+                                    <option value="CA">1</option>
+                                    <option value="NV">1</option>
+                                    <option value="OR">1</option>
+                                
                                   </select>
-                                </div>
-                                <div class="mb-3 col-lg-6 col-xl-4 col-12 mb-0">
-                                  <label class="form-label" for="form-repeater-1-1">  الكمية <span class="start-form">*</span></label>
-                                  <input type="text" id="form-repeater-1-1" class="form-control" placeholder="  الكمية" />
-                                </div>
+                                </td>
+                                <td>
+                                  <input type="number"class="form-control">
+                                </td>
+                                <td>
+                                  <input type="date"class="form-control">
+                                </td>
                                
-                                <div class="mb-3 col-lg-6 col-xl-4 col-12 mb-0">
-                                  <label class="form-label" for="form-repeater-1">    تاريخ انتهاء صلاحية<span class="start-form">*</span></label>
-                                  <input type="date" id="form-repeater-1" class="form-control" placeholder=" اسم الدوام" />
-                                </div>
-                              
-                                <div class="mb-3 col-lg-12 col-xl-4 col-12 d-flex align-items-center mb-0">
-                                  <button class="btn btn-label-danger mt-4" data-repeater-delete type="button">
-                                    <i class="ti ti-x ti-xs me-1"></i>
-                                    <span class="align-middle">Delete</span>
-                                  </button>
-                                </div>
-                              </div>
-                              <hr />
-  
-                            </div>
-                            <div class="mb-3">
-                              <button id="add-new-row1" class="btn btn-primary" data-repeater-create type="button">
-                                <i class="ti ti-plus me-1"></i>
-                                <span class="align-middle">Add New</span>
-                              </button>
-                            </div>
-                        </div>
+                                <td class="d-flex">
+
+                                  <button type="button" class="button btn btn-primary add_another p-1" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
+
+                                </td>
+                              </tr>
+                            
+                            </tbody>
+                        
+                          </table>
+
                         </div>
                         
                        </div>
@@ -1923,45 +1932,53 @@
                     </h2>
                     <div id="collapsethere" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
-                        <div class="form-repeater">
-                          <div id="repeater-list" data-repeater-list="group-a">
-                            <div data-repeater-item class="col-lg-12" data-repeater-item>
-                              <div class="row">
-        
-                                <div class="mb-3 col-lg-6 col-xl-5 col-12 mb-0">
-                                  <label class="form-label" for="purpose"> الغرض<span class="start-form">*</span></label>
-                                  <select id="purpose" class="form-select select2">
-                                    <option value="Designer">اختر  التكلفة</option>
-                                    <option value="Developer">Developer</option>
-                                    <option value="Tester">Tester</option>
-                                    <option value="Manager">Manager</option>
-                                  </select>
-                                </div>
-                             
-                                <div class="mb-3 col-lg-6 col-xl-5 col-12 mb-0">
-                                  <label class="form-label" for="form-repeater-1-1">  القيمة <span class="start-form">*</span></label>
-                                  <input type="text" id="form-repeater-1-1" class="form-control" placeholder="  القيمة" />
-                                </div>
+                        <div class="table-responsive text-nowrap rounded  pt-4 pb-4">
+      
+                          <table class="table table-bordered table-hover rounded tabel-table table-inv" id="my-table-tow">
+                            <thead class="table-light">
+                              <tr class="fw-bold">
+                                <th class="fw-bold"> SR. NO.</th>
+                                <th class="fw-bold">   الغرض</th>
+
+                                <th class="fw-bold"> القيمة</th>
                                
+                                <th class="fw-bold"> </th>
+
+                                  
+                              </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0" id="tb2">
+                              <tr>
+                            
+                                <td class="text-center">  1</td>
+                          
+                                <td>  
+                                  <select id="select-4" class="form-select  form-control select2" >
+                                    <option value="AK" selected>   	اختر  التكلفة</option>
+                                    <option value="HI">1</option>
+                                    <option value="CA">1</option>
+                                    <option value="NV">1</option>
+                                    <option value="OR">1</option>
                                 
-                              
-                                <div class="mb-3 col-lg-12 col-xl-2 col-12 d-flex align-items-center mb-0">
-                                  <button class="btn btn-label-danger mt-4" data-repeater-delete type="button">
-                                    <i class="ti ti-x ti-xs me-1"></i>
-                                    <span class="align-middle">Delete</span>
-                                  </button>
-                                </div>
-                              </div>
-                              <hr />
-  
-                            </div>
-                            <div class="mb-3">
-                              <button id="add-new-row" class="btn btn-primary" data-repeater-create type="button">
-                                <i class="ti ti-plus me-1"></i>
-                                <span class="align-middle">Add New</span>
-                              </button>
-                            </div>
-                        </div>
+                                  </select>
+                                </td>
+                               
+                                <td>
+                                  <input type="number"class="form-control">
+                                </td>
+                               
+                               
+                                <td class="d-flex justify-content-center">
+
+                                  <button type="button" class="button btn btn-primary p-1" value="Add another line" onclick="addFieldproduction(this);"><i class="fa-solid fa-plus fs-4"></i></button>
+
+                                </td>
+                              </tr>
+                            
+                            </tbody>
+                        
+                          </table>
+
                         </div>
                         
                       </div>
@@ -2139,118 +2156,122 @@
   <script src="./assets/vendor/js/chart.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
   <script>
-    $(document).ready(function() {
-      // Initialize select2 for existing elements
+    $(document).ready(function () {
       $('.select2').select2();
-  
-      // Function to add a new row
-      function addNewRow() {
-        const newRow = `
-          <div class="repeater-item col-lg-12" data-repeater-item>
-            <div class="row">
-              <div class="mb-3 col-lg-6 col-xl-5 col-12 mb-0">
-                <label class="form-label" for="purpose">الغرض<span class="start-form">*</span></label>
-                <select class="form-select select2">
-                  <option value="Designer">اختر التكلفة</option>
-                  <option value="Developer">Developer</option>
-                  <option value="Tester">Tester</option>
-                  <option value="Manager">Manager</option>
-                </select>
-              </div>
-              <div class="mb-3 col-lg-6 col-xl-5 col-12 mb-0">
-                <label class="form-label" for="form-repeater-1-1">القيمة<span class="start-form">*</span></label>
-                <input type="text" class="form-control" placeholder="القيمة" />
-              </div>
-              <div class="mb-3 col-lg-12 col-xl-2 col-12 d-flex align-items-center mb-0">
-                <button class="btn btn-label-danger mt-4" data-repeater-delete type="button">
-                  <i class="ti ti-x ti-xs me-1"></i>
-                  <span class="align-middle">Delete</span>
-                </button>
-              </div>
-            </div>
-            <hr />
-          </div>`;
-        
-        // Append new row to the repeater list
-        $('#repeater-list').append(newRow);
-  
-        // Reinitialize select2 for the new elements
-        $('.select2').select2();
-  
-        // Attach delete event to the new delete button
-        $('[data-repeater-delete]').on('click', function() {
-          $(this).closest('[data-repeater-item]').remove();
+
+    // Function to add a new row
+    window.addField = function () {
+        var newRow = `
+            <tr>
+                <td class="text-center"></td>
+                <td style="width: 50%;">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>1</option>
+                        <option value="VIDEO">2</option>
+                        <option value="PHOTO">3</option>
+                        <option value="SI">4</option>
+                        <option value="CERTIFICATE">5</option>
+                        <option value="OTHER">6</option>
+                    </select>
+                </td>
+                <td class="p-1">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="AK" selected>SIZE</option>
+                        <option value="HI">1</option>
+                        <option value="CA">1</option>
+                        <option value="NV">1</option>
+                        <option value="OR">1</option>
+                    </select>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="date" class="form-control"></td>
+
+                <td class="d-flex">
+                    <button  type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
+
+                </td>
+            </tr>`;
+
+        $('#tb3').append(newRow);
+
+        // Re-initialize select2 for the newly added select elements
+        $('#tb3 tr:last-child .select2').select2({
+            dropdownParent: $('body'), // Ensures dropdown is within body
+            width: '100%' // Ensures the select2 element uses 100% width of its container
         });
-      }
-  // Function to add a new row
-  function addNewRow1() {
-        const newRow = `
-          <div class="repeater-item col-lg-12" data-repeater-item>
-           <div class="row">
-        
-                                <div class="mb-3 col-lg-6 col-xl-4 col-12 mb-0">
-                                  <label class="form-label" for="form-repeater-1-4">اسم الصنف<span class="start-form">*</span></label>
-                                  <select id="form-repeater-1-4" class="form-select select2">
-                                    <option value="Designer">اختر اسم الصنف</option>
-                                    <option value="Developer">Developer</option>
-                                    <option value="Tester">Tester</option>
-                                    <option value="Manager">Manager</option>
-                                  </select>
-                                </div>
-                                <div class="mb-3 col-lg-6 col-xl-4 col-12 mb-0">
-                                  <label class="form-label" for="form-repeater">  الحجم<span class="start-form">*</span></label>
-                                  <select id="form-repeater" class="form-select select2">
-                                    <option value="Designer">  الحجم</option>
-                                    <option value="Developer">Developer</option>
-                                    <option value="Tester">Tester</option>
-                                    <option value="Manager">Manager</option>
-                                  </select>
-                                </div>
-                                <div class="mb-3 col-lg-6 col-xl-4 col-12 mb-0">
-                                  <label class="form-label" for="form-repeater-1-1">  الكمية <span class="start-form">*</span></label>
-                                  <input type="text" id="form-repeater-1-1" class="form-control" placeholder="  الكمية" />
-                                </div>
-                               
-                                <div class="mb-3 col-lg-6 col-xl-4 col-12 mb-0">
-                                  <label class="form-label" for="form-repeater-1">    تاريخ انتهاء صلاحية<span class="start-form">*</span></label>
-                                  <input type="date" id="form-repeater-1" class="form-control" placeholder=" اسم الدوام" />
-                                </div>
-                              
-                                <div class="mb-3 col-lg-12 col-xl-4 col-12 d-flex align-items-center mb-0">
-                                  <button class="btn btn-label-danger mt-4" data-repeater-delete type="button">
-                                    <i class="ti ti-x ti-xs me-1"></i>
-                                    <span class="align-middle">Delete</span>
-                                  </button>
-                                </div>
-                              </div>
-            
-            <hr />
-          </div>`;
-        
-        // Append new row to the repeater list
-        $('#repeater-list1').append(newRow);
-  
-        // Reinitialize select2 for the new elements
-        $('.select2').select2();
-  
-        // Attach delete event to the new delete button
-        $('[data-repeater-delete]').on('click', function() {
-          $(this).closest('[data-repeater-item]').remove();
+
+
+        // Update row numbering
+        updateRowNumbers();
+    };
+
+    // Function to update row numbering
+    function updateRowNumbers() {
+        $('#tb3 tr').each(function (index, row) {
+            $(row).find('td:first').text(index + 1);
         });
-      }
-      // Add new row on button click
-      $('#add-new-row1').on('click', function() {
-        addNewRow1();
-      });
-   // Add new row on button click
-   $('#add-new-row').on('click', function() {
-        addNewRow();
-      });
-      // Attach delete event to existing delete buttons
-      $('[data-repeater-delete]').on('click', function() {
-        $(this).closest('[data-repeater-item]').remove();
-      });
+    }
+
+    // Function to delete a row
+    $(document).on('click', '.btnDelete-to', function () {
+        $(this).closest('tr').remove();
+        updateRowNumbers();
     });
+
+
+    // Function to add a new row
+    window.addFieldproduction = function () {
+        var newRow = `
+            <tr>
+                <td class="text-center"></td>
+                <td style="width: 50%;">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>1</option>
+                        <option value="VIDEO">2</option>
+                        <option value="PHOTO">3</option>
+                        <option value="SI">4</option>
+                        <option value="CERTIFICATE">5</option>
+                        <option value="OTHER">6</option>
+                    </select>
+                </td>
+               
+                <td><input type="text" class="form-control"></td>
+
+                <td class="d-flex justify-content-center">
+                    <button  type="button" class="bg-danger btn btnDelete-p text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center  rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
+
+                </td>
+            </tr>`;
+
+        $('#tb2').append(newRow);
+
+        // Re-initialize select2 for the newly added select elements
+        $('#tb2 tr:last-child .select2').select2({
+            dropdownParent: $('body'), // Ensures dropdown is within body
+            width: '100%' // Ensures the select2 element uses 100% width of its container
+        });
+
+
+        // Update row numbering
+        updateRowNumberss();
+    };
+
+    // Function to update row numbering
+    function updateRowNumberss() {
+        $('#tb2 tr').each(function (index, row) {
+            $(row).find('td:first').text(index + 1);
+        });
+    }
+
+    // Function to delete a row
+    $(document).on('click', '.btnDelete-p', function () {
+        $(this).closest('tr').remove();
+        updateRowNumberss();
+    });
+
+
+});
+
   </script>
   
 
