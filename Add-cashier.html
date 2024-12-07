@@ -1885,7 +1885,7 @@
                 </div>
                 <div class="modal-body">
                   <form class="row component-form pt-2 mx-0">
-                    <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
+                    <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-4">
 
                       <table class="table table-bordered table-hover rounded " id="my_table-tow">
                         <thead class="table-light">
@@ -2001,7 +2001,7 @@
                             </td>
                             <td class="p-1"> 
                             
-                                <select id="select-2" class="form-select select2">
+                                <select id="select-pranh" class="form-select select2">
                                   <option value="AK"> الفرع</option>
                                   <option value="HI">1</option>
                                   <option value="CA">1</option>
@@ -2013,7 +2013,7 @@
                             
                             </td>
                             <td class="p-1">
-                              <select id="select-3" class="form-select select2">
+                              <select id="select-prices" class="form-select select2">
                                 <option value="AK"> اسلوب الدفع</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -2024,7 +2024,7 @@
                             
                             </td>
                             <td class="p-1">
-                              <select id="select-4" class="form-select select2">
+                              <select id="select-client" class="form-select select2">
                                 <option value="AK"> العميل الافتراضي</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -2178,79 +2178,69 @@
   <script src="./assets/vendor/js/chart.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
   <script>
-    $(document).ready(function() {
-// تهيئة جميع حقول Select2 في البداية
-$('.select2').select2({
-  dropdownParent: $('#exampleModal') // للتأكد أن الـ Select2 يظهر داخل الـ modal
-});
-// تهيئة جميع حقول Select2 في البداية
-$('.select2').select2({
-  dropdownParent: $('#edit-modeil') // للتأكد أن الـ Select2 يظهر داخل الـ modal
-});
+     $(document).ready(function() {
+    // عند فتح أي مودال يحتوي على فئة معينة
+    $('.modal').on('shown.bs.modal', function () {
+      // تهيئة الـ select2 لجميع العناصر داخل هذا المودال
+      $(this).find('.select2').select2({
+        dropdownParent: $(this) // تخصيص الـ modal الحالي كأب للقائمة المنسدلة
+      });
+    });
 
-// دالة لإضافة صف جديد
-window.addField = function(button) {
-  const newRow = `
-    <tr>
-       <td class="p-1 text-center">  1</td>
-                      
-                            <td class="p-1">                             
-                              
-                              <input type="text" class="form-control">
-                            </td>
-                            <td class="p-1" style="width: 20%;"> 
-                            
-                                <select id="select-2" class="form-select select2">
-                                  <option value="AK"> الفرع</option>
-                                  <option value="HI">1</option>
-                                  <option value="CA">1</option>
-                                  <option value="NV">1</option>
-                                  <option value="OR">1</option>
-                              
-                                </select>
-                            
-                            
-                            </td>
-                            <td class="p-1">
-                              <select id="select-3" class="form-select select2">
-                                <option value="AK"> اسلوب الدفع</option>
-                                <option value="HI">1</option>
-                                <option value="CA">1</option>
-                                <option value="NV">1</option>
-                                <option value="OR">1</option>
-                            
-                              </select>
-                            
-                            </td>
-                            <td class="p-1">
-                              <select id="select-4" class="form-select select2">
-                                <option value="AK"> العميل الافتراضي</option>
-                                <option value="HI">1</option>
-                                <option value="CA">1</option>
-                                <option value="NV">1</option>
-                                <option value="OR">1</option>
-                            
-                              </select>
-                            
-                            </td>
-      <td class="d-flex justify-content-center align-items-center">
-        <button type="button" class="bg-danger btn btnDelete text-bg-danger p-1 me-2 rounded" title="حذف"><i class="ti ti-trash fs-4"></i></button>
-      </td>
-    </tr>
-  `;
-  $('#tb2').append(newRow);
+    // دالة لإضافة صف جديد
+    window.addField = function(button) {
+      const newRow = `
+        <tr>
+          <td class="p-1 text-center">  1</td>
+          <td class="p-1">
+            <input type="text" class="form-control">
+          </td>
+          <td class="p-1" style="width: 20%;">
+            <select class="form-select select2" data-allow-clear="true">
+              <option value="AK"> الفرع</option>
+              <option value="HI">1</option>
+              <option value="CA">1</option>
+              <option value="NV">1</option>
+              <option value="OR">1</option>
+            </select>
+          </td>
+          <td class="p-1">
+            <select class="form-select select2" data-allow-clear="true">
+              <option value="AK"> اسلوب الدفع</option>
+              <option value="HI">1</option>
+              <option value="CA">1</option>
+              <option value="NV">1</option>
+              <option value="OR">1</option>
+            </select>
+          </td>
+          <td class="p-1">
+            <select class="form-select select2" data-allow-clear="true">
+              <option value="AK"> العميل الافتراضي</option>
+              <option value="HI">1</option>
+              <option value="CA">1</option>
+              <option value="NV">1</option>
+              <option value="OR">1</option>
+            </select>
+          </td>
+          <td class="d-flex justify-content-center align-items-center">
+            <button type="button" class="bg-danger btn btnDelete text-bg-danger p-1 me-2 rounded" title="حذف"><i class="ti ti-trash fs-4"></i></button>
+          </td>
+        </tr>
+      `;
+      $('#tb2').append(newRow);
 
-  // تهيئة Select2 للصف الجديد
-  $('#tb2 .select2').select2({
-    dropdownParent: $('#exampleModal')
+      // تهيئة Select2 للصف الجديد
+      $('#tb2 .select2').select2({
+        dropdownParent: $('#exampleModal'),
+        width: '100%' // Ensures the select2 element uses 100% width of its container
+      });
+    };
+
+    // دالة حذف الصف
+    $('#tb2').on('click', '.btnDelete', function() {
+      $(this).closest('tr').remove();
+    });
   });
-};
-
-// دالة حذف الصف
-$('#tb2').on('click', '.btnDelete', function() {
-  $(this).closest('tr').remove();
-});
-});
 
   </script>
 

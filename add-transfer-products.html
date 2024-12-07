@@ -2000,12 +2000,18 @@
                       <tr class="fw-bold">
                         <th class="fw-bold">التسلسل</th>
                         <th class="fw-bold">المنتج المراد تحويله </th>
-
+                        <th class="fw-bold">  تاريخ انتهاء صلاحية </th>
                         <th class="fw-bold"> الحجم</th>
-
+                        <th class="fw-bold">
+                          اسم الرف
+                        </th>
+                        <th class="fw-bold">
+                          الى رف
+                        </th>
                         <th class="fw-bold">
                           الكمية
                         </th>
+                        
                         <th class="fw-bold">
                           سعر الوحدة
                         </th>
@@ -2027,7 +2033,9 @@
                             <option value="OR">1</option>
                           </select>
                         </td>
-
+                        <td>
+                          <input type="date" class="form-control">
+                        </td>
                         <td style="width: 20%">
                           <select id="select-3" class="form-select form-s select2">
                             <option value="AK"> الحجم</option>
@@ -2038,7 +2046,26 @@
                           </select>
 
                         </td>
+                        <td style="width: 20%">
+                          <select id="select-4" class="form-select form-s select2">
+                            <option value="AK"> اسم الرف</option>
+                            <option value="HI">1</option>
+                            <option value="CA">1</option>
+                            <option value="NV">1</option>
+                            <option value="OR">1</option>
+                          </select>
 
+                        </td>
+                        <td style="width: 20%">
+                          <select id="select-5" class="form-select form-s select2">
+                            <option value="AK"> الى رف</option>
+                            <option value="HI">1</option>
+                            <option value="CA">1</option>
+                            <option value="NV">1</option>
+                            <option value="OR">1</option>
+                          </select>
+
+                        </td>
                         <td><input type="text" class="form-control" /></td>
                         <td><input type="text" class="form-control" /></td>
                         <td><input type="text" class="form-control" /></td>
@@ -2259,6 +2286,12 @@
   <script src="./assets/vendor/js/chart.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
   <script>
+     $(document).ready(function() {
+    // تهيئة جميع عناصر select2 الموجودة عند تحميل الصفحة
+    $('.select2').select2({
+        width: "100%" // لتأكيد عرض القائمة المنسدلة بشكل كامل
+    });
+});
     // Function to add a new row
     function addFieldprodcts() {
       var tableBody = document.getElementById("tbl");
@@ -2279,9 +2312,30 @@
                     <option value="OR">1</option>
                 </select>
             </td>
+             <td>
+                 <input type="date" class="form-control">
+             </td>
             <td style="width: 20%">
                 <select class="form-select form-s select2">
                     <option value="AK">الحجم</option>
+                    <option value="HI">1</option>
+                    <option value="CA">1</option>
+                    <option value="NV">1</option>
+                    <option value="OR">1</option>
+                </select>
+            </td>
+          <td style="width: 20%">
+                <select class="form-select form-s select2">
+                    <option value="AK">اسم الرف</option>
+                    <option value="HI">1</option>
+                    <option value="CA">1</option>
+                    <option value="NV">1</option>
+                    <option value="OR">1</option>
+                </select>
+            </td>
+              <td style="width: 20%">
+                <select class="form-select form-s select2">
+                    <option value="AK">الى رف</option>
                     <option value="HI">1</option>
                     <option value="CA">1</option>
                     <option value="NV">1</option>
