@@ -1851,9 +1851,9 @@
                 
                   
                 
-                  <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
+                  <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-2">
 
-                    <table class="table table-bordered table-hover rounded tabel-table" id="my_table" >
+                    <table class="table table-bordered table-hover rounded " id="my_table" >
                       <thead class="table-light">
                         <tr class="fw-bold">
                           <th class="fw-bold">التسلسل</th>
@@ -1870,12 +1870,19 @@
                       
                           <td>  1</td>
                     
-                          <td style="width: 50%;">  
-                             <input type="text"class="form-control">
+                          <td style="width: 50%;"> 
+                            <select id="select-item-name" class="select2 form-select" data-allow-clear="true">
+                              <option value="LETTER">1  </option>
+                              <option value="VIDEO">2 </option>
+                              <option value="PHOTO">3 </option>
+                              <option value="SI">4 </option>
+                              <option value="CERTIFICATE">5</option>
+                              <option value="OTHER">6</option>
+                            </select>
                           </td>
-                          <td> 
+                          <td class="p-1"> 
                           
-                              <select id="select-2" class="form-select">
+                              <select id="select-size" class="form-select select2" data-allow-clear="true">
                                 <option value="AK"> SIZE</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -1891,36 +1898,12 @@
                           </td>
                         
                           <td class="d-flex">
-                            <button  type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-                            <button type="button" class="button btn btn-primary add_another" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus"></i></button>
-                          </td>
-                        </tr>
-                        <tr>
-                      
-                          <td>  1</td>
-                    
-                          <td style="width: 50%;">  
-                             <input type="text"class="form-control">
-                          </td>
-                          <td> 
+                            <button  type="button" class="bg-danger btn text-bg-danger btnDelete  p-1 d-flex align-items-center justify-content-center me-2 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
+
+                            <button type="button" class="button btn btn-primary addField p-1 me-2" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
+
+
                           
-                              <select id="select-2" class="form-select">
-                                <option value="AK"> SIZE</option>
-                                <option value="HI">1</option>
-                                <option value="CA">1</option>
-                                <option value="NV">1</option>
-                                <option value="OR">1</option>
-                            
-                              </select>
-                          
-                          
-                          </td>
-                          <td>
-                            <input type="text"class="form-control">
-                          </td>
-                        
-                          <td class="d-flex">
-                            <button  type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
                           </td>
                         </tr>
                       </tbody>
@@ -1934,7 +1917,7 @@
         <div>
           <button type="submit" class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">حفظ</button>
         </div>
-    </form>
+               </form>
                 
               
               </div>
@@ -2105,6 +2088,73 @@
   <script src="./assets/js/forms-selects.js"></script>
   <script src="./assets/vendor/js/chart.js"></script>
   <script src="./assets/vendor/js/accordion.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.select2').select2();
+    
+    // Function to add a new row
+    window.addField = function () {
+        var newRow = `
+            <tr>
+                <td></td>
+                <td style="width: 50%;">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>1</option>
+                        <option value="VIDEO">2</option>
+                        <option value="PHOTO">3</option>
+                        <option value="SI">4</option>
+                        <option value="CERTIFICATE">5</option>
+                        <option value="OTHER">6</option>
+                    </select>
+                </td>
+                <td class="p-1">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="AK" selected>SIZE</option>
+                        <option value="HI">1</option>
+                        <option value="CA">1</option>
+                        <option value="NV">1</option>
+                        <option value="OR">1</option>
+                    </select>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td class="d-flex">
+                    <button type="button" class="bg-danger btn text-bg-danger btnDelete-to p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
+                        <i class="ti ti-trash fs-4"></i>
+                    </button>
+                </td>
+            </tr>`;
+
+        $('#tbl').append(newRow);
+
+        // Re-initialize select2 for the newly added select elements
+        $('#tbl tr:last-child .select2').select2({
+            dropdownParent: $('body'), // Ensures dropdown is within body
+            width: '100%' // Ensures the select2 element uses 100% width of its container
+        });
+
+
+        // Update row numbering
+        updateRowNumbers();
+    };
+
+    // Function to update row numbering
+    function updateRowNumbers() {
+        $('#tbl tr').each(function (index, row) {
+            $(row).find('td:first').text(index + 1);
+        });
+    }
+
+    // Function to delete a row
+    $(document).on('click', '.btnDelete-to', function () {
+        $(this).closest('tr').remove();
+        updateRowNumbers();
+    });
+
+
+});
+
+
+  </script>
 </body>
 
 </html>
