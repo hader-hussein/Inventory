@@ -1820,20 +1820,167 @@
           <!-- Content -->
 
           <div class="container-xxl flex-grow-1 container-p-y">
-            <div class="card comonent-hader-top">
-              <div class="card-body py-4 px-md-4 px-2 card-widget-separator">
-                <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> لوحة
-                    التحكم </span> </strong>
-
+           
+              <div class="card comonent-hader-top">
+                <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
+                  <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted">
+                    مجموعات العملاء
+                    </span>
+                  </strong>
+                  <div class="row justify-content-center mx-0 py-2 px-md-3 px-2">
+                    <!--item-->
+                    <div class="col-xl-6 col-lg-4 col-md-6 mb-md-0 mb-2">
+                      <div class="a-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="card h-100">
+                          <div class="row h-100">
+                            <div class="col-sm-5 col-12">
+                              <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                                <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
+                                  alt="add-new-roles" width="83" />
+                              </div>
+                            </div>
+                            <div class="col-sm-7 col-12">
+                              <div class="card-body text-sm-end text-center ps-sm-0">
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                  class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
+                                  اضافة مجموعة
+                                </button>
+                                <p class="mb-0 mt-1">
+                                  Add Groups-Customers. data , if it does not exist
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <!--item-->
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="card comonent-hader-top p-2 mt-4">
+              <div class="card comonent-hader-top p-2 mt-4">
+
+                <div class="row mx-0">
+                  
+                  <div class="col-sm-12 col-md-4">
+                    <div id="DataTables_Table_1_filter" class="dataTables_filter w-100">
+                      <label class="w-100 fw-medium">البحث:<input type="search" class="form-control w-100" placeholder="البحث.........." aria-controls="DataTables_Table_1"></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive text-nowrap rounded mt-2">
+                  <table class="table table-bordered table-hover rounded text-center">
+                    <thead class="table-light">
+                      <tr class="fw-bold">
+                        <th class="fw-bold">التسلسل</th>
+
+                        <th class="fw-bold"> (عربى)اسم الفئة</th>
+                        <th class="fw-bold"> (انجيلزى)اسم الفئة</th>
+                       
+                        <th class="fw-bold"> Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <tr>
+                        <td>  1 </td>
+                        <td> 123456</td>
+                        <td></td>
+                     
+                        <td class="d-flex justify-content-center">
+                          <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
+                            data-bs-target="#edit-modal" data-bs-toggle="modal" title="تعديل"><i
+                              class="ti ti-pencil  fs-4"></i> </a>
+
+                          <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                            href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
+                            data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
 
 
+                        </td>
+                      </tr>
+
+
+                    </tbody>
+                  </table>
+                </div>
+              
             </div>
           </div>
 
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel">اضافة مجموعة</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                  <form class="row component-form  mx-0">
+                    <div class="col-12 mb-2">
+                      <label class="form-label" for="add-groups">اسم المجموعة بالعربى <span class="start-form">*</span></label>
+                      <input type="text" id="add-groups" class="form-control" placeholder="اسم المجموعة بالعربى" />
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label" for="add-groups-en">اسم المجموعة بالانجليزية <span class="start-form">*</span></label>
+                      <input type="text" id="add-groups-en" class="form-control" placeholder="اسم المجموعة بالانجليزى" />
+                    </div>
+                    <div class="col-12 col-lg-12 mt-2">
+                      <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Modal لتعديل الفئة -->
+          <div class="modal fade" id="edit-modal" aria-labelledby="editModalLabel" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h6 class="modal-title fs-4 fw-bold text-tilte-b">تعديل المجموعات</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                  <form class="row component-form  mx-0">
+                    <div class="col-12 mb-2">
+                      <label class="form-label" for="add-groups">اسم المجموعة بالعربى <span class="start-form">*</span></label>
+                      <input type="text" id="add-groups" class="form-control" placeholder="اسم المجموعة بالعربى" />
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label" for="add-groups-en">اسم المجموعة بالانجليزية <span class="start-form">*</span></label>
+                      <input type="text" id="add-groups-en" class="form-control" placeholder="اسم المجموعة بالانجليزى" />
+                    </div>
+                    <div class="col-12 col-lg-12 mt-2">
+                      <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- delet Modal -->
+          <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
+              <div class="modal-content p-1 p-md-3">
+                <button type="button" class="btn-close btn-pinned" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body text-center">
+                  <h3 class="role-title mb-2 fs-5">
+                    هل انت متاكد من حذف العنصر؟
+                  </h3>
 
+                  <div class="col-11 col-lg-12 mb-2">
+                    <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
+                    <button type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- Footer -->
           <footer class="content-footer footer bg-footer-theme">
             <div class="container-xxl">
@@ -1903,6 +2050,7 @@
   <!--/ Layout wrapper -->
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
+
   <script src="./assets/vendor/libs/jquery/jquery.js"></script>
   <script src="./assets/vendor/libs/popper/popper.js"></script>
   <script src="./assets/vendor/js/bootstrap.js"></script>
@@ -1942,6 +2090,7 @@
   <script src="./assets/vendor/js/accordion.js"></script>
   <script src="./assets/js/tables-datatables-advanced.js"></script><!--مسول عن داتا-->
   <script src="./assets/js/tables-datatables-basic.js"></script>
+<!-- JavaScript -->
 
 </body>
 

@@ -101,7 +101,7 @@ width: 0px;
 }
 .content-bottom {
     color: #fff;
-    height: 60px;
+    height: 105px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,7 +216,7 @@ width: 0px;
   .table-footer tr td{
 background-color: #fff;
 color: #000;
-font-size: 16px;
+font-size: 14px;
 vertical-align: top
   }
   .tr-back td{
