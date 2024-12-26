@@ -1831,14 +1831,14 @@
            
               <div class="card comonent-hader-top">
                 <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
-                  <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">
-                         امر تجميع
+                  <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted">
+                        اضافة مورد
                     </span>
                   </strong>
                   <div class="row justify-content-center mx-0 py-2 px-md-3 px-2">
                     <!--item-->
-                    <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                      <a href="add-Assembly-command.html">
+                    <div class="col-xl-6 col-lg-4 col-md-6 mb-md-0 mb-2">
+                      <div class="a-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="card h-100">
                           <div class="row h-100">
                             <div class="col-sm-5 col-12">
@@ -1849,19 +1849,19 @@
                             </div>
                             <div class="col-sm-7 col-12">
                               <div class="card-body text-sm-end text-center ps-sm-0">
-                                <button 
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"
                                   class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
-                                  اضافة امر تجميع
-                                 </button>
+                                  اضافة  مورد
+                                </button>
                                 <p class="mb-0 mt-1">
-                                  Add Assembly-command. data , if it does not exist
+                                  Add suppliers. data , if it does not exist
                                 </p>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </a>
-                     
+                      </div>
+                      
                     </div>
                     <!--item-->
                   </div>
@@ -1871,25 +1871,26 @@
 
                 <div class="row mx-0">
                   
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-sm-12 col-md-4">
                     <div id="DataTables_Table_1_filter" class="dataTables_filter w-100">
                       <label class="w-100 fw-medium">البحث:<input type="search" class="form-control w-100" placeholder="البحث.........." aria-controls="DataTables_Table_1"></label>
                     </div>
                   </div>
                 </div>
-                <div class="table-responsive text-nowrap rounded mt-4">
+                <div class="table-responsive text-nowrap rounded mt-2">
                   <table class="table table-bordered table-hover rounded text-center">
                     <thead class="table-light">
                       <tr class="fw-bold">
                         <th class="fw-bold">التسلسل</th>
 
-                        <th class="fw-bold">  رقم الامر</th>
-                        <th class="fw-bold"> التاريخ </th>
-                        <th class="fw-bold">   المخزن </th>
-                        <th class="fw-bold">  عدد الاصناف المجمعه</th>
-                        <th class="fw-bold">   عدد الاصناف الهالكة </th>
-                        <th class="fw-bold">    مجموع التكلفة </th>
-                       
+                        <th class="fw-bold">  اسم المورد </th>
+                        <th class="fw-bold">  الحساب</th>
+                        <th class="fw-bold">  الجوال  </th>
+                        <th class="fw-bold">  fax-no </th>
+                        <th class="fw-bold">  السجل التجارى</th>
+                        <th class="fw-bold">   الرقم الضريبى </th>
+                        <th class="fw-bold">  اجمالى   المدفوع </th>
+                        <th class="fw-bold">     الاجل </th>
                         <th class="fw-bold"> Action</th>
                       </tr>
                     </thead>
@@ -1902,19 +1903,14 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                       
-                     
+                        <td></td>
+                        <td></td>
                         <td class="d-flex justify-content-center">
-                          <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-2 rounded cursor-pointer"
-                           href="edit-Assembly-command.html" title="تعديل"><i
-                              class="ti ti-pencil  fs-4"></i> </a>
-                              <a class="bg-primary text-bg-primary p-1 d-flex align-items-center justify-content-center me-2  rounded"
-                              href="./Print/Assembly-command.html" title="طباعة"><i class="ti ti-printer  fs-4"></i> </a>
-                          <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-2 rounded"
+                      
+                          <a href="javascript:void(0);" data-bs-target="#exampleModal-edit" data-bs-toggle="modal" class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" title=" تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
+                          <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
                             href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
                             data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
-                           
-
 
 
                         </td>
@@ -1928,9 +1924,168 @@
             </div>
           </div>
 
-          
-          <!-- edit Hardware Modal -->
-          
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel"> اضافة مورد</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                  <form class="row component-form g-2 mx-0">
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="name-indebtedness">    اسم المورد <span class="start-form">*</span></label>
+                      <input type="text" id="name-indebtedness" class="form-control" placeholder="اسم المورد" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label for="Payment-method" class="form-label">   فئة الموردين<span
+                          class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>   اختر الفئة مورد</option>
+                        <option value="VIDEO">سند صرف على حسب اسلوب دفع </option>
+                       
+                      </select>
+
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="Tax-number">   الرقم الضريبى <span class="start-form">*</span></label>
+                      <input type="number" id="Tax-number" class="form-control" placeholder="  المبلغ المودع" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="email-input">    البريد الاكترونى <span class="start-form">*</span></label>
+                      <input type="email" id="email-input" class="form-control" placeholder="   البريد الاكترونى" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="tel-input">  الجوال <span class="start-form">*</span></label>
+                      <input type="text" id="tel-input" class="form-control" placeholder=" الجوال" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="fex-input">  رقم الفاكس <span class="start-form">*</span></label>
+                      <input type="text" id="fex-input" class="form-control" placeholder="رقم الفاكس" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="Record-input">   السجل التجارى <span class="start-form">*</span></label>
+                      <input type="text" id="Record-input" class="form-control" placeholder=" السجل التجارى" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="Balance-input">    الرصيد الافتتاحى <span class="start-form">*</span></label>
+                      <input type="text" id="Balance-input" class="form-control" placeholder=" الرصيد الافتتاحى" />
+                    </div>
+                    <div class="mb-2 col-md-12 col-lg-6 col-12">
+                      <label for="Client-type" class="form-label">   اختر العميل <span
+                          class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>   العميل</option>
+                        <option value="VIDEO">   مصاريف</option>
+                        <option value="VIDEO">   العميل</option>
+                      </select>
+
+                    </div>
+                    <div class="mb-2 col-md-12 col-lg-6 col-12">
+                      <label for="account " class="form-label">    الحساب <span
+                          class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر الحساب</option>
+                        <option value="VIDEO">   مصاريف</option>
+                        <option value="VIDEO">   العميل</option>
+                      </select>
+
+                    </div>
+                   
+                  
+                   
+                    <div class="col-12 col-lg-12 mt-2">
+                      <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModal-edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel"> تعديل مورد</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                  <form class="row component-form g-2 mx-0">
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="name-indebtedness">    اسم المورد <span class="start-form">*</span></label>
+                      <input type="text" id="name-indebtedness" class="form-control" placeholder="اسم المورد" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label for="Payment-method" class="form-label">   فئة الموردين<span
+                          class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>   اختر الفئة مورد</option>
+                        <option value="VIDEO">سند صرف على حسب اسلوب دفع </option>
+                       
+                      </select>
+
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="Tax-number">   الرقم الضريبى <span class="start-form">*</span></label>
+                      <input type="number" id="Tax-number" class="form-control" placeholder="  المبلغ المودع" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="email-input">    البريد الاكترونى <span class="start-form">*</span></label>
+                      <input type="email" id="email-input" class="form-control" placeholder="   البريد الاكترونى" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="tel-input">  الجوال <span class="start-form">*</span></label>
+                      <input type="text" id="tel-input" class="form-control" placeholder=" الجوال" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="fex-input">  رقم الفاكس <span class="start-form">*</span></label>
+                      <input type="text" id="fex-input" class="form-control" placeholder="رقم الفاكس" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="Record-input">   السجل التجارى <span class="start-form">*</span></label>
+                      <input type="text" id="Record-input" class="form-control" placeholder=" السجل التجارى" />
+                    </div>
+                    <div class="mb-2 col-md-6 col-lg-3 col-12">
+                      <label class="form-label" for="Balance-input">    الرصيد الافتتاحى <span class="start-form">*</span></label>
+                      <input type="text" id="Balance-input" class="form-control" placeholder=" الرصيد الافتتاحى" />
+                    </div>
+                    <div class="mb-2 col-md-12 col-lg-6 col-12">
+                      <label for="Client-type" class="form-label">   اختر العميل <span
+                          class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>   العميل</option>
+                        <option value="VIDEO">   مصاريف</option>
+                        <option value="VIDEO">   العميل</option>
+                      </select>
+
+                    </div>
+                    <div class="mb-2 col-md-12 col-lg-6 col-12">
+                      <label for="account " class="form-label">    الحساب <span
+                          class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر الحساب</option>
+                        <option value="VIDEO">   مصاريف</option>
+                        <option value="VIDEO">   العميل</option>
+                      </select>
+
+                    </div>
+                   
+                  
+                   
+                    <div class="col-12 col-lg-12 mt-2">
+                      <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- delet Modal -->
           <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
@@ -1941,7 +2096,7 @@
                     هل انت متاكد من حذف العنصر؟
                   </h3>
 
-                  <div class="col-11 col-lg-12 mb-3">
+                  <div class="col-11 col-lg-12 mb-2">
                     <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
                     <button type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
                   </div>
@@ -2020,6 +2175,7 @@
   <!--/ Layout wrapper -->
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
+
   <script src="./assets/vendor/libs/jquery/jquery.js"></script>
   <script src="./assets/vendor/libs/popper/popper.js"></script>
   <script src="./assets/vendor/js/bootstrap.js"></script>
@@ -2059,7 +2215,8 @@
   <script src="./assets/vendor/js/accordion.js"></script>
   <script src="./assets/js/tables-datatables-advanced.js"></script><!--مسول عن داتا-->
   <script src="./assets/js/tables-datatables-basic.js"></script>
-  
+<!-- JavaScript -->
+
 </body>
 
 </html>
