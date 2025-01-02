@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html lang="en" class="light-style  layout-compact" dir="ltr" data-theme="theme-default" data-assets-path="./assets/"
   data-template="horizontal-menu-template">
 
@@ -2052,256 +2051,1326 @@
             </div>
           </aside>
           <!-- / Menu -->
+
           <!-- Content -->
 
-          <div class="container-xxl flex-grow-1 container-p-y">
-
+          <div class="container-xxl flex-grow-1 container-p-y ">
             <div class="card comonent-hader-top">
-              <div class="card-body  px-md-2 px-2 card-widget-separator">
-
-                <div class="row justify-content-between align-items-center">
-                  <div class="col">
-                    <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">
-                        اساليب دفع
-                      </span>
-                    </strong>
-                  </div>
-
-                  <!--item-->
-                  <div class="col-xl-6 col-lg-4 col-md-6 text-end">
-                    <a href="javascript:void(0);" title="حذف  " data-bs-target="#addRoleModal"
-                    data-bs-toggle="modal"
-                      class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light">
-                    اضافة جديدة <i class="fa-solid fa-plus px-2"></i>
-                    </a>
-
-                  </div>
-                  <!--item-->
-                </div>
+              <div class="card-body py-2 px-md-2 px-2 pb-3 card-widget-separator">
+                <strong class="py-md-3 px-md-3 m text-title-hadeer text-tilte-b"><span class="text-muted"> اعدادت الشركة
+                  </span>
+                </strong>
               </div>
             </div>
-            <div class="card comonent-hader-top p-2 mt-4">
-
-              <div class="row mx-0">
-
-                <div class="col-sm-12 col-md-4">
-                  <div id="DataTables_Table_1_filter" class="dataTables_filter w-100">
-                    <label class="w-100 fw-medium">البحث:<input type="search" class="form-control w-100"
-                        placeholder="البحث.........." aria-controls="DataTables_Table_1"></label>
-                  </div>
-                </div>
-              </div>
-              <div class="table-responsive text-nowrap rounded mt-2">
-                <table class="table table-bordered table-hover rounded text-center">
-                  <thead class="table-light">
-                    <tr class="fw-bold">
-                      <th class="fw-bold">التسلسل</th>
-
-                      <th class="fw-bold"> الاسم (عربى)</th>
-                      <th class="fw-bold"> الاسم(انجيلزى)</th>
-                      <th class="fw-bold"> رقم الحساب</th>
-
-                      <th class="fw-bold"> Action</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-border-bottom-0">
-                    <tr>
-                      <td> 1 </td>
-                      <td> 123456</td>
-                      <td></td>
-                      <td></td>
-                      
-                      <td class="d-flex justify-content-center">
-                        <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
-                        href="javascript:void(0);" title="حذف  " data-bs-target="#editRoleModal"
-                        data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
-
-                        <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
-                          href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
-                          data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
-                      </td>
-                    </tr>
-
-
-                  </tbody>
-                </table>
-              </div>
-
-            </div>
-          </div>
-          <!-- add Modal -->
-          <div class="modal fade" id="addRoleModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-lg ">
-              <div class="modal-content p-1 p-md-3">
-                <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel">اضافة اساليب الدفع</h6>
-                <button type="button" class="btn-close btn-pinned" data-bs-dismiss="modal" aria-label="Close"></button>
-                <div class="modal-body">
-                  <form class="row component-form g-2  mx-0">
-                    <div class="col-12 col-md-6 col-lg-4">
-                      <label class="form-label" for="payment-add"> طريقة الدفع (عربى) <span class="start-form">*</span></label>
-                      <input type="text" class="form-control" placeholder=" طريقة الدفع (عربى) ">
-                    </div>
-                      <div class="col-12 col-md-6 col-lg-4">
-                      <label class="form-label" for="payment-add-en"> طريقة الدفع (انجيلزى) <span class="start-form">*</span></label>
-                      <input type="text" class="form-control" placeholder=" طريقة الدفع (انجيلزى) ">
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 ">
-                      <label class="form-label" for="number-add"> رقم الحساب<span class="start-form">*</span></label>
-
-                      <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
-
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                      <label class="form-label" for="number-add">  حساب المبيعات<span class="start-form">*</span></label>
-
-                      <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
-
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                      <label class="form-label" for="Commission-add"> العمولة<span class="start-form">*</span></label>
-                      <input type="number" class="form-control" placeholder=" العمولة ">
-                    </div>
-                    <div class=" col-md-6 col-lg-4 col-12">
-                      <label for="rival-employees" class="form-label"> عرض في تقرير الصندوق<span class="start-form">*</span></label>
-                      <div class="d-flex form-control justify-content-between align-items-center">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault8">
-                          <label class="form-check-label" for="flexRadioDefault8">
-                            نعم
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault9" checked>
-                          <label class="form-check-label" for="flexRadioDefault9">
-                            لا
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mb-2 col-md-4 col-lg-4 col-12 px-1">
-                      <label for="rival-employees" class="form-label"> سند صرف تلقائي علي اسلوب الدفع
-                        <span class="start-form">*</span></label>
-                      <div class="d-flex form-control justify-content-between align-items-center">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault6">
-                          <label class="form-check-label" for="flexRadioDefault6">
-                            نعم
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault7" checked>
-                          <label class="form-check-label" for="flexRadioDefault7">
-                            لا
-                          </label>
+            <div class="card comonent-hader-top p-2 mt-4 px-3">
+              <ul class="nav nav-tabs px-0 mx-0" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active p-md-2 p-1" id="home-tab" data-bs-toggle="tab"
+                    data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                    aria-selected="true"> البيانات العامة</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link p-md-2 p-1" id="profile-tab" data-bs-toggle="tab"
+                    data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                    aria-selected="false"> ظبط الطلبيات</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link p-md-2 p-1" id="Orders-tab" data-bs-toggle="tab"
+                    data-bs-target="#Orders-tab-pane" type="button" role="tab" aria-controls="Orders-tab-pane"
+                    aria-selected="false"> 2ظبط الطلبيات</button>
+                </li>
+              </ul>
+              <form class="component-form">
+              <div class="tab-content px-1" id="myTabContent">
+              
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                 
+                    <h2 class="accordion-header fs-4 p-2">الاعدادت العامة</h2>
+                    <div class="row mx-0 g-2 pt-2 justify-content-md-start justify-content-center ">
+                      <div class="col-md-12 col-lg-10 px-0">
+                        <div class="row g-2 mx-0">
+                          <div class="col-12 col-md-6 col-lg-3 mb-2">
+                            <label class="form-label" for="basic-default-fullname">
+                              اسم المكتب</label>
+                            <input type="text" class="form-control" id="basic-default-fullname" placeholder=" الاسم" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="basic-Tax">
+                              رقم الضريبة :</label>
+                            <input type="text" id="basic-Tax" class="form-control" placeholder="    رقم الضريبى" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="basic-default-locetion">
+                              عنوان السكن:</label>
+                            <input type="text" class="form-control" id="basic-default-locetion"
+                              placeholder=" العنوان " />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="basic-commercial ">
+                              السجل التجارى:</label>
+                            <input type="text" class="form-control" id="basic-commercial"
+                              placeholder=" السجل التجارى " />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-3 mb-2">
+                            <label class="form-label" for="basic-Street">
+                              اسم الشارع:</label>
+                            <input type="text" class="form-control" id="basic-Street" placeholder=" اسم الشارع" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="basic-Building  ">
+                              رقم المبنى:</label>
+                            <input type="text" class="form-control" id="basic-Building " placeholder="رقم المبنى " />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="basic-plot  ">
+                              plot_identification :</label>
+                            <input type="text" class="form-control" id="basic-plot "
+                              placeholder="plot_identification  " />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="Area-name">
+                              اسم المنطقه :</label>
+                            <input type="text" class="form-control" id="Area-name" placeholder="اسم المنطقه" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="city-name">
+                              اسم المدينه:</label>
+                            <input type="text" class="form-control" id="city-name" placeholder=" اسم المدينه" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="city-name">
+                              الرقم البريدي:</label>
+                            <input type="text" class="form-control" id="city-name" placeholder="  الرقم البريدي" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="basic-default-phone">
+                              رقم الهاتف:</label>
+                            <input type="text" id="basic-default-phone" class="form-control"
+                              placeholder="    رقم الهاتف" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="basic-default-phone">
+                              رقم الهاتف:</label>
+                            <input type="text" id="basic-default-phone" class="form-control"
+                              placeholder="    2رقم الهاتف" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="basic-default-phone">
+                              رقم التيلفون:</label>
+                            <input type="text" id="default-phone" class="form-control" placeholder="    رقم التيلفون" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-3 mb-2">
+                            <label class="form-label" for="basic-default-phone">
+                              رقم الفاكس:</label>
+                            <input type="text" id="basic-default-phone" class="form-control "
+                              placeholder="    رقم الفاكس" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-3 mb-2">
+                            <label class="form-label" for="basic-account">
+                              رقم الحساب المصرفي الدولي:</label>
+                            <input type="text" id="basic-account" class="form-control"
+                              placeholder="     رقم الحساب المصرفي الدولي" />
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-2 mb-2">
+                            <label class="form-label" for="basic-Invoice">
+                              رمز الفاتورة:</label>
+                            <input type="text" id="basic-Invoice" class="form-control "
+                              placeholder="     رمز الفاتورة" />
+                          </div>
                         </div>
                       </div>
+
+                      <div class="col-12 col-md-6 col-lg-2 mb-2">
+                        <label class="form-label" for="basic-logo">
+                          اضافة لوجو:</label>
+
+                        <div class="img-porfoil mb-2">
+                          <div class="avatar-edit">
+                            <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                            <label for="imageUpload">
+                              <img src="./assets/img/front-pages/icons/instagram-light.png" style="width: 25px" />
+                            </label>
+                          </div>
+                          <div class="avatar-preview">
+                            <div id="imagePreview" style="
+                                  background-image: url(./assets/img/icons/user.png);
+                                "></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label class="form-label" for="basic-default-email">
+                          البريد الاكترونى:</label>
+                        <input type="email" id="basic-default-email" class="form-control"
+                          placeholder="     البريد الاكترونى" />
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label class="form-label" for="basic-email">
+                          البريد الاكترونى2</label>
+                        <input type="email" id="basic-email" class="form-control" placeholder="     البريد الاكترونى" />
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label class="form-label" for="Name-general ">
+                          اسم المدير العام</label>
+                        <input type="text" id="Name-general " class="form-control "
+                          placeholder="  اسم المدير العام   " />
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label class="form-label" for="basic-email">
+                          البريد الإلكتروني للمدير العام</label>
+                        <input type="email" id="basic-email" class="form-control"
+                          placeholder="      البريد الإلكتروني للمدير العام" />
+                      </div>
+
+
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          حساب الموردين
+                        </label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="AK">سعودى</option>
+                          <option value="HI">Hawaii</option>
+                          <option value="CA">California</option>
+                          <option value="NV">Nevada</option>
+                          <option value="OR">Oregon</option>
+                        </select>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          حساب العملاء
+
+                        </label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="AK">سعودى</option>
+                          <option value="HI">Hawaii</option>
+                          <option value="CA">California</option>
+                          <option value="NV">Nevada</option>
+                          <option value="OR">Oregon</option>
+                        </select>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          حساب القيمة المضافة (مشتريات)
+
+
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          حساب القيمة المضافة (مبيعات)
+
+
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          حساب المبيعات
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          تكلفة المبيعات
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          حساب فرق المخزون
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          debitnote_account
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          حساب الخصم
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          حساب التكاليف الاضافيه للمشتريات
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          اضافة حساب عمولة البنك
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3 mb-2">
+                        <label for="select-Suppliers" class="form-label">
+                          إضافة حساب سند خصم مشتريات
+                        </label>
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                        <label for="rival-employees" class="form-label"> الربط المحاسبي<span
+                            class="start-form">*</span></label>
+                        <div class="d-flex form-control justify-content-between align-items-center">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault4"
+                              id="flexRadioDefault8">
+                            <label class="form-check-label" for="flexRadioDefault8">
+                              ربط
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault9"
+                              checked>
+                            <label class="form-check-label" for="flexRadioDefault9">
+                              فصل
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                        <label for="rival-employees" class="form-label"> zatca phase 2
+                          <span class="start-form">*</span></label>
+                        <div class="d-flex form-control justify-content-between align-items-center">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault3"
+                              id="flexRadioDefault6">
+                            <label class="form-check-label" for="flexRadioDefault6">
+                              نعم
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault7"
+                              checked>
+                            <label class="form-check-label" for="flexRadioDefault7">
+                              لا
+                            </label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-12 col-lg-12 mt-2">
-                      <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+
+                  
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <div class="accordion from-cllapse" id="accordionExample">
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          بيانات الاساسية
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="row mx-0 g-2 pt-2">
+                            <div class="col-12 col-md-6 col-lg-2 mb-2">
+                              <label class="form-label" for="basic-default-tax-1 ">
+                                نسبة ضريبه المبيعات %</label>
+                              <input type="text" class="form-control" id="basic-default-tax-1 " placeholder="   نسبة ضريبه المبيعات %">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-2 mb-2">
+                              <label class="form-label" for="basic-default-tax ">
+                                نسبة ضريبه المشتريات %</label>
+                              <input type="text" class="form-control" id="basic-default-tax " placeholder="   نسبة ضريبه المشتريات %">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-2 mb-2">
+                              <label class="form-label" for="basic-default-invoice ">
+                                مده ارتجاع الفاتوره</label>
+                              <input type="text" class="form-control" id="basic-default-invoice " placeholder=" مده ارتجاع الفاتوره">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3 mb-2">
+                              <label class="form-label" for="basic-default-invoice ">
+                                مدة التنبيه قبل انتهاء الصلاحية (بالايام)</label>
+                              <input type="text" class="form-control" id="basic-default-invoice " placeholder="   مدة التنبيه قبل انتهاء الصلاحية (بالايام)">
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                              <label for="rival-employees" class="form-label"> السماح بتعديل قيمه الضربيه في المشتريات
+                                <span class="start-form">*</span></label>
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault32" id="flexRadioDefault66">
+                                  <label class="form-check-label" for="flexRadioDefault66">
+                                    نعم
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault32" id="flexRadioDefault77" checked="">
+                                  <label class="form-check-label" for="flexRadioDefault77">
+                                    لا
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked66" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked66"> 
+                                    ترتيب الفواتير حسب الفرع
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked65" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked65"> 
+                                    المرجع في عرض فاتوره المبيعات
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked64" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked64"> 
+                                    A4 اظهار عنوان العميل فى المطبوع
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked63" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked63"> 
+                                    تعديل اسم العميل فى الفاتورة
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked62" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked62"> 
+                                    تعديل اسم المندوب فى فاتورة
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked61" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked61"> 
+                                    تاريخ الانتاج
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked60" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked60"> 
+                                    تاريخ انتهاء الصلاحية
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked59" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked59"> 
+                                    الضريبة الإنتقائية
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked58" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked58"> 
+                                    تكاليف إضافية
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked57" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked57"> 
+                                    الكميات بالكسور
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked56" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked56"> 
+                                    تعديل المرتجعات
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked55" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked55"> 
+                                    اصدار فاتوره من موقع العميل
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked54" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked54"> 
+                                    التحصيل من موقع العميل
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked53" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked53"> 
+                                    المديونيه علي العميل
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked52" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked52"> 
+                                    سند صرف عند انهاء المناوبه
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked51" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked51"> 
+                                    مرتجع من فاتورة سابقه فقط
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked50" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked50"> 
+                                    اضافه عميل من التطبيق
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked49" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked49"> 
+                                    استخدام الارفف في الحركات
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-4 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked48" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked48"> 
+                                    اظهار كل العملاء في سند القبض
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-4 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked47" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked47"> 
+                                    إظهار جوال المندوب فى طباعة الفاتورة
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked46" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked46"> 
+                                    طباعة epson
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-5 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked45" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked45"> 
+                                    إخفاء المخزن فى إضافة فاتورة المبيعات ومرتجع المبيعات
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-5 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked44" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked44"> 
+                                    إظهار رقم جوال الشركة فى مطبوع A4 فاتورة المبيعات
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked43" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked43"> 
+                                    نقاط البيع عاجلة
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-4 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked42" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked42"> 
+                                    طباعة ملخص مبيعات ومرتجعات الأصناف
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </form>
+                    <!--item-->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          الخصومات
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="row mx-0 g-2 pt-2">
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked38" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked38"> 
+                                    خصم من النظام
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked39" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked39"> 
+                                    خصم من التطبيق
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked40" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked40"> 
+                                    خصم تلقائي علي العميل
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked41" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked41"> 
+                                    خصم للصنف
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--item-->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapsethere" aria-expanded="false" aria-controls="collapsethere">
+                          كمية مجانية
+                        </button>
+                      </h2>
+                      <div id="collapsethere" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="row mx-0 g-2 pt-2">
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked37" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked37"> 
+                                    كميه مجانيه
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked36" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked36"> 
+                                    كميه مجانيه علي الصنف
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                           
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked35" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked35"> 
+                                    كميه مجانيه علي فئه الصنف
+                              
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--item-->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse-p" aria-expanded="false" aria-controls="collapsethere">
+                          السعر شامل الضريبة
+                        </button>
+                      </h2>
+                      <div id="collapse-p" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row mx-0 g-2 pt-2">
+                              <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                                <div class="d-flex form-control justify-content-between align-items-center">
+                                  <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked32" >
+                                    <label class="form-check-label" for="flexSwitchCheckChecked32"> 
+                                      السعر شامل الضريبه
+                                
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                                <div class="d-flex form-control justify-content-between align-items-center">
+                                  <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked33" >
+                                    <label class="form-check-label" for="flexSwitchCheckChecked33"> 
+                                      السعر شامل الضريبه مبيعات
+                                
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                                <div class="d-flex form-control justify-content-between align-items-center">
+                                  <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked34" >
+                                    <label class="form-check-label" for="flexSwitchCheckChecked34"> 
+                                      السعر شامل الضريبه مشتريات
+                                
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapphone" aria-expanded="false" aria-controls="collapphone">
+                          اعدادات الموبيال
+                        </button>
+                      </h2>
+                      <div id="collapphone" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="row mx-0 g-2 pt-2">
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                            
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault6">
+                                  <label class="form-check-label" for="flexSwitchCheckDefault6"> اظهار اجمالى الكارتين</label>
+                                </div>
+                               
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-1 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked7" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked7"> عملاء</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked8" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked8"> فاتورة مبيعات</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked9" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked9">  فاتورة مرتجعات وتالف</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked10" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked10"> تحويل منتجات</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked11" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked11">  سند القبض</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked12" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked12"> سند الصرف
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked13" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked13">  سداد فواتير مشتريات
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked14" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked14">الزيارة
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked15" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked15">خط السير
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked16" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked16"> مخزون مندوب
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked17" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked17"> تقرير المبيعات
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked18" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked18"> تقرير المبيعات
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked19" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked19"> تقرير مرتجعات
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked20" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked20"> تقرير العملاء
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked21" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked21">  تقرير المديونية
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked22" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked22">  تقرير المديونيات بالعميل
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked23" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked23">  التحصيلات
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked24" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked24">  سله الاسعار
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked25" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked25">  تقرير التالف
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked23" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked23"> ترتيب العملاء حسب موقع المندوب
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked27" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked27"> 
+
+                                    منع المدفوع علي الفاتوره
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked28" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked28"> 
+
+                                    اشعارات الزيارات الاجباريه
+
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked29" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked29"> 
+
+                                    نظام بدء اليوم
+
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked30" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked30"> 
+
+                                    عمل فاتوره بدون زياره
+
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked31" >
+                                  <label class="form-check-label" for="flexSwitchCheckChecked31"> 
+
+الفاتورة يتم دفعها تلقائيا.
+
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapExchange" aria-expanded="false" aria-controls="collapExchange">
+                          سندات الصرف
+                        </button>
+                      </h2>
+                      <div id="collapExchange" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="row mx-0 g-2 pt-2">
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                            
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault5">
+                                  <label class="form-check-label" for="flexSwitchCheckDefault5"> سند صرف من التطبيق</label>
+                                </div>
+                               
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked4" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked4">  سند صرف مرتجع</label>
+                                </div>
+                              </div>
+                            </div>
+                           
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapPurchases" aria-expanded="false" aria-controls="collapExchange">
+                          سندات المشتريات
+                        </button>
+                      </h2>
+                      <div id="collapPurchases" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="row mx-0 g-2 pt-2">
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                            
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault3">
+                                  <label class="form-check-label" for="flexSwitchCheckDefault3"> الخصم علي الفاتوره</label>
+                                </div>
+                               
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked2">  الخصم علي الصنف</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked1" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked1"> كميه مجانيه علي الصنف</label>
+                                </div>
+                              </div>
+                            </div>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapMembership" aria-expanded="false" aria-controls="collapMembership">
+                          مطبوع العضوية
+                        </button>
+                      </h2>
+                      <div id="collapMembership" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="row mx-0 g-2 pt-2">
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                            
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                  <label class="form-check-label" for="flexSwitchCheckDefault">الرقم الضريبى</label>
+                                </div>
+                               
+                              </div>
+                            </div>
+                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                             
+                              <div class="d-flex form-control justify-content-between align-items-center">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"> رقم العضوية</label>
+                                </div>
+                              </div>
+                            </div>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapprice-list" aria-expanded="false" aria-controls="collapMembership">
+                          price list
+                        </button>
+                      </h2>
+                      <div id="collapprice-list" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                             <div class="row mx-0 g-2 pt-2">
+                              <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                                <label for="rival-employees" class="form-label">  سلة الاسعار بالعميل<span
+                                    class="start-form">*</span></label>
+                                <div class="d-flex form-control justify-content-between align-items-center">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadiobasket1"
+                                      id="flex-b">
+                                    <label class="form-check-label" for="flex-b">
+                                      نعم
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadiobasket1"
+                                     id="flex-f"
+                                      checked>
+                                    <label class="form-check-label" for="flex-f">
+                                      لا
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
+                                <label for="rival-employees" class="form-label">سلة الاسعار بالفئة
+                                  <span class="start-form">*</span></label>
+                                <div class="d-flex form-control justify-content-between align-items-center">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio-price"
+                                      id="flexRadio6">
+                                    <label class="form-check-label" for="flexRadio6">
+                                      نعم
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio-price" id="flexRadio7"
+                                      checked>
+                                    <label class="form-check-label" for="flexRadio7">
+                                      لا
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                             </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collap-casher" aria-expanded="false" aria-controls="collapMembership">
+                          payment methods for casher
+                        </button>
+                      </h2>
+                      <div id="collap-casher" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="Orders-tab-pane" role="tabpanel" aria-labelledby="Orders-tab"
+                  tabindex="0">
 
                 </div>
-              </div>
-            </div>
-          </div>
-        <!-- add Modal -->
-        <div class="modal fade" id="editRoleModal" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-lg ">
-            <div class="modal-content p-1 p-md-3">
-              <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel">تعديل اساليب الدفع</h6>
-              <button type="button" class="btn-close btn-pinned" data-bs-dismiss="modal" aria-label="Close"></button>
-              <div class="modal-body">
-                <form class="row component-form g-2  mx-0">
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <label class="form-label" for="payment-add"> طريقة الدفع (عربى) <span class="start-form">*</span></label>
-                    <input type="text" class="form-control" placeholder=" طريقة الدفع (عربى) ">
-                  </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                    <label class="form-label" for="payment-add-en"> طريقة الدفع (انجيلزى) <span class="start-form">*</span></label>
-                    <input type="text" class="form-control" placeholder=" طريقة الدفع (انجيلزى) ">
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-4 ">
-                    <label class="form-label" for="number-add"> رقم الحساب<span class="start-form">*</span></label>
-
-                    <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
-
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <label class="form-label" for="number-add">  حساب المبيعات<span class="start-form">*</span></label>
-
-                    <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
-
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <label class="form-label" for="Commission-add"> العمولة<span class="start-form">*</span></label>
-                    <input type="number" class="form-control" placeholder=" العمولة ">
-                  </div>
-                  <div class=" col-md-6 col-lg-4 col-12">
-                    <label for="rival-employees" class="form-label"> عرض في تقرير الصندوق<span class="start-form">*</span></label>
-                    <div class="d-flex form-control justify-content-between align-items-center">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault5">
-                        <label class="form-check-label" for="flexRadioDefault5">
-                          نعم
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault6" checked>
-                        <label class="form-check-label" for="flexRadioDefault6">
-                          لا
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-2 col-md-4 col-lg-4 col-12 px-1">
-                    <label for="rival-employees" class="form-label"> سند صرف تلقائي علي اسلوب الدفع
-                      <span class="start-form">*</span></label>
-                    <div class="d-flex form-control justify-content-between align-items-center">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault6">
-                        <label class="form-check-label" for="flexRadioDefault6">
-                          نعم
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault7" checked>
-                        <label class="form-check-label" for="flexRadioDefault7">
-                          لا
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-12 mt-2">
-                    <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
-                  </div>
-                </form>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-          <!-- delet Modal -->
-          <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
-              <div class="modal-content p-1 p-md-3">
-                <button type="button" class="btn-close btn-pinned" data-bs-dismiss="modal" aria-label="Close"></button>
-                <div class="modal-body text-center">
-                  <h3 class="role-title mb-2 fs-5">
-                    هل انت متاكد من حذف العنصر؟
-                  </h3>
-
-                  <div class="col-11 col-lg-12 mb-3">
-                    <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
-                    <button type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
-                  </div>
-
-
+                <div class="col-12 mb-2 pt-3">
+                  <button type="submit" class="btn btn-primary waves-effect waves-light" title="حفظ"
+                    id="saveButton">
+                    <i class="fa-solid fa-check mx-2"></i>تحديث
+                  </button>
                 </div>
+              
               </div>
+            </form>
             </div>
+
+
           </div>
+
+
           <!-- Footer -->
           <footer class="content-footer footer bg-footer-theme">
             <div class="container-xxl">
@@ -2312,9 +3381,9 @@
                   <script>
                     document.write(new Date().getFullYear());
                   </script>
-                  , made with ❤️ by Raito <a href="#" target="_blank" class="fw-medium">Raito</a>
+                  , made with ❤️ by Raito
+                  <a href="#" target="_blank" class="fw-medium">Raito</a>
                 </div>
-
               </div>
             </div>
           </footer>
@@ -2324,7 +3393,6 @@
         </div>
         <!--/ Content wrapper -->
       </div>
-
       <!--/ Layout container -->
     </div>
   </div>
@@ -2333,34 +3401,26 @@
   <div class="compoent-color position-fixed">
     <div class="back">
       <div class="dropdown">
-
-        <button class="btn  btn-btn d-flex mx-0 justify-content-between dropbtn" type="button" onclick="myFunction()"
+        <button class="btn btn-btn d-flex mx-0 justify-content-between dropbtn" type="button" onclick="myFunction()"
           id="myDIV">
-
           <span class="span-i">
-            <img src="./assets/img/icons/color-wheel.png" alt="platte">
-
+            <img src="./assets/img/icons/color-wheel.png" alt="platte" />
           </span>
         </button>
-
       </div>
       <div id="myDropdown" class="dropdown-content dropdown-menu">
         <div class="d-flex align-items-center flex-wrap">
-
           <div id="theme-picker-section" class="example-section" @change="updateTheme">
-
-            <input type="radio" name="theme" value="blue" checked="true">
-            <input type="radio" name="theme" value="grey">
-            <input type="radio" name="theme" value="green">
-            <input type="radio" name="theme" value="Brown">
-            <input type="radio" name="theme" value="orange">
-            <input type="radio" name="theme" value="red">
-
+            <input type="radio" name="theme" value="blue" checked="true" />
+            <input type="radio" name="theme" value="grey" />
+            <input type="radio" name="theme" value="green" />
+            <input type="radio" name="theme" value="Brown" />
+            <input type="radio" name="theme" value="orange" />
+            <input type="radio" name="theme" value="red" />
           </div>
         </div>
       </div>
     </div>
-
   </div>
   <!-- Overlay -->
   <div class="layout-overlay layout-menu-toggle"></div>
@@ -2371,6 +3431,7 @@
   <!--/ Layout wrapper -->
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
+
   <script src="./assets/vendor/libs/jquery/jquery.js"></script><!--متكرر-->
   <script src="./assets/vendor/libs/popper/popper.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/bootstrap.js"></script><!--متكرر-->
@@ -2407,140 +3468,141 @@
   <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
   <script>
-$(document).ready(function () {
-    function initializeDropDownTree(selector) {
-      $(selector).each(function () {
-        if (!$(this).data("kendoDropDownTree")) {
-          $(this).kendoDropDownTree({
-            placeholder: "Select ...",
-            filter: "startswith",
-            autoBind: true,
-            autoWidth: true,
-            dataSource: [
-              {
-                text: "Furniture",
-                expanded: true,
-                enable: false,
-             
-                items: [
-                  { text: "Tables & Chairsاااااااااااااااااااااااااا" },
-                  { text: "Sofas" },
-                  { text: "Occasional Furnitureاااااااااااااااااااااا" },
-                ],
+    $(document).ready(function () {
+      function initializeDropDownTree(selector) {
+        $(selector).each(function () {
+          if (!$(this).data("kendoDropDownTree")) {
+            $(this).kendoDropDownTree({
+              placeholder: "Select ...",
+              filter: "startswith",
+              autoBind: true,
+              autoWidth: true,
+              dataSource: [
+                {
+                  text: "Furniture",
+                  expanded: true,
+                  enable: false,
+
+                  items: [
+                    { text: "Tables & Chairsاااااااااااااااااااااااااا" },
+                    { text: "Sofas" },
+                    { text: "Occasional Furnitureاااااااااااااااااااااا" },
+                  ],
+                },
+                {
+                  text: "Decor",
+                  expanded: true,
+                  enable: false,
+                  items: [
+                    { text: "Bed Linen" },
+                    { text: "Curtains & Blinds" },
+                    { text: "Carpetsااااااااااااااااااا" },
+                  ],
+                }, {
+                  text: "Decor",
+                  expanded: true,
+                  enable: false,
+                  items: [
+                    { text: "Bed Linen" },
+                    { text: "Curtains & Blinds" },
+                    { text: "Carpetsننننننننننننننننننننننننننننننننننننن" },
+                  ],
+                }, {
+                  text: "Decor",
+                  expanded: true,
+                  enable: false,
+                  items: [
+                    { text: "Bed Linen" },
+                    { text: "Curtains & Blinds" },
+                    { text: "Carpets" },
+                  ],
+                }, {
+                  text: "Decor",
+                  expanded: true,
+                  enable: false,
+                  items: [
+                    { text: "Bed Linen" },
+                    { text: "Curtains & Blinds" },
+                    { text: "Carpets" },
+                  ],
+                }, {
+                  text: "Decor",
+                  expanded: true,
+                  enable: false,
+                  items: [
+                    { text: "Bed Linen" },
+                    { text: "Curtains & Blinds" },
+                    { text: "Carpets" },
+                  ],
+                }, {
+                  text: "Decor",
+                  expanded: true,
+                  enable: false,
+                  items: [
+                    { text: "Bed Linen" },
+                    { text: "Curtains & Blinds" },
+                    { text: "Carpets" },
+                  ],
+                }, {
+                  text: "Decor",
+                  expanded: true,
+                  items: [
+                    { text: "Bed Linen" },
+                    { text: "Curtains & Blinds" },
+                    { text: "Carpets" },
+                  ],
+                }
+              ],
+
+              select: function (e) {
+                var dataItem = this.dataItem(e.node);
+                if (dataItem.hasChildren) {
+                  e.preventDefault();
+                  alert("لا يمكنك اختيار العناصر الرئيسية، يرجى اختيار عنصر فرعي.");
+                }
+
               },
-              {
-                text: "Decor",
-                expanded: true,
-                enable: false,
-                items: [
-                  { text: "Bed Linen" },
-                  { text: "Curtains & Blinds" },
-                  { text: "Carpetsااااااااااااااااااا" },
-                ],
-              },{
-                text: "Decor",
-                expanded: true,
-                enable: false,
-                items: [
-                  { text: "Bed Linen" },
-                  { text: "Curtains & Blinds" },
-                  { text: "Carpetsننننننننننننننننننننننننننننننننننننن" },
-                ],
-              },{
-                text: "Decor",
-                expanded: true,
-                enable: false,
-                items: [
-                  { text: "Bed Linen" },
-                  { text: "Curtains & Blinds" },
-                  { text: "Carpets" },
-                ],
-              },{
-                text: "Decor",
-                expanded: true,
-                enable: false,
-                items: [
-                  { text: "Bed Linen" },
-                  { text: "Curtains & Blinds" },
-                  { text: "Carpets" },
-                ],
-              },{
-                text: "Decor",
-                expanded: true,
-                enable: false,
-                items: [
-                  { text: "Bed Linen" },
-                  { text: "Curtains & Blinds" },
-                  { text: "Carpets" },
-                ],
-              },{
-                text: "Decor",
-                expanded: true,
-                enable: false,
-                items: [
-                  { text: "Bed Linen" },
-                  { text: "Curtains & Blinds" },
-                  { text: "Carpets" },
-                ],
-              },{
-                text: "Decor",
-                expanded: true,
-                items: [
-                  { text: "Bed Linen" },
-                  { text: "Curtains & Blinds" },
-                  { text: "Carpets" },
-                ],
-              }
-            ],
-            
-            select: function (e) {
-              var dataItem = this.dataItem(e.node);
-              if (dataItem.hasChildren) {
+
+            });
+
+            // تفعيل DropDownTree باستخدام الكيبورد
+            // تفعيل DropDownTree باستخدام الكيبورد
+            $(this).on('keydown', function (e) {
+              if (e.key === 'Enter' || e.key === ' ') {  // استخدم Enter أو Space لفتح القائمة
+                $(this).data("kendoDropDownTree").toggle();  // فتح أو إغلاق القائمة
                 e.preventDefault();
-                alert("لا يمكنك اختيار العناصر الرئيسية، يرجى اختيار عنصر فرعي.");
               }
+            });
 
-            },
-      
-    });
-          
-          // تفعيل DropDownTree باستخدام الكيبورد
-         // تفعيل DropDownTree باستخدام الكيبورد
-         $(this).on('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') {  // استخدم Enter أو Space لفتح القائمة
-              $(this).data("kendoDropDownTree").toggle();  // فتح أو إغلاق القائمة
-              e.preventDefault();
+          }
+        });
+
+        $(".k-treeview").on("keydown", function (e) {
+          var treeView = $(this);
+          var currentNode = treeView.find(".k-treeview-leaf").first(); // العنصر الأول الذي يحمل الفئة
+
+          if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+            var nodeHeight = currentNode.outerHeight(); // ارتفاع العنصر
+            var currentScrollTop = treeView.scrollTop(); // موضع التمرير الحالي
+
+            if (e.key === "ArrowDown") {
+              // تحريك التمرير إلى الأسفل بناءً على ارتفاع العنصر
+              treeView.scrollTop(currentScrollTop + nodeHeight);
+            } else if (e.key === "ArrowUp") {
+              // تحريك التمرير إلى الأعلى بناءً على ارتفاع العنصر
+              treeView.scrollTop(currentScrollTop - nodeHeight);
             }
-          });
+          }
+        });
 
-        }
-      });
-  
-$(".k-treeview").on("keydown", function(e) {
-  var treeView = $(this);
-  var currentNode = treeView.find(".k-treeview-leaf").first(); // العنصر الأول الذي يحمل الفئة
 
-  if (e.key === "ArrowDown" || e.key === "ArrowUp") {
-      var nodeHeight = currentNode.outerHeight(); // ارتفاع العنصر
-      var currentScrollTop = treeView.scrollTop(); // موضع التمرير الحالي
-
-      if (e.key === "ArrowDown") {
-          // تحريك التمرير إلى الأسفل بناءً على ارتفاع العنصر
-          treeView.scrollTop(currentScrollTop + nodeHeight);
-      } else if (e.key === "ArrowUp") {
-          // تحريك التمرير إلى الأعلى بناءً على ارتفاع العنصر
-          treeView.scrollTop(currentScrollTop - nodeHeight);
       }
-  }
-});
-
-      
-    }
-    initializeDropDownTree(".dropdowntree");
-    initializeDropDownTree(".dropdowntree-tow");
-  })
+      initializeDropDownTree(".dropdowntree");
+      initializeDropDownTree(".dropdowntree-tow");
+    })
   </script>
-  
+
+
 </body>
 
 </html>
