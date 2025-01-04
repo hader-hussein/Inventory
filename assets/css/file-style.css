@@ -1,0 +1,78 @@
+
+.upload-container {
+width: 100%;
+
+margin: 0px auto;
+}
+
+.upload-area {
+border: 2px dashed #ccc;
+border-radius: 8px;
+padding: 20px;
+text-align: center;
+background-color: #fff;
+cursor: pointer;
+transition: border 0.3s ease;
+}
+
+.upload-area.dragover {
+border-color: #4a90e2;
+background-color: #f8f9fa;
+}
+
+.upload-icon {
+font-size: 24px;
+margin-bottom: 10px;
+display: block;
+}
+
+.upload-text {
+color: #666;
+margin-bottom: 15px;
+font-size: 14px;
+}
+
+.file-input {
+display: none;
+}
+
+.file-info {
+margin-top: 10px;
+}
+
+.file-details {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #f8f9fa;
+padding: 8px 12px;
+border-radius: 4px;
+border: 1px solid #ddd;
+}
+
+.file-name {
+color: #333;
+font-size: 14px;
+margin-right: 10px;
+}
+
+.delete-btn {
+background: none;
+border: none;
+color: #dc3545;
+cursor: pointer;
+padding: 4px 8px;
+font-size: 14px;
+transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+color: #c82333;
+}
+
+/* إخفاء النص الافتراضي عند وجود ملف */
+.upload-area.has-file .upload-icon,
+.upload-area.has-file .upload-text {
+display: none;
+}
+
