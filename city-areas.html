@@ -29,12 +29,13 @@
   <link rel="stylesheet" href="./assets/vendor/fonts/flag-icons.css" /><!--متكرر-->
 
   <!-- Core CSS -->
-  <link rel="stylesheet" href="./assets/vendor/css/rtl/core.css" class="template-customizer-core-css" /><!--متكرر-->
+  <link rel="stylesheet" href="./assets/vendor/css/rtl/core.css" class="template-customizer-core-css" /><!--مشترك-->
   <link rel="stylesheet" href="./assets/css/demo.css" /><!--متكرر-->
 
   <!-- Vendors CSS -->
   <link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" /><!--متكرر-->
   <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" /><!--متكرر-->
+
 
   <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" /><!--متكرر-->
 
@@ -42,7 +43,7 @@
 
 
 
-  <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" /><!--متكرر-->
+  <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" /><!--مشترك-->
   <link rel="stylesheet" href="./assets/css/style.css" /><!--متكرر-->
   <!-- Helpers -->
   <script src="./assets/vendor/js/helpers.js"></script><!--متكرر-->
@@ -1927,464 +1928,262 @@
           <!-- Content -->
 
           <div class="container-xxl flex-grow-1 container-p-y">
-            <div class="card comonent-hader-top">
-              <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
-                <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-2 align-items-center pt-2">
-                  <div class="col col-md-8 col-12  mb-md-2 px-1 mb-2 ">
-                    <strong class="py-md-3 px-md-0 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">اضافه منتج</span>  </strong>
-
-
-                  </div>
-                  <div class="col text-end px-1">
-                    <a href="Items.html" class="btn btn-primary waves-effect waves-light btn-add"> مشاهدة الكل</a>
-  
-                  </div>
-                </div>
-                
-              </div>
-            
-           </div>
-           <div class="card comonent-hader-top p-2 mt-4">
-            <div class="accordion from-cllapse" id="accordionExample">
-
-              <form class="form-content  row mx-0">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                         بيانات المنتج
-                      </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                          <div class="row mx-0 pt-2">
-                        
-                            <div class="mb-2 mx-0 col-md-4 col-12 form-check form-check-inline">
-                              <input name="collapsible-address-type" class="form-check-input" type="radio" value="" id="collapsible-address-type-home" checked="" onclick="show1();"/>
-                              <label class="form-check-label" for="collapsible-address-type-home">
-                                منتج عادى</label>
-                            </div>
-                            <div class="mb-2 mx-0 col-md-4 col-12 form-check form-check-inline">
-                              <input name="collapsible-address-type" class="form-check-input" type="radio" value="" id="collapsible-address-type-office" onclick="show2();"/>
-                              <label class="form-check-label" for="collapsible-address-type-office" >
-                              منتج الانتاج
-                              </label>
-                            </div>
-                            <div class="mb-2 mx-0 col-md-4 col-12 form-check form-check-inline">
-                              <input name="collapsible-address-type" class="form-check-input" type="radio" value="" id="collapsible-address-type-office">
-                              <label class="form-check-label" for="collapsible-address-type-office">
-                                اصناف خدمية
-                              </label>
-                            </div>
-                            <hr>
-                            <div class="col-lg-10">
-                              <div class="row mx-0">
-                                <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                                  <label for="exampleFormControlInput1" class="form-label">اسم الصنف   <span class="start-form">*</span></label>
-                                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="اسم الصنف   ">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                                  <label for="exampleFormControlInputno" class="form-label">اسم الصنف بالانجليزى <span class="start-form">*</span></label>
-                                  <input type="text" class="form-control" id="exampleFormControlInputno" placeholder="  اسم الصنف بالانجليزى">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                                  <label for="example-Barcodes" class="form-label">الباركود<span class="start-form">*</span></label>
-                                  <input type="text" class="form-control" id="example-Barcodes" placeholder=" الباركود">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-4  col-12 px-1">
-                                  <label for="select2Basic-2" class="form-label">الفئة الرئيسية </label>
-                                  <div class="input-groupe">
-                                    <button data-bs-target="#addtruck" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                      اضافة  
-                                    </button>
-                                  <select id="select2Basic-2" class="select2 form-select" data-allow-clear="true">
-                                    <option value="LETTER">رضوى  </option>
-                                    <option value="VIDEO">الوطنية </option>
-                                    <option value="PHOTO">الدوحة </option>
-                                    <option value="SI">الاخوين </option>
-                                    <option value="CERTIFICATE">مراعى</option>
-                                    <option value="OTHER">نادك</option>
-                                  </select>
-                                  </div>
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                                  <label for="select2Basic-percussion" class="form-label">الفئة الفرعية </label>
-                                  <div class="input-groupe">
-                                    <button data-bs-target="#add-Category" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe fs-6">
-                                      اضافة  
-                                    </button>
-                                  <select id="select2Basic" class="select2 form-select" data-allow-clear="true">
-                                    <option value="LETTER">رضوى  </option>
-                                    <option value="VIDEO">الوطنية </option>
-                                    <option value="PHOTO">الدوحة </option>
-                                    <option value="SI">الاخوين </option>
-                                    <option value="CERTIFICATE">مراعى</option>
-                                    <option value="OTHER">نادك</option>
-                                  </select>
-                                  </div>
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                                  <label for="exampleForm-by" class="form-label"> سعر الشراء  </label>
-                                  <input type="text" class="form-control" id="exampleForm-by" placeholder="سعر الشراء ">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                                  <label for="exampleForm-to" class="form-label">سعر البيع </label>
-                                  <input type="text" class="form-control" id="exampleForm-to" placeholder="سعر البيع ">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                                  <label for="exampleForm-ac" class="form-label"> اقل كميه
-                                    </label>
-                                  <input type="text" class="form-control" id="exampleForm-ac" placeholder="اقل كميه">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                                  <label for="select2Basic-deceont" class="form-label"> ضريبه القيمه المضافه </label>
-                                  <div class="input-groupe">
-                                    <button data-bs-target="#add-Added" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                      اضافة  
-                                    </button>
-                                  <select id="select2Basic-deceont" class="select2 form-select" data-allow-clear="true">
-                                    <option value="LETTER">1  </option>
-                                    <option value="VIDEO">2 </option>
-                                    <option value="PHOTO">3 </option>
-                                    <option value="SI">4 </option>
-                                    <option value="CERTIFICATE">5</option>
-                                    <option value="OTHER">6</option>
-                                  </select>
-                                  </div>
-                                </div>
-                              </div>
-                              
-                            </div>
-                            
-                            <div class="col-12 col-md-12 col-lg-2 mb-2">
-                              <label class="form-label" for="basic-logo">
-                                اضافة صورة المنتج:</label>
-          
-                              <div class="img-porfoil mb-2">
-                                <div class="avatar-edit">
-                                  <input type="file" class="imageUpload" id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                  <label for="imageUpload">
-                                    <img src="./assets/img/front-pages/icons/instagram-light.png" style="width: 25px" />
-                                  </label>
-                                </div>
-                                <div class="avatar-preview">
-                                  <div class="imagePreview" id="imagePreview" style="
-                                        background-image: url(./assets/img/icons/user.png);
-                                      "></div>
-                                </div>
+           
+              <div class="card comonent-hader-top">
+                <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
+                  <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted">
+                       المدن والمناطق
+                    </span>
+                  </strong>
+                  <div class="row justify-content-center mx-0 py-2 px-md-3 px-2">
+                    <!--item-->
+                    <div class="col-xl-6 col-lg-4 col-md-6 mb-md-0 mb-2">
+                      <div class="a-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="card h-100">
+                          <div class="row h-100">
+                            <div class="col-sm-5 col-12">
+                              <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                                <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0"
+                                  alt="add-new-roles" width="83" />
                               </div>
                             </div>
-
-                            <div class="mb-2 col-md-6 col-12">
-                              <label for="exampleForm-remarks" class="form-label">وصف الصنف </label>
-                              <textarea class="form-control" id="exampleForm-remarks" placeholder="وصف الصنف" rows="1"></textarea>
-                            </div>
-                            <div class="mb-2 col-md-6 col-12">
-                              <label for="exampleForm-remarks-tow" class="form-label">وصف الصنف(الانجليزية)  </label>
-                              <textarea class="form-control" id="exampleForm-remarks-tow" placeholder="وصف الصنف " rows="1"></textarea>
-                            </div>
-                          
-                            
-                            <!--5-2/2024-->
-                            <div id="div1" class="hide">
-                              <hr><h4>بيانات المنتج المجمع</h4>
-                              <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-2">
-
-                                <table class="table table-bordered table-hover rounded " id="my_table" >
-                                  <thead class="table-light">
-                                    <tr class="fw-bold">
-                                      <th class="fw-bold">التسلسل</th>
-                                      <th class="fw-bold"> اسم الصنف </th>
-                                    
-                                      <th class="fw-bold"> الحجم</th>
-                                      <th class="fw-bold"> الكمية</th>
-                                    
-                                      <th></th>
-                                    </tr>
-                                  </thead>
-                                  <tbody class="table-border-bottom-0" id="tbl">
-                                    <tr>
-                                  
-                                      <td>  1</td>
-                                
-                                      <td style="width: 50%;"> 
-                                        <select id="select-item-name" class="select2 form-select" data-allow-clear="true">
-                                          <option value="LETTER">1  </option>
-                                          <option value="VIDEO">2 </option>
-                                          <option value="PHOTO">3 </option>
-                                          <option value="SI">4 </option>
-                                          <option value="CERTIFICATE">5</option>
-                                          <option value="OTHER">6</option>
-                                        </select>
-                                      </td>
-                                      <td class="p-1"> 
-                                      
-                                          <select id="select-size" class="form-select select2" data-allow-clear="true">
-                                            <option value="AK"> SIZE</option>
-                                            <option value="HI">1</option>
-                                            <option value="CA">1</option>
-                                            <option value="NV">1</option>
-                                            <option value="OR">1</option>
-                                        
-                                          </select>
-                                      
-                                      
-                                      </td>
-                                      <td>
-                                        <input type="text"class="form-control">
-                                      </td>
-                                    
-                                      <td class="d-flex">
-                                        <button  type="button" class="bg-danger btn text-bg-danger btnDelete  p-1 d-flex align-items-center justify-content-center me-2 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-
-                                        <button type="button" class="button btn btn-primary addField p-1 me-2" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
-
-
-                                      
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                              
-                                </table>
-
-                              </div>
-                              <hr><h4>بيانات اصناف التعبئة والتغليف </h4>
-                              <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-2">
-                               <!--عند ضغط على add بيضف صف جديد الكود موجود فى accordion.js-->
-                                <table class="table table-bordered table-hover rounded" id="my-table-tow" >
-                                  <thead class="table-light">
-                                    <tr class="fw-bold">
-                                      <th class="fw-bold">التسلسل</th>
-                                      <th class="fw-bold"> اسم الصنف </th>
-                                    
-                                      <th class="fw-bold"> الحجم</th>
-                                      <th class="fw-bold"> الكمية</th>
-                                    
-                                      <th></th>
-                                    </tr>
-                                  </thead>
-                                  <tbody class="table-border-bottom-0" id="tb2">
-                                    <tr>
-                                  
-                                      <td>  1</td>
-                                
-                                      <td style="width: 50%;"> 
-                                        <select id="select-name-add" class="select2 form-select" data-allow-clear="true">
-                                          <option value="LETTER"selected >1  </option>
-                                          <option value="VIDEO">2 </option>
-                                          <option value="PHOTO">3 </option>
-                                          <option value="SI">4 </option>
-                                          <option value="CERTIFICATE">5</option>
-                                          <option value="OTHER">6</option>
-                                        </select>
-                                      </td>
-                                      <td class="p-1"> 
-                                      
-                                          <select id="select-size-add" class="form-select select2" data-allow-clear="true">
-                                            <option value="AK" selected> SIZE</option>
-                                            <option value="HI">1</option>
-                                            <option value="CA">1</option>
-                                            <option value="NV">1</option>
-                                            <option value="OR">1</option>
-                                        
-                                          </select>
-                                      
-                                      
-                                      </td>
-                                      <td>
-                                        <input type="text"class="form-control">
-                                      </td>
-                                    
-                                      <td class="d-flex">
-                                        <button  type="button" class="bg-danger btn text-bg-danger btnDelete-to   p-1 d-flex align-items-center justify-content-center me-2 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-
-                                        <button type="button" class="button btn btn-primary addField p-1 me-2" value="Add another line" onclick="addFieldtow(this);"><i class="fa-solid fa-plus fs-4"></i></button>
-
-
-                                      
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                              
-                                </table>
-
+                            <div class="col-sm-7 col-12">
+                              <div class="card-body text-sm-end text-center ps-sm-0">
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                  class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
+                                  اضافة فئة
+                                </button>
+                                <p class="mb-0 mt-1">
+                                  Add city-areas. data , if it does not exist
+                                </p>
                               </div>
                             </div>
                           </div>
-                       </div>
-                    </div>
-                  </div>
-                   <!--item-->
-                   <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        الاحجام
-                      </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <div class="table-responsive text-nowrap rounded table-size pt-4 pb-4">
-
-                          <table class="table table-bordered table-hover rounded tabel-table table-inv tabel-table" id="my-table-tow">
-                            <thead class="table-light">
-                              <tr class="fw-bold">
-                                <th class="fw-bold"> SR. NO.</th>
-                                <th class="fw-bold"> كود الصنف</th>
-                              
-                                <th class="fw-bold" style="width: 20%;"> الشد  </th>
-                                <th class="fw-bold" style="width: 15%;"> الوزن</th>
-                                <th class="fw-bold"style="width: 15%;"> الحجم</th>
-                                <th class="fw-bold" style="width: 15%;"> الكمية</th>
-                                <th class="fw-bold" style="width: 15%;"> السعر </th>
-                                <th class="fw-bold">  سعر الشراء </th>
-                                <th class="fw-bold" style="width: 15%;"> الوحدة</th>
-                                <th class="fw-bold"> اقل سعر بيع</th>
-                                <th class="fw-bold"> الحجم الاساسى</th>
-                                <th class="fw-bold">الحجم الفرعى </th>
-                                <th>
-
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody class="table-border-bottom-0" id="tb3">
-                              <tr>
-                            
-                                <td class="text-center">  1</td>
-                          
-                                <td> 
-                                   
-                                
-                                </td>
-                                <td>  
-                                  <select id="select-size-i" class="form-select form-control select2"  data-allow-clear="true">
-                                    <option value="AK" selected>CHOOSE THE SIZE</option>
-                                    <option value="HI">1</option>
-                                    <option value="CA">1</option>
-                                    <option value="NV">1</option>
-                                    <option value="OR">1</option>
-                                
-                                  </select>
-                                </td>
-                                <td>
-                                  <input type="number"class="form-control">
-                                </td>
-                                <td>  <input type="text"class="form-control"></td>
-                                <td><input type="number"class="form-control"></td>
-                                <td> <input type="text"class="form-control"> </td>
-                                <td><input type="text"class="form-control"></td>
-                                <td> <input type="text"class="form-control"> </td>
-                                <td><input type="text"class="form-control"></td>
-                                <td class="text-center">  <input name="collap-type" class="form-check-input" type="radio" value="" id="colla-basic" checked=""></td>
-                                <td class="text-center"><input name="collap-type" class="form-check-input" type="radio" value="" id="sub-size" checked=""></td>
-                               
-                               
-                                <td class="d-flex">
-                                  <button  type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-
-                                  <button type="button" class="button btn btn-primary p-1" value="Add another line" onclick="addFieldthere(this);"><i class="fa-solid fa-plus fs-4"></i></button>
-
-                                </td>
-                              </tr>
-                              
-                            </tbody>
-                        
-                          </table>
-
                         </div>
                       </div>
+                      
+                    </div>
+                    <!--item-->
+                  </div>
+                </div>
+              </div>
+              <div class="card comonent-hader-top p-2 mt-4">
+
+                <div class="row mx-0">
+                  
+                  <div class="col-sm-12 col-md-4">
+                    <div id="DataTables_Table_1_filter" class="dataTables_filter w-100">
+                      <label class="w-100 fw-medium">البحث:<input type="search" class="form-control w-100" placeholder="البحث.........." aria-controls="DataTables_Table_1"></label>
                     </div>
                   </div>
-                  <div>
-                    <button type="submit" class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">حفظ</button>
+                </div>
+                <div class="table-responsive text-nowrap rounded mt-2">
+                  <table class="table table-bordered table-hover rounded text-center">
+                    <thead class="table-light">
+                      <tr class="fw-bold">
+                        <th class="fw-bold">التسلسل</th>
+
+                        <th class="fw-bold"> اسم المنطقة</th>
+                        <th class="fw-bold">  المدينة</th>
+                        <th class="fw-bold"> Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <tr>
+                        <td>  1 </td>
+                        <td> الباحة</td>
+                        <td>
+                          <div class="table-responsive text-nowrap rounded mt-2">
+                            <table class="table table-bordered table-hover rounded text-center">
+                              <thead class="table-light">
+                                <tr class="fw-bold">
+                                  <th class="fw-bold">التسلسل</th>
+          
+                                  <th class="fw-bold"> اسم المنطقة</th>
+                                  <th class="fw-bold">  المدينة</th>
+                                  <th class="fw-bold"> Action</th>
+                                </tr>
+                              </thead>
+                              <tbody class="table-border-bottom-0">
+                                <tr>
+                                  <td>  1 </td>
+                                  <td> الباحة</td>
+                                  <td> 123456</td>
+                                  <td class="d-flex justify-content-center">
+                                    <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
+                                      data-bs-target="#edit-modal" data-bs-toggle="modal" title="تعديل"><i
+                                        class="ti ti-pencil  fs-4"></i> </a>
+          
+                                    <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                                      href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
+                                      data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
+          
+          
+                                  </td>
+                                </tr>
+          
+          
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                          <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
+                            data-bs-target="#edit-modal" data-bs-toggle="modal" title="تعديل"><i
+                              class="ti ti-pencil  fs-4"></i> </a>
+
+                          <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
+                            href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal"
+                            data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
+
+
+                        </td>
+                      </tr>
+
+
+                    </tbody>
+                  </table>
+                </div>
+              
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h6 class="modal-title fs-4 fw-bold" id="exampleModalLabel">اضافة اسم المنطقة او مدينة</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                  <form class="row g-2 component-form component-modal-select mx-0">
+                    <div class="col-12 col-lg-6 mb-2">
+                      <label class="form-label" for="number-add">   الرقم التعريفي <span class="start-form">*</span></label>
+                      <input type="number" id="number-add" class="form-control" placeholder=" الرقم التعريفي" />
+                    </div>
+                    <div class="col-12 col-lg-6 mb-2">
+                      <label class="form-label" for="username-add">اسم المنطقة  او المدينة <span class="start-form">*</span></label>
+                      <input type="text" id="username-add" class="form-control" placeholder="اسم الفئة" />
+                    </div>
+                    <div class="mb-2  col-12 col-lg-6">
+                      <label for="select-type" class="form-label"> 
+                        النوع <span class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر النوع
+                        </option>
+                        <option value="VIDEO">الفرع التجارى </option>
+                        <option value="PHOTO">شركه الجمعية فرع الخالدية
+                        </option>
+                        <option value="SI">شركة الجمعية فرع المروج
+                        </option>
+
+                      </select>
+
+                    </div>
+                    <div class="mb-2  col-12 col-lg-6">
+                      <label for="select-type" class="form-label"> 
+                        اختر اسم المنطقة <span class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر المنطقة
+                        </option>
+                        <option value="VIDEO">الفرع التجارى </option>
+                        <option value="PHOTO">شركه الجمعية فرع الخالدية
+                        </option>
+                        <option value="SI">شركة الجمعية فرع المروج
+                        </option>
+
+                      </select>
+
+                    </div>
+                    <div class="col-12 col-lg-12 mt-2">
+                      <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Modal لتعديل الفئة -->
+          <div class="modal fade" id="edit-modal" aria-labelledby="editModalLabel" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h6 class="modal-title fs-4 fw-bold text-tilte-b">تعديل المنطقة والمدينة</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                  <form class="row g-2 component-form component-modal-select mx-0">
+                    <div class="col-12 col-lg-6 mb-2">
+                      <label class="form-label" for="number-add">   الرقم التعريفي <span class="start-form">*</span></label>
+                      <input type="number" id="number-add" class="form-control" placeholder=" الرقم التعريفي" />
+                    </div>
+                    <div class="col-12 col-lg-6 mb-2">
+                      <label class="form-label" for="username-add">اسم المنطقة  او المدينة <span class="start-form">*</span></label>
+                      <input type="text" id="username-add" class="form-control" placeholder="اسم الفئة" />
+                    </div>
+                    <div class="mb-2  col-12 col-lg-6">
+                      <label for="select-type" class="form-label"> 
+                        النوع <span class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر النوع
+                        </option>
+                        <option value="VIDEO">الفرع التجارى </option>
+                        <option value="PHOTO">شركه الجمعية فرع الخالدية
+                        </option>
+                        <option value="SI">شركة الجمعية فرع المروج
+                        </option>
+
+                      </select>
+
+                    </div>
+                    <div class="mb-2  col-12 col-lg-6">
+                      <label for="select-type" class="form-label"> 
+                        اختر اسم المنطقة <span class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر المنطقة
+                        </option>
+                        <option value="VIDEO">الفرع التجارى </option>
+                        <option value="PHOTO">شركه الجمعية فرع الخالدية
+                        </option>
+                        <option value="SI">شركة الجمعية فرع المروج
+                        </option>
+
+                      </select>
+
+                    </div>
+                    <div class="col-12 col-lg-12 mt-2">
+                      <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- delet Modal -->
+          <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
+              <div class="modal-content p-1 p-md-3">
+                <button type="button" class="btn-close btn-pinned" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body text-center">
+                  <h3 class="role-title mb-2 fs-5">
+                    هل انت متاكد من حذف العنصر؟
+                  </h3>
+
+                  <div class="col-11 col-lg-12 mb-2">
+                    <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
+                    <button type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
                   </div>
-              </form>
-            </div>
-          </div>
-          <!-- Add  Modal -->
-          <div class="modal fade " id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                    إضافة الفئة الرئيسية
 
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                 </div>
-                <div class="modal-body px-0">
-                  
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-md-12 col-lg-12">
-                      <label class="form-label" for="name-requests">  الاسم</label>
-                      <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                    </div>
-                  
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-              
               </div>
             </div>
-          </div>
-          </div>
-          <!-- Add  Modal -->
-          <div class="modal fade " id="add-Category" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                    إضافة  الفئة الفرعية
-
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-md-12 col-lg-12">
-                      <label class="form-label" for="name-requests">  الاسم</label>
-                      <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                    </div>
-                  
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-              
-              </div>
-            </div>
-          </div>
-          </div>
-           <!-- Add  Modal -->
-           <div class="modal fade " id="add-Added" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                    إضافة ضريبه القيمه المضافه
-
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-md-12 col-lg-12">
-                      <label class="form-label" for="name-requests">  الاسم</label>
-                      <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                    </div>
-                  
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-              
-              </div>
-            </div>
-          </div>
           </div>
           <!-- Footer -->
           <footer class="content-footer footer bg-footer-theme">
@@ -2467,27 +2266,25 @@
 
   <script src="./assets/vendor/js/menu.js"></script><!--متكرر-->
 
+  <!-- endbuild -->
 
   <!-- Vendors JS -->
   <script src="./assets/vendor/js/dropdown-hover.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/mega-dropdown.js"></script><!--متكرر-->
+  <script src="./assets/vendor/js/mega-dropdown.js"></script> <!--متكرر-->
   <script src="./assets/js/main.js"></script><!--متكرر-->
 
   <script src="./assets/js/ui-navbar.js"></script><!--متكرر-->
 
   <!-- Vendors JS -->
 
+ 
   <script src="./assets/vendor/libs/select2/select2.js"></script><!--متكرر-->
-
-
-  <!-- Main JS -->
-
 
   <!-- Page JS -->
   <script src="./assets/js/forms-selects.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/add-items.js"></script><!--صفحة-->
+
 
 </body>
 
