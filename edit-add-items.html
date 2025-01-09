@@ -51,6 +51,7 @@
   <script src="./assets/vendor/js/template-customizer.js"></script><!--متكرر-->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="./assets/js/config.js"></script><!--متكرر-->
+
 </head>
 
 <body>
@@ -1931,7 +1932,7 @@
               <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
                 <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-2 align-items-center pt-2">
                   <div class="col col-md-8 col-12  mb-md-2 px-1 mb-2 ">
-                    <strong class="py-md-3 px-md-0 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">تعديل منتج</span>  </strong>
+                    <strong class="py-md-3 px-md-0 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">اضافه منتج</span>  </strong>
 
 
                   </div>
@@ -2087,10 +2088,9 @@
                             <!--5-2/2024-->
                             <div id="div1" class="hide">
                               <hr><h4>بيانات المنتج المجمع</h4>
-                              <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-2">
-
-                                <table class="table table-bordered table-hover rounded " id="my_table" >
-                                  <thead class="table-light">
+                              <div class="table-responsive">
+                                <table class="table  table-bordered table-hover rounded " id="my-table">
+                                  <thead class="table-light text-center">
                                     <tr class="fw-bold">
                                       <th class="fw-bold">التسلسل</th>
                                       <th class="fw-bold"> اسم الصنف </th>
@@ -2101,13 +2101,13 @@
                                       <th></th>
                                     </tr>
                                   </thead>
-                                  <tbody class="table-border-bottom-0" id="tbl">
+                                  <tbody class="table-border-bottom-0">
                                     <tr>
-                                  
-                                      <td>  1</td>
-                                
+                                      <td>
+                                        1
+                                      </td>
                                       <td style="width: 50%;"> 
-                                        <select id="select-item-name" class="select2 form-select" data-allow-clear="true">
+                                        <select  class="select2 form-select" data-allow-clear="true">
                                           <option value="LETTER">1  </option>
                                           <option value="VIDEO">2 </option>
                                           <option value="PHOTO">3 </option>
@@ -2132,23 +2132,23 @@
                                       <td>
                                         <input type="text"class="form-control">
                                       </td>
-                                    
-                                      <td class="d-flex">
-                                        <button  type="button" class="bg-danger btn text-bg-danger btnDelete  p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-                                        <button type="button" class="button btn btn-primary addField p-1" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
-
-                                      
+                                      <td class="d-flex justify-content-center">
+                                        <button type="button" class=" btn btn-primary  p-1 d-flex align-items-center justify-content-center  rounded add-row"
+                                          title="اضافة">
+                                          <i class="fa-solid fa-plus fs-5"></i>
+                                        </button>
                                       </td>
                                     </tr>
+              
                                   </tbody>
-                              
+              
                                 </table>
-
                               </div>
+                              
                               <hr><h4>بيانات اصناف التعبئة والتغليف </h4>
-                              <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-2">
-                               <!--عند ضغط على add بيضف صف جديد الكود موجود فى accordion.js-->
-                                <table class="table table-bordered table-hover rounded" id="my-table-tow" >
+                              <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-2" >
+                            
+                                <table class="table table-bordered table-hover rounded" id="my-table-item">
                                   <thead class="table-light">
                                     <tr class="fw-bold">
                                       <th class="fw-bold">التسلسل</th>
@@ -2160,14 +2160,14 @@
                                       <th></th>
                                     </tr>
                                   </thead>
-                                  <tbody class="table-border-bottom-0" id="tb2">
+                                  <tbody class="table-border-bottom-0">
                                     <tr>
                                   
                                       <td>  1</td>
                                 
                                       <td style="width: 50%;"> 
-                                        <select id="select-name-add" class="select2 form-select" data-allow-clear="true">
-                                          <option value="LETTER"selected >1  </option>
+                                        <select  class="select2 form-select" data-allow-clear="true">
+                                          <option value=""selected >  </option>
                                           <option value="VIDEO">2 </option>
                                           <option value="PHOTO">3 </option>
                                           <option value="SI">4 </option>
@@ -2177,8 +2177,8 @@
                                       </td>
                                       <td class="p-1"> 
                                       
-                                          <select id="select-size-add" class="form-select select2" data-allow-clear="true">
-                                            <option value="AK" selected> SIZE</option>
+                                          <select  class="select2 form-select " data-allow-clear="true">
+                                            <option value="" selected> </option>
                                             <option value="HI">1</option>
                                             <option value="CA">1</option>
                                             <option value="NV">1</option>
@@ -2192,9 +2192,10 @@
                                         <input type="text"class="form-control">
                                       </td>
                                     
-                                      <td class="d-flex">
-                                        <button  type="button" class="bg-danger btn text-bg-danger btnDelete-to   p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-                                        <button type="button" class="button btn btn-primary addField p-1" value="Add another line" onclick="addFieldtow(this);"><i class="fa-solid fa-plus fs-4"></i></button>
+                                      <td class="d-flex justify-content-center">
+                                      
+                                        <button type="button" class="button btn btn-primary addField p-1 me-2"><i class="fa-solid fa-plus fs-4"></i></button>
+
 
                                       
                                       </td>
@@ -2218,9 +2219,9 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
-                        <div class="table-responsive text-nowrap rounded table-size pt-4 pb-4">
+                        <div class="table-responsive text-nowrap rounded  pt-4 pb-4">
 
-                          <table class="table table-bordered table-hover rounded tabel-table table-inv tabel-table" id="my-table-tow">
+                          <table class="table table-bordered table-hover rounded table-inv tabel-table" id="my-table-tow">
                             <thead class="table-light">
                               <tr class="fw-bold">
                                 <th class="fw-bold"> SR. NO.</th>
@@ -2228,11 +2229,11 @@
                               
                                 <th class="fw-bold" style="width: 20%;"> الشد  </th>
                                 <th class="fw-bold" style="width: 15%;"> الوزن</th>
-                                <th class="fw-bold"> الحجم</th>
-                                <th class="fw-bold"> الكمية</th>
-                                <th class="fw-bold"> السعر </th>
+                                <th class="fw-bold"style="width: 15%;"> الحجم</th>
+                                <th class="fw-bold" style="width: 15%;"> الكمية</th>
+                                <th class="fw-bold" style="width: 15%;"> السعر </th>
                                 <th class="fw-bold">  سعر الشراء </th>
-                                <th class="fw-bold"> الوحدة</th>
+                                <th class="fw-bold" style="width: 15%;"> الوحدة</th>
                                 <th class="fw-bold"> اقل سعر بيع</th>
                                 <th class="fw-bold"> الحجم الاساسى</th>
                                 <th class="fw-bold">الحجم الفرعى </th>
@@ -2241,17 +2242,17 @@
                                 </th>
                               </tr>
                             </thead>
-                            <tbody class="table-border-bottom-0" id="tb3">
+                            <tbody class="table-border-bottom-0" >
                               <tr>
                             
                                 <td class="text-center">  1</td>
                           
                                 <td> 
-                                   
+                                  <input type="text"class="form-control">
                                 
                                 </td>
                                 <td>  
-                                  <select id="select-size-i" class="form-select form-control select2"  data-allow-clear="true">
+                                  <select  class="form-select form-control select2"  data-allow-clear="true">
                                     <option value="AK" selected>CHOOSE THE SIZE</option>
                                     <option value="HI">1</option>
                                     <option value="CA">1</option>
@@ -2269,14 +2270,13 @@
                                 <td><input type="text"class="form-control"></td>
                                 <td> <input type="text"class="form-control"> </td>
                                 <td><input type="text"class="form-control"></td>
-                                <td>  <input name="collap-type" class="form-check-input" type="radio" value="" id="colla-basic" checked=""></td>
-                                <td><input name="collap-type" class="form-check-input" type="radio" value="" id="sub-size" checked=""></td>
+                                <td class="text-center">  <input name="collap-type" class="form-check-input" type="radio" value=""  checked=""></td>
+                                <td class="text-center"><input name="collap-type" class="form-check-input" type="radio" value=""></td>
                                
                                
-                                <td class="d-flex">
-                                  <button  type="button" class="bg-danger btn btnDelete-to text-bg-danger remove_row-2 p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
+                                <td class="d-flex justify-content-center">
 
-                                  <button type="button" class="button btn btn-primary p-1" value="Add another line" onclick="addFieldthere(this);"><i class="fa-solid fa-plus fs-4"></i></button>
+                                  <button type="button" class=" btn btn-primary btnaddsize p-1"><i class="fa-solid fa-plus fs-4"></i></button>
 
                                 </td>
                               </tr>
@@ -2451,7 +2451,7 @@
   <!--/ Layout wrapper -->
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
-
+  
   <script src="./assets/vendor/libs/jquery/jquery.js"></script><!--متكرر-->
   <script src="./assets/vendor/libs/popper/popper.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/bootstrap.js"></script><!--متكرر-->
@@ -2463,34 +2463,25 @@
 
   <script src="./assets/vendor/js/menu.js"></script><!--متكرر-->
 
-  <!-- endbuild -->
-  <!-- <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-  <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script> -->
 
   <!-- Vendors JS -->
   <script src="./assets/vendor/js/dropdown-hover.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/mega-dropdown.js"></script><!--متكرر-->
+  <script src="./assets/vendor/libs/select2/select2.js"></script><!--متكرر-->
+ 
+
   <script src="./assets/js/main.js"></script><!--متكرر-->
 
   <script src="./assets/js/ui-navbar.js"></script><!--متكرر-->
 
   <!-- Vendors JS -->
-  <!-- <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script> -->
-  <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script><!--متكرر-->
-  <!-- <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script> -->
-
-  <script src="./assets/vendor/libs/select2/select2.js"></script><!--متكرر-->
-
-
-  <!-- Main JS -->
-
 
   <!-- Page JS -->
   <script src="./assets/js/forms-selects.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/add-items.js"></script><!--صفحة-->
-  
+
 </body>
 
 </html>

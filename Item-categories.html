@@ -2031,14 +2031,16 @@
                     </div>
                     <div class="col-12 mb-2">
                       <label for="Bond-type-add" class="form-label">النوع <span class="start-form">*</span></label>
-                      <select id="Bond-type-add" class="Bond-type-add select2 form-select" data-allow-clear="true">
+                      <select  class="Bond-type-add select2 form-select" data-allow-clear="true">
+                        <option value="">اختر النوع</option> <!-- خيار فارغ -->
                         <option value="رئيسية">رئيسية</option>
                         <option value="الفرعية">الفرعية</option>
                       </select>
                     </div>
                     <div id="sub-category-div-add" class="sub-category-div-add col-12 mb-2" style="display:none;">
                       <label for="sub-category-add" class="form-label">اختر الفئة الرئيسية <span class="start-form">*</span></label>
-                      <select id="sub-category-add" class="select2 form-select" data-allow-clear="true">
+                      <select id="sub-category-add"  class="select2 form-select" data-allow-clear="true">
+                        <option value=""> اختر الفئة الرئيسية</option>
                         <option value="Sub1">الفئة الفرعية 1</option>
                         <option value="Sub2">الفئة الفرعية 2</option>
                         <option value="Sub3">الفئة الفرعية 3</option>
@@ -2069,14 +2071,14 @@
                     </div>
                     <div class="col-12 mb-2">
                       <label for="Bond-type-edit" class="form-label">النوع <span class="start-form">*</span></label>
-                      <select id="Bond-type-edit" class="Bond-type-edit select2 form-select" data-allow-clear="true">
+                      <select class="Bond-type-edit select2 form-select" data-allow-clear="true">
                         <option value="رئيسية">رئيسية</option>
                         <option value="الفرعية">الفرعية</option>
                       </select>
                     </div>
                     <div id="sub-category-div-edit" class="sub-category-div-edit col-12 mb-2" style="display:none;">
                       <label for="sub-category-edit" class="form-label">اختر الفئة الرئيسية <span class="start-form">*</span></label>
-                      <select id="sub-category-edit" class="select2 form-select" data-allow-clear="true">
+                      <select  class="select2 form-select" data-allow-clear="true">
                         <option value="Sub1">الفئة الفرعية 1</option>
                         <option value="Sub2">الفئة الفرعية 2</option>
                         <option value="Sub3">الفئة الفرعية 3</option>
@@ -2186,9 +2188,9 @@
   <script src="./assets/vendor/js/bootstrap.js"></script><!--متكرر-->
   <script src="./assets/vendor/libs/node-waves/node-waves.js"></script><!--متكرر-->
   <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script><!--متكرر-->
-  <!-- <script src="./assets/vendor/libs/hammer/hammer.js"></script> -->
+  <script src="./assets/vendor/libs/hammer/hammer.js"></script>
   <script src="./assets/vendor/libs/i18n/i18n.js"></script><!--متكرر-->
-  <!-- <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script> -->
+  <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
 
   <script src="./assets/vendor/js/menu.js"></script><!--متكرر-->
 
@@ -2197,14 +2199,13 @@
   <!-- Vendors JS -->
   <script src="./assets/vendor/js/dropdown-hover.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/mega-dropdown.js"></script> <!--متكرر-->
+  <script src="./assets/vendor/libs/select2/select2.js"></script><!--متكرر-->
+    <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
   <script src="./assets/js/main.js"></script><!--متكرر-->
 
   <script src="./assets/js/ui-navbar.js"></script><!--متكرر-->
 
   <!-- Vendors JS -->
-
- 
-  <script src="./assets/vendor/libs/select2/select2.js"></script><!--متكرر-->
 
   <!-- Page JS -->
   <script src="./assets/js/forms-selects.js"></script><!--متكرر-->

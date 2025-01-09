@@ -40,23 +40,6 @@ function optionCheck() {
 
 
 
-// function readURL(input) {
-//     if (input.files && input.files[0]) {
-//         var reader = new FileReader();
-//         reader.onload = function(e) {
-//             $('.imagePreview').css('background-image', 'url('+e.target.result +')');
-//             $('.imagePreview').hide();
-//             $('.imagePreview').fadeIn(650);
-//         }
-//         reader.readAsDataURL(input.files[0]);
-//     }
-//   }
-//   $(".imageUpload").change(function() {
-//     readURL(this);
-//   });
-// دالة لقراءة الصورة المرفوعة وتطبيقها كخلفية للعنصر المطلوب
-// دالة لقراءة الصورة وتحديث الخلفية للمعاينة
-// وظيفة لتحديث الصورة عند تحميل ملف جديد
 function readURL(input, previewElement) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();

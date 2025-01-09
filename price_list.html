@@ -2086,7 +2086,7 @@
                         </div>
                         <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
 
-                          <table class="table table-bordered table-hover rounded tabel-table" id="my_table">
+                          <table class="table table-bordered table-hover rounded tabel-table" id="my-table">
                             <thead class="table-light">
                               <tr class="fw-bold">
                                 <th class="fw-bold">التسلسل</th>
@@ -2098,13 +2098,13 @@
                                 <th></th>
                               </tr>
                             </thead>
-                            <tbody class="table-border-bottom-0" id="tbl">
+                            <tbody class="table-border-bottom-0">
                               <tr>
 
                                 <td> 1</td>
 
                                 <td style="width: 30%;">
-                                  <select id="select-name" class="form-select select2" data-allow-clear="true">
+                                  <select  class="form-select select2" data-allow-clear="true">
                                     <option selected> select name</option>
                                     <option value="HI">1</option>
                                     <option value="CA">1</option>
@@ -2115,7 +2115,7 @@
                                 </td>
                                 <td class="p-1">
 
-                                  <select id="select-size" class="form-select select2" data-allow-clear="true">
+                                  <select  class="form-select select2" data-allow-clear="true">
                                     <option selected> SIZE</option>
                                     <option value="HI">1</option>
                                     <option value="CA">1</option>
@@ -2131,11 +2131,8 @@
                                 </td>
 
                                 <td class="d-flex justify-content-center align-items-center">
-                                  <button type="button"
-                                    class="bg-danger btn btnDelete text-bg-danger p-1  me-3 rounded" title="حذف"><i
-                                      class="ti ti-trash  fs-4"></i> </button>
-                                  <button type="button" class="button btn btn-primary p-1" value="Add another line"
-                                    onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
+                                 
+                                  <button type="button" class="button btn btn-primary btn-add-price p-1"><i class="fa-solid fa-plus fs-4"></i></button>
                                 </td>
                               </tr>
 
@@ -2286,12 +2283,18 @@
     <script>
       $(document).ready(function() {
   // تهيئة جميع حقول Select2 في البداية
-  $('.select2').select2({
-    dropdownParent: $('#edit-modeil') // للتأكد أن الـ Select2 يظهر داخل الـ modal
-  });
+   // إصلاح محتمل للخطأ عند استخدام allowClear
+   $.fn.select2.amd.require(['select2/selection/allowClear'], function (AllowClear) {
+       AllowClear.prototype._handleClear = function (evt) {
+         if (this.$element[0] && this.$element[0].id) { // تحقق من وجود id
+           AllowClear.__super__._handleClear.call(this, evt);
+         }
+       };
+     });
 
+  // initializeSelect2();
   // دالة لإضافة صف جديد
-  window.addField = function(button) {
+  $('#my-table').on('click', '.btn-add-price', function () {
     const newRow = `
       <tr>
         <td> 1 </td>
@@ -2321,20 +2324,31 @@
         </td>
       </tr>
     `;
-    $('#tbl').append(newRow);
+   // Append the new row
+   $('#my-table tbody').append(newRow);
 
-    // تهيئة Select2 للصف الجديد
-    $('#tbl .select2').select2({
-      dropdownParent: $('#edit-modeil')
-    });
-  };
-
-  // دالة حذف الصف
-  $('#tbl').on('click', '.btnDelete', function() {
-    $(this).closest('tr').remove();
-  });
+// Reinitialize select2 for all dropdowns including the new one
+initializeSelect2();
+// Update row numbering
+updateRowNumberse();
 });
-
+function updateRowNumberse() {
+    $('#my-table tr').each(function (index, row) {
+        $(row).find('td:first').text(index + 0); // الترقيم يبدأ من 1
+    });
+}
+// Delete row when delete button is clicked
+$('#my-table').on('click', '.btnDelete', function () {
+    $(this).closest('tr').remove();
+});
+// Function to initialize select2
+function initializeSelect2() {
+    $('.select2').select2({
+        placeholder: "اختر خيارًا", // إضافة placeholder
+        allowClear: true // السماح بإزالة الاختيار
+    });
+}
+});
     </script>
 
 </body>
