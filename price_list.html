@@ -2014,7 +2014,7 @@
 
                       <td class="d-flex justify-content-center">
                         <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"
-                          data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i
+                          href="edit-price_list.html" title="تعديل"><i
                             class="ti ti-pencil  fs-4"></i> </a>
 
                         <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded"
@@ -2033,129 +2033,6 @@
             </div>
 
 
-            <!-- edit Hardware Modal -->
-            <div class="modal fade" id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
-              aria-modal="true" role="dialog">
-              <div class="modal-dialog modal-lg ">
-                <div class="modal-content p-3 p-md-3">
-                  <div class="modal-header px-0">
-                    <h6 class="modal-title fs-4 fw-bold text-tilte-b"> تعديل سلة الاسعار</h6>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body px-0">
-                    <div class="accordion from-cllapse" id="accordionExample">
-
-                      <form class="form-content g-2  row mx-0">
-
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="select2-pranh" class="form-label"> الفرع </label>
-
-                          <select id="select2-pranh" class="select2 form-select" data-allow-clear="true">
-                            <option value="LETTER">اختيار الفرع </option>
-                            <option value="VIDEO">الفرع التجارى </option>
-                            <option value="PHOTO">شركة الجمعية فرع الخالدية </option>
-                            <option value="SI">شركة الجمعية فرع المروج </option>
-
-                          </select>
-
-                        </div>
-
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="select2Basic-deceont" class="form-label"> المندوب </label>
-
-                          <select id="select2Basic-deceont" class="select2 form-select" data-allow-clear="true">
-                            <option value="LETTER">اختر المندوب </option>
-                            <option value="VIDEO">جهاز المبيعات فرع المروج </option>
-                            <option value="PHOTO">انور محمد </option>
-                            <option value="SI">محمد نعمان </option>
-
-                          </select>
-
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="select2Basic-percussion" class="form-label">الفئة </label>
-
-                          <select id="select2Basic" class="select2 form-select" data-allow-clear="true">
-                            <option value="LETTER">عملاء جملة </option>
-                            <option value="VIDEO">عملاء تجزئة </option>
-                            <option value="PHOTO">عملاء شركة الجمعية </option>
-                            <option value="SI">محلات دواجن </option>
-
-                          </select>
-
-                        </div>
-                        <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
-
-                          <table class="table table-bordered table-hover rounded tabel-table" id="my-table">
-                            <thead class="table-light">
-                              <tr class="fw-bold">
-                                <th class="fw-bold">التسلسل</th>
-                                <th class="fw-bold"> اسم الصنف </th>
-
-                                <th class="fw-bold"> الحجم</th>
-                                <th class="fw-bold"> السعر</th>
-
-                                <th></th>
-                              </tr>
-                            </thead>
-                            <tbody class="table-border-bottom-0">
-                              <tr>
-
-                                <td> 1</td>
-
-                                <td style="width: 30%;">
-                                  <select  class="form-select select2" data-allow-clear="true">
-                                    <option selected> select name</option>
-                                    <option value="HI">1</option>
-                                    <option value="CA">1</option>
-                                    <option value="NV">1</option>
-                                    <option value="OR">1</option>
-
-                                  </select>
-                                </td>
-                                <td class="p-1">
-
-                                  <select  class="form-select select2" data-allow-clear="true">
-                                    <option selected> SIZE</option>
-                                    <option value="HI">1</option>
-                                    <option value="CA">1</option>
-                                    <option value="NV">1</option>
-                                    <option value="OR">1</option>
-
-                                  </select>
-
-
-                                </td>
-                                <td>
-                                  <input type="text" class="form-control">
-                                </td>
-
-                                <td class="d-flex justify-content-center align-items-center">
-                                 
-                                  <button type="button" class="button btn btn-primary btn-add-price p-1"><i class="fa-solid fa-plus fs-4"></i></button>
-                                </td>
-                              </tr>
-
-                            </tbody>
-
-                          </table>
-
-                        </div>
-
-                        <!--item-->
-
-                        <div>
-                          <button type="submit"
-                            class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">حفظ</button>
-                        </div>
-                      </form>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
             <!-- delet Modal -->
             <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
               <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
@@ -2280,76 +2157,9 @@
     <script src="./assets/js/forms-selects.js"></script><!--متكرر-->
     <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
     <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
-    <script>
-      $(document).ready(function() {
-  // تهيئة جميع حقول Select2 في البداية
-   // إصلاح محتمل للخطأ عند استخدام allowClear
-   $.fn.select2.amd.require(['select2/selection/allowClear'], function (AllowClear) {
-       AllowClear.prototype._handleClear = function (evt) {
-         if (this.$element[0] && this.$element[0].id) { // تحقق من وجود id
-           AllowClear.__super__._handleClear.call(this, evt);
-         }
-       };
-     });
+   
 
-  // initializeSelect2();
-  // دالة لإضافة صف جديد
-  $('#my-table').on('click', '.btn-add-price', function () {
-    const newRow = `
-      <tr>
-        <td> 1 </td>
-        <td style="width: 30%;">
-          <select class="form-select select2" data-allow-clear="true">
-            <option selected> select name</option>
-            <option value="HI">1</option>
-            <option value="CA">1</option>
-            <option value="NV">1</option>
-            <option value="OR">1</option>
-          </select>
-        </td>
-        <td class="p-1">
-          <select class="form-select select2" data-allow-clear="true">
-            <option selected> SIZE</option>
-            <option value="HI">1</option>
-            <option value="CA">1</option>
-            <option value="NV">1</option>
-            <option value="OR">1</option>
-          </select>
-        </td>
-        <td>
-          <input type="text" class="form-control">
-        </td>
-        <td class="d-flex justify-content-center align-items-center">
-          <button type="button" class="bg-danger btn btnDelete text-bg-danger p-1 me-3 rounded" title="حذف"><i class="ti ti-trash fs-4"></i></button>
-        </td>
-      </tr>
-    `;
-   // Append the new row
-   $('#my-table tbody').append(newRow);
-
-// Reinitialize select2 for all dropdowns including the new one
-initializeSelect2();
-// Update row numbering
-updateRowNumberse();
-});
-function updateRowNumberse() {
-    $('#my-table tr').each(function (index, row) {
-        $(row).find('td:first').text(index + 0); // الترقيم يبدأ من 1
-    });
-}
-// Delete row when delete button is clicked
-$('#my-table').on('click', '.btnDelete', function () {
-    $(this).closest('tr').remove();
-});
-// Function to initialize select2
-function initializeSelect2() {
-    $('.select2').select2({
-        placeholder: "اختر خيارًا", // إضافة placeholder
-        allowClear: true // السماح بإزالة الاختيار
-    });
-}
-});
-    </script>
+ 
 
 </body>
 

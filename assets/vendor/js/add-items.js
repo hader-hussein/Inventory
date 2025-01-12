@@ -119,7 +119,7 @@ $('#my-table-item').on('click', '.delete-Field', function () {
  $('#my-table-tow').on('click', '.btnaddsize', function () {
     var newRowe = `
     <tr>
-     <td> </td>
+     <td class="text-center"> </td>
                                 <td> 
                                   <input type="text"class="form-control">
                                 

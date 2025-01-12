@@ -561,3 +561,8 @@ a .card-body  p{
   filter:saturate(500%) contrast(800%) brightness(500%) 
   invert(123%) sepia(97%) hue-rotate(190deg); 
 }
+#map {
+  height: 400px;
+  width: 100%;
+  max-width: 100%;
+}
