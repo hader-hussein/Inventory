@@ -41,6 +41,8 @@
   
   
    <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" /><!--متكرر-->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /><!--    متكرر فى بعض الصفحات اللى فيها خريطة-->
+
    <link rel="stylesheet" href="./assets/css/style.css" /><!--متكرر-->
    <!-- Helpers -->
    <script src="./assets/vendor/js/helpers.js"></script><!--متكرر-->
@@ -49,6 +51,8 @@
    <script src="./assets/vendor/js/template-customizer.js"></script><!--متكرر-->
    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
    <script src="./assets/js/config.js"></script><!--متكرر-->
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><!--    متكرر فى بعض الصفحات اللى فيها خريطة-->
+
 </head>
 
 <body>
@@ -1965,7 +1969,7 @@
                     المخزن
                   </label>
                   <div class="input-groupe">
-                    <button data-bs-target="#addtruck" type="button" data-bs-toggle="modal"
+                    <button data-bs-target="#exampleModal" type="button" data-bs-toggle="modal"
                       class="btn btn-primary text-nowrap add-new-role waves-effect waves-light text-withe">
                       اضافة
                     </button>
@@ -1983,7 +1987,7 @@
                 </div>
 
                 <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-4">
-                  <table class="table table-bordered table-hover rounded w-100 table-inv" id="myTable">
+                  <table class="table table-bordered table-hover rounded w-100 table-inv" id="my-table-tow">
                       <thead class="table-light">
                           <tr class="fw-bold">
                               <th class="fw-bold">التسلسل</th>
@@ -2009,7 +2013,7 @@
                               <th></th>
                           </tr>
                       </thead>
-                      <tbody class="table-border-bottom-0" id="tableBody">
+                      <tbody class="table-border-bottom-0">
                           <tr>
                               <td>1</td>
                               <td style="width: 40%">
@@ -2021,7 +2025,7 @@
                                       <option value="OR">1</option>
                                   </select>
                               </td>
-                              <td style="width: 40%">
+                              <td style="width: 20%">
                                   <select class="form-select form-s select2">
                                       <option value="AK">SIZE</option>
                                       <option value="HI">1</option>
@@ -2036,11 +2040,11 @@
                               <td><input type="text" class="form-control" /></td>
                               <td><input type="text" class="form-control" /></td>
                               <td><input type="text" class="form-control" /></td>
-                              <td><input type="text" class="form-control" /></td>
+                              <td style="width: 10%"><input type="text" class="form-control" /></td>
 
                               <td class="d-flex">
                                
-                                  <button type="button" class="button btn btn-primary add_another p-1" value="Add another line" onclick="addFieldinv();">
+                                  <button type="button" class="button btn btn-primary btnaddsize p-1">
                                       <i class="fa-solid fa-plus fs-4"></i>
                                   </button>
                               </td>
@@ -2061,9 +2065,9 @@
           </div>
 
           <!-- Add  Modal -->
-          <div class="modal fade" id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+          <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
             aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
               <div class="modal-content p-3">
                 <div class="modal-header px-0">
                   <h1 class="modal-title fs-4 fw-bold text-tilte-b">
@@ -2072,19 +2076,134 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-0">
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-md-12 col-lg-12">
-                      <label class="form-label" for="name-requests">
-                        الاسم</label>
-                      <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
+                  <form class="row  component-form form-1 mx-0 g-2 align-items-end">
+             
+                    
+                    <div class="col-12 col-lg-4 col-md-4 mb-2">
+                      <label class="form-label" for="name-add">  اسم المخزن<span class="start-form">*</span></label>
+                      <input type="text" id="name-add" class="form-control" placeholder="  اسم المخزن" />
                     </div>
+                    <div class="col-12 col-lg-2 col-md-4 mb-2">
+                      <label class="form-label" for="code-add"> كود المخزن<span class="start-form">*</span></label>
+                      <input type="text" id="code-add" class="form-control" placeholder="  كود المخزن" />
+                    </div>
+                    <div class="col-12 col-lg-3 col-md-4 mb-2">
+                      <label for="select-type" class="form-label"> 
+                        نوع المخزن<span class="start-form">*</span></label>
 
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary waves-effect waves-light">
-                        حفظ
-                      </button>
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر المخزن
+                        </option>
+                        <option value="VIDEO">الفرع التجارى </option>
+                        <option value="PHOTO">شركه الجمعية فرع الخالدية
+                        </option>
+                        <option value="SI">شركة الجمعية فرع المروج
+                        </option>
+
+                      </select>
+
                     </div>
-                  </form>
+                    <div class="col-12 col-lg-3 col-md-4 mb-2">
+                      <label for="select-type" class="form-label"> 
+                        مسئول المخزن<span class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر مسئول
+                        </option>
+                        <option value="VIDEO">الفرع التجارى </option>
+                        <option value="PHOTO">شركه الجمعية فرع الخالدية
+                        </option>
+                        <option value="SI">شركة الجمعية فرع المروج
+                        </option>
+
+                      </select>
+
+                    </div>
+                  
+                    <div class="col-12 col-lg-3 col-md-4 mb-2">
+                      <label for="select-type" class="form-label"> 
+                        الفرع<span class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر الفرع
+                        </option>
+                        <option value="VIDEO">الفرع التجارى </option>
+                        <option value="PHOTO">شركه الجمعية فرع الخالدية
+                        </option>
+                        <option value="SI">شركة الجمعية فرع المروج
+                        </option>
+
+                      </select>
+
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 mb-2">
+                      <div class="form-check form-control">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          رئـيـسـي
+                        </label>
+                      </div>
+                      </div>
+                    <div class="col-12 col-lg-3 col-md-4 mb-2">
+                      <label for="select-type" class="form-label"> 
+                        اختر  حساب المخزن <span class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر حساب المخزن
+                        </option>
+                        <option value="VIDEO">الفرع التجارى </option>
+                        <option value="PHOTO">شركه الجمعية فرع الخالدية
+                        </option>
+                        <option value="SI">شركة الجمعية فرع المروج
+                        </option>
+
+                      </select>
+
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-4 mb-2">
+                      <label for="select-type" class="form-label"> 
+                        اختر  حساب سلفه المخزون <span class="start-form">*</span></label>
+
+                      <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected> اختر المخزون
+                        </option>
+                        <option value="VIDEO">الفرع التجارى </option>
+                        <option value="PHOTO">شركه الجمعية فرع الخالدية
+                        </option>
+                        <option value="SI">شركة الجمعية فرع المروج
+                        </option>
+
+                      </select>
+
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-4 mb-2">
+                      <label class="form-label" for="name-areas">    اسم المنطقة <span class="start-form">*</span></label>
+                      <input type="text" id="name-areas" readonly class="form-control">
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 mb-2">
+                      <label class="form-label" for="Longitude">     خط طول <span class="start-form">*</span></label>
+                      <input type="text" class="longitude form-control" readonly>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 mb-2">
+                      <label class="form-label" for="Latitude">     خط عرض <span class="start-form">*</span></label>
+                      <input type="text" class="latitude form-control" readonly>
+                    
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 mb-2">
+                      <label class="form-label" for="radius">نصف القطر <span class="start-form">*</span></label>
+                      <input type="number" id="radius" class="form-control" value="1000">
+                    
+                    </div>
+                
+               
+               
+                <div class="map" id="map1" style="height: 400px;"></div>
+
+               
+                <div class="col-12 col-lg-12 mt-2">
+                  <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                </div>
+              </form>
                 </div>
               </div>
             </div>
@@ -2186,94 +2305,9 @@
   <script src="./assets/js/forms-selects.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
- 
+  <script src="./assets/vendor/js/add-Warehouse.js"></script><!--خاص بصفحة-->
   <script src="./assets/vendor/js/map.js"></script><!--متكرر فى صفحات فيها خريطة-->
-  <script>
-    $(document).ready(function() {
-    // تهيئة جميع عناصر select2 الموجودة عند تحميل الصفحة
-    $('.select2').select2({
-        width: "100%" // لتأكيد عرض القائمة المنسدلة بشكل كامل
-    });
-});
-    // Function to add a new row
-    function addFieldinv() {
-        var tableBody = document.getElementById("tableBody");
-        var rowCount = tableBody.rows.length + 1;
-
-        // Create a new row
-        var newRow = document.createElement("tr");
-
-        // Add content to the new row
-        newRow.innerHTML = `
-            <td>${rowCount}</td>
-            <td style="width: 40%">
-                <select class="form-select form-s select2">
-                    <option value="AK">الاصناف</option>
-                    <option value="HI">1</option>
-                    <option value="CA">1</option>
-                    <option value="NV">1</option>
-                    <option value="OR">1</option>
-                </select>
-            </td>
-            <td style="width: 40%">
-                <select class="form-select form-s select2">
-                    <option value="AK">SIZE</option>
-                    <option value="HI">1</option>
-                    <option value="CA">1</option>
-                    <option value="NV">1</option>
-                    <option value="OR">1</option>
-                </select>
-            </td>
-            <td><input type="text" class="form-control" /></td>
-            <td><input type="text" class="form-control" /></td>
-            <td><input type="text" class="form-control" /></td>
-            <td><input type="text" class="form-control" /></td>
-            <td><input type="text" class="form-control" /></td>
-            <td><input type="text" class="form-control" /></td>
-             <td><input type="text" class="form-control" /></td>
-
-            <td class="d-flex">
-                <button type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
-                    <i class="ti ti-trash fs-4"></i>
-                </button>
-             
-            </td>
-        `;
-
-        // Append the new row to the table
-        tableBody.appendChild(newRow);
-
-        // Re-initialize select2 for the new elements
-        $('.select2').select2();
-
-        // Add delete functionality for the new row
-        newRow.querySelector('.btnDelete').addEventListener('click', function() {
-            newRow.remove();
-            updateRowNumbers();
-        });
-    }
-
-    // Function to update row numbers after deletion
-    function updateRowNumbers() {
-        var rows = document.querySelectorAll("#tableBody tr");
-        rows.forEach((row, index) => {
-            row.querySelector('td').innerText = index + 1;
-        });
-    }
-
-    // Initialize select2 for the existing rows on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        $('.select2').select2();
-
-        // Add delete functionality for the initial delete buttons
-        document.querySelectorAll('.btnDelete').forEach(button => {
-            button.addEventListener('click', function() {
-                this.closest('tr').remove();
-                updateRowNumbers();
-            });
-        });
-    });
-</script>
+  
 </body>
 
 </html>
