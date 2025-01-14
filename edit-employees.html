@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 
-<html lang="en" class="light-style  layout-compact" dir="ltr" data-theme="theme-default"
-  data-assets-path="./assets/" data-template="horizontal-menu-template">
+<html lang="en" class="light-style  layout-compact" dir="ltr" data-theme="theme-default" data-assets-path="./assets/"
+  data-template="horizontal-menu-template">
 
 <head>
   <meta charset="utf-8" />
@@ -40,9 +40,12 @@
 
   <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" /><!--متكرر-->
 
+  <link href="./assets/default-ocean-blue.css" rel="stylesheet" /><!--الصفحة ب-kendo-->
 
 
-  <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" /><!--متكرر-->
+  <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+  <!--متكرر-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="./assets/css/style.css" /><!--متكرر-->
   <!-- Helpers -->
   <script src="./assets/vendor/js/helpers.js"></script><!--متكرر-->
@@ -51,6 +54,8 @@
   <script src="./assets/vendor/js/template-customizer.js"></script><!--متكرر-->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="./assets/js/config.js"></script><!--متكرر-->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><!--    متكرر فى بعض الصفحات اللى فيها خريطة-->
+
 </head>
 
 <body>
@@ -528,7 +533,8 @@
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="Item-categories.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Item-categories.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Item-categories.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Item-categories"> فئات الأصناف </div>
                           </a>
@@ -536,7 +542,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Items.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Items.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Items.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Items"> الاصناف </div>
                           </a>
@@ -544,7 +551,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="product_reportForm.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/report-products.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/report-products.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="report-products"> تقرير الاصناف
                             </div>
@@ -555,14 +563,16 @@
                     </li>
                     <li class="menu-item">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/store-report.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/store-report.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="store-report"> تقارير المخزن </div>
                       </a>
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="transfer_report-store.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/transfer-report-store.svg" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/transfer-report-store.svg"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="transfer_report-store"> تقرير تحويلات المخازن
                             </div>
@@ -571,7 +581,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="store-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/store-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/store-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="store-report"> تقرير المخزون
                             </div>
@@ -580,7 +591,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Inventory-size-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/store-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/store-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Inventory-size-report"> تقرير المخزون بالاحجام
                             </div>
@@ -589,7 +601,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="store-report-detelies.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/store-report-detelies.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/store-report-detelies.png"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="store-report-detelies"> تقرير المخزون التفصيلى
 
@@ -599,7 +612,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="freequantity_report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/free-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/free-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="freequantity_reportt">
                               تقرير الكميات المجانية
@@ -610,7 +624,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="transactionCostReport.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/transactionCostReport.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/transactionCostReport.png"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="transactionCostReport">
                               تقرير تكلفة المعاملة
@@ -623,7 +638,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="price_list.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/price-list.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/price-list.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="price_list"> سلة الأسعار
                         </div>
@@ -638,7 +654,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="Warehouse-inventory.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Warehouse-inventory.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Warehouse-inventory.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Warehouse-inventory"> جرد المخازن</div>
                       </a>
@@ -646,7 +663,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="Items-unit.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Items-unit.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Items-unit.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Items-unit"> وحدة الأصناف</div>
                       </a>
@@ -654,7 +672,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="transfer-products.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/transfer-products.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/transfer-products.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="transfer-products"> تحويلات منتجات المخازن</div>
                       </a>
@@ -662,28 +681,32 @@
                     </li>
                     <li class="menu-item">
                       <a href="Internal-drainage.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Internal-drainage">صرف داخلى</div>
                       </a>
                     </li>
                     <li class="menu-item">
                       <a href="internalDisbursementRequest.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Internal-drainage.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Internal exchange request"> طلب صرف داخلى</div>
                       </a>
                     </li>
                     <li class="menu-item">
                       <a href="Store-shelves.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Store-shelves.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Store-shelves.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Store shelves">ارفف المخزن</div>
                       </a>
                     </li>
                     <li class="menu-item">
                       <a href="internal-receipt.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/internal-receipt.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/internal-receipt.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="internal receipt">استلام داخلي</div>
                       </a>
@@ -696,16 +719,18 @@
                 <!-- أوامر الإنتاج والتصنيع -->
                 <li class="menu-item">
                   <a href="javascript:void(0)" class="menu-link menu-toggle">
-                    <img class="menu-icon img-nav" src="./assets/img/nav-icon/manufacturing.png" alt="img" loading="lazy">
+                    <img class="menu-icon img-nav" src="./assets/img/nav-icon/manufacturing.png" alt="img"
+                      loading="lazy">
 
                     <div data-i18n="manufacturing">
-                      أوامر الإنتاج 
+                      أوامر الإنتاج
                     </div>
                   </a>
                   <ul class="menu-sub">
                     <li class="menu-item">
                       <a href="view-Assembly-command.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Assembly-command.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Assembly-command.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Assembly-command"> امر تجميع
                         </div>
@@ -714,7 +739,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="productionCollection.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/productionCollection.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/productionCollection.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="productionCollection"> امر إنتاج
                         </div>
                       </a>
@@ -722,7 +748,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="Complete_Product_Report.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Complete_Product_Report.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Complete_Product_Report.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="Complete_Product_Report"> تقرير الانتاج</div>
                       </a>
 
@@ -733,7 +760,8 @@
                 <!--money-->
                 <li class="menu-item">
                   <a href="javascript:void(0)" class="menu-link menu-toggle">
-                    <img class="menu-icon img-nav" src="./assets/img/nav-icon/point-of-sale.png" alt="img" loading="lazy">
+                    <img class="menu-icon img-nav" src="./assets/img/nav-icon/point-of-sale.png" alt="img"
+                      loading="lazy">
 
                     <div data-i18n="Points sale">نظام نقاط البيع </div>
                   </a>
@@ -741,7 +769,8 @@
 
                     <li class="menu-item">
                       <a href="points-sale.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/point-of-sale.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/point-of-sale.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="points-sale"> اضافه نقاط بيع
                         </div>
@@ -750,7 +779,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="Pending-invoices.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Pending-invoices.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Pending-invoices.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="Pending-invoices">
                           الفواتير المعلقه</div>
                       </a>
@@ -758,7 +788,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="Add-cashier.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Add-cashier.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Add-cashier.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="Add a cashier">
                           اضافه كاشير</div>
                       </a>
@@ -766,7 +797,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="report-cashier.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/report-cashier.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/report-cashier.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="report cashier">
                           تقرير الكاشير
@@ -776,7 +808,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="Inquiry-quantities.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Inquiry-quantities.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Inquiry-quantities.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Inquiry-quantities">
 
@@ -798,7 +831,8 @@
                   <ul class="menu-sub">
                     <li class="menu-item">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Customer"> العملاء
                         </div>
@@ -806,7 +840,8 @@
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="Customer-category.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-category.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-category.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Customer category"> فئة العملاء
                             </div>
@@ -815,7 +850,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Customer.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Customer"> العملاء</div>
                           </a>
@@ -823,7 +859,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Groups-Customers.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Groups.Customers"> مجموعات العملاء</div>
                           </a>
@@ -831,7 +868,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Transferring-client's.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Transferring-client's.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Transferring-client's.png"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="Transferring-client's debts"> نقل مديونيه العميل
                             </div>
@@ -847,169 +885,184 @@
                         <div data-i18n="report"> تقارير </div>
                       </a>
                       <ul class="menu-sub">
-                        
-                          <li class="menu-item">
-                            <a href="Sales-offer-report.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-offer-report.png" alt="img" loading="lazy">
 
-                              <div data-i18n="Sales-offer-report"> تقرير عروض المبيعات
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="client_report.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img" loading="lazy">
+                        <li class="menu-item">
+                          <a href="Sales-offer-report.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-offer-report.png" alt="img"
+                              loading="lazy">
 
-                              <div data-i18n="client_report">
-  
-                                تقرير العملاء
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="Customer-account-statement.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-account-statement.png" alt="img" loading="lazy">
+                            <div data-i18n="Sales-offer-report"> تقرير عروض المبيعات
 
-                              <div data-i18n="Customer-account-statement">
-                                كشف حساب العميل
-  
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="sales_report.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/sales_report.png" alt="img" loading="lazy">
+                            </div>
+                          </a>
 
-                              <div data-i18n="sales_report">
-                                تقرير المبيعات
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="delegate_bills_total.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/delegate_bills_total.png" alt="img" loading="lazy">
+                        </li>
+                        <li class="menu-item">
+                          <a href="client_report.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img"
+                              loading="lazy">
 
-                              <div data-i18n="delegate_bills_total">
-                                تقرير المبيعات (اجمالي)
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="Detailed-sales-report.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png" alt="img" loading="lazy">
+                            <div data-i18n="client_report">
 
-                              <div data-i18n="Detailed-sales-report">
-                                تقرير مبيعات تفصيلي
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="Detailed-sales-report-size.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png" alt="img" loading="lazy">
+                              تقرير العملاء
+                            </div>
+                          </a>
 
-                              <div data-i18n="Detailed-sales-report-size">
-                                تقرير مبيعات تفصيلى بالاحجام
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="Receipt-notice.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png" alt="img" loading="lazy">
+                        </li>
+                        <li class="menu-item">
+                          <a href="Customer-account-statement.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-account-statement.png"
+                              alt="img" loading="lazy">
 
-                              <div data-i18n="Receipt notice">
-                                تقرير  اشعار استلام
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="Daily-report-supervisor.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img" loading="lazy">
+                            <div data-i18n="Customer-account-statement">
+                              كشف حساب العميل
 
-                              <div data-i18n="Daily-report-supervisor">
-                                تقرير المتابعة اليومية للمناديب
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="Sales_Self_Service_Report.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img" loading="lazy">
 
-                              <div data-i18n="Sales_Self_Service_Report">
-                                تقرير المبيعات اليومية للمندوب (حسب خط السير)
-  
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="Sales-report-period.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-report-period.png" alt="img" loading="lazy">
+                            </div>
+                          </a>
 
-                              <div data-i18n="Sales-report-period">
-                                تقرير المبيعات خلال فتره
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="target-report-period.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/target-report-period.png" alt="img" loading="lazy">
+                        </li>
+                        <li class="menu-item">
+                          <a href="sales_report.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/sales_report.png" alt="img"
+                              loading="lazy">
 
-                              <div data-i18n="target-report-period">
-                                مبيعات المناديب حسب التارجت
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="Invoice-report-without-supply.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/Invoice-report-without-supply.png" alt="img" loading="lazy">
+                            <div data-i18n="sales_report">
+                              تقرير المبيعات
 
-                              <div data-i18n="Invoice-report-without-supply">
-                                تقرير فواتير بدون توريد
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                          <li class="menu-item">
-                            <a href="target_quantity.html" class="menu-link">
-                              <img class="menu-icon img-nav" src="./assets/img/nav-icon/target_quantity.png" alt="img" loading="lazy">
+                            </div>
+                          </a>
 
-                              <div data-i18n="target_quantity">
-                                تقرير التارجت بالكميه
-  
-                              </div>
-                            </a>
-  
-                          </li>
-                       
-                    
-                        </ul>
+                        </li>
+                        <li class="menu-item">
+                          <a href="delegate_bills_total.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/delegate_bills_total.png"
+                              alt="img" loading="lazy">
+
+                            <div data-i18n="delegate_bills_total">
+                              تقرير المبيعات (اجمالي)
+
+                            </div>
+                          </a>
+
+                        </li>
+                        <li class="menu-item">
+                          <a href="Detailed-sales-report.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png"
+                              alt="img" loading="lazy">
+
+                            <div data-i18n="Detailed-sales-report">
+                              تقرير مبيعات تفصيلي
+
+                            </div>
+                          </a>
+
+                        </li>
+                        <li class="menu-item">
+                          <a href="Detailed-sales-report-size.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png"
+                              alt="img" loading="lazy">
+
+                            <div data-i18n="Detailed-sales-report-size">
+                              تقرير مبيعات تفصيلى بالاحجام
+
+                            </div>
+                          </a>
+
+                        </li>
+                        <li class="menu-item">
+                          <a href="Receipt-notice.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png"
+                              alt="img" loading="lazy">
+
+                            <div data-i18n="Receipt notice">
+                              تقرير اشعار استلام
+
+                            </div>
+                          </a>
+
+                        </li>
+                        <li class="menu-item">
+                          <a href="Daily-report-supervisor.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img"
+                              loading="lazy">
+
+                            <div data-i18n="Daily-report-supervisor">
+                              تقرير المتابعة اليومية للمناديب
+
+                            </div>
+                          </a>
+
+                        </li>
+                        <li class="menu-item">
+                          <a href="Sales_Self_Service_Report.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img"
+                              loading="lazy">
+
+                            <div data-i18n="Sales_Self_Service_Report">
+                              تقرير المبيعات اليومية للمندوب (حسب خط السير)
+
+
+                            </div>
+                          </a>
+
+                        </li>
+                        <li class="menu-item">
+                          <a href="Sales-report-period.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-report-period.png" alt="img"
+                              loading="lazy">
+
+                            <div data-i18n="Sales-report-period">
+                              تقرير المبيعات خلال فتره
+
+                            </div>
+                          </a>
+
+                        </li>
+                        <li class="menu-item">
+                          <a href="target-report-period.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/target-report-period.png"
+                              alt="img" loading="lazy">
+
+                            <div data-i18n="target-report-period">
+                              مبيعات المناديب حسب التارجت
+
+                            </div>
+                          </a>
+
+                        </li>
+                        <li class="menu-item">
+                          <a href="Invoice-report-without-supply.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Invoice-report-without-supply.png"
+                              alt="img" loading="lazy">
+
+                            <div data-i18n="Invoice-report-without-supply">
+                              تقرير فواتير بدون توريد
+
+                            </div>
+                          </a>
+
+                        </li>
+                        <li class="menu-item">
+                          <a href="target_quantity.html" class="menu-link">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/target_quantity.png" alt="img"
+                              loading="lazy">
+
+                            <div data-i18n="target_quantity">
+                              تقرير التارجت بالكميه
+
+                            </div>
+                          </a>
+
+                        </li>
+
+
+                      </ul>
                     </li>
                     <li class="menu-item ">
                       <a href="Expectations.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Expectations.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Expectations.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Expectations">
                           التوقعات
@@ -1028,7 +1081,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="cashReceipts.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Arrest-document.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Arrest-document.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="Arrest document">
                           سند القبض
 
@@ -1038,7 +1092,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="Credit-note-invoice-return.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/invoice-return.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/invoice-return.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="Credit-note-invoice-return">
                           إشعار دائن - مرتجع فاتورة
 
@@ -1048,7 +1103,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="Notice-receipt.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Invoice-report-without-supply.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Invoice-report-without-supply.png"
+                          alt="img" loading="lazy">
                         <div data-i18n="Notice of receipt">
                           اشعار استلام
                         </div>
@@ -1057,7 +1113,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="Invoice-without-supply.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Invoice-report-without-supply.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Invoice-report-without-supply.png"
+                          alt="img" loading="lazy">
                         <div data-i18n="Invoice-without-supply">
                           فاتورة بدون توريد
                         </div>
@@ -1066,13 +1123,15 @@
                     </li>
                     <li class="menu-item">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-offers.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-offers.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="Sales offers/discounts">عروض المبيعات/ والخصومات </div>
                       </a>
                       <ul class="menu-sub">
                         <li class="menu-item ">
                           <a href="Sales-presentations.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-presentations.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-presentations.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Sales presentations">
                               عروض المبيعات
@@ -1083,7 +1142,8 @@
                         <li class="menu-item ">
 
                           <a href="Sales-offers.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-offers.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-offers.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Sales offers">
                               عروض الخصومات
@@ -1093,7 +1153,8 @@
                         </li>
                         <li class="menu-item ">
                           <a href="Quantity-discount-offers.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Quantity-offers.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Quantity-offers.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Quantity discount offers">
                               عروض الخصومات بالكمية
@@ -1104,19 +1165,21 @@
                         <li class="menu-item ">
 
                           <a href="Group-discounts-item.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-offers.png" alt="img" loading="lazy">
-    
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-offers.png" alt="img"
+                              loading="lazy">
+
                             <div data-i18n="Group discounts item">
-                             خصومات المجموعة والاصناف
+                              خصومات المجموعة والاصناف
                             </div>
                           </a>
-    
+
                         </li>
                       </ul>
                     </li>
                     <li class="menu-item ">
                       <a href="Free-quantity-per-category.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Free-category.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Free-category.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Free quantity per category">
                           الكمية المجانية بالفئة
@@ -1126,7 +1189,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="Dismissal-notice.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/exchange.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/exchange.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Dismissal notice">
                           اذن صرف
@@ -1136,7 +1200,8 @@
                     </li>
                     <li class="menu-item ">
                       <a href="Opening-balance.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Opening-balance.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Opening-balance.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="Opening balance">
                           رصيد افتتاحى
                         </div>
@@ -1166,7 +1231,8 @@
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="Purchasing report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Purchasing-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Purchasing-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Purchasing report"> تقرير المشتريات</div>
                           </a>
@@ -1174,7 +1240,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Detailed-suppliers-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Detailed-suppliers-report"> تقرير الموردين تفصلى</div>
                           </a>
@@ -1182,7 +1249,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Procurement-bids-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Procurement-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Procurement-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Procurement bids report"> تقرير عروض المشتريات</div>
                           </a>
@@ -1190,7 +1258,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Suppliers-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/client_report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Suppliers report"> تقرير الموردين</div>
                           </a>
@@ -1198,7 +1267,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Detailed-purchases-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="Detailed-purchases-report"> تقرير المشتريات تفصلى</div>
                           </a>
@@ -1206,7 +1276,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Supplier-report-customer.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="Supplier report-customer"> تقرير مورد مع عميل</div>
                           </a>
@@ -1216,49 +1287,56 @@
                     </li>
                     <li class="menu-item">
                       <a href="Purchases.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Purchases.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Purchases.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Purchases"> المشتريات </div>
                       </a>
                     </li>
                     <li class="menu-item">
                       <a href="Purchase-returns.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Purchase-returns.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Purchase-returns.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Purchase-returns"> مرتجع المشتريات </div>
                       </a>
                     </li>
                     <li class="menu-item">
                       <a href="Supplier-category.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Supplier-category.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Supplier-category.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Supplier category"> فئة الموردين </div>
                       </a>
                     </li>
                     <li class="menu-item">
                       <a href="Payment-purchase-invoices.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/PaymentPurchaseInvoices.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/PaymentPurchaseInvoices.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="PaymentPurchaseInvoices"> سداد فواتير المشتريات</div>
                       </a>
                     </li>
                     <li class="menu-item">
                       <a href="Purchase-offers.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Purchase-offers.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Purchase-offers.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Purchase offers"> عروض المشتريات</div>
                       </a>
                     </li>
                     <li class="menu-item">
                       <a href="Bill-exchange.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/exchange.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/exchange.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Bill-exchange"> سند الصرف </div>
                       </a>
                     </li>
                     <li class="menu-item">
                       <a href="Suppliers.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Suppliers.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Suppliers.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Suppliers"> الموردين</div>
                       </a>
@@ -1266,7 +1344,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="Transferring-supplier-transactions.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Suppliers.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Suppliers.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Transferring-transactions"> نقل حركات المورد</div>
                       </a>
@@ -1274,7 +1353,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="purchase-order.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/purchase-order.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/purchase-order.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="purchase order"> امر شراء</div>
                       </a>
@@ -1292,7 +1372,8 @@
 
                     <li class="menu-item">
                       <a href="delegate's-indebtedness.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/delegate_bills_total.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/delegate_bills_total.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="delegate's-indebtedness">
                           مديونه المندوب
@@ -1301,7 +1382,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="Customer-visit.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-visit.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-visit.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="Customer visit">
                           زيارة العملاء
                         </div>
@@ -1309,7 +1391,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="Itinerary.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Itinerary.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Itinerary.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Itinerary">
                           خط السير
@@ -1326,7 +1409,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="Change-representatives-customers.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/representatives-customers.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/representatives-customers.png"
+                          alt="img" loading="lazy">
                         <div data-i18n="Change-representatives-customers">
                           تغير المناديب للعملاء
                         </div>
@@ -1334,7 +1418,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="Target-value.html" class="menu-link">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Target-value.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Target-value.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="Target value">
                           القيمة المستهدفة
                         </div>
@@ -1342,13 +1427,15 @@
                     </li>
                     <li class="menu-item">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/delegate.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/delegate.png" alt="img"
+                          loading="lazy">
                         <div data-i18n="report "> التقارير</div>
                       </a>
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="Visits-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Visits-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Visits-report.png" alt="img"
+                              loading="lazy">
                             <div data-i18n="Visits report">
                               تقرير الزيارات
                             </div>
@@ -1356,7 +1443,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Daily-visits-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Visits-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Visits-report.png" alt="img"
+                              loading="lazy">
                             <div data-i18n="Daily visits report">
                               تقرير الزيارات اليومى
                             </div>
@@ -1364,7 +1452,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Report-customer-visits.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Visits-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Visits-report.png" alt="img"
+                              loading="lazy">
                             <div data-i18n="Report late customer visits">
                               تقرير الزيارات العملاء المتاخرة
                             </div>
@@ -1372,8 +1461,9 @@
                         </li>
                         <li class="menu-item">
                           <a href="Tracking-delegates.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Tracking-delegates.png" alt="img" loading="lazy">
-    
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Tracking-delegates.png" alt="img"
+                              loading="lazy">
+
                             <div data-i18n="Tracking-delegates">
                               تتبع المناديب
                             </div>
@@ -1381,7 +1471,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Forecast-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Forecast-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Forecast-report.png" alt="img"
+                              loading="lazy">
                             <div data-i18n="Forecast report">
                               تقرير التوقعات
                             </div>
@@ -1389,7 +1480,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Representative-account-statement.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-account-statement.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-account-statement.png"
+                              alt="img" loading="lazy">
                             <div data-i18n="Representative account statement">
                               كشف حساب المندوب
                             </div>
@@ -1397,15 +1489,16 @@
                         </li>
                         <li class="menu-item">
                           <a href="Target-quantity.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/target_quantity.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/target_quantity.png" alt="img"
+                              loading="lazy">
                             <div data-i18n="Target quantity">
                               الكمية المستهدفة
                             </div>
                           </a>
                         </li>
-                        </ul>
+                      </ul>
                     </li>
-                    
+
                   </ul>
                 </li>
                 <!--Reports-->
@@ -1419,7 +1512,8 @@
 
                     <li class="menu-item">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Warehouse-movements.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Warehouse-movements.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Warehouse-movements">
                           حركات المخازن
@@ -1428,7 +1522,8 @@
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="Inventory-report-production-date.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/production-date.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/production-date.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Inventory-report-production-date">
                               تقارير المخزون بتاريخ الانتاج
@@ -1437,7 +1532,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Inventory-report-(totals).html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/inventory-management.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/inventory-management.png"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="Inventory report (totals)">
                               تقرير المخزون ( إجماليات )
@@ -1446,7 +1542,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Damaged-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Damaged-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Damaged-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Damaged report">
                               تقرير التالف
@@ -1455,7 +1552,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Tax-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Tax-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Tax-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Tax report">
                               تقرير الضرائب
@@ -1464,7 +1562,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Tax-report-representative.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Tax-report-representative.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Tax-report-representative.png"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="Tax-report-representative">
                               تقرير الضرائب للمندوب
@@ -1485,7 +1584,8 @@
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="Fund-Reports.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Fund-Reports.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Fund-Reports.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Fund Reports">
                               تقارير صندوق
@@ -1494,7 +1594,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Payment-fund-reports.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Fund-Reports.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Fund-Reports.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Payment method fund reports">
                               تقارير صندوق بااسلوب الدفع
@@ -1503,7 +1604,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Sales-statistics.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-statistics.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Sales-statistics.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Sales statistics">
                               احصائيات المبيعات (شهري)
@@ -1512,7 +1614,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Customer-debt-statistics.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-statistics.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Customer-statistics.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Customer debt statistics">
                               احصائيات مديونيه العميل
@@ -1521,7 +1624,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Inventory-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Inventory-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Inventory-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Inventory-report">
                               تقرير الجرد
@@ -1530,7 +1634,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Cost-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Inventory-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Inventory-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Cost report">
                               تقرير التكلفة
@@ -1551,7 +1656,8 @@
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="Discounts-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Discounts-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Discounts-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Discounts-report">
                               تقرير الخصومات
@@ -1560,7 +1666,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="General-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="General report">
                               تقرير عام
@@ -1572,7 +1679,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/delegate.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/delegate.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="delegates">
                           المناديب
@@ -1581,7 +1689,8 @@
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="Earnings-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Detailed-sales-report.png"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="Earnings-report">
                               تقرير الارباح
@@ -1590,7 +1699,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Average-profitability-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/average-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/average-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Average profitability report">
                               تقرير متوسط الربحية
@@ -1599,7 +1709,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Average-profitability-report-branch.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/average-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/average-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Average profitability report branch">
                               تقرير متوسط الربحية
@@ -1609,7 +1720,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Report user movements.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Report-movements.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Report-movements.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Report user movements">
                               تقرير حركات المستخدمين
@@ -1618,7 +1730,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Receivable-bills.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Receivable-bills.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Receivable-bills.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Receivable bills">
                               فواتير مدينة
@@ -1627,7 +1740,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Debt-clients.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Debt-report-clients">
                               تقرير اعمار الديون للعملاء
@@ -1636,7 +1750,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Debt-report-suppliers.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Report-movements.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Report-movements.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Debt-report-suppliers">
                               تقرير اعمار الديون للموردين
@@ -1648,7 +1763,8 @@
                     </li>
                     <li class="menu-item">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
-                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Payable-invoices.png" alt="img" loading="lazy">
+                        <img class="menu-icon img-nav" src="./assets/img/nav-icon/Payable-invoices.png" alt="img"
+                          loading="lazy">
 
                         <div data-i18n="Payable invoices">
                           فواتير دائنة
@@ -1657,7 +1773,8 @@
                       <ul class="menu-sub">
                         <li class="menu-item">
                           <a href="Payable-invoices.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Payable-invoices.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/Payable-invoices.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Payable invoices">
                               فواتير دائنة
@@ -1666,7 +1783,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Zakat-income-reportAnd-sales.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/reportAnd-sales.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/reportAnd-sales.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Zakat-income-reportAnd-sales">
                               تقرير الزكاة و الدخل/ المبيعات
@@ -1675,7 +1793,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="Zakat-income/refunds-report.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/refunds-report.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/refunds-report.png" alt="img"
+                              loading="lazy">
 
                             <div data-i18n="Zakat-income/refunds-report">
                               تقرير الزكاة و الدخل/ المترجعات
@@ -1684,7 +1803,8 @@
                         </li>
                         <li class="menu-item">
                           <a href="ZakatReportIncomeNotice.html" class="menu-link">
-                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/ZakatReportIncomeNotice.png" alt="img" loading="lazy">
+                            <img class="menu-icon img-nav" src="./assets/img/nav-icon/ZakatReportIncomeNotice.png"
+                              alt="img" loading="lazy">
 
                             <div data-i18n="ZakatReportIncomeNotice">
                               تقرير الزكاة والدخل إشعار
@@ -1714,140 +1834,150 @@
 
                           <div data-i18n="employees"> الموظفين</div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="Payment-methods.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Payment-methods.png" alt="img" loading="lazy">
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Payment-methods.png" alt="img"
+                            loading="lazy">
 
-                          <div data-i18n="Payment-methods">  أساليب الدفع
+                          <div data-i18n="Payment-methods"> أساليب الدفع
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="Powers.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Powers-users.png" alt="img" loading="lazy">
-  
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Powers-users.png" alt="img"
+                            loading="lazy">
+
                           <div data-i18n="Powers"> الصلاحيات
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="Report-settings.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Report-settings.png" alt="img" loading="lazy">
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Report-settings.png" alt="img"
+                            loading="lazy">
 
-                          <div data-i18n="Report settings"> 
+                          <div data-i18n="Report settings">
                             اعدادات التقارير
-   
+
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="General-settings.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/General-Settings.png" alt="img" loading="lazy">
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/General-Settings.png" alt="img"
+                            loading="lazy">
 
-                          <div data-i18n="General Settings">  
+                          <div data-i18n="General Settings">
                             الإعدادات العامه
-  
+
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="Import-files.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Import-files.png" alt="img" loading="lazy">
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Import-files.png" alt="img"
+                            loading="lazy">
 
-                          <div data-i18n="Import files">  
+                          <div data-i18n="Import files">
                             استيراد ملفات
-  
+
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="Recalculation-costs.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Recalculation-costs.png" alt="img" loading="lazy">
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Recalculation-costs.png" alt="img"
+                            loading="lazy">
 
-                          <div data-i18n="Recalculation of costs">  
+                          <div data-i18n="Recalculation of costs">
                             إعادة احتساب تكاليف
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="System-testing.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/System-testing.png" alt="img" loading="lazy">
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/System-testing.png" alt="img"
+                            loading="lazy">
 
-                          <div data-i18n="System testing">  
+                          <div data-i18n="System testing">
                             اختبار النظام
-  
+
                           </div>
                         </a>
-  
-                      </li> 
+
+                      </li>
                       <li class="menu-item">
                         <a href="Distribution-areas.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Distribution-areas.png" alt="img" loading="lazy">
-  
-                          <div data-i18n="Distribution areas">  
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/Distribution-areas.png" alt="img"
+                            loading="lazy">
+
+                          <div data-i18n="Distribution areas">
                             مناطق التوزيع
-  
+
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="city-areas.html" class="menu-link">
                           <img class="menu-icon img-nav" src="./assets/img/nav-icon/city.png" alt="img" loading="lazy">
-  
-                          <div data-i18n="city-areas">  
+
+                          <div data-i18n="city-areas">
                             المدن و المناطق
-                                                                                          
-  
+
+
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="branches.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/branches.png" alt="img" loading="lazy">
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/branches.png" alt="img"
+                            loading="lazy">
 
-                          <div data-i18n="branches">  
+                          <div data-i18n="branches">
                             الفروع
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="stores.html" class="menu-link">
                           <img class="menu-icon img-nav" src="./assets/img/nav-icon/store.png" alt="img" loading="lazy">
-  
-                          <div data-i18n="stores">  
+
+                          <div data-i18n="stores">
                             المخازن
-  
+
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="sides.html" class="menu-link">
                           <img class="menu-icon img-nav" src="./assets/img/nav-icon/sides.png" alt="img" loading="lazy">
 
-                          <div data-i18n="sides">  
+                          <div data-i18n="sides">
                             الجهات
                           </div>
                         </a>
-  
+
                       </li>
                       <li class="menu-item">
                         <a href="company.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/company.png" alt="img" loading="lazy">
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/company.png" alt="img"
+                            loading="lazy">
 
-                          <div data-i18n="company">  
-                            الشركات                                                        
+                          <div data-i18n="company">
+                            الشركات
                           </div>
                         </a>
                       </li>
@@ -1855,53 +1985,55 @@
                         <a href="tax.html" class="menu-link">
                           <img class="menu-icon img-nav" src="./assets/img/nav-icon/tax.png" alt="img" loading="lazy">
 
-                          <div data-i18n="tax">  
+                          <div data-i18n="tax">
                             ضريبه القيمه المضافه
-                                                     
+
                           </div>
                         </a>
                       </li>
                       <li class="menu-item">
                         <a href="backup.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/backup.png" alt="img" loading="lazy">
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/backup.png" alt="img"
+                            loading="lazy">
 
-                          <div data-i18n="backup">  
+                          <div data-i18n="backup">
                             نسخه احتياطيه
-                
+
                           </div>
                         </a>
                       </li>
                       <li class="menu-item">
                         <a href="zatca-seting.html" class="menu-link">
-                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/General-Settings.png" alt="img" loading="lazy">
-  
-                          <div data-i18n="zatca-seting">  
-                            اعدادت zatca                
+                          <img class="menu-icon img-nav" src="./assets/img/nav-icon/General-Settings.png" alt="img"
+                            loading="lazy">
+
+                          <div data-i18n="zatca-seting">
+                            اعدادت zatca
                           </div>
                         </a>
                       </li>
                       <li class="menu-item">
                         <a href="help.html" class="menu-link">
                           <img class="menu-icon img-nav" src="./assets/img/nav-icon/help.png" alt="img" loading="lazy">
-  
-                          <div data-i18n="help">  
+
+                          <div data-i18n="help">
                             المساعدة
-                                                                                                       
+
                           </div>
                         </a>
                       </li>
                       <li class="menu-item">
                         <a href="api-test.html" class="menu-link">
                           <img class="menu-icon img-nav" src="./assets/img/nav-icon/help.png" alt="img" loading="lazy">
-  
-                          <div data-i18n="api-test">  
+
+                          <div data-i18n="api-test">
                             api-test
-                                                                                                       
+
                           </div>
                         </a>
                       </li>
                     </ul>
-                   
+
                   </div>
                 </li>
                 <li class="menu-item">
@@ -1930,737 +2062,1265 @@
             <div class="card comonent-hader-top">
               <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
                 <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-2 align-items-center pt-2">
-                  <div class="col col-md-8 col-12  mb-md-2 px-1 mb-2 ">
-                    <strong class="py-md-3 px-md-0 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">تعديل موظف</span>  </strong>
+                  <div class="col col-md-8 col-12  mb-md-2  mb-2 ">
+                    <strong class="py-md-3 px-md-0 text-title-hadeer text-tilte-b"><span
+                        class="text-muted fw-medium">تعديل موظف</span> </strong>
 
 
                   </div>
-                  <div class="col text-end px-1">
+                  <div class="col text-end ">
                     <a href="employees.html" class="btn btn-primary waves-effect waves-light btn-add"> مشاهدة الكل</a>
-  
+
                   </div>
                 </div>
-                
+
               </div>
-            
-           </div>
-           <div class="card comonent-hader-top p-2 mt-4">
 
-              <form class="form-content g-2  row mx-0">
+            </div>
+            <div class="card comonent-hader-top p-2 mt-4">
 
-                            <div class="col-lg-10">
-                              <div class="row mx-0">
-                                <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                                  <label for="name-employees" class="form-label">اسم الموظف   <span class="start-form">*</span></label>
-                                  <input type="text" class="form-control" id="name-employees" placeholder="اسم الموظف   ">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                                  <label for="example-Barcodes" class="form-label">رمز الموظف<span class="start-form">*</span></label>
-                                  <input type="text" class="form-control" id="example-Barcodes" placeholder=" رمز الموظف">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-4 col-12 px-1">
-                                  <label for="example-email" class="form-label">  البريد الاكترونى <span class="start-form">*</span></label>
-                                  <input type="email" class="form-control"  placeholder="     البريد الاكترونى ">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                                  <label for="example-phone" class="form-label"> الجوال<span class="start-form">*</span></label>
-                                  <input type="text" class="form-control"  placeholder="الجوال ">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                                  <label for="example-number" class="form-label"> رقم الهوية<span class="start-form">*</span></label>
-                                  <input type="text" class="form-control"  placeholder="رقم الهوية ">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                                  <label for="example-Nationality" class="form-label"> الجنسية<span class="start-form">*</span></label>
-                                  <input type="text" class="form-control" id="example-Nationality" placeholder=" الجنسية ">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                                  <label for="example-jop" class="form-label"> الوظيفية<span class="start-form">*</span></label>
-                                  <input type="text" class="form-control" id="example-jop" placeholder=" الوظيفية ">
-                                </div>
-                                <div class="mb-2 col-md-4 col-lg-4  col-12 px-1">
-                                  <label for="select-category" class="form-label">الفئة الوظيفية</label>
-                                  <div class="input-groupe">
-                                    <button data-bs-target="#addtruck" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                      اضافة  
-                                    </button>
-                                  <select  class="select2 form-select" data-allow-clear="true">
-                                    <option value="LETTER">رضوى  </option>
-                                    <option value="VIDEO">الوطنية </option>
-                                    <option value="PHOTO">الدوحة </option>
-                                    <option value="SI">الاخوين </option>
-                                    <option value="CERTIFICATE">مراعى</option>
-                                    <option value="OTHER">نادك</option>
-                                  </select>
-                                  </div>
-                                </div>
-                               
-                              </div>
-                              
-                            </div>
-                            
-                            <div class="col-12 col-md-12 col-lg-2 mb-2">
-                              <label class="form-label" for="basic-logo">
-                                اضافة صورة المنتج:</label>
-          
-                              <div class="img-porfoil mb-2">
-                                <div class="avatar-edit">
-                                  <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                  <label for="imageUpload">
-                                    <img src="./assets/img/front-pages/icons/instagram-light.png" style="width: 25px" />
-                                  </label>
-                                </div>
-                                <div class="avatar-preview">
-                                  <div id="imagePreview" style="
-                                        background-image: url(./assets/img/icons/user.png);
-                                      "></div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="select2Basic-percussion" class="form-label"> اساليب الدفع </label>
-                              <div class="input-groupe">
-                                <button data-bs-target="#add-Category" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe fs-6">
-                                  اضافة  
-                                </button>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER" selected>نقدية  </option>
-                                <option value="VIDEO">الوطنية </option>
-                                <option value="PHOTO">الدوحة </option>
-                                <option value="SI">الاخوين </option>
-                                <option value="CERTIFICATE">مراعى</option>
-                                <option value="OTHER">نادك</option>
-                              </select>
-                              </div>
-                            </div>
-                          
-                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                              <label for="select2Basic-deceont" class="form-label">   اختر مجموعة مستخدمين </label>
-                              <div class="input-groupe">
-                                <button data-bs-target="#add-Added" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                  اضافة  
-                                </button>
-                              <select id="select2Basic-deceont" class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER">الرئيس التنفيذى  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="addArea" class="form-label">  المنطقة</label>
-                              <div class="input-groupe">
-                                <button data-bs-target="#add-Area" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة
-                                </button>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER"> اختر المنطقة  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="addCity" class="form-label">  المدينة</label>
-                              <div class="input-groupe">
-                                <button data-bs-target="#add-City" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة
-                                </button>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER"> اختر المدينة  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                              <label for="addBranch" class="form-label">  الفرع</label>
-                              <div class="input-groupe">
-                                <button data-bs-target="#add-Branch" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة
-                                </button>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER"> اختر الفرع  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                              <label for="addClient" class="form-label">  العميل</label>
-                              <div class="input-groupe">
-                                <button data-bs-target="#add-Client" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة
-                                </button>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER"> اختر العميل  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                              <label for="adddelegate" class="form-label">  المندوب</label>
-                              <div class="input-groupe">
-                                <button data-bs-target="#add-delegate" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة
-                                </button>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER"> اختر المندوب  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="addstore" class="form-label">  المخزن</label>
-                              <div class="input-groupe">
-                                <button data-bs-target="#add-store" type="button" data-bs-toggle="modal" class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة
-                                </button>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER"> اختر المخزن  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="addstore" class="form-label">  مخزن التالف</label>
-                           
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER"> اختر مخزن التالف  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                            
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="addCustomer-category" class="form-label">   فئة العملاء</label>
-                           
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER"> اختر  فئة العملاء  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                            
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                              <label for="addItinerary" class="form-label">  خط السير</label>
-                              
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="LETTER"> اختر خط السير  </option>
-                                <option value="VIDEO">2 </option>
-                                <option value="PHOTO">3 </option>
-                                <option value="SI">4 </option>
-                                <option value="CERTIFICATE">5</option>
-                                <option value="OTHER">6</option>
-                              </select>
-                           
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                              <label for="password-employees" class="form-label"> كلمة المرور   <span class="start-form">*</span></label>
-                              <input type="password" class="form-control"placeholder=" كلمة المرور   ">
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="password-employees" class="form-label">  السماح بالبيع   <span class="start-form">*</span></label>
-                              <div class="d-flex form-control justify-content-between align-items-center">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                  <label class="form-check-label" for="flexRadioDefault1">
-                                    نعم
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                  <label class="form-check-label" for="flexRadioDefault2">
-                                    لا
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="password-employees" class="form-label">   مندوب الجملة   <span class="start-form">*</span></label>
-                              <div class="d-flex form-control justify-content-between align-items-center">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault3">
-                                  <label class="form-check-label" for="flexRadioDefault3">
-                                    نعم
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault4" checked>
-                                  <label class="form-check-label" for="flexRadioDefault4">
-                                    لا
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="password-employees" class="form-label"> تعديل السعر في التطبيق  <span class="start-form">*</span></label>
-                              <div class="d-flex form-control justify-content-between align-items-center">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4">
-                                  <label class="form-check-label" for="flexRadioDefault4">
-                                    نعم
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5" checked>
-                                  <label class="form-check-label" for="flexRadioDefault5">
-                                    لا
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="rival-employees" class="form-label"> الخصم في التطبيق <span class="start-form">*</span></label>
-                              <div class="d-flex form-control justify-content-between align-items-center">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4">
-                                  <label class="form-check-label" for="flexRadioDefault4">
-                                    نعم
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5" checked>
-                                  <label class="form-check-label" for="flexRadioDefault5">
-                                    لا
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-2 col-12 px-1">
-                              <label for="rival-employees" class="form-label"> طباعة A4<span class="start-form">*</span></label>
-                              <div class="d-flex form-control justify-content-between align-items-center">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault8">
-                                  <label class="form-check-label" for="flexRadioDefault8">
-                                    نعم
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault9" checked>
-                                  <label class="form-check-label" for="flexRadioDefault9">
-                                    لا
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="mb-2 col-md-4 col-lg-3 col-12 px-1">
-                              <label for="rival-employees" class="form-label"> فاتورة مبيعات نقديه فقط في التطبيق
-                                <span class="start-form">*</span></label>
-                              <div class="d-flex form-control justify-content-between align-items-center">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault6">
-                                  <label class="form-check-label" for="flexRadioDefault6">
-                                    نعم
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault7" checked>
-                                  <label class="form-check-label" for="flexRadioDefault7">
-                                    لا
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                  <div>
-                    <button type="submit" class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">حفظ</button>
+              <form class="form-content g-2  row mx-0 align-items-end">
+
+                <div class="col-lg-10">
+                  <div class="row mx-0 g-2">
+                    <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                      <label for="name-employees" class="form-label">اسم الموظف <span
+                          class="start-form">*</span></label>
+                      <input type="text" class="form-control" id="name-employees" placeholder="اسم الموظف   ">
+                    </div>
+                    <div class="mb-2 col-md-4 col-lg-2 col-12 ">
+                      <label for="example-Barcodes" class="form-label">رمز الموظف<span
+                          class="start-form">*</span></label>
+                      <input type="text" class="form-control" id="example-Barcodes" placeholder=" رمز الموظف">
+                    </div>
+                    <div class="mb-2 col-md-4 col-lg-4 col-12 ">
+                      <label for="example-email" class="form-label"> البريد الاكترونى <span
+                          class="start-form">*</span></label>
+                      <input type="email" class="form-control" placeholder="     البريد الاكترونى ">
+                    </div>
+                    <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                      <label for="example-phone" class="form-label"> الجوال<span class="start-form">*</span></label>
+                      <input type="text" class="form-control" placeholder="الجوال ">
+                    </div>
+                    <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                      <label for="example-number" class="form-label"> رقم الهوية<span
+                          class="start-form">*</span></label>
+                      <input type="text" class="form-control" placeholder="رقم الهوية ">
+                    </div>
+                    <div class="mb-2 col-md-4 col-lg-2 col-12 ">
+                      <label for="example-Nationality" class="form-label"> الجنسية<span
+                          class="start-form">*</span></label>
+                      <input type="text" class="form-control" id="example-Nationality" placeholder=" الجنسية ">
+                    </div>
+                    <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                      <label for="example-jop" class="form-label"> الوظيفية<span class="start-form">*</span></label>
+                      <input type="text" class="form-control" id="example-jop" placeholder=" الوظيفية ">
+                    </div>
+                    <div class="mb-2 col-md-4 col-lg-4  col-12 ">
+                      <label for="select-category" class="form-label">الفئة الوظيفية</label>
+                      <div class="input-groupe">
+                        <button data-bs-target="#addtruck" type="button" data-bs-toggle="modal"
+                          class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
+                          اضافة
+                        </button>
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER">رضوى </option>
+                          <option value="VIDEO">الوطنية </option>
+                          <option value="PHOTO">الدوحة </option>
+                          <option value="SI">الاخوين </option>
+                          <option value="CERTIFICATE">مراعى</option>
+                          <option value="OTHER">نادك</option>
+                        </select>
+                      </div>
+                    </div>
+
                   </div>
-              </form>
-          
-          </div>
-          <!-- Add  Modal -->
-          <div class="modal fade " id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog  modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                    إضافة الفئة الوظيفية
 
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body px-0">
-                  
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-md-12 col-lg-12">
-                      <label class="form-label" for="name-requests">  الاسم</label>
-                      <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                    </div>
-                  
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
 
-                    </div>
-                  </form>
-              
-              </div>
-            </div>
-          </div>
-          </div>
-          <!-- Add  Modal -->
-          <div class="modal fade " id="add-Category" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog  modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                    إضافة اساليب الدفع
+                <div class="col-12 col-md-12 col-lg-2 mb-2">
+                  <label class="form-label" for="basic-logo">
+                    اضافة صورة المنتج:</label>
 
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-md-12 col-lg-12">
-                      <label class="form-label" for="name-requests">  الاسم</label>
-                      <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
+                  <div class="img-porfoil mb-2">
+                    <div class="avatar-edit">
+                      <input type="file" class="imageUpload" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                      <label for="imageUpload">
+                        <img src="./assets/img/front-pages/icons/instagram-light.png" style="width: 25px" />
+                      </label>
                     </div>
-                  
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-              
-              </div>
-            </div>
-          </div>
-          </div>
-           <!-- Add  Modal -->
-           <div class="modal fade " id="add-Added" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog  modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                    إضافة  مجموعة مستخدمين
-
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-md-12 col-lg-12">
-                      <label class="form-label" for="name-requests">  الاسم</label>
-                      <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                    </div>
-                  
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-              
-              </div>
-            </div>
-          </div>
-          </div>
-           <!-- Add  Modal -->
-           <div class="modal fade " id="add-Area" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog  modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                    إضافة منطقة
-
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-md-12 col-lg-12">
-                      <label class="form-label" for="name-requests">  الاسم</label>
-                      <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                    </div>
-                  
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-              
-              </div>
-            </div>
-          </div>
-          </div>
-            <!-- Add  Modal -->
-            <div class="modal fade " id="add-City" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-              <div class="modal-dialog  modal-dialog-centered">
-                <div class="modal-content p-3 ">
-                  <div class="modal-header px-0">
-                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                      إضافة مدينة
-  
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body px-0">
-                    
-                    <form class="row component-form g-3 mx-0">
-                      <div class="col-md-12 col-lg-12">
-                        <label class="form-label" for="name-requests">  الاسم</label>
-                        <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                      </div>
-                    
-                      <div class="pt-2">
-                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-  
-                      </div>
-                    </form>
-                
-                </div>
-              </div>
-            </div>
-            </div>
-             <!-- Add  Modal -->
-             <div class="modal fade " id="add-Branch" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-              <div class="modal-dialog  modal-dialog-centered">
-                <div class="modal-content p-3 ">
-                  <div class="modal-header px-0">
-                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                      إضافة فرع
-  
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body px-0">
-                    
-                    <form class="row component-form g-3 mx-0">
-                      <div class="col-md-12 col-lg-12">
-                        <label class="form-label" for="name-requests">  الاسم</label>
-                        <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                      </div>
-                    
-                      <div class="pt-2">
-                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-  
-                      </div>
-                    </form>
-                
-                </div>
-              </div>
-            </div>
-            </div>
-            <!-- Add  Modal -->
-            <div class="modal fade " id="add-Client" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-              <div class="modal-dialog  modal-dialog-centered">
-                <div class="modal-content p-3 ">
-                  <div class="modal-header px-0">
-                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                      إضافة عميل
-  
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body px-0">
-                    
-                    <form class="row component-form g-3 mx-0">
-                      <div class="col-md-12 col-lg-12">
-                        <label class="form-label" for="name-requests">  الاسم</label>
-                        <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                      </div>
-                    
-                      <div class="pt-2">
-                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-  
-                      </div>
-                    </form>
-                
-                </div>
-              </div>
-            </div>
-            </div>
-                <!-- Add  Modal -->
-                <div class="modal fade " id="add-delegate" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-                  <div class="modal-dialog  modal-dialog-centered">
-                    <div class="modal-content p-3 ">
-                      <div class="modal-header px-0">
-                        <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                          إضافة مندوب
-      
-                        </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body px-0">
-                        
-                        <form class="row component-form g-3 mx-0">
-                          <div class="col-md-12 col-lg-12">
-                            <label class="form-label" for="name-requests">  الاسم</label>
-                            <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                          </div>
-                        
-                          <div class="pt-2">
-                            <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-      
-                          </div>
-                        </form>
-                    
+                    <div class="avatar-preview">
+                      <div class="imagePreview" id="imagePreview" style="
+                            background-image: url(./assets/img/icons/user.png);
+                          "></div>
                     </div>
                   </div>
                 </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="select2Basic-percussion" class="form-label"> اساليب الدفع </label>
+                  <div class="input-groupe">
+                    <button data-bs-target="#add-Category" type="button" data-bs-toggle="modal"
+                      class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe fs-6">
+                      اضافة
+                    </button>
+                    <select class="select2 form-select" data-allow-clear="true">
+                      <option value="LETTER" selected>نقدية </option>
+                      <option value="VIDEO">الوطنية </option>
+                      <option value="PHOTO">الدوحة </option>
+                      <option value="SI">الاخوين </option>
+                      <option value="CERTIFICATE">مراعى</option>
+                      <option value="OTHER">نادك</option>
+                    </select>
+                  </div>
                 </div>
-                  <!-- Add  Modal -->
-                  <div class="modal fade " id="add-store" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-                    <div class="modal-dialog  modal-dialog-centered">
-                      <div class="modal-content p-3 ">
-                        <div class="modal-header px-0">
-                          <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                            إضافة مخزن
-        
-                          </h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body px-0">
-                          
-                          <form class="row component-form g-3 mx-0">
-                            <div class="col-md-12 col-lg-12">
-                              <label class="form-label" for="name-requests">  الاسم</label>
-                              <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
-                            </div>
-                          
-                            <div class="pt-2">
-                              <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-        
-                            </div>
-                          </form>
-                      
-                      </div>
+
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="select2Basic-deceont" class="form-label"> اختر مجموعة مستخدمين </label>
+                  <div class="input-groupe">
+                    <button data-bs-target="#add-Added" type="button" data-bs-toggle="modal"
+                      class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
+                      اضافة
+                    </button>
+                    <select id="select2Basic-deceont" class="select2 form-select" data-allow-clear="true">
+                      <option value="LETTER">الرئيس التنفيذى </option>
+                      <option value="VIDEO">2 </option>
+                      <option value="PHOTO">3 </option>
+                      <option value="SI">4 </option>
+                      <option value="CERTIFICATE">5</option>
+                      <option value="OTHER">6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="addArea" class="form-label"> المنطقة</label>
+                  <div class="input-groupe">
+                    <button data-bs-target="#add-Area" type="button" data-bs-toggle="modal"
+                      class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
+                      اضافة
+                    </button>
+                    <select class="select2 form-select" data-allow-clear="true">
+                      <option value="LETTER"> اختر المنطقة </option>
+                      <option value="VIDEO">2 </option>
+                      <option value="PHOTO">3 </option>
+                      <option value="SI">4 </option>
+                      <option value="CERTIFICATE">5</option>
+                      <option value="OTHER">6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="addCity" class="form-label"> المدينة</label>
+                  <div class="input-groupe">
+                    <button data-bs-target="#add-City" type="button" data-bs-toggle="modal"
+                      class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
+                      اضافة
+                    </button>
+                    <select class="select2 form-select" data-allow-clear="true">
+                      <option value="LETTER"> اختر المدينة </option>
+                      <option value="VIDEO">2 </option>
+                      <option value="PHOTO">3 </option>
+                      <option value="SI">4 </option>
+                      <option value="CERTIFICATE">5</option>
+                      <option value="OTHER">6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="addBranch" class="form-label"> الفرع</label>
+                  <div class="input-groupe">
+                    <button data-bs-target="#exampleModal" type="button" data-bs-toggle="modal"
+                      class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
+                      اضافة
+                    </button>
+                    <select class="select2 form-select" data-allow-clear="true">
+                      <option value="LETTER"> اختر الفرع </option>
+                      <option value="VIDEO">2 </option>
+                      <option value="PHOTO">3 </option>
+                      <option value="SI">4 </option>
+                      <option value="CERTIFICATE">5</option>
+                      <option value="OTHER">6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="addClient" class="form-label"> العميل</label>
+                  <div class="input-groupe">
+                    <button data-bs-target="#add-Client" type="button" data-bs-toggle="modal"
+                      class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
+                      اضافة
+                    </button>
+                    <select class="select2 form-select" data-allow-clear="true">
+                      <option value="LETTER"> اختر العميل </option>
+                      <option value="VIDEO">2 </option>
+                      <option value="PHOTO">3 </option>
+                      <option value="SI">4 </option>
+                      <option value="CERTIFICATE">5</option>
+                      <option value="OTHER">6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="adddelegate" class="form-label"> المندوب</label>
+                  <div class="input-groupe">
+                    <button data-bs-target="#add-delegate" type="button" data-bs-toggle="modal"
+                      class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
+                      اضافة
+                    </button>
+                    <select class="select2 form-select" data-allow-clear="true">
+                      <option value="LETTER"> اختر المندوب </option>
+                      <option value="VIDEO">2 </option>
+                      <option value="PHOTO">3 </option>
+                      <option value="SI">4 </option>
+                      <option value="CERTIFICATE">5</option>
+                      <option value="OTHER">6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="addstore" class="form-label"> المخزن</label>
+                  <div class="input-groupe">
+                    <button data-bs-target="#edit-modal" type="button" data-bs-toggle="modal"
+                      class="btn btn-primary  text-nowrap add-new-role waves-effect waves-light text-withe">
+                      اضافة
+                    </button>
+                    <select class="select2 form-select" data-allow-clear="true">
+                      <option value="LETTER"> اختر المخزن </option>
+                      <option value="VIDEO">2 </option>
+                      <option value="PHOTO">3 </option>
+                      <option value="SI">4 </option>
+                      <option value="CERTIFICATE">5</option>
+                      <option value="OTHER">6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="addstore" class="form-label"> مخزن التالف</label>
+
+                  <select class="select2 form-select" data-allow-clear="true">
+                    <option value="LETTER"> اختر مخزن التالف </option>
+                    <option value="VIDEO">2 </option>
+                    <option value="PHOTO">3 </option>
+                    <option value="SI">4 </option>
+                    <option value="CERTIFICATE">5</option>
+                    <option value="OTHER">6</option>
+                  </select>
+
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12">
+                  <label for="addCustomer-category" class="form-label"> فئة العملاء</label>
+
+                  <select class="select2 form-select" data-allow-clear="true">
+                    <option value="LETTER"> اختر فئة العملاء </option>
+                    <option value="VIDEO">2 </option>
+                    <option value="PHOTO">3 </option>
+                    <option value="SI">4 </option>
+                    <option value="CERTIFICATE">5</option>
+                    <option value="OTHER">6</option>
+                  </select>
+
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12">
+                  <label for="addItinerary" class="form-label"> خط السير</label>
+
+                  <select class="select2 form-select" data-allow-clear="true">
+                    <option value="LETTER"> اختر خط السير </option>
+                    <option value="VIDEO">2 </option>
+                    <option value="PHOTO">3 </option>
+                    <option value="SI">4 </option>
+                    <option value="CERTIFICATE">5</option>
+                    <option value="OTHER">6</option>
+                  </select>
+
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="password-employees" class="form-label"> كلمة المرور <span
+                      class="start-form">*</span></label>
+                  <input type="password" class="form-control" placeholder=" كلمة المرور   ">
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12">
+                  <label for="password-employees" class="form-label"> السماح بالبيع <span
+                      class="start-form">*</span></label>
+                  <div class="d-flex form-control justify-content-between align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        نعم
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        لا
+                      </label>
                     </div>
                   </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-2 col-12 ">
+                  <label for="password-employees" class="form-label"> مندوب الجملة <span
+                      class="start-form">*</span></label>
+                  <div class="d-flex form-control justify-content-between align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault3">
+                      <label class="form-check-label" for="flexRadioDefault3">
+                        نعم
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault4"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault4">
+                        لا
+                      </label>
+                    </div>
                   </div>
-          <!-- Footer -->
-          <footer class="content-footer footer bg-footer-theme">
-            <div class="container-xxl">
-              <div
-                class="footer-container d-flex align-items-center justify-content-center py-2 flex-md-row flex-column">
+                </div>
+                <div class="mb-2 col-md-4 col-lg-4 col-12 ">
+                  <label for="password-employees" class="form-label"> تعديل السعر في التطبيق <span
+                      class="start-form">*</span></label>
+                  <div class="d-flex form-control justify-content-between align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault21" id="flexRadioDefault4">
+                      <label class="form-check-label" for="flexRadioDefault4">
+                        نعم
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault21" id="flexRadioDefault5"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault5">
+                        لا
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="rival-employees" class="form-label"> الخصم في التطبيق <span
+                      class="start-form">*</span></label>
+                  <div class="d-flex form-control justify-content-between align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4">
+                      <label class="form-check-label" for="flexRadioDefault4">
+                        نعم
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault5">
+                        لا
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-3 col-12 ">
+                  <label for="rival-employees" class="form-label"> طباعة A4<span class="start-form">*</span></label>
+                  <div class="d-flex form-control justify-content-between align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault8">
+                      <label class="form-check-label" for="flexRadioDefault8">
+                        نعم
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault9"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault9">
+                        لا
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2 col-md-4 col-lg-4 col-12 ">
+                  <label for="rival-employees" class="form-label"> فاتورة مبيعات نقديه فقط في التطبيق
+                    <span class="start-form">*</span></label>
+                  <div class="d-flex form-control justify-content-between align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault6">
+                      <label class="form-check-label" for="flexRadioDefault6">
+                        نعم
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault7"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault7">
+                        لا
+                      </label>
+                    </div>
+                  </div>
+                </div>
                 <div>
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  , made with ❤️ by Raito <a href="#" target="_blank" class="fw-medium">Raito</a>
+                  <button type="submit" class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">حفظ</button>
                 </div>
+              </form>
 
+            </div>
+            <!-- Add  Modal -->
+            <div class="modal fade " id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+              aria-modal="true" role="dialog">
+              <div class="modal-dialog  modal-dialog-centered">
+                <div class="modal-content p-3 ">
+                  <div class="modal-header px-0">
+                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">
+                      إضافة الفئة الوظيفية
+
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-0">
+
+                    <form class="row component-form g-3 mx-0">
+                      <div class="col-md-12 col-lg-12">
+                        <label class="form-label" for="name-requests"> الاسم</label>
+                        <input type="text"  class="form-control" placeholder=" الاسم " />
+                      </div>
+
+                      <div class="pt-2">
+                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
               </div>
             </div>
-          </footer>
-          <!-- / Footer -->
+            <!-- Add  Modal -->
+            <div class="modal fade " id="add-Category" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+              aria-modal="true" role="dialog">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content p-3 ">
+                  <div class="modal-header px-0">
+                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">
+                      إضافة اساليب الدفع
 
-          <div class="content-backdrop fade"></div>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-0">
+
+                    <form class="row component-form g-2  mx-0">
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label" for="payment-add"> طريقة الدفع (عربى) <span
+                            class="start-form">*</span></label>
+                        <input type="text" class="form-control" placeholder=" طريقة الدفع (عربى) ">
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label" for="payment-add-en"> طريقة الدفع (انجيلزى) <span
+                            class="start-form">*</span></label>
+                        <input type="text" class="form-control" placeholder=" طريقة الدفع (انجيلزى) ">
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 ">
+                        <label class="form-label" for="number-add"> رقم الحساب<span class="start-form">*</span></label>
+
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label" for="number-add"> حساب المبيعات<span
+                            class="start-form">*</span></label>
+
+                        <input id="dropdowntree" class="dropdowntree-tow" style="padding: 0.31rem 0.875rem;" />
+
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label" for="Commission-add"> العمولة<span class="start-form">*</span></label>
+                        <input type="number" class="form-control" placeholder=" العمولة ">
+                      </div>
+                      <div class=" col-md-6 col-lg-4 col-12">
+                        <label for="rival-employees" class="form-label"> عرض في تقرير الصندوق<span
+                            class="start-form">*</span></label>
+                        <div class="d-flex form-control justify-content-between align-items-center">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault4"
+                              id="flexRadioDefault8">
+                            <label class="form-check-label" for="flexRadioDefault8">
+                              نعم
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault9"
+                              checked>
+                            <label class="form-check-label" for="flexRadioDefault9">
+                              لا
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 col-md-4 col-lg-4 col-12 px-1">
+                        <label for="rival-employees" class="form-label"> سند صرف تلقائي علي اسلوب الدفع
+                          <span class="start-form">*</span></label>
+                        <div class="d-flex form-control justify-content-between align-items-center">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault3"
+                              id="flexRadioDefault6">
+                            <label class="form-check-label" for="flexRadioDefault6">
+                              نعم
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault7"
+                              checked>
+                            <label class="form-check-label" for="flexRadioDefault7">
+                              لا
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-12 mt-2">
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add  Modal -->
+            <div class="modal fade " id="add-Added" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+              aria-modal="true" role="dialog">
+              <div class="modal-dialog  modal-dialog-centered">
+                <div class="modal-content p-3 ">
+                  <div class="modal-header px-0">
+                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">
+                      إضافة مجموعة مستخدمين
+
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-0">
+
+                    <form class="row component-form g-3 mx-0">
+                      <div class="col-md-12 col-lg-12">
+                        <label class="form-label" for="name-requests"> الاسم</label>
+                        <input type="text"class="form-control" placeholder=" الاسم " />
+                      </div>
+
+                      <div class="pt-2">
+                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add  Modal -->
+            <div class="modal fade " id="add-Area" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+              aria-modal="true" role="dialog">
+              <div class="modal-dialog  modal-dialog-centered">
+                <div class="modal-content p-3 ">
+                  <div class="modal-header px-0">
+                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">
+                      إضافة منطقة
+
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-0">
+
+                    <form class="row g-2 component-form component-modal-select mx-0">
+                      <div class="col-12 col-lg-6 mb-2">
+                        <label class="form-label" for="number-add"> الرقم التعريفي <span
+                            class="start-form">*</span></label>
+                        <input type="number" id="number-add" class="form-control" placeholder=" الرقم التعريفي" />
+                      </div>
+                      <div class="col-12 col-lg-6 mb-2">
+                        <label class="form-label" for="username-add">اسم المنطقة او المدينة <span
+                            class="start-form">*</span></label>
+                        <input type="text" id="username-add" class="form-control" placeholder="اسم الفئة" />
+                      </div>
+                      <div class="mb-2  col-12 col-lg-6">
+                        <label for="select-type" class="form-label">
+                          النوع <span class="start-form">*</span></label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER" selected> اختر النوع
+                          </option>
+                          <option value="VIDEO">الفرع التجارى </option>
+                          <option value="PHOTO">شركه الجمعية فرع الخالدية
+                          </option>
+                          <option value="SI">شركة الجمعية فرع المروج
+                          </option>
+
+                        </select>
+
+                      </div>
+                      <div class="mb-2  col-12 col-lg-6">
+                        <label for="select-type" class="form-label">
+                          اختر اسم المنطقة <span class="start-form">*</span></label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER" selected> اختر المنطقة
+                          </option>
+                          <option value="VIDEO">الفرع التجارى </option>
+                          <option value="PHOTO">شركه الجمعية فرع الخالدية
+                          </option>
+                          <option value="SI">شركة الجمعية فرع المروج
+                          </option>
+
+                        </select>
+
+                      </div>
+                      <div class="col-12 col-lg-12 mt-2">
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add  Modal -->
+            <div class="modal fade " id="add-City" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+              aria-modal="true" role="dialog">
+              <div class="modal-dialog  modal-dialog-centered">
+                <div class="modal-content p-3 ">
+                  <div class="modal-header px-0">
+                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">
+                      إضافة مدينة
+
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-0">
+
+                    <form class="row g-2 component-form component-modal-select mx-0">
+                      <div class="col-12 col-lg-6 mb-2">
+                        <label class="form-label" for="number-add"> الرقم التعريفي <span
+                            class="start-form">*</span></label>
+                        <input type="number" id="number-add" class="form-control" placeholder=" الرقم التعريفي" />
+                      </div>
+                      <div class="col-12 col-lg-6 mb-2">
+                        <label class="form-label" for="username-add">اسم المنطقة او المدينة <span
+                            class="start-form">*</span></label>
+                        <input type="text" id="username-add" class="form-control" placeholder="اسم الفئة" />
+                      </div>
+                      <div class="mb-2  col-12 col-lg-6">
+                        <label for="select-type" class="form-label">
+                          النوع <span class="start-form">*</span></label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER" selected> اختر النوع
+                          </option>
+                          <option value="VIDEO">الفرع التجارى </option>
+                          <option value="PHOTO">شركه الجمعية فرع الخالدية
+                          </option>
+                          <option value="SI">شركة الجمعية فرع المروج
+                          </option>
+
+                        </select>
+
+                      </div>
+                      <div class="mb-2  col-12 col-lg-6">
+                        <label for="select-type" class="form-label">
+                          اختر اسم المنطقة <span class="start-form">*</span></label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER" selected> اختر المنطقة
+                          </option>
+                          <option value="VIDEO">الفرع التجارى </option>
+                          <option value="PHOTO">شركه الجمعية فرع الخالدية
+                          </option>
+                          <option value="SI">شركة الجمعية فرع المروج
+                          </option>
+
+                        </select>
+
+                      </div>
+                      <div class="col-12 col-lg-12 mt-2">
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add  Modal -->
+            <div class="modal fade " id="exampleModal" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+              aria-modal="true" role="dialog">
+              <div class="modal-dialog  modal-xl modal-dialog-centered">
+                <div class="modal-content p-3 ">
+                  <div class="modal-header px-0">
+                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">
+                      إضافة فرع
+
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-0">
+
+                    <form class="row g-2 component-form  form-1 mx-0">
+                      <div class="col-md-12">
+                        <div class="row mx-0 g-2">
+                          <div class="col-12 col-lg-2 col-md-4 mb-2">
+                            <label class="form-label" for="number-add"> الرقم التعريفي <span
+                                class="start-form">*</span></label>
+                            <input type="number" id="number-add" class="form-control" placeholder=" الرقم التعريفي" />
+                          </div>
+
+                          <div class="col-12 col-lg-3 col-md-4 mb-2">
+                            <label for="select-type" class="form-label">
+                              الفرع المتصل <span class="start-form">*</span></label>
+
+                            <select class="select2 form-select" data-allow-clear="true">
+                              <option value="LETTER" selected> اختر الفرع
+                              </option>
+                              <option value="VIDEO">الفرع التجارى </option>
+                              <option value="PHOTO">شركه الجمعية فرع الخالدية
+                              </option>
+                              <option value="SI">شركة الجمعية فرع المروج
+                              </option>
+
+                            </select>
+
+                          </div>
+                          <div class="col-12 col-lg-3 col-md-4 mb-2">
+                            <label for="select-type" class="form-label">
+                              حساب صندوق الفرع<span class="start-form">*</span></label>
+
+                            <select class="select2 form-select" data-allow-clear="true">
+                              <option value="LETTER" selected> اختر صندوق
+                              </option>
+                              <option value="VIDEO">الفرع التجارى </option>
+                              <option value="PHOTO">شركه الجمعية فرع الخالدية
+                              </option>
+                              <option value="SI">شركة الجمعية فرع المروج
+                              </option>
+
+                            </select>
+
+                          </div>
+                          <div class="col-12 col-lg-2 col-md-4 mb-2">
+                            <label class="form-label" for="name-branches"> اسم الفرع <span
+                                class="start-form">*</span></label>
+                            <input type="text" id="name-branches" class="form-control" placeholder="  اسم الفرع" />
+                          </div>
+                          <div class="col-12 col-lg-2 col-md-4 mb-2">
+                            <label for="select-type" class="form-label">
+                              اختر اسم المنطقة <span class="start-form">*</span></label>
+
+                            <select class="select2 form-select" data-allow-clear="true">
+                              <option value="LETTER" selected> اختر المنطقة
+                              </option>
+                              <option value="VIDEO">الفرع التجارى </option>
+                              <option value="PHOTO">شركه الجمعية فرع الخالدية
+                              </option>
+                              <option value="SI">شركة الجمعية فرع المروج
+                              </option>
+
+                            </select>
+
+                          </div>
+                          <div class="col-12 col-lg-2 col-md-4 mb-2">
+                            <label for="select-type" class="form-label">
+                              اختر المدينة <span class="start-form">*</span></label>
+
+                            <select class="select2 form-select" data-allow-clear="true">
+                              <option value="LETTER" selected> اختر المدينة
+                              </option>
+                              <option value="VIDEO">الفرع التجارى </option>
+                              <option value="PHOTO">شركه الجمعية فرع الخالدية
+                              </option>
+                              <option value="SI">شركة الجمعية فرع المروج
+                              </option>
+
+                            </select>
+
+                          </div>
+                          <div class="col-12 col-lg-3 col-md-4 mb-2">
+                            <label for="select-type" class="form-label">
+                              اختر الشركات <span class="start-form">*</span></label>
+
+                            <select class="select2 form-select" data-allow-clear="true">
+                              <option value="LETTER" selected> اختر الشركات
+                              </option>
+                              <option value="VIDEO">الفرع التجارى </option>
+                              <option value="PHOTO">شركه الجمعية فرع الخالدية
+                              </option>
+                              <option value="SI">شركة الجمعية فرع المروج
+                              </option>
+
+                            </select>
+
+                          </div>
+                          <div class="col-12 col-lg-3 col-md-4 mb-2">
+                            <label class="form-label" for="name-areas"> اسم المنطقة <span
+                                class="start-form">*</span></label>
+                            <input type="text" id="name-areas" readonly class="form-control">
+                          </div>
+                          <div class="col-12 col-lg-2 col-md-4 mb-2">
+                            <label class="form-label" for="Longitude"> خط طول <span class="start-form">*</span></label>
+                            <input type="text" class="longitude form-control" readonly>
+                          </div>
+                          <div class="col-12 col-lg-2 col-md-4 mb-2">
+                            <label class="form-label" for="Latitude"> خط عرض <span class="start-form">*</span></label>
+                            <input type="text" class="latitude form-control" readonly>
+
+                          </div>
+                          <div class="col-12 col-lg-4 col-md-4 mb-2">
+                            <label class="form-label" for="radius">نصف القطر <span class="start-form">*</span></label>
+                            <input type="number" id="radius" class="form-control" value="1000">
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="map" id="map1" style="height: 400px;"></div>
+
+                      <div class="col-12 col-lg-12 mt-2">
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add  Modal -->
+            <div class="modal fade " id="add-Client" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+              aria-modal="true" role="dialog">
+              <div class="modal-dialog  modal-dialog-centered">
+                <div class="modal-content p-3 ">
+                  <div class="modal-header px-0">
+                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">
+                      إضافة عميل
+
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-0">
+
+                    <form class="row component-form g-3 mx-0">
+                      <div class="col-md-12 col-lg-12">
+                        <label class="form-label" for="name-requests"> الاسم</label>
+                        <input type="text"  class="form-control" placeholder=" الاسم " />
+                      </div>
+
+                      <div class="pt-2">
+                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add  Modal -->
+            <div class="modal fade " id="add-delegate" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+              aria-modal="true" role="dialog">
+              <div class="modal-dialog  modal-dialog-centered">
+                <div class="modal-content p-3 ">
+                  <div class="modal-header px-0">
+                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">
+                      إضافة مندوب
+
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-0">
+
+                    <form class="row component-form g-3 mx-0">
+                      <div class="col-md-12 col-lg-12">
+                        <label class="form-label" for="name-requests"> الاسم</label>
+                        <input type="text"  class="form-control" placeholder=" الاسم " />
+                      </div>
+
+                      <div class="pt-2">
+                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add  Modal -->
+            <div class="modal fade " id="edit-modal" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+              aria-modal="true" role="dialog">
+              <div class="modal-dialog  modal-lg">
+                <div class="modal-content p-3 ">
+                  <div class="modal-header px-0">
+                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">
+                      إضافة مخزن
+
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-0">
+
+                    <form class="row g-2 component-form form-2 g-2 align-items-end  mx-0">
+
+                      <div class="col-12 col-lg-4 col-md-4 mb-2">
+                        <label class="form-label" for="name-add"> اسم المخزن<span class="start-form">*</span></label>
+                        <input type="text" id="name-add" class="form-control" placeholder="  اسم المخزن" />
+                      </div>
+                      <div class="col-12 col-lg-2 col-md-4 mb-2">
+                        <label class="form-label" for="code-add"> كود المخزن<span class="start-form">*</span></label>
+                        <input type="text" id="code-add" class="form-control" placeholder="  كود المخزن" />
+                      </div>
+                      <div class="col-12 col-lg-3 col-md-4 mb-2">
+                        <label for="select-type" class="form-label">
+                          نوع المخزن<span class="start-form">*</span></label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER" selected> اختر المخزن
+                          </option>
+                          <option value="VIDEO">الفرع التجارى </option>
+                          <option value="PHOTO">شركه الجمعية فرع الخالدية
+                          </option>
+                          <option value="SI">شركة الجمعية فرع المروج
+                          </option>
+
+                        </select>
+
+                      </div>
+                      <div class="col-12 col-lg-3 col-md-4 mb-2">
+                        <label for="select-type" class="form-label">
+                          مسئول المخزن<span class="start-form">*</span></label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER" selected> اختر مسئول
+                          </option>
+                          <option value="VIDEO">الفرع التجارى </option>
+                          <option value="PHOTO">شركه الجمعية فرع الخالدية
+                          </option>
+                          <option value="SI">شركة الجمعية فرع المروج
+                          </option>
+
+                        </select>
+
+                      </div>
+
+                      <div class="col-12 col-lg-3 col-md-4 mb-2">
+                        <label for="select-type" class="form-label">
+                          الفرع<span class="start-form">*</span></label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER" selected> اختر الفرع
+                          </option>
+                          <option value="VIDEO">الفرع التجارى </option>
+                          <option value="PHOTO">شركه الجمعية فرع الخالدية
+                          </option>
+                          <option value="SI">شركة الجمعية فرع المروج
+                          </option>
+
+                        </select>
+
+                      </div>
+                      <div class="col-12 col-lg-2 col-md-4 mb-2">
+                        <div class="form-check form-control">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            رئـيـسـي
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-3 col-md-4 mb-2">
+                        <label for="select-type" class="form-label">
+                          اختر حساب المخزن <span class="start-form">*</span></label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER" selected> اختر حساب المخزن
+                          </option>
+                          <option value="VIDEO">الفرع التجارى </option>
+                          <option value="PHOTO">شركه الجمعية فرع الخالدية
+                          </option>
+                          <option value="SI">شركة الجمعية فرع المروج
+                          </option>
+
+                        </select>
+
+                      </div>
+                      <div class="col-12 col-lg-4 col-md-4 mb-2">
+                        <label for="select-type" class="form-label">
+                          اختر حساب سلفه المخزون <span class="start-form">*</span></label>
+
+                        <select class="select2 form-select" data-allow-clear="true">
+                          <option value="LETTER" selected> اختر المخزون
+                          </option>
+                          <option value="VIDEO">الفرع التجارى </option>
+                          <option value="PHOTO">شركه الجمعية فرع الخالدية
+                          </option>
+                          <option value="SI">شركة الجمعية فرع المروج
+                          </option>
+
+                        </select>
+
+                      </div>
+                      <div class="col-12 col-lg-4 col-md-4 mb-2">
+                        <label class="form-label" for="name-areas"> اسم المنطقة <span
+                            class="start-form">*</span></label>
+                        <input type="text" id="name-areas2" readonly class="form-control">
+                      </div>
+                      <div class="col-12 col-lg-2 col-md-4 mb-2">
+                        <label class="form-label" for="Longitude"> خط طول <span class="start-form">*</span></label>
+                        <input type="text" class="longitude2 form-control" readonly>
+                      </div>
+                      <div class="col-12 col-lg-2 col-md-4 mb-2">
+                        <label class="form-label" for="Latitude"> خط عرض <span class="start-form">*</span></label>
+                        <input type="text" class="latitude2 form-control" readonly>
+
+                      </div>
+                      <div class="col-12 col-lg-2 col-md-4 mb-2">
+                        <label class="form-label" for="radius">نصف القطر <span class="start-form">*</span></label>
+                        <input type="number" id="radius2" class="form-control" value="1000">
+                      </div>
+
+                      <div class="map" id="map2" style="height: 400px;"></div>
+
+
+                      <div class="col-12 col-lg-12 mt-2">
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">حفظ</button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl">
+                <div
+                  class="footer-container d-flex align-items-center justify-content-center py-2 flex-md-row flex-column">
+                  <div>
+                    ©
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                    , made with ❤️ by Raito <a href="#" target="_blank" class="fw-medium">Raito</a>
+                  </div>
+
+                </div>
+              </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!--/ Content wrapper -->
         </div>
-        <!--/ Content wrapper -->
-      </div>
 
-      <!--/ Layout container -->
+        <!--/ Layout container -->
+      </div>
     </div>
-  </div>
-  <!--color-->
+    <!--color-->
 
-  <div class="compoent-color position-fixed">
-    <div class="back">
-      <div class="dropdown">
+    <div class="compoent-color position-fixed">
+      <div class="back">
+        <div class="dropdown">
 
-        <button class="btn  btn-btn d-flex mx-0 justify-content-between dropbtn" type="button" onclick="myFunction()"
-          id="myDIV">
+          <button class="btn  btn-btn d-flex mx-0 justify-content-between dropbtn" type="button" onclick="myFunction()"
+            id="myDIV">
 
-          <span class="span-i">
-            <img src="./assets/img/icons/color-wheel.png" alt="platte">
+            <span class="span-i">
+              <img src="./assets/img/icons/color-wheel.png" alt="platte">
 
-          </span>
-        </button>
+            </span>
+          </button>
 
-      </div>
-      <div id="myDropdown" class="dropdown-content dropdown-menu">
-        <div class="d-flex align-items-center flex-wrap">
+        </div>
+        <div id="myDropdown" class="dropdown-content dropdown-menu">
+          <div class="d-flex align-items-center flex-wrap">
 
-          <div id="theme-picker-section" class="example-section" @change="updateTheme">
+            <div id="theme-picker-section" class="example-section" @change="updateTheme">
 
-            <input type="radio" name="theme" value="blue" checked="true">
-            <input type="radio" name="theme" value="grey">
-            <input type="radio" name="theme" value="green">
-            <input type="radio" name="theme" value="Brown">
-            <input type="radio" name="theme" value="orange">
-            <input type="radio" name="theme" value="red">
+              <input type="radio" name="theme" value="blue" checked="true">
+              <input type="radio" name="theme" value="grey">
+              <input type="radio" name="theme" value="green">
+              <input type="radio" name="theme" value="Brown">
+              <input type="radio" name="theme" value="orange">
+              <input type="radio" name="theme" value="red">
 
+            </div>
           </div>
         </div>
       </div>
+
     </div>
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
 
-  </div>
-  <!-- Overlay -->
-  <div class="layout-overlay layout-menu-toggle"></div>
+    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
 
-  <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-  <div class="drag-target"></div>
+    <!--/ Layout wrapper -->
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
 
-  <!--/ Layout wrapper -->
-  <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
+    <script src="./assets/vendor/libs/jquery/jquery.js"></script><!--متكرر-->
+    <script src="./assets/vendor/libs/popper/popper.js"></script><!--متكرر-->
+    <script src="./assets/vendor/js/bootstrap.js"></script><!--متكرر-->
+    <script src="./assets/vendor/libs/node-waves/node-waves.js"></script><!--متكرر-->
+    <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script><!--متكرر-->
+    <!-- <script src="./assets/vendor/libs/hammer/hammer.js"></script> -->
+    <script src="./assets/vendor/libs/i18n/i18n.js"></script><!--متكرر-->
+    <!-- <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script> -->
 
-  <script src="./assets/vendor/libs/jquery/jquery.js"></script><!--متكرر-->
-  <script src="./assets/vendor/libs/popper/popper.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/bootstrap.js"></script><!--متكرر-->
-  <script src="./assets/vendor/libs/node-waves/node-waves.js"></script><!--متكرر-->
-  <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script><!--متكرر-->
-  <!-- <script src="./assets/vendor/libs/hammer/hammer.js"></script> -->
-  <script src="./assets/vendor/libs/i18n/i18n.js"></script><!--متكرر-->
-  <!-- <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script> -->
-
-  <script src="./assets/vendor/js/menu.js"></script><!--متكرر-->
+    <script src="./assets/vendor/js/menu.js"></script><!--متكرر-->
 
 
-  <!-- Vendors JS -->
-  <script src="./assets/vendor/js/dropdown-hover.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/mega-dropdown.js"></script><!--متكرر-->
-  <script src="./assets/js/main.js"></script><!--متكرر-->
+    <!-- Vendors JS -->
+    <script src="./assets/vendor/js/dropdown-hover.js"></script><!--متكرر-->
+    <script src="./assets/vendor/js/mega-dropdown.js"></script><!--متكرر-->
+    <script src="./assets/js/main.js"></script><!--متكرر-->
 
-  <script src="./assets/js/ui-navbar.js"></script><!--متكرر-->
+    <script src="./assets/js/ui-navbar.js"></script><!--متكرر-->
 
-  <!-- Vendors JS -->
+    <!-- Vendors JS -->
 
-  <script src="./assets/vendor/libs/select2/select2.js"></script><!--متكرر-->
-
-
-  <!-- Main JS -->
+    <script src="./assets/vendor/libs/select2/select2.js"></script><!--متكرر-->
 
 
-  <!-- Page JS -->
-  <script src="./assets/js/forms-selects.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
+    <!-- Main JS -->
+    <script src="./assets/kendo.all.min.js"></script><!--الصفحة-->
 
+    <!-- Page JS -->
+    <script src="./assets/js/forms-selects.js"></script><!--متكرر-->
+    <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
+   
+    <script src="./assets/vendor/js/map.js"></script><!--متكرر فى صفحات فيها خريطة-->
+    <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
+    <script>
+      $(document).ready(function () {
+        function initializeDropDownTree(selector) {
+          $(selector).each(function () {
+            if (!$(this).data("kendoDropDownTree")) {
+              $(this).kendoDropDownTree({
+                placeholder: "Select ...",
+                filter: "startswith",
+                autoBind: true,
+                autoWidth: true,
+                dataSource: [
+                  {
+                    text: "Furniture",
+                    expanded: true,
+                    enable: false,
+
+                    items: [
+                      { text: "Tables & Chairsاااااااااااااااااااااااااا" },
+                      { text: "Sofas" },
+                      { text: "Occasional Furnitureاااااااااااااااااااااا" },
+                    ],
+                  },
+                  {
+                    text: "Decor",
+                    expanded: true,
+                    enable: false,
+                    items: [
+                      { text: "Bed Linen" },
+                      { text: "Curtains & Blinds" },
+                      { text: "Carpetsااااااااااااااااااا" },
+                    ],
+                  }, {
+                    text: "Decor",
+                    expanded: true,
+                    enable: false,
+                    items: [
+                      { text: "Bed Linen" },
+                      { text: "Curtains & Blinds" },
+                      { text: "Carpetsننننننننننننننننننننننننننننننننننننن" },
+                    ],
+                  }, {
+                    text: "Decor",
+                    expanded: true,
+                    enable: false,
+                    items: [
+                      { text: "Bed Linen" },
+                      { text: "Curtains & Blinds" },
+                      { text: "Carpets" },
+                    ],
+                  }, {
+                    text: "Decor",
+                    expanded: true,
+                    enable: false,
+                    items: [
+                      { text: "Bed Linen" },
+                      { text: "Curtains & Blinds" },
+                      { text: "Carpets" },
+                    ],
+                  }, {
+                    text: "Decor",
+                    expanded: true,
+                    enable: false,
+                    items: [
+                      { text: "Bed Linen" },
+                      { text: "Curtains & Blinds" },
+                      { text: "Carpets" },
+                    ],
+                  }, {
+                    text: "Decor",
+                    expanded: true,
+                    enable: false,
+                    items: [
+                      { text: "Bed Linen" },
+                      { text: "Curtains & Blinds" },
+                      { text: "Carpets" },
+                    ],
+                  }, {
+                    text: "Decor",
+                    expanded: true,
+                    items: [
+                      { text: "Bed Linen" },
+                      { text: "Curtains & Blinds" },
+                      { text: "Carpets" },
+                    ],
+                  }
+                ],
+
+                select: function (e) {
+                  var dataItem = this.dataItem(e.node);
+                  if (dataItem.hasChildren) {
+                    e.preventDefault();
+                    alert("لا يمكنك اختيار العناصر الرئيسية، يرجى اختيار عنصر فرعي.");
+                  }
+
+                },
+
+              });
+
+              // تفعيل DropDownTree باستخدام الكيبورد
+              // تفعيل DropDownTree باستخدام الكيبورد
+              $(this).on('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {  // استخدم Enter أو Space لفتح القائمة
+                  $(this).data("kendoDropDownTree").toggle();  // فتح أو إغلاق القائمة
+                  e.preventDefault();
+                }
+              });
+
+            }
+          });
+
+          $(".k-treeview").on("keydown", function (e) {
+            var treeView = $(this);
+            var currentNode = treeView.find(".k-treeview-leaf").first(); // العنصر الأول الذي يحمل الفئة
+
+            if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+              var nodeHeight = currentNode.outerHeight(); // ارتفاع العنصر
+              var currentScrollTop = treeView.scrollTop(); // موضع التمرير الحالي
+
+              if (e.key === "ArrowDown") {
+                // تحريك التمرير إلى الأسفل بناءً على ارتفاع العنصر
+                treeView.scrollTop(currentScrollTop + nodeHeight);
+              } else if (e.key === "ArrowUp") {
+                // تحريك التمرير إلى الأعلى بناءً على ارتفاع العنصر
+                treeView.scrollTop(currentScrollTop - nodeHeight);
+              }
+            }
+          });
+
+
+        }
+        initializeDropDownTree(".dropdowntree");
+        initializeDropDownTree(".dropdowntree-tow");
+      })
+    </script>
 
 </body>
 
