@@ -2021,7 +2021,7 @@
                   <form class="row component-form pt-2 mx-0">
                     <div class="table-responsive text-nowrap rounded card-datatable pt-2 pb-4">
 
-                      <table class="table table-bordered table-hover rounded " id="my_table-tow">
+                      <table class="table table-bordered table-hover rounded " id="my_table">
                         <thead class="table-light">
                           <tr class="fw-bold">
                             <th class="fw-bold">التسلسل</th>
@@ -2045,7 +2045,7 @@
                             </td>
                             <td class="p-1" style="width: 20%;"> 
                             
-                                <select id="select-2" class="form-select select2">
+                                <select  class="form-select select2" data-allow-clear="true">
                                   <option value="AK"> الفرع</option>
                                   <option value="HI">1</option>
                                   <option value="CA">1</option>
@@ -2057,7 +2057,7 @@
                             
                             </td>
                             <td class="p-1">
-                              <select id="select-3" class="form-select select2">
+                              <select  class="form-select select2"data-allow-clear="true">
                                 <option value="AK"> اسلوب الدفع</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -2068,7 +2068,7 @@
                             
                             </td>
                             <td class="p-1">
-                              <select id="select-4" class="form-select select2">
+                              <select  class="form-select select2"data-allow-clear="true">
                                 <option value="AK"> العميل الافتراضي</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -2079,8 +2079,7 @@
                             
                             </td>
                             <td class="d-flex justify-content-center align-items-center">
-                              <button type="button" class="bg-danger btn  text-bg-danger  p-1 d-flex align-items-center justify-content-center me-2 rounded" title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-                              <button type="button" class=" btn btn-primary  waves-effect waves-light p-1" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus fs-4"></i></button>
+                              <button type="button" class=" btn btn-primary  btnaddsize p-1"><i class="fa-solid fa-plus fs-4"></i></button>
                             </td>
                           </tr>
                        </tbody>
@@ -2099,7 +2098,7 @@
             </div>
           </div>
           <!-- edit Hardware Modal -->
-          <div class="modal fade " id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+          <div class="modal fade" id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
             aria-modal="true" role="dialog">
             <div class="modal-dialog modal-xl modal-dialog-centered">
               <div class="modal-content p-3 p-md-3">
@@ -2111,7 +2110,7 @@
                   <form class="row component-form pt-2 mx-0">
                     <div class="table-responsive text-nowrap rounded card-datatable ">
 
-                      <table class="table table-bordered table-hover rounded " id="my_table-tow">
+                      <table class="table table-bordered table-hover rounded " id="my_table-cashier">
                         <thead class="table-light">
                           <tr class="fw-bold">
                             <th class="fw-bold">التسلسل</th>
@@ -2135,7 +2134,7 @@
                             </td>
                             <td class="p-1"> 
                             
-                                <select id="select-pranh" class="form-select select2">
+                                <select  class="form-select select2" data-allow-clear="true">
                                   <option value="AK"> الفرع</option>
                                   <option value="HI">1</option>
                                   <option value="CA">1</option>
@@ -2147,7 +2146,7 @@
                             
                             </td>
                             <td class="p-1">
-                              <select id="select-prices" class="form-select select2">
+                              <select  class="form-select select2" data-allow-clear="true">
                                 <option value="AK"> اسلوب الدفع</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -2158,7 +2157,7 @@
                             
                             </td>
                             <td class="p-1">
-                              <select id="select-client" class="form-select select2">
+                              <select  class="form-select select2 " data-allow-clear="true">
                                 <option value="AK"> العميل الافتراضي</option>
                                 <option value="HI">1</option>
                                 <option value="CA">1</option>
@@ -2307,72 +2306,8 @@
   <script src="./assets/js/forms-selects.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
-  <script>
-     $(document).ready(function() {
-    // عند فتح أي مودال يحتوي على فئة معينة
-    $('.modal').on('shown.bs.modal', function () {
-      // تهيئة الـ select2 لجميع العناصر داخل هذا المودال
-      $(this).find('.select2').select2({
-        dropdownParent: $(this) // تخصيص الـ modal الحالي كأب للقائمة المنسدلة
-      });
-    });
-
-    // دالة لإضافة صف جديد
-    window.addField = function(button) {
-      const newRow = `
-        <tr>
-          <td class="p-1 text-center">  1</td>
-          <td class="p-1">
-            <input type="text" class="form-control">
-          </td>
-          <td class="p-1" style="width: 20%;">
-            <select class="form-select select2" data-allow-clear="true">
-              <option value="AK"> الفرع</option>
-              <option value="HI">1</option>
-              <option value="CA">1</option>
-              <option value="NV">1</option>
-              <option value="OR">1</option>
-            </select>
-          </td>
-          <td class="p-1">
-            <select class="form-select select2" data-allow-clear="true">
-              <option value="AK"> اسلوب الدفع</option>
-              <option value="HI">1</option>
-              <option value="CA">1</option>
-              <option value="NV">1</option>
-              <option value="OR">1</option>
-            </select>
-          </td>
-          <td class="p-1">
-            <select class="form-select select2" data-allow-clear="true">
-              <option value="AK"> العميل الافتراضي</option>
-              <option value="HI">1</option>
-              <option value="CA">1</option>
-              <option value="NV">1</option>
-              <option value="OR">1</option>
-            </select>
-          </td>
-          <td class="d-flex justify-content-center align-items-center">
-            <button type="button" class="bg-danger btn btnDelete text-bg-danger p-1 me-2 rounded" title="حذف"><i class="ti ti-trash fs-4"></i></button>
-          </td>
-        </tr>
-      `;
-      $('#tb2').append(newRow);
-
-      // تهيئة Select2 للصف الجديد
-      $('#tb2 .select2').select2({
-        dropdownParent: $('#exampleModal'),
-        width: '100%' // Ensures the select2 element uses 100% width of its container
-      });
-    };
-
-    // دالة حذف الصف
-    $('#tb2').on('click', '.btnDelete', function() {
-      $(this).closest('tr').remove();
-    });
-  });
-
-  </script>
+  <script src="./assets/vendor/js/add-cashier.js"></script><!--صفحة-->
+  
 
 </body>
 
