@@ -12,44 +12,45 @@
   <title>Admin Template</title>
 
   <meta name="description" content="" />
-
  <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="./assets/img/favicon/logo.png" /><!--متكرر-->
+ <link rel="icon" type="image/x-icon" href="./assets/img/favicon/logo.png" />
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" /><!--متكرر-->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><!--متكرر-->
-<link
-  href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
-  rel="stylesheet" /><!--متكرر-->
+ <!-- Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" /><!--مشترك-->
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!--مشترك-->
+ <link
+   href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+   rel="stylesheet" /><!--مشترك-->
 
-<!-- Icons -->
-<link rel="stylesheet" href="./assets/vendor/fonts/fontawesome.css" /><!--متكرر-->
-<link rel="stylesheet" href="./assets/vendor/fonts/tabler-icons.css" /><!--متكرر-->
-<link rel="stylesheet" href="./assets/vendor/fonts/flag-icons.css" /><!--متكرر-->
+ <!-- Icons -->
+ <link rel="stylesheet" href="./assets/vendor/fonts/fontawesome.css" /><!--مشترك-->
+ <link rel="stylesheet" href="./assets/vendor/fonts/tabler-icons.css" /><!--مشترك-->
+ <link rel="stylesheet" href="./assets/vendor/fonts/flag-icons.css" /><!--مشترك-->
 
-<!-- Core CSS -->
-<link rel="stylesheet" href="./assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
-<link rel="stylesheet" href="./assets/css/demo.css" /><!--متكرر-->
+ <!-- Core CSS -->
+ <link rel="stylesheet" href="./assets/vendor/css/rtl/core.css" class="template-customizer-core-css" /><!--مشترك-->
+ <link rel="stylesheet" href="./assets/css/demo.css" /><!--مشترك-->
 
-<!-- Vendors CSS -->
-<link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" /><!--متكرر-->
-<link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" /><!--متكرر-->
+ <!-- Vendors CSS -->
+ <link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" /> <!--مشترك-->
+ <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" /> <!--مشترك-->
 
-<link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" /><!--متكرر-->
+ 
+ <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" /><!--مشترك-->
 
-<link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" /><!--متكرر-->
+ <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" /><!--مشترك-->
 
 
-<link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" /><!--متكرر-->
-<link rel="stylesheet" href="./assets/css/style.css" /><!--متكرر-->
-<!-- Helpers -->
-<script src="./assets/vendor/js/helpers.js"></script><!--متكرر-->
-<!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section --><!--متكرر-->
-<!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-<script src="./assets/vendor/js/template-customizer.js"></script><!--متكرر-->
-<!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-<script src="./assets/js/config.js"></script><!--متكرر-->
+
+ <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" /><!--مشترك-->
+ <link rel="stylesheet" href="./assets/css/style.css" /><!--مشترك-->
+ <!-- Helpers -->
+ <script src="./assets/vendor/js/helpers.js"></script><!--مشترك-->
+ <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+ <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+ <script src="./assets/vendor/js/template-customizer.js"></script> <!--مشترك-->
+ <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+ <script src="./assets/js/config.js"></script> <!--مشترك-->
 </head>
 
 <body>
@@ -1673,7 +1674,7 @@
                           </a>
                         </li>
                         <li class="menu-item">
-                          <a href="Zakat-incomerefunds-report.html" class="menu-link">
+                          <a href="Zakat-income/refunds-report.html" class="menu-link">
                             <img class="menu-icon img-nav" src="./assets/img/nav-icon/refunds-report.png" alt="img" loading="lazy">
 
                             <div data-i18n="Zakat-income/refunds-report">
@@ -1928,36 +1929,26 @@
           <div class="container-xxl flex-grow-1 container-p-y">
            
               <div class="card comonent-hader-top">
-                <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
-                    <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">
-                      تقرير الزيارات
-                     </span>
-                   </strong>
-                   <form class="row component-form mt-2 g-2 align-items-end" id="createModal">
-                    <div class="col-12 col-md-6 col-lg-4 mb-2" >
-                      <label for="From-account-user" class="form-label">المندوب</label>
-                      <select  class="select2 form-select" data-allow-clear="true">
-                        <option value="AK"> اختر المندوب</option>
-                        <option value="HI">المدير</option>
-                        <option value="CA">admin</option>
-                      </select>
+                <div class="card-body py-3 px-md-2 px-2 card-widget-separator">
+                  <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-3 align-items-center pt-2">
+                    <div class="col col-md-8 col-12  mb-md-2 mb-2 ">
+                      <strong class=" text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">
+                        تقرير المشتريات التفصيلى                        </span>
+                      </strong>
                     </div>
-
-                    <div class="col-12 col-md-6 col-lg-3 mb-2" >
-                      <label class="form-label" for="basic-default-date">من تاريخ</label>
-                      <input type="date" class="form-control" id="basic-default-date">
-                    </div>
- 
-                    <div class="col-12 col-md-6 col-lg-3 mb-2">
-                      <button type="submit" class="btn btn-primary text-white mx-2">عرض تقرير الزيارات <i class="ti-xs mx-2 ti ti-eye-check"></i></button>
-                     
-                    </div>
-                  </form>
+                    
                  
+                     <div class="col text-end px-3 mx-md-4">
+                      <a href="Detailed-purchases-report.html" class="btn btn-primary waves-effect waves-light"> رجوع</a>
+  
+                    </div>
+                    
+                  </div>
                   
                 </div>
+               
               </div>
-              <div class="card comonent-hader-top component-button p-2 mt-4">
+              <div class="card comonent-hader-top  p-2 mt-4">
 
                 <div class="table-responsive text-nowrap rounded mt-4">
                   <table class="table table-bordered table-hover rounded text-center">
@@ -1965,14 +1956,26 @@
                       <tr class="fw-bold">
                         <th class="fw-bold">التسلسل</th>
 
-                        <th class="fw-bold">   اسم المندوب</th>
-                        
-                        <th class="fw-bold">  اسم  العميل </th>
-                        <th class="fw-bold">    تاريخ </th>
-                        <th class="fw-bold">    الوقت </th>
-                        <th class="fw-bold">  تفاصيل الزيارة</th>
-                        <th class="fw-bold">   عنوان المندوب</th>
-                     
+                        <th class="fw-bold">   اسم المنتج</th>
+                        <th class="fw-bold">   اسم المنتج بالانجليزية</th>
+                        <th class="fw-bold">  كود المنتج</th>
+                        <th class="fw-bold">    المورد</th>
+                        <th class="fw-bold">   الرقم الضريبى للمورد</th>
+                        <th class="fw-bold"> الفرع</th>
+                        <th class="fw-bold"> المخزن</th>
+                        <th class="fw-bold"> التاريخ</th>
+                        <th class="fw-bold"> رقم االحركة</th>
+                        <th class="fw-bold"> نوع الحركة</th>
+                        <th class="fw-bold"> سعر الشراء</th>
+                        <th class="fw-bold">  الكمية بالحجم الاساسى</th>
+                         <th class="fw-bold">  اجمالى المشتريات</th> 
+                         <th class="fw-bold">  كمية مجانية</th>
+                         <th class="fw-bold">   قيمة المشتريات قبل الخصم</th>
+                         <th class="fw-bold">  قيمة الخصم</th>
+                         <th class="fw-bold">   قيمة المشتريات بعد الخصم</th>
+                         <th class="fw-bold">  الضريبة</th>
+                         <th class="fw-bold">  الضريبة الانتقائية</th>
+                         <th class="fw-bold">  قيمة المشتريات بعد الضريبة</th>
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
@@ -1981,10 +1984,24 @@
                         <td> 123456</td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                       
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                     
                       </tr>
 
 
@@ -2044,55 +2061,38 @@
   <!--/ Layout wrapper -->
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
-  <script src="./assets/vendor/libs/jquery/jquery.js"></script><!--متكرر-->
-  <script src="./assets/vendor/libs/popper/popper.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/bootstrap.js"></script><!--متكرر-->
-  <script src="./assets/vendor/libs/node-waves/node-waves.js"></script><!--متكرر-->
-  <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script><!--متكرر-->
+  <script src="./assets/vendor/libs/jquery/jquery.js"></script><!--مشترك-->
+  <script src="./assets/vendor/libs/popper/popper.js"></script><!--مشترك-->
+  <script src="./assets/vendor/js/bootstrap.js"></script><!--مشترك-->
+  <script src="./assets/vendor/libs/node-waves/node-waves.js"></script> <!--مشترك-->
+  <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script> <!--مشترك-->
   <!-- <script src="./assets/vendor/libs/hammer/hammer.js"></script> -->
-  <script src="./assets/vendor/libs/i18n/i18n.js"></script><!--متكرر-->
+  <script src="./assets/vendor/libs/i18n/i18n.js"></script><!--مشترك-->
   <!-- <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script> -->
 
-  <script src="./assets/vendor/js/menu.js"></script><!--متكرر-->
+  <script src="./assets/vendor/js/menu.js"></script><!--مشترك-->
 
   <!-- endbuild -->
-  <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script><!--صفحة بيجب داتا-->
  
+  <!-- Vendors JS -->
+  <script src="./assets/vendor/js/dropdown-hover.js"></script><!--مشترك-->
+  <script src="./assets/vendor/js/mega-dropdown.js"></script><!--مشترك-->
+  <script src="./assets/js/main.js"></script> <!--مشترك-->
+
+  <script src="./assets/js/ui-navbar.js"></script><!--مشترك-->
 
   <!-- Vendors JS -->
-  <script src="./assets/vendor/js/dropdown-hover.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/mega-dropdown.js"></script><!--متكرر-->
-  <script src="./assets/js/main.js"></script><!--متكرر-->
 
-  <script src="./assets/js/ui-navbar.js"></script><!--متكرر-->
-
-  <!-- Vendors JS -->
-
-  <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script><!--متكرر-->
-
-
-  <script src="./assets/vendor/libs/select2/select2.js"></script><!--متكرر-->
+  <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script> <!--مشترك-->
+  <!-- <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script> -->
+ 
+  <script src="./assets/vendor/libs/select2/select2.js"></script><!--مشترك-->
 
   <!-- Page JS -->
-  <script src="./assets/js/forms-selects.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
-  <script>
-    $(document).ready(function() {
-// إخفاء comonent-hader-top عند تحميل الصفحة
-$('.component-button').hide();
+  <script src="./assets/js/forms-selects.js"></script><!--مشترك-->
+  <script src="./assets/vendor/js/chart-color.js"></script><!--مشترك-->
+  <script src="./assets/vendor/js/accordion.js"></script><!--مشترك-->
 
-// عند الضغط على زر "حفظ" داخل الـ Modal
-$('#createModal .btn-primary').click(function(event) {
-event.preventDefault(); // منع إعادة تحميل الصفحة
-
-// إظهار comonent-hader-top
-$('.component-button').show();
-
-});
-});
-
-</script>
 
 </body>
 

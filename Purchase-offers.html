@@ -2045,6 +2045,12 @@
                                     >
                                 </div>
                                 <div class="mb-2 col-md-4 col-lg-2 col-12">
+                                  <label for="exampleForm-by" class="form-label"> رقم المرجع<span
+                                      class="start-form">*</span></label>
+                                  <input type="text" class="form-control" id="exampleForm-by"
+                                    placeholder=" رقم المرجع ">
+                                </div>
+                                <div class="mb-2 col-md-4 col-lg-3 col-12">
                                   <label for="select2Basic-2" class="form-label"> الفرع <span
                                       class="start-form">*</span></label>
 
@@ -2060,7 +2066,8 @@
                                   </select>
 
                                 </div>
-                                <div class="mb-2 col-md-4 col-lg-2 col-12">
+
+                                <div class="mb-2 col-md-4 col-lg-3 col-12">
                                   <label for="select2Basic-percussion" class="form-label"> المخزن <span
                                       class="start-form">*</span></label>
 
@@ -2075,7 +2082,7 @@
                                   </select>
 
                                 </div>
-                                <div class="mb-2 col-md-4 col-lg-2 col-12">
+                                <div class="mb-2 col-md-4 col-lg-3 col-12">
                                   <label for="select-delegate" class="form-label"> اختر المورد <span
                                       class="start-form">*</span></label>
 
@@ -2092,16 +2099,6 @@
                                   </select>
 
                                 </div>
-
-
-                                <div class="mb-2 col-md-4 col-lg-2 col-12">
-                                  <label for="exampleForm-by" class="form-label"> رقم المرجع<span
-                                      class="start-form">*</span></label>
-                                  <input type="text" class="form-control" id="exampleForm-by"
-                                    placeholder=" رقم المرجع ">
-                                </div>
-                                
-                                
 
                               </div>
                             </div>
@@ -2121,7 +2118,7 @@
 
                                 <table
                                   class="table table-bordered table-hover rounded tabel-table table-inv tabel-table"
-                                  id="my-table-tow">
+                                  id="my-table-size">
                                   <thead class="table-light">
                                     <tr class="fw-bold">
                                       <th class="fw-bold"> SR. NO.</th>
@@ -2150,7 +2147,7 @@
                                       <td> 1</td>
 
                                       <td>
-                                        <select id="select-4" class="form-select select2 form-control">
+                                        <select  class="form-select select2 form-control" data-allow-clear="true">
                                           <option value="AK" selected> اختر
                                             الصنف</option>
                                           <option value="HI">1</option>
@@ -2185,14 +2182,10 @@
                                       <td style="width: 10%;"> <input type="text" class="form-control px-0">
                                       </td>
                                       <td> <input type="text" class="form-control px-0"> </td>
-                                      <td class="d-flex">
-                                        <button type="button"
-                                          class="bg-danger btn  text-bg-danger p-1 d-flex align-items-center justify-content-center me-2 rounded btnDelete"
-                                          title="حذف"><i class="ti ti-trash  fs-4"></i>
-                                        </button>
+                                      <td class="d-flex justify-content-center align-items-center">
+                                     
 
-                                        <button type="button" class="button btn btn-primary p-1"
-                                          value="Add another line" onclick="addField(this);"><i
+                                        <button type="button" class="button btn btn-primary btnaddvalueedit p-1"><i
                                             class="fa-solid fa-plus fs-4"></i></button>
 
                                       </td>
@@ -2361,129 +2354,40 @@
   <!--/ Layout wrapper -->
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
-  <script src="./assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="./assets/vendor/libs/popper/popper.js"></script>
-  <script src="./assets/vendor/js/bootstrap.js"></script>
-  <script src="./assets/vendor/libs/node-waves/node-waves.js"></script>
-  <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-  <script src="./assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="./assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="./assets/vendor/libs/jquery/jquery.js"></script><!--متكرر-->
+  <script src="./assets/vendor/libs/popper/popper.js"></script><!--متكرر-->
+  <script src="./assets/vendor/js/bootstrap.js"></script><!--متكرر-->
+  <script src="./assets/vendor/libs/node-waves/node-waves.js"></script><!--متكرر-->
+  <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script><!--متكرر-->
+  <!-- <script src="./assets/vendor/libs/hammer/hammer.js"></script> -->
+  <script src="./assets/vendor/libs/i18n/i18n.js"></script><!--متكرر-->
+  <!-- <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script> -->
 
-  <script src="./assets/vendor/js/menu.js"></script>
+  <script src="./assets/vendor/js/menu.js"></script><!--متكرر-->
 
   <!-- endbuild -->
-  <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-  <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+  <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script><!--صفحة بيجب داتا-->
+ 
 
   <!-- Vendors JS -->
-  <script src="./assets/vendor/js/dropdown-hover.js"></script>
-  <script src="./assets/vendor/js/mega-dropdown.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="./assets/vendor/js/dropdown-hover.js"></script><!--متكرر-->
+  <script src="./assets/vendor/js/mega-dropdown.js"></script><!--متكرر-->
+  <script src="./assets/js/main.js"></script><!--متكرر-->
 
-  <script src="./assets/js/ui-navbar.js"></script>
+  <script src="./assets/js/ui-navbar.js"></script><!--متكرر-->
 
   <!-- Vendors JS -->
-  <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
-  <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
-  <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
-  <script src="./assets/vendor/libs/chartjs/chartjs.js"></script>
-  <script src="./assets/vendor/libs/select2/select2.js"></script>
 
-  <!-- Main JS -->
+  <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script><!--متكرر-->
+
+
+  <script src="./assets/vendor/libs/select2/select2.js"></script><!--متكرر-->
 
   <!-- Page JS -->
-  <script src="./assets/js/forms-selects.js"></script>
+  <script src="./assets/js/forms-selects.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
-  <script src="./assets/vendor/js/accordion.js"></script>
-  <script src="./assets/js/tables-datatables-advanced.js"></script><!--مسول عن داتا-->
-  <script src="./assets/js/tables-datatables-basic.js"></script>
-  <script>
-    $(document).ready(function () {
-      // تهيئة جميع حقول Select2 في البداية
-      $('.select2').select2({
-        dropdownParent: $('#edit-modeil') // للتأكد أن الـ Select2 يظهر داخل الـ modal
-      });
-
-
-      // Function to add a new row
-      window.addField = function () {
-        var newRow = `
-            <tr>
-                <td></td>
-                <td style="width: 50%;">
-                    <select class="select2 form-select" data-allow-clear="true">
-                        <option value="LETTER" selected>1</option>
-                        <option value="VIDEO">2</option>
-                        <option value="PHOTO">3</option>
-                        <option value="SI">4</option>
-                        <option value="CERTIFICATE">5</option>
-                        <option value="OTHER">6</option>
-                    </select>
-                </td>
-                <td class="p-1">
-                    <select class="select2 form-select" data-allow-clear="true">
-                        <option value="AK" selected>SIZE</option>
-                        <option value="HI">1</option>
-                        <option value="CA">1</option>
-                        <option value="NV">1</option>
-                        <option value="OR">1</option>
-                    </select>
-                </td>
-                    <td class="p-1">
-                    <select class="select2 form-select" data-allow-clear="true">
-                        <option value="AK" selected>اسم الرف</option>
-                        <option value="HI">1</option>
-                        <option value="CA">1</option>
-                        <option value="NV">1</option>
-                        <option value="OR">1</option>
-                    </select>
-                </td>
-                <td><input type="number" class="form-control"></td>
-               
-                                <td style="width: 10%;"><input type="date"class="px-0 form-control"></td>        
-                                <td style="width: 10%;"> <input type="text"class="form-control px-0"> </td>
-                                <td style="width: 10%;"> <input type="text"class="form-control px-0"> </td>
-
-                <td class="d-flex">
-                    <button type="button" class="bg-danger btn text-bg-danger btnDelete p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
-                        <i class="ti ti-trash fs-4"></i>
-                    </button>
-                </td>
-            </tr>`;
-
-        $('#tb3').append(newRow);
-        // تهيئة Select2 للصف الجديد
-        $('#tb3 .select2').select2({
-          dropdownParent: $('#edit-modeil')
-        });
-
-
-
-        // Update row numbering
-        updateRowNumbers();
-      };
-
-      // Function to update row numbering
-      function updateRowNumbers() {
-        $('#tb3 tr').each(function (index, row) {
-          $(row).find('td:first').text(index + 1);
-        });
-      }
-
-      // Function to delete a row
-      $(document).on('click', '.btnDelete', function () {
-        $(this).closest('tr').remove();
-        updateRowNumbers();
-      });
-
-
-
-
-    });
-
-
-  </script>
+  <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
+  <script src="./assets/vendor/js/purchase-offers.js"></script><!--صفحة-->
   <script>
     document.querySelectorAll('.form-control').forEach(input => {
         input.addEventListener('input', function () {
