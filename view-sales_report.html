@@ -13,7 +13,7 @@
 
   <meta name="description" content="" />
 
-  <!-- Favicon -->
+ <!-- Favicon -->
  <link rel="icon" type="image/x-icon" href="./assets/img/favicon/logo.png" /><!--متكرر-->
 
  <!-- Fonts -->
@@ -1931,91 +1931,81 @@
            
               <div class="card comonent-hader-top">
                 <div class="card-body py-3 px-md-2 px-2 card-widget-separator">
+                  <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-3 align-items-center pt-2">
+
+                  <div class="col col-md-8 col-12  mb-md-2 mb-2 ">
+
                     <strong class=" text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">
                      تقرير المبيعات
                      </span>
                    </strong>
-                  
-                 
+                   </div>
+                   <div class="col text-end px-3 mx-md-4">
+                    <a href="sales_report.html" class="btn btn-primary waves-effect waves-light"> رجوع</a>
+
+                  </div>
+                 </div>
                   
                 </div>
               </div>
-              <div class="card comonent-hader-top component-button p-2 mt-4">
-                <div class="row mx-0  mt-4 mb-4 justify-content-center">
-                  <div class="col-xl-9 col-lg-10 col-md-10">
-                    <div class="card py-4 px-2  h-100 card-border-shadow-gray">
-                      <div class="row h-100 mx-0 align-items-center">
-                        <div class="col-sm-5">
-                          <div class="d-flex align-items-end h-100 justify-content-center mt-sm-0 mt-3">
-                            <img src="./assets/img/illustrations/invoices.jpg" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="300">
-    
-                          </div>
-                        </div>
-                        <div class="col-sm-7">
-                          <form class="row mx-0 component-form mt-3 g-2 align-items-end" action="view-sales_report.html">
-                            <div class="col-12 col-md-6 col-lg-6 mb-2" >
-                              <label for="From-account-user" class="form-label"> مدفوع علي الفاتوره</label>
-                              <div class="d-flex align-items-center justify-content-between form-control">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                  <label class="form-check-label" for="flexRadioDefault1">
-                                    نعم
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                  <label class="form-check-label" for="flexRadioDefault2">
-                                    لا
-                                  </label>
-                                </div>
-                              </div>
-                             
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-6 mb-2" >
-                              <label for="From-account-user" class="form-label">الفئة</label>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="AK"> اختر الفئة</option>
-                                <option value="HI">المدير</option>
-                                <option value="CA">admin</option>
-                              </select>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-6 mb-2" >
-                              <label for="From-account-user" class="form-label"> المندوب</label>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="AK"> اختر المندوب</option>
-                                <option value="HI">المدير</option>
-                                <option value="CA">admin</option>
-                              </select>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-6 mb-2" >
-                              <label for="From-account-user" class="form-label"> العميل</label>
-                              <select  class="select2 form-select" data-allow-clear="true">
-                                <option value="AK"> اختر المندوب</option>
-                                <option value="HI">المدير</option>
-                                <option value="CA">admin</option>
-                              </select>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-6 mb-2" >
-                              <label class="form-label" for="default-date"> من تاريخ</label>
-                              <input type="date" class="form-control" id="default-date">
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-6 mb-2" >
-                              <label class="form-label" for="basic-default-date"> الى تاريخ</label>
-                              <input type="date" class="form-control" id="basic-default-date">
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 mb-2">
-                              <button type="submit" class="btn btn-primary text-white mx-2">عرض تقرير  <i class="ti-xs mx-2 ti ti-eye-check"></i></button>
-          
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                     
-                    </div>
-                    
-                  </div>
+              <div class="card comonent-hader-top  p-2 mt-4">
+               
+                <div class="table-responsive text-nowrap rounded mt-2">
+                  <table class="table table-bordered table-hover rounded text-center">
+                    <thead class="table-light">
+                      <tr class="fw-bold">
+                        <th class="fw-bold">التسلسل</th>
+
+                        <th class="fw-bold">    رقم الفاتورة</th>
+                        <th class="fw-bold"> اسم العميل</th>
+                        <th class="fw-bold"> موقع العميل</th>
+                        <th class="fw-bold">  رمز العميل</th>
+                        <th class="fw-bold">   اسم المندوب</th>
+                        <th class="fw-bold">    نوع الحركة</th>
+                        <th class="fw-bold">    التاريخ</th>
+                        <th class="fw-bold">    الوقت</th>
+                        <th class="fw-bold">    طريقة الدفع</th>
+                        <th class="fw-bold">    الاجمالى قبل  الخصم الضربية</th>
+                        <th class="fw-bold">    الاجمالى قبل  الضربية</th>
+                        <th class="fw-bold">    الاجمالى بعد  الخصم الضربية</th>
+                        <th class="fw-bold">   المدفوع</th>
+                        <th class="fw-bold">   المتبقى</th>
+                        <th class="fw-bold">   قيمة التكاليف</th>
+                        <th class="fw-bold">   الربح</th>
+                        <th class="fw-bold">   اجمالى الكمية  بالحجم  الاساسى</th>
+
+                        <th class="fw-bold">   اسم الفرع</th>
+
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <tr>
+                        <td>  1 </td>
+                        <td> 123456</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                      </tr>
+
+
+                    </tbody>
+                  </table>
                 </div>
-                
               
               </div>
            
@@ -2100,6 +2090,26 @@
   <script src="./assets/vendor/js/chart-color.js"></script><!--متكرر-->
   <script src="./assets/vendor/js/accordion.js"></script><!--متكرر-->
  
+  <script>
+$(document).ready(function () {
+    // إخفاء العناصر عند تحميل الصفحة
+    $('.component-button').hide();
+  
+
+    // عند الضغط على زر "حفظ" (btn-primary)
+    $('#createModal .btn-primary').click(function (event) {
+        event.preventDefault(); // منع إعادة تحميل الصفحة
+
+        // إظهار component-button وإخفاء component-totol
+        $('.component-button').show();
+       
+    });
+
+   
+});
+
+
+</script>
 
 </body>
 

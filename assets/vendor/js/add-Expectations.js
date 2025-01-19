@@ -1,0 +1,65 @@
+$(document).ready(function() {
+ // Function to initialize select2 for a specific table
+ function initializeSelect2ForTable(table) {
+    $(table).find('.select2').select2({
+        placeholder: "اختر خيارًا", // إضافة placeholder
+        allowClear: true // السماح بإزالة الاختيار
+    });
+}
+// Function to update row numbering
+function updateRowNumbersee() {
+    $('#add-Expectations tr').each(function (index, row) {
+        $(row).find('td:first').text(index + 0); // الترقيم يبدأ من 1
+    });
+}
+//table-size
+ // Add new row when plus button is clicked
+ $('#add-Expectations').on('click', '.add-product', function () {
+    var newRowe = `
+    <tr>
+    <td></td>
+   <td style="width: 50%;">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="LETTER" selected>اسم الصنف</option>
+                        <option value="VIDEO">2</option>
+                        <option value="PHOTO">3</option>
+                        <option value="SI">4</option>
+                        <option value="CERTIFICATE">5</option>
+                        <option value="OTHER">6</option>
+                    </select>
+                </td>
+                <td class="p-1">
+                    <select class="select2 form-select" data-allow-clear="true">
+                        <option value="AK" selected>SIZE</option>
+                        <option value="HI">1</option>
+                        <option value="CA">1</option>
+                        <option value="NV">1</option>
+                        <option value="OR">1</option>
+                    </select>
+                </td>
+                <td><input type="text" class="form-control"></td>
+        <td class="d-flex justify-content-center">
+            <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center rounded delete-size" href="javascript:void(0);" title="حذف">
+                <i class="fa-solid fa-trash fs-5"></i>
+            </a>
+        </td>
+    </tr>`;
+
+    // Append the new row
+    $('#add-Expectations tbody').append(newRowe);
+
+    // Reinitialize select2 for all dropdowns including the new one
+    // Initialize select2 for the new row only
+    initializeSelect2ForTable($('#add-Expectations'));
+ // Update row numbering
+ updateRowNumbersee();
+});
+
+// Delete row when delete button is clicked
+$('#add-Expectations').on('click', '.delete-size', function () {
+    $(this).closest('tr').remove();
+});
+// Function to initialize select2
+// Initialize select2 for the table on page load
+initializeSelect2ForTable($('#add-Expectations'));
+});
